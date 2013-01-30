@@ -2,7 +2,8 @@
 		</div> <!-- /container -->
 		<footer role="contentinfo">
 			<div class="container">
-		
+			
+				Newsletter Sign Up
 				<div class="home_email_signup">
 					<form action="http://ibethel.us1.list-manage2.com/subscribe/post?u=b824912e75c6e72f2ace5ded3&amp;id=c45a6c9961" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
 						<div id="email" style="float: left;">
@@ -14,7 +15,9 @@
 					</form>
 				</div><!-- !newsletter sign up -->
 
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
 
+				Donate to BJM
 				<form action="index.php" method=POST>
 					<b>Amount $ </b> <input type=text size=6 name=amount>
 					<br><br>
@@ -52,6 +55,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-collapse.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-carousel.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/lifestream.js"></script>
 
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>

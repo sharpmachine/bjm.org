@@ -1,0 +1,92 @@
+<?php $featured_query = new WP_Query('showposts=1'); 
+						while ($featured_query->have_posts()) : $featured_query->the_post();
+						$do_not_duplicate[] = $post->ID 
+						?>
+
+						<?php query_posts( 'post_type[]=g_n&g_n_cat[]=video&post_type[]=post&cat[]=3' ); ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php if(get_field('vimeo_id')): ?>
+						<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<?php endif; ?>
+						<?php endwhile; ?>
+						<!-- post navigation -->
+						<?php else: ?>
+						<!-- no posts found -->
+						<?php endif; ?>
+						<hr>
+						<?php wp_reset_query(); ?>
+
+<?php endwhile; ?>
+
+<?php query_posts('showposts=2'); ?>
+					<?php while (have_posts()) : the_post();
+					if (in_array ($post->ID, $do_not_duplicate)) continue;
+					update_post_caches($post);
+					 ?>
+
+						<?php query_posts( 'post_type[]=g_n&g_n_cat[]=video&post_type[]=post&cat[]=3' ); ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<?php if(get_field('vimeo_id')): ?>
+						<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<?php endif; ?>
+						<?php endwhile; ?>
+						<!-- post navigation -->
+						<?php else: ?>
+						<!-- no posts found -->
+						<?php endif; ?>
+						<hr>
+						<?php wp_reset_query(); ?>
+						
+<?php endwhile; ?>
+
+
+
+
+
+
+
+
+
+
+
+<!-- query the posts of your custom post types -->
+					<?php 
+					// set the $paged variable
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+					query_posts( array(
+		        'post_type' => array(
+	                    'post',
+	                    'g_n'
+	                ),
+	                'paged' => $paged ) // for paging links to work
+		            );
+					 
+					// have some posts?
+					if (have_posts()) :
+					    while (have_posts()) : the_post(); // begin the Loop
+					 
+					      if(get_field('vimeo_id')): ?>
+								<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					
+					 		<?php endif;
+					    endwhile;
+					endif;
+					?>
+
+					<!-- !Testing -->
+
+
+					<?php query_posts( 'post_type[]=g_n&g_n_cat[]=video&post_type[]=post&cat[]=3' ); ?>
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<?php if(get_field('vimeo_id')): ?>
+					<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<?php endif; ?>
+					<?php endwhile; ?>
+					<!-- post navigation -->
+					<?php else: ?>
+					<!-- no posts found -->
+					<?php endif; ?>
+					<hr>
+					<?php wp_reset_query(); ?>
+					<!-- !Videos -->

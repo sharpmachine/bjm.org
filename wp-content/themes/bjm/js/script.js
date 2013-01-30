@@ -9,6 +9,16 @@ jQuery(document).ready(function($) {
  	$("li.dropdown > a").addClass('dropdown-toggle');
 	$("li.dropdown > a").attr('data-toggle','dropdown');
 	$("a.dropdown-toggle").append('<b class="caret"></b>');
+
+	 $("#lifestream").lifestream({
+	 	limit: 1, 
+    list:[ 
+      { 
+        service: "facebook_page",
+        user: "54557413386"
+      }
+    ]
+  });
 	
 });
 
