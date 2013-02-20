@@ -23,13 +23,12 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
     	<!-- Le styles -->
     	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
-    	<style>
-      	body {
-        	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      	}
-    	</style>
+    	
     	<link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700italic,700' rel='stylesheet' type='text/css'>
 
     	<!-- Le fav and touch icons -->
     	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
@@ -50,23 +49,43 @@
 
 	<body <?php body_class(); ?>>
 
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            			<span class="icon-bar"></span>
-            			<span class="icon-bar"></span>
-            			<span class="icon-bar"></span>
-					</a>
-					<a class="brand" href="<?php bloginfo('url') ?>"><?php bloginfo('name'); ?></a>
-					<div class="nav-collapse">
-            			<ul class="nav">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
-            			</ul>
-					</div><!--/.nav-collapse -->
-        		</div>
-			</div>
-    	</div>
+		<header>
 
-    	<div class="container">
-			<div class="row">
+		<div class="navbar navbar-static-top">
+				<div class="container bethel-menu">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+					</a>
+					<div class="nav-collapse">
+      			<ul class="nav ">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+      			</ul>
+					</div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="navbar navbar-static-top ">
+				<div class="container bill-menu">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+      			<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson-signature.png"></a>
+					<div class="nav-collapse">
+      			<ul class="nav">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+      			</ul>
+      			<a class="brand" href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a>
+      			<a class="brand" href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a>
+      			<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a>
+					</div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    </header>
+
+  	<div class="container">
+		<div class="row">

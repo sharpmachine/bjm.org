@@ -824,7 +824,7 @@ input[type="color"],
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 20px;
-  color: #555555;
+  color: #58585b;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -2827,17 +2827,17 @@ input[type="button"].btn-block {
 .btn-inverse {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #363636;
-  background-image: -moz-linear-gradient(top, #444444, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#222222));
-  background-image: -webkit-linear-gradient(top, #444444, #222222);
-  background-image: -o-linear-gradient(top, #444444, #222222);
-  background-image: linear-gradient(to bottom, #444444, #222222);
+  background-color: #434243;
+  background-image: -moz-linear-gradient(top, #444444, #413f41);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#413f41));
+  background-image: -webkit-linear-gradient(top, #444444, #413f41);
+  background-image: -o-linear-gradient(top, #444444, #413f41);
+  background-image: linear-gradient(to bottom, #444444, #413f41);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff413f41', GradientType=0);
+  border-color: #413f41 #413f41 #1a191a;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #222222;
+  *background-color: #413f41;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2848,12 +2848,12 @@ input[type="button"].btn-block {
 .btn-inverse.disabled,
 .btn-inverse[disabled] {
   color: #ffffff;
-  background-color: #222222;
-  *background-color: #151515;
+  background-color: #413f41;
+  *background-color: #343234;
 }
 .btn-inverse:active,
 .btn-inverse.active {
-  background-color: #080808 \9;
+  background-color: #272627 \9;
 }
 button.btn,
 input[type="submit"].btn {
@@ -3052,7 +3052,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #2f96b4;
 }
 .btn-group.open .btn-inverse.dropdown-toggle {
-  background-color: #222222;
+  background-color: #413f41;
 }
 .btn .caret {
   margin-top: 8px;
@@ -3274,7 +3274,7 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
-  color: #555555;
+  color: #58585b;
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
@@ -3363,8 +3363,8 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: #fff;
 }
 .nav-tabs .active .dropdown-toggle .caret {
-  border-top-color: #555555;
-  border-bottom-color: #555555;
+  border-top-color: #58585b;
+  border-bottom-color: #58585b;
 }
 .nav > .dropdown.active > a:hover {
   cursor: pointer;
@@ -3716,7 +3716,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-  color: #555555;
+  color: #58585b;
   text-decoration: none;
   background-color: #e5e5e5;
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -3815,7 +3815,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   background-color: #e5e5e5;
-  color: #555555;
+  color: #58585b;
 }
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: #777777;
@@ -3824,8 +3824,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.open > .dropdown-toggle .caret,
 .navbar .nav li.dropdown.active > .dropdown-toggle .caret,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
-  border-top-color: #555555;
-  border-bottom-color: #555555;
+  border-top-color: #58585b;
+  border-bottom-color: #58585b;
 }
 .navbar .pull-right > li > .dropdown-menu,
 .navbar .nav > li > .dropdown-menu.pull-right {
@@ -4520,7 +4520,7 @@ a.thumbnail:hover {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #555555;
+  color: #58585b;
 }
 .media,
 .media-body {
@@ -4909,7 +4909,7 @@ a.badge:hover {
   line-height: 30px;
   color: #ffffff;
   text-align: center;
-  background: #222222;
+  background: #413f41;
   border: 3px solid #ffffff;
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
@@ -4970,8 +4970,182 @@ a.badge:hover {
   line-height: 30px;
 }
 /*
-Project Name: Twitter Bootstrap Framework
+Project Name: Bill Johnson Ministries
 */
+/* ...................................the header*/
+header {
+  font-family: 'Crimson', serif;
+  font-size: 22px;
+}
+header .navbar-inner {
+  border: none;
+}
+header .bethel-menu {
+  border-bottom: 1px solid #a19159;
+}
+header .bethel-menu .nav > li > a {
+  color: #a19159;
+  font-style: italic;
+  font-weight: 100;
+}
+header .bill-menu {
+  text-transform: uppercase;
+  border-bottom: 1px solid #a19159;
+}
+header .bill-menu .nav > li > a {
+  color: #413f41;
+  vertical-align: text-bottom;
+}
+/* ...................................the footer*/
+footer {
+  font-family: 'Open Sans', sans-serif;
+}
+.footer-top {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.newsletter {
+  font-family: 'Crimson', serif;
+  text-transform: uppercase;
+}
+.monthly-podcast {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+.footer-menu {
+  font-family: 'Open Sans', sans-serif;
+}
+.donate-text {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+.donate-bjm {
+  font-family: 'Crimson', serif;
+  font-weight: 700;
+}
+.copyright-privacy {
+  color: #a19159;
+  font-family: 'Crimson', serif;
+}
+.copyright-privacy a {
+  color: #a19159;
+  padding-right: 30px;
+}
+/* ...................................the slider*/
+.hero-slider {
+  height: 500px;
+  border: 1px solid #000;
+}
+/* ...................................the news*/
+.news ul {
+  list-style-image: url('/img/');
+}
+.news .life-messages {
+  margin-right: -20px;
+}
+.news .good-news {
+  margin-right: -60px;
+}
+.news a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  color: #a19159;
+}
+.news .messages-news-blog {
+  font-family: 'Crimson', serif;
+  font-size: 35px;
+  font-weight: 100;
+  color: #58585b;
+}
+.news .messages-news-blog-2nd {
+  font-family: 'Crimson', serif;
+  font-size: 60px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #58585b;
+}
+/* ...................................the featured product*/
+.feature-product .product-title {
+  font-family: 'Crimson', serif;
+}
+.feature-product .product-endorsement {
+  font-family: 'Crimson', serif;
+  font-style: italic;
+}
+.feature-product .product-endorser-title {
+  font-family: 'Open Sans', sans-serif;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.feature-product .product-endorser {
+  font-weight: 900;
+}
+.feature-product .product-link {
+  width: 190px;
+  color: #fff;
+  font-family: 'Crimson', serif;
+  text-transform: uppercase;
+  background: #000;
+}
+.feature-product .product-link a {
+  color: #fff;
+}
+.feature-product .other-products {
+  width: 280px;
+  font-family: 'Crimson', serif;
+  text-transform: uppercase;
+  background: #eee;
+}
+.feature-product .other-products a {
+  color: #000;
+}
+/* ...................................the videos*/
+.video .video-layout:last-child {
+  padding-top: 25px;
+}
+/* ...................................the facebook*/
+.facebook {
+  color: #a19159;
+  font-family: 'Crimson', serif;
+  font-size: ;
+}
+.facebook .facebook-borders {
+  padding: 30px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.facebook .facebook-status {
+  padding: 20px 20px;
+  border-left: 1px solid #000;
+}
+/* ...................................the house of generals*/
+.house-generals {
+  font-family: 'Open Sans', sans-serif;
+}
+.house-generals .generals-heading {
+  margin-bottom: 27px;
+  font-family: 'Crimson', serif;
+  border-bottom: 1px solid #000;
+  text-transform: uppercase;
+}
+.house-generals .learn-more {
+  font-family: 'Crimson', serif;
+  text-transform: uppercase;
+}
+/* ...................................the Q&A*/
+.q-and-a {
+  font-family: 'Crimson', serif;
+}
+.q-and-a .questions {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.q-and-a .answers {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+/* ...................................the end*/
 img.size-auto,
 img.size-full,
 img.size-large,
