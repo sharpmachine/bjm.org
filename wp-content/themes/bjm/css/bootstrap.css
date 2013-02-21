@@ -4972,9 +4972,24 @@ a.badge:hover {
 /*
 Project Name: Bill Johnson Ministries
 */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+h1 {
+  color: #a19159;
+  font-family: 'Crimson Text', serif;
+  font-size: 40px;
+  font-weight: 100;
+}
+h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+  font-weight: 100;
+}
 /* ...................................the header*/
 header {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   font-size: 22px;
 }
 header .navbar-inner {
@@ -4997,35 +5012,27 @@ header .bill-menu .nav > li > a {
   vertical-align: text-bottom;
 }
 /* ...................................the footer*/
-footer {
-  font-family: 'Open Sans', sans-serif;
-}
 .footer-top {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
 .newsletter {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   text-transform: uppercase;
 }
 .monthly-podcast {
-  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
 }
-.footer-menu {
-  font-family: 'Open Sans', sans-serif;
-}
 .donate-text {
-  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
 }
 .donate-bjm {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   font-weight: 700;
 }
 .copyright-privacy {
   color: #a19159;
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
 }
 .copyright-privacy a {
   color: #a19159;
@@ -5033,6 +5040,7 @@ footer {
 }
 /* ...................................the slider*/
 .hero-slider {
+  margin-top: 18px;
   height: 500px;
   border: 1px solid #000;
 }
@@ -5047,19 +5055,18 @@ footer {
   margin-right: -60px;
 }
 .news a {
-  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: 100;
   color: #a19159;
 }
 .news .messages-news-blog {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   font-size: 35px;
   font-weight: 100;
   color: #58585b;
 }
 .news .messages-news-blog-2nd {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   font-size: 60px;
   font-weight: 100;
   text-transform: uppercase;
@@ -5067,14 +5074,13 @@ footer {
 }
 /* ...................................the featured product*/
 .feature-product .product-title {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
 }
 .feature-product .product-endorsement {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   font-style: italic;
 }
 .feature-product .product-endorser-title {
-  font-family: 'Open Sans', sans-serif;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
@@ -5084,7 +5090,7 @@ footer {
 .feature-product .product-link {
   width: 190px;
   color: #fff;
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   text-transform: uppercase;
   background: #000;
 }
@@ -5093,7 +5099,7 @@ footer {
 }
 .feature-product .other-products {
   width: 280px;
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   text-transform: uppercase;
   background: #eee;
 }
@@ -5107,7 +5113,7 @@ footer {
 /* ...................................the facebook*/
 .facebook {
   color: #a19159;
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   font-size: ;
 }
 .facebook .facebook-borders {
@@ -5120,22 +5126,19 @@ footer {
   border-left: 1px solid #000;
 }
 /* ...................................the house of generals*/
-.house-generals {
-  font-family: 'Open Sans', sans-serif;
-}
 .house-generals .generals-heading {
   margin-bottom: 27px;
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   border-bottom: 1px solid #000;
   text-transform: uppercase;
 }
 .house-generals .learn-more {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
   text-transform: uppercase;
 }
 /* ...................................the Q&A*/
 .q-and-a {
-  font-family: 'Crimson', serif;
+  font-family: 'Crimson Text', serif;
 }
 .q-and-a .questions {
   border-top: 1px solid #000;
@@ -5144,6 +5147,31 @@ footer {
 .q-and-a .answers {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+}
+/* ...................................the invite*/
+.invite-bill h2 {
+  padding: 25px 0 10px;
+}
+.itineary {
+  padding-top: 52px;
+}
+.itineary-contact {
+  color: #58585b;
+  font-family: ;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.itineary-contact .contact-details {
+  color: #000;
+  font-size: 24px;
+}
+.itineary-contact input[type="text"] {
+  width: 300px;
+  height: 30px;
+  background: #58585b;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 /* ...................................the end*/
 img.size-auto,

@@ -2,9 +2,27 @@
 Project Name: Bill Johnson Ministries
 */
 
+body {
+	font-family: @sansFont;
+	font-size: 16px;
+}
+
+h1 {
+	color: @yellow;
+	font-family: @serifFont;
+	font-size: 40px;
+	font-weight: 100;
+}
+
+h2 {
+	font-family: @serifFont;
+	font-size: 24px;
+	font-weight: 100;
+}
+
 /* ...................................the header*/
 header {
-	font-family: @serifFontFamily;
+	font-family: @serifFont;
 	font-size: 22px;
 
 	.navbar-inner {
@@ -34,45 +52,37 @@ header {
 
 /* ...................................the footer*/
 
-footer {
-	font-family: @sansFontFamily2;
-	
-}
-
 .footer-top {
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
 }
 
 .newsletter {
-	font-family: @serifFontFamily;
+	font-family: @serifFont;
 	text-transform: uppercase;
 }
 
 .monthly-podcast {
-	font-family: @sansFontFamily2;
 	text-transform: uppercase;
 }
 
 .footer-menu {
-	font-family: @sansFontFamily2;
 }
 
 .donate-text {
 	//color: ;
-	font-family: @sansFontFamily2;
 	//font-size: ;
 	text-transform: uppercase;
 }
 
 .donate-bjm {
-	font-family: @serifFontFamily;
+	font-family: @serifFont;
 	font-weight: 700;
 }
 
 .copyright-privacy {
 	color: @yellow;
-	font-family: @serifFontFamily;
+	font-family: @serifFont;
 	//font-size:;
 
 	 a {
@@ -84,6 +94,7 @@ footer {
 /* ...................................the slider*/
 
 .hero-slider {
+	margin-top: 18px;
 	height: 500px;
 	border: 1px solid #000;
 }
@@ -104,21 +115,20 @@ footer {
 	}
 
 	a{
-		font-family: @sansFontFamily2;
 		font-size: 18px;
 		font-weight: 100;
 		color: @yellow;
 	}
 
 	.messages-news-blog {
-		font-family: @serifFontFamily;
+		font-family: @serifFont;
 		font-size: 35px;
 		font-weight: 100;
 		color: @gray;
 	}
 
 	.messages-news-blog-2nd{
-		font-family: @serifFontFamily;
+		font-family: @serifFont;
 		font-size: 60px;
 		font-weight: 100;
 		text-transform: uppercase;
@@ -135,18 +145,17 @@ footer {
 	}	
 
 	.product-title {
-		font-family: @serifFontFamily;
+		font-family: @serifFont;
 		//font-size: ;
 	}
 
 	.product-endorsement {
-		font-family: @serifFontFamily;
+		font-family: @serifFont;
 		//font-size: ;
 		font-style: italic;
 	}
 
 	.product-endorser-title {
-		font-family: @sansFontFamily2;
 		//font-size: ;
 		border-top: 1px solid #000;
 		border-bottom: 1px solid #000;
@@ -159,7 +168,7 @@ footer {
 	.product-link {
 		width: 190px;
 		color: #fff;
-		font-family: @serifFontFamily;
+		font-family: @serifFont;
 		//font-size: ;
 		text-transform: uppercase;
 		background: #000;
@@ -170,7 +179,7 @@ footer {
 
 	.other-products {
 		width: 280px;
-		font-family: @serifFontFamily;
+		font-family: @serifFont;
 		//font-size: ;
 		text-transform: uppercase;
 		background: #eee;
@@ -197,7 +206,7 @@ footer {
 
 .facebook {
 	color: @yellow;
-	font-family: @serifFontFamily;
+	font-family: @serifFont;
 	font-size: ;
 
 	.facebook-borders {
@@ -216,19 +225,18 @@ footer {
 
 .house-generals {
 	//color: ;
-	font-family: @sansFontFamily2;
 	//font-size: ;
 
 	.generals-heading {
 		margin-bottom: 27px;
-		font-family: @serifFontFamily;
+		font-family: @serifFont;
 		//font-size: ;
 		border-bottom: 1px solid #000;
 		text-transform: uppercase;
 	}
 
 	.learn-more {
-		font-family: @serifFontFamily;
+		font-family: @serifFont;
 		//font-size: ;
 		text-transform: uppercase;
 		//background: ;
@@ -240,7 +248,7 @@ footer {
 
 .q-and-a {
 	//color: ;
-	font-family: @serifFontFamily;
+	font-family: @serifFont;
 	//font-size: ;
 
 	.questions {
@@ -253,6 +261,41 @@ footer {
 		border-bottom: 1px solid #000;
 	}
 }
+
+/* ...................................the invite*/
+
+.invite-bill {
+	h2 {
+		padding: 25px 0 10px;
+	}
+}
+
+.itineary {
+	padding-top: 52px;
+}
+.itineary-contact {
+	color: @gray;
+	font-family: ;
+	font-size: 12px;
+	text-transform: uppercase;
+
+	.contact-details {
+		color: #000;
+		font-size: 24px;
+	}
+
+	input[type="text"] {
+		width: 300px;
+		height: 30px;
+		background: @gray;
+		//#gradient > .vertical(#ffffff, #f6f6f6);
+		.border-radius(0);
+	}
+}
+
+
+
+
 
 /* ...................................the end*/
 

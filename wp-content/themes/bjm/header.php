@@ -28,7 +28,7 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 		<!-- Google Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700italic,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic|Open+Sans:300italic,400italic,600italic,700italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
 
     	<!-- Le fav and touch icons -->
     	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
