@@ -51,7 +51,7 @@
 
 		<header>
 
-		<div class="navbar navbar-static-top">
+		<div class="navbar navbar-static-top top-menu">
 				<div class="container bethel-menu">
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
       			<span class="icon-bar"></span>

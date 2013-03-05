@@ -4992,11 +4992,14 @@ header {
   font-family: 'Crimson Text', serif;
   font-size: 22px;
 }
-header .navbar-inner {
-  border: none;
+header .top-menu {
+  margin-bottom: -5px;
 }
 header .bethel-menu {
   border-bottom: 1px solid #a19159;
+}
+header .bethel-menu .nav-collapse {
+  margin-left: 108px;
 }
 header .bethel-menu .nav > li > a {
   color: #a19159;
@@ -5009,32 +5012,156 @@ header .bill-menu {
 }
 header .bill-menu .nav > li > a {
   color: #413f41;
-  vertical-align: text-bottom;
 }
 /* ...................................the footer*/
-.footer-top {
+footer {
+  color: #58585b;
+}
+footer a {
+  color: #58585b;
+}
+footer .footer-top {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+  padding-top: 53px;
+  padding-bottom: 57px;
 }
-.newsletter {
+footer .newsletter {
+  padding-bottom: 4px;
   font-family: 'Crimson Text', serif;
+  font-size: 18px;
   text-transform: uppercase;
 }
-.monthly-podcast {
+footer .monthly-podcast {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  line-height: 14px;
   text-transform: uppercase;
 }
-.donate-text {
-  text-transform: uppercase;
+footer .email-signup input[type="text"] {
+  width: 186px;
+  height: 30px;
+  margin: 0;
+  color: #999999;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  border-color: #58585b;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
-.donate-bjm {
+footer .email-signup button[type="submit"] {
+  width: 123px;
+  height: 35px;
+  margin: 15px 20px 0 0;
+  color: #58585b;
   font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  border-color: #e2e2e2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+footer .footer-menu {
+  color: #58585b;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+}
+footer .footer-menu li {
+  margin-bottom: 10px;
+}
+footer .donate-text {
+  margin-bottom: 7px;
+  color: #58585b;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+footer .donate-bjm {
+  margin-bottom: 8px;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+footer input[type="text"] {
+  width: 220px;
+  height: 30px;
+  color: #999999;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  border-color: #58585b;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+footer button[type="submit"] {
+  width: 100px;
+  height: 35px;
+  color: #58585b;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  border-color: #e2e2e2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+footer .paypal-btn {
+  width: 80px;
+  padding: 0 10px;
+  color: #58585b;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-style: italic;
   font-weight: 700;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  border-color: #e2e2e2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
-.copyright-privacy {
+footer .paypal-btn span {
+  display: block;
+  position: relative;
+  height: 13px;
+  top: -5px;
+}
+footer .copyright-privacy {
+  padding: 30px 0 100px;
   color: #a19159;
   font-family: 'Crimson Text', serif;
+  font-size: 15px;
 }
-.copyright-privacy a {
+footer .copyright-privacy a {
   color: #a19159;
   padding-right: 30px;
 }
@@ -5045,19 +5172,27 @@ header .bill-menu .nav > li > a {
   border: 1px solid #000;
 }
 /* ...................................the news*/
-.news ul {
-  list-style-image: url('/img/');
-}
-.news .life-messages {
-  margin-right: -20px;
-}
-.news .good-news {
-  margin-right: -60px;
+.news {
+  margin-top: 25px;
 }
 .news a {
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 400;
   color: #a19159;
+}
+.news ul {
+  margin-top: 40px;
+  margin-left: 18px;
+  list-style-image: url('../img/yellow-arrow.png');
+}
+.news ul h3 {
+  line-height: 27px;
+}
+.news .right-border {
+  margin-left: 50px;
+  margin-right: 0;
+  padding-left: 49px;
+  border-left: 1px solid #000;
 }
 .news .messages-news-blog {
   font-family: 'Crimson Text', serif;

@@ -21,7 +21,7 @@ get_header(); ?>
 <div class="news">
 	<div class="container">
 		<div class="row">
-			<div class="span5 life-messages">
+			<div class="span4">
 
 				<h3 class="messages-news-blog">Life</h3><h3 class="messages-news-blog-2nd">Messages</h3>
 				<ul>
@@ -38,7 +38,7 @@ get_header(); ?>
 				<!-- !Life Messages -->
 
 			</div>
-			<div class="span4 good-news">
+			<div class="span3 offset1 right-border">
 
 				<h3 class="messages-news-blog">Good</h3><h3 class="messages-news-blog-2nd">News</h3>
 				<ul>
@@ -55,7 +55,7 @@ get_header(); ?>
 				<!-- !Good News -->
 
 			</div>
-			<div class="span3">
+			<div class="span3 right-border">
 
 				<h3 class="messages-news-blog">Bill's </h3><h3 class="messages-news-blog-2nd">Blog</h3>
 				<ul>
