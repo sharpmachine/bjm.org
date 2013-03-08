@@ -613,6 +613,21 @@ ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+ul.inline > li,
+ol.inline > li {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 dl {
   margin-bottom: 20px;
 }
@@ -4855,7 +4870,7 @@ a.badge:hover {
   width: 100%;
   position: relative;
 }
-.carousel .item {
+.carousel-inner > .item {
   display: none;
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
@@ -4863,38 +4878,39 @@ a.badge:hover {
   -o-transition: 0.6s ease-in-out left;
   transition: 0.6s ease-in-out left;
 }
-.carousel .item > img {
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
   display: block;
   line-height: 1;
 }
-.carousel .active,
-.carousel .next,
-.carousel .prev {
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
   display: block;
 }
-.carousel .active {
+.carousel-inner > .active {
   left: 0;
 }
-.carousel .next,
-.carousel .prev {
+.carousel-inner > .next,
+.carousel-inner > .prev {
   position: absolute;
   top: 0;
   width: 100%;
 }
-.carousel .next {
+.carousel-inner > .next {
   left: 100%;
 }
-.carousel .prev {
+.carousel-inner > .prev {
   left: -100%;
 }
-.carousel .next.left,
-.carousel .prev.right {
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
   left: 0;
 }
-.carousel .active.left {
+.carousel-inner > .active.left {
   left: -100%;
 }
-.carousel .active.right {
+.carousel-inner > .active.right {
   left: 100%;
 }
 .carousel-control {
@@ -4921,11 +4937,34 @@ a.badge:hover {
   left: auto;
   right: 15px;
 }
-.carousel-control:hover {
+.carousel-control:hover,
+.carousel-control:focus {
   color: #ffffff;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
+}
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+}
+.carousel-indicators li {
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+}
+.carousel-indicators .active {
+  background-color: #fff;
 }
 .carousel-caption {
   position: absolute;
@@ -4973,19 +5012,43 @@ a.badge:hover {
 Project Name: Bill Johnson Ministries
 */
 body {
+  color: #58585b;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+}
+body a {
+  color: #58585b;
 }
 h1 {
   color: #a19159;
   font-family: 'Crimson Text', serif;
   font-size: 40px;
-  font-weight: 100;
 }
 h2 {
   font-family: 'Crimson Text', serif;
   font-size: 24px;
-  font-weight: 100;
+}
+button[type="submit"] {
+  width: 123px;
+  height: 35px;
+  margin: 15px 0px 0 0;
+  color: #58585b;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  border-color: #e2e2e2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 /* ...................................the header*/
 header {
@@ -4995,23 +5058,40 @@ header {
 header .top-menu {
   margin-bottom: -5px;
 }
-header .bethel-menu {
+.bethel-menu .container {
+  padding-bottom: 20px;
   border-bottom: 1px solid #a19159;
 }
-header .bethel-menu .nav-collapse {
+.bethel-menu .nav-collapse {
   margin-left: 108px;
 }
-header .bethel-menu .nav > li > a {
+.bethel-menu .nav {
+  display: none;
+  height: 40px;
+}
+.bethel-menu .bethel-menu-toggle {
+  position: relative;
+  top: -10px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.bethel-menu .nav > li > a {
   color: #a19159;
   font-style: italic;
   font-weight: 100;
 }
-header .bill-menu {
+.bill-menu {
   text-transform: uppercase;
   border-bottom: 1px solid #a19159;
 }
-header .bill-menu .nav > li > a {
+.bill-menu .nav > li > a {
   color: #413f41;
+}
+.bill-menu .nav {
+  margin-top: 10px;
 }
 /* ...................................the footer*/
 footer {
@@ -5052,26 +5132,7 @@ footer .email-signup input[type="text"] {
   border-radius: 0;
 }
 footer .email-signup button[type="submit"] {
-  width: 123px;
-  height: 35px;
-  margin: 15px 20px 0 0;
-  color: #58585b;
-  font-family: 'Crimson Text', serif;
-  font-size: 18px;
-  font-weight: 900;
-  text-transform: uppercase;
-  background-color: #f3f3f3;
-  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
-  border-color: #e2e2e2;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  margin-right: 20px;
 }
 footer .footer-menu {
   color: #58585b;
@@ -5096,7 +5157,7 @@ footer .donate-bjm {
   font-weight: 500;
 }
 footer input[type="text"] {
-  width: 220px;
+  width: 205px;
   height: 30px;
   color: #999999;
   font-family: 'Open Sans', sans-serif;
@@ -5107,26 +5168,9 @@ footer input[type="text"] {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-footer button[type="submit"] {
+footer .donate button[type="submit"] {
   width: 100px;
-  height: 35px;
-  color: #58585b;
-  font-family: 'Crimson Text', serif;
-  font-size: 18px;
-  font-weight: 900;
-  text-transform: uppercase;
-  background-color: #f3f3f3;
-  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
-  border-color: #e2e2e2;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  margin-top: 0;
 }
 footer .paypal-btn {
   width: 80px;
@@ -5208,51 +5252,89 @@ footer .copyright-privacy a {
   color: #58585b;
 }
 /* ...................................the featured product*/
+.feature-product .shadow {
+  margin: 65px 0 85px;
+}
+.feature-product .product-image {
+  margin: 50px 0 35px;
+}
 .feature-product .product-title {
+  margin: 62px 0 27px;
   font-family: 'Crimson Text', serif;
+  font-size: 50px;
+  line-height: 82px;
 }
 .feature-product .product-endorsement {
   font-family: 'Crimson Text', serif;
+  font-size: 30px;
   font-style: italic;
+  line-height: 30px;
 }
 .feature-product .product-endorser-title {
+  margin-top: 45px;
+  font-size: 18px;
+  line-height: 52px;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
 .feature-product .product-endorser {
-  font-weight: 900;
+  font-weight: 700;
+}
+.feature-product .featured-product-buttons {
+  margin: 60px 0 77px;
+  font-family: 'Crimson Text', serif;
+  font-size: 25px;
+  font-weight: 100;
+  line-height: 26px;
+  text-transform: uppercase;
 }
 .feature-product .product-link {
   width: 190px;
+  margin-right: 38px;
+  padding: 5px 25px;
   color: #fff;
-  font-family: 'Crimson Text', serif;
-  text-transform: uppercase;
-  background: #000;
+  text-align: center;
+  background: #999999;
+  border: 1px solid #000;
 }
 .feature-product .product-link a {
   color: #fff;
 }
 .feature-product .other-products {
-  width: 280px;
-  font-family: 'Crimson Text', serif;
-  text-transform: uppercase;
+  width: 282px;
+  color: #000;
+  padding: 5px 25px;
+  text-align: center;
   background: #eee;
+  border: 1px solid #000;
 }
 .feature-product .other-products a {
   color: #000;
 }
 /* ...................................the videos*/
+.video {
+  margin-bottom: 80px;
+}
+.video .video-margins {
+  margin-left: 0px;
+}
 .video .video-layout:last-child {
   padding-top: 25px;
 }
 /* ...................................the facebook*/
 .facebook {
+  padding: 90px 0;
   color: #a19159;
   font-family: 'Crimson Text', serif;
-  font-size: ;
+  font-size: 18px;
+  line-height: 21px;
+}
+.facebook .bill-photo {
+  margin-right: -10px;
+  padding: 0 0px 0 10px;
 }
 .facebook .facebook-borders {
-  padding: 30px;
+  padding: 30px 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
@@ -5261,52 +5343,156 @@ footer .copyright-privacy a {
   border-left: 1px solid #000;
 }
 /* ...................................the house of generals*/
+.house-generals {
+  margin: 65px 0 78px;
+  font-size: 12px;
+  line-height: 20px;
+  background: url('../img/house-of-generals-bk.png');
+}
+.house-generals .opacity {
+  background: rgba(255, 255, 255, 0.65);
+}
 .house-generals .generals-heading {
-  margin-bottom: 27px;
+  margin: 38px 40px 25px;
   font-family: 'Crimson Text', serif;
-  border-bottom: 1px solid #000;
+  font-size: 24px;
+  line-height: 24px;
   text-transform: uppercase;
+  border-bottom: 1px solid #000;
+}
+.house-generals p {
+  margin: 0 40px 20px;
 }
 .house-generals .learn-more {
+  width: 135px;
+  margin: 0 40px 24px;
+  padding: 6px 0;
   font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
+  border: 1px solid #000000;
 }
-/* ...................................the Q&A*/
-.q-and-a {
-  font-family: 'Crimson Text', serif;
+/* ...................................the schedule*/
+.schedule img {
+  margin-top: 18px;
 }
-.q-and-a .questions {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.q-and-a .answers {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+.schedule .bethel-schedule {
+  height: 100%;
+  padding: 20px 0;
 }
 /* ...................................the invite*/
+.invite-bill {
+  color: #414042;
+  font-size: 16px;
+  line-height: 22px;
+}
 .invite-bill h2 {
-  padding: 25px 0 10px;
+  margin: 40px 0 25px;
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  font-size: 36px;
 }
 .itineary {
-  padding-top: 52px;
+  margin: 70px 0 80px;
+  padding: 140px 0 190px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.itineary h1 {
+  padding-bottom: 11px;
+  font-size: 60px;
 }
 .itineary-contact {
   color: #58585b;
-  font-family: ;
   font-size: 12px;
+  line-height: 20px;
   text-transform: uppercase;
 }
 .itineary-contact .contact-details {
   color: #000;
   font-size: 24px;
+  padding-bottom: 38px;
 }
 .itineary-contact input[type="text"] {
-  width: 300px;
+  width: 286px;
   height: 30px;
-  background: #58585b;
+  border: 1px solid #58585b;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+}
+/* ...................................the Q&A*/
+.q-and-a {
+  margin-bottom: 85px;
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.q-and-a .questions {
+  padding: 42px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.q-and-a .answers {
+  padding: 42px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+/* ...................................the blog page*/
+.blog {
+  color: #414042;
+}
+.blog .image {
+  margin-top: 50px;
+}
+.blog .blog-title {
+  margin: 30px 0 2px;
+  font-family: 'Crimson Text', serif;
+  font-size: 36px;
+}
+.blog .blog-author {
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  line-height: 18px;
+}
+.blog .uppercase {
+  margin: 23px 0 20px;
+  color: #a19159;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.blog .uppercase a {
+  color: #a19159;
+}
+.blog .bold {
+  font-weight: 600;
+}
+.blog .underline {
+  text-decoration: underline;
+}
+.blog .the-excerpt {
+  font-size: 16px;
+  line-height: 22px;
+}
+.read-more {
+  margin-top: 23px;
+  color: #a19159;
+  text-decoration: underline;
+}
+.read-more a {
+  color: #a19159;
+}
+/* ...................................the sidebar*/
+#sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rss {
+  border: 1px solid #58585b;
 }
 /* ...................................the end*/
 img.size-auto,
@@ -5355,6 +5541,9 @@ img.aligncenter {
 a.qa-aname {
   display: block;
   margin-bottom: 50px;
+}
+h4 {
+  font-size: 24px;
 }
 /* =Comments
 -------------------------------------------------------------- */
@@ -5552,24 +5741,6 @@ h3#reply-title {
 #entry-author-info #author-description {
   float: left;
   margin: 0 0 0 104px;
-}
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
-.invisible {
-  visibility: hidden;
-}
-.affix {
-  position: fixed;
 }
 /* Hash Grid - Remove before moving to production
 -------------------------------------------------------------- */

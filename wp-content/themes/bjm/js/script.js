@@ -19,6 +19,14 @@ jQuery(document).ready(function($) {
       }
     ]
   });
+
+	 $(".bethel-menu-toggle").click(function(){
+	 	$(".bethel-menu .nav").slideToggle();
+	 });
+
+	 $("a.close-menu").click(function(){
+	 	$(".bethel-menu .nav").slideUp();
+	 });
 	
 });
 

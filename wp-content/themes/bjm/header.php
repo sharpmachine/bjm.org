@@ -51,8 +51,8 @@
 
 		<header>
 
-		<div class="navbar navbar-static-top top-menu">
-				<div class="container bethel-menu">
+		<div class="navbar navbar-static-top bethel-menu">
+				<div class="container">
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
       			<span class="icon-bar"></span>
       			<span class="icon-bar"></span>
@@ -62,8 +62,11 @@
       			<ul class="nav ">
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
       			</ul>
+							
 					</div><!--/.nav-collapse -->
+					
         </div>
+        <div class="bethel-menu-toggle">Bethel Menu</div>
     </div>
 
     <div class="navbar navbar-static-top ">
@@ -78,9 +81,12 @@
       			<ul class="nav">
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
       			</ul>
-      			<a class="brand" href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a>
-      			<a class="brand" href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a>
-      			<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a>
+      			<ul class="social-icons inline pull-right ">
+      				<li><a href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
+      				<li><a href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
+      				<li><a href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>
+      			</ul>
+      			
 					</div><!--/.nav-collapse -->
         </div>
     </div>

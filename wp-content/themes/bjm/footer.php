@@ -40,7 +40,7 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>	
 						
 					</div>
-					<div class="span3">
+					<div class="span3 donate">
 
 						<div class="donate-text">
 							<div class="donate-bjm">
@@ -51,7 +51,7 @@
 
 						<form action="" method=POST>
 							<input type='text' size='6' name='amount' placeholder='Amount to give'>
-							<input type="submit" value="Submit" class="submit-donate pull-right">
+							<button type="submit" value="Submit" class="btn pull-right">Submit</button>
 						</form>
 
 						<!-- paypal -->

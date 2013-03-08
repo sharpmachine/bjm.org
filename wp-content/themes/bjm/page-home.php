@@ -11,7 +11,38 @@ get_header(); ?>
 		<div class="row">
 			<div class="span12">
 
-				Hero Slider
+				<div id="myCarousel" class="carousel slide">
+					<ol class="carousel-indicators">
+				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				    <li data-target="#myCarousel" data-slide-to="1"></li>
+				    <li data-target="#myCarousel" data-slide-to="2"></li>
+				  </ol>
+					<div class="carousel-inner">
+						<div class="item">
+							<img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>First Thumbnail label</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							</div>
+						</div>
+						<div class="item">
+							<img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Second Thumbnail label</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							</div>
+						</div>
+						<div class="item active">
+							<img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
+							<div class="carousel-caption">
+								<h4>Third Thumbnail label</h4>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							</div>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+				</div>
 
 			</div>
 		</div>
@@ -77,7 +108,7 @@ get_header(); ?>
 </div>
 
 <div class="feature-product">
-	<div class="container">
+	<div class="container shadow">
 		<div class="row">
 			<div class="span4">
 
@@ -92,8 +123,7 @@ get_header(); ?>
 					<span class="product-endorser">- <?php the_field('endorser'); ?></span>
 					// <?php the_field('endorser_title'); ?>
 				</div>
-				<div class="product-link"><a href="<?php the_field('product_link'); ?>">Purchase</a></div>
-				<div class="other-products"><a href="<?php the_field(''); ?>">Other Products</a></div>
+				<div class="featured-product-buttons"><a href="<?php the_field('product_link'); ?>" class="product-link">Purchase</a><a href="<?php the_field(''); ?>" class="other-products">Other Products</a></div>
 
 				<!-- !Featured Product -->
 
@@ -113,13 +143,13 @@ get_header(); ?>
 				?>
 
 				<?php if(get_field('vimeo_id')): ?>
-				<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="600" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 				<?php endif; ?>
 
 				<?php endwhile; ?>
 
 			</div>
-			<div class="span4">
+			<div class="span3 video-margins">
 
 				<?php query_posts('showposts=2'); ?>
 					<?php while (have_posts()) : the_post();
@@ -143,8 +173,15 @@ get_header(); ?>
 <div class="facebook">
 	<div class="container">
 		<div class="row">
-			<div class="span12 facebook-borders">
+
+			<div class="span4 bill-photo">
+
+				<img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson">
 				
+			</div>
+			<div class="span8 facebook-borders">
+				
+				<img src="<?php bloginfo('template_directory'); ?>/img/big-facebook.png" alt="Facebook">
 				<div id="lifestream" class="facebook-status">&nbsp;</div>
 
 				<!-- !Facebook -->
@@ -155,12 +192,12 @@ get_header(); ?>
 </div>
 
 <div class="house-generals">
-	<div class="container">
+	<div class="container background">
 		<div class="row">
 			<div class="span8">
 			
 			</div>
-			<div class="span4">
+			<div class="span4 opacity">
 
 				<div class="generals-heading">House of Generals</div>
 
@@ -192,7 +229,7 @@ get_header(); ?>
 				<?php wp_reset_query(); ?>
 
 			</div>
-			<div class="span3">
+			<div class="span3 ">
 
 				Q&A
 

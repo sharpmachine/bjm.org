@@ -3,21 +3,40 @@ Project Name: Bill Johnson Ministries
 */
 
 body {
+	color: @gray;
 	font-family: @sansFont;
 	font-size: 16px;
+
+	a {
+		color: @gray;
+	}
 }
 
 h1 {
 	color: @yellow;
 	font-family: @serifFont;
 	font-size: 40px;
-	font-weight: 100;
+	// font-weight: 100;
 }
 
 h2 {
 	font-family: @serifFont;
 	font-size: 24px;
-	font-weight: 100;
+	// font-weight: 100;
+}
+
+button[type="submit"] {
+	width: 123px;
+	height: 35px;
+	margin: 15px 0px 0 0;
+	color: @gray;
+	font-family: @serifFont;
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	#gradient > .vertical(#ffffff, #e0e0e0);
+	border-color: #e2e2e2;
+	.border-radius(0);
 }
 
 /* ...................................the header*/
@@ -28,29 +47,51 @@ header {
 	.top-menu {
 		margin-bottom: -5px;
 	}
+}
 
-	.bethel-menu 
-	 {
-	 	border-bottom: 1px solid @yellow;
+.bethel-menu {
 
-	 	.nav-collapse {
-	 		margin-left: 108px;
-	 	}
+	.container {
+		padding-bottom: 20px;
+		border-bottom: 1px solid @yellow;
+	}
+ 	
+ 	.nav-collapse {
+ 		margin-left: 108px;
+ 	}
 
-	 	.nav > li > a{
-			color: @yellow;
-			font-style: italic;
-			font-weight: 100;
-	 	}
+ 	.nav {
+ 		display: none;
+ 		height: 40px;
+ 	}
+
+ 	.bethel-menu-toggle {
+ 		position: relative;
+ 		top: -10px;
+ 		width: 200px;
+ 		margin: 0 auto;
+ 		text-align: center;
+ 		background-color: @white;
+ 		cursor: pointer;
+ 	}
+
+ 	.nav > li > a{
+		color: @yellow;
+		font-style: italic;
+		font-weight: 100;
+ 	}
+}
+
+.bill-menu {
+	text-transform: uppercase;
+	border-bottom: 1px solid @yellow;
+
+	.nav > li > a {
+		color: @grayDarker;
 	}
 
-	.bill-menu {
-		text-transform: uppercase;
-		border-bottom: 1px solid @yellow;
-
-		.nav > li > a {
-			color: @grayDarker;
-		}
+	.nav {
+		margin-top: 10px;
 	}
 }
 
@@ -98,17 +139,7 @@ footer {
 		}
 
 		button[type="submit"] {
-			width: 123px;
-			height: 35px;
-			margin: 15px 20px 0 0;
-			color: @gray;
-			font-family: @serifFont;
-			font-size: 18px;
-			font-weight: 900;
-			text-transform: uppercase;
-			#gradient > .vertical(#ffffff, #e0e0e0);
-			border-color: #e2e2e2;
-			.border-radius(0);
+			margin-right: 20px;
 		}
 	}
 
@@ -139,7 +170,7 @@ footer {
 	}
 
 	input[type="text"] {
-		width: 220px;
+		width: 205px;
 		height: 30px;
 		color: @grayLight;
 		font-family: @sansFont;
@@ -148,19 +179,14 @@ footer {
 		border-color: @gray;
 		.border-radius(0);
 	}
-
-	button[type="submit"] {
-		width: 100px;
-		height: 35px;
-		color: @gray;
-		font-family: @serifFont;
-		font-size: 18px;
-		font-weight: 900;
-		text-transform: uppercase;
-		#gradient > .vertical(#ffffff, #e0e0e0);
-		border-color: #e2e2e2;
-		.border-radius(0);
+	
+	.donate {
+		button[type="submit"] {
+			width: 100px;
+			margin-top: 0;
+		}
 	}
+	
 
 	.paypal-btn {
 		width: 80px;
@@ -252,49 +278,72 @@ footer {
 
 .feature-product {
 
+	.shadow {
+		margin: 65px 0 85px;
+		//.box-shadow(inset 0px 0px 55px #999);
+	}
+
 	.product-image {
-		
-	}	
+		margin: 50px 0 35px;
+	}
 
 	.product-title {
+		margin: 62px 0 27px;
 		font-family: @serifFont;
-		//font-size: ;
+		font-size: 50px;
+		line-height: 82px;
 	}
 
 	.product-endorsement {
 		font-family: @serifFont;
-		//font-size: ;
+		font-size: 30px;
 		font-style: italic;
+		line-height: 30px;
 	}
 
 	.product-endorser-title {
-		//font-size: ;
+		margin-top: 45px;
+		font-size: 18px;
+		line-height: 52px;
 		border-top: 1px solid #000;
 		border-bottom: 1px solid #000;
 	}
 
 	.product-endorser {
-		font-weight: 900;
+		font-weight: 700;
+	}
+
+	.featured-product-buttons {
+		margin: 60px 0 77px;
+		font-family: @serifFont;
+		font-size: 25px;
+		font-weight: 100;
+		line-height: 26px;
+		text-transform: uppercase;
 	}
 
 	.product-link {
 		width: 190px;
+		margin-right: 38px;
+		padding: 5px 25px;
 		color: #fff;
-		font-family: @serifFont;
-		//font-size: ;
-		text-transform: uppercase;
-		background: #000;
+		text-align: center;
+		background: @grayLight;
+		border: 1px solid #000;
+
 		a {
 			color: #fff;
 		}
 	}
 
 	.other-products {
-		width: 280px;
-		font-family: @serifFont;
-		//font-size: ;
-		text-transform: uppercase;
+		width: 282px;
+		color: #000;
+		padding: 5px 25px;
+		text-align: center;
 		background: #eee;
+		border: 1px solid #000;
+
 		a {
 			color: #000;
 		}
@@ -304,27 +353,40 @@ footer {
 /* ...................................the videos*/
 
 .video {
+	margin-bottom: 80px;
+
+	.video-margins {
+		margin-left: 0px;
+	}
 
 	.video-layout {
 		&:last-child {
 			padding-top: 25px;	
 		}
-		
 	}
-
 }
 
 /* ...................................the facebook*/
 
 .facebook {
+	padding: 90px 0;
 	color: @yellow;
 	font-family: @serifFont;
-	font-size: ;
+	font-size: 18px;
+	line-height: 21px;
+
+	.bill-photo {
+		margin-right: -10px;
+		padding: 0 0px 0 10px;
+	}
 
 	.facebook-borders {
-		padding: 30px;
+		padding: 30px 0;
 		border-top: 1px solid #000;
 		border-bottom: 1px solid #000;
+		//background: url('../img/facebook-quotes.png');
+		// background: #fff;
+		// opacity:0.1;
 	}
 
 	.facebook-status {
@@ -336,77 +398,195 @@ footer {
 /* ...................................the house of generals*/
 
 .house-generals {
-	//color: ;
-	//font-size: ;
+	margin: 65px 0 78px;
+	font-size: 12px;
+	line-height: 20px;
+	background: url('../img/house-of-generals-bk.png');
+
+	.opacity {
+		background: rgba(255,255,255,0.65);
+	}
 
 	.generals-heading {
-		margin-bottom: 27px;
+		margin: 38px 40px 25px;
 		font-family: @serifFont;
-		//font-size: ;
-		border-bottom: 1px solid #000;
+		font-size: 24px;
+		line-height: 24px;
 		text-transform: uppercase;
+		border-bottom: 1px solid #000;
+	}
+
+	p {
+		margin: 0 40px 20px;
 	}
 
 	.learn-more {
+		width: 135px;
+		margin: 0 40px 24px;
+		padding: 6px 0;
 		font-family: @serifFont;
-		//font-size: ;
+		font-size: 18px;
+		line-height: 18px;
+		text-align: center;
 		text-transform: uppercase;
-		//background: ;
+		border: 1px solid @black;
 	}
 
 }
 
-/* ...................................the Q&A*/
+/* ...................................the schedule*/
 
-.q-and-a {
-	//color: ;
-	font-family: @serifFont;
-	//font-size: ;
-
-	.questions {
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #000;
+.schedule {
+	img {
+		margin-top: 18px;
 	}
 
-	.answers {
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #000;
+	.bethel-schedule {
+		height: 100%;
+		padding: 20px 0;
 	}
 }
 
 /* ...................................the invite*/
 
 .invite-bill {
+	color: @fontGray;
+	font-size: 16px;
+	line-height: 22px;
+
 	h2 {
-		padding: 25px 0 10px;
+		margin: 40px 0 25px;
+		color: @fontGray;
+		font-family: @serifFont;
+		font-size: 36px;
 	}
 }
 
 .itineary {
-	padding-top: 52px;
+	margin: 70px 0 80px;
+	padding: 140px 0 190px;
+	font-size: 16px;
+	line-height: 22px;
+
+	h1 {
+		padding-bottom: 11px;
+		font-size: 60px;
+	}
+
+	.itineary-text {
+		
+	}
 }
+
 .itineary-contact {
 	color: @gray;
-	font-family: ;
 	font-size: 12px;
+	line-height: 20px;
 	text-transform: uppercase;
 
 	.contact-details {
 		color: #000;
 		font-size: 24px;
+		padding-bottom: 38px;
 	}
 
 	input[type="text"] {
-		width: 300px;
+		width: 286px;
 		height: 30px;
-		background: @gray;
-		//#gradient > .vertical(#ffffff, #f6f6f6);
+		border: 1px solid @gray;
 		.border-radius(0);
 	}
 }
 
+/* ...................................the Q&A*/
 
+.q-and-a {
+	margin-bottom: 85px;
+	font-family: @serifFont;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 21px;
 
+	.questions {
+		padding: 42px 0;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+	}
+
+	.answers {
+		padding: 42px 0;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+	}
+}
+
+/* ...................................the blog page*/
+.blog {
+	color: @fontGray;
+
+	.image {
+		margin-top: 50px;
+	}
+
+	.blog-title {
+		margin: 30px 0 2px;
+		font-family: @serifFont;
+		font-size: 36px;
+	}
+
+	.blog-author {
+		font-family: @serifFont;
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.uppercase {
+		margin: 23px 0 20px;
+		color: @yellow;
+		font-size: 12px;
+		text-transform: uppercase;
+
+		a {
+			color: @yellow;
+		}
+	}
+
+	.bold {
+		font-weight: 600;
+	}
+
+	.underline {
+		text-decoration: underline;
+	}
+
+	.the-excerpt {
+		font-size: 16px;
+		line-height: 22px;
+	}
+}
+
+.read-more {
+	margin-top: 23px;
+	color: @yellow;
+	text-decoration: underline;
+
+	a {
+		color: @yellow;
+	}
+}
+
+/* ...................................the sidebar*/
+
+#sidebar {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+.rss {
+	border: 1px solid @gray;
+}
 
 
 /* ...................................the end*/
@@ -485,3 +665,4 @@ a.qa-aname {
 	display: block;
 	margin-bottom: 50px;
 }
+

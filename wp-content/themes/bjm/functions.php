@@ -428,3 +428,11 @@ function getgo_method() {
 }    
  
 add_action('wp_enqueue_scripts', 'getgo_method');
+
+
+// Modified the_excerpt from Continue Reading to Read More
+function new_excerpt_more($more) {
+       global $post;
+	return ' <a href="'. get_permalink($post->ID) . '"><p class="read-more">Read More</p></a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

@@ -25,7 +25,7 @@ get_header(); ?>
 				<div class="span12">
 						
 						<h1>Bill's itinerary is full through 2013.</h1>
-						Request for 2013 will not be considered. Thank you for understanding.
+						<div class="itineary-text">Request for 2013 will not be considered. Thank you for understanding.</div>
 
 				</div>
 			</div>
@@ -35,11 +35,9 @@ get_header(); ?>
 	<div class="itineary-contact">
 		<div class="container">
 			<div class="row">
-				<div class="span12">
+				<div class="span12 contact-details">
 
-					<div class="contact-details">
 						Contact Details
-					</div>
 
 				</div>
 			</div>
@@ -158,9 +156,9 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="row">
-				<div class="span12 invite-submit pull-right">
+				<div class="span12 invite-submit">
 					
-					<input type="submit" value="Submit">
+					<button type="submit" value="Submit" class="btn pull-right">Submit</button>
 
 				</div>
 			</div>
