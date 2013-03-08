@@ -16,13 +16,11 @@ h1 {
 	color: @yellow;
 	font-family: @serifFont;
 	font-size: 40px;
-	// font-weight: 100;
 }
 
 h2 {
 	font-family: @serifFont;
 	font-size: 24px;
-	// font-weight: 100;
 }
 
 button[type="submit"] {
@@ -93,6 +91,10 @@ header {
 	.nav {
 		margin-top: 10px;
 	}
+}
+
+.social-icons {
+	margin-top: 27px;
 }
 
 /* ...................................the footer*/
@@ -523,15 +525,18 @@ footer {
 /* ...................................the blog page*/
 .blog {
 	color: @fontGray;
+}
 
 	.image {
 		margin-top: 50px;
 	}
 
+
 	.blog-title {
 		margin: 30px 0 2px;
 		font-family: @serifFont;
 		font-size: 36px;
+		font-weight: 300;
 	}
 
 	.blog-author {
@@ -540,8 +545,12 @@ footer {
 		line-height: 18px;
 	}
 
+	.blog-page {
+			margin: 23px 0 20px;
+		}
+
 	.uppercase {
-		margin: 23px 0 20px;
+		
 		color: @yellow;
 		font-size: 12px;
 		text-transform: uppercase;
@@ -563,7 +572,7 @@ footer {
 		font-size: 16px;
 		line-height: 22px;
 	}
-}
+
 
 .read-more {
 	margin-top: 23px;
@@ -584,10 +593,63 @@ footer {
 		list-style: none;
 	}
 }
-.rss {
+.rss-subscribe {
+	margin-top: 50px;
+	padding: 7px;
+	font-family: @serifFont;
+	font-size: 25px;
+	line-height: 26px;
+	text-transform: uppercase;
 	border: 1px solid @gray;
+	.border-radius(3px);
+
+	img {
+		padding: 2px 13px;
+	}
 }
 
+.screen-reader-text {
+	display: none;
+}
+
+#searchsubmit {
+	display: none;
+}
+
+.widget_search {
+	input[type='text'] {
+		height: 32px;
+		margin-top: 10px;
+		border: 1px solid @gray;
+		.border-radius(3px);
+	}
+}
+
+.widget-title {
+	padding-top: 39px;
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 22px;
+	text-transform: uppercase;
+
+	// &:nth-child(1n+2) {
+		border-top: 1px solid @gray;
+	//}
+}
+
+#sidebar li > a {
+	color: @yellow;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 30px;
+	text-decoration: underline;
+}
+
+/* ...................................the single blog post*/
+
+.single-post {
+		margin: 10px 0 73px;
+	}
 
 /* ...................................the end*/
 

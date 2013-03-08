@@ -18,7 +18,7 @@ get_header(); ?>
 						<h2 class="blog-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<div class="blog-author">By <?php the_author_posts_link() ?></div>
 						<div class="blog-author">Posted on <?php the_time('F jS, Y') ?></div>
-						<div class="uppercase">
+						<div class="uppercase blog-page">
 							<div><span class="bold">Categroies: </span><span class="underline"><?php the_category(',&nbsp;'); ?></span></div>
 							<div><span class="bold">Tags: </span><span class="underline"><?php the_tags('',', '); ?></span></div>
 							<div class="bold underline"><?php comments_number( '0', '1', '%' ); ?>  Comments</div>

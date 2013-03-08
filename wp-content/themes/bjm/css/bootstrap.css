@@ -5093,6 +5093,9 @@ header .top-menu {
 .bill-menu .nav {
   margin-top: 10px;
 }
+.social-icons {
+  margin-top: 27px;
+}
 /* ...................................the footer*/
 footer {
   color: #58585b;
@@ -5445,35 +5448,38 @@ footer .copyright-privacy a {
 .blog {
   color: #414042;
 }
-.blog .image {
+.image {
   margin-top: 50px;
 }
-.blog .blog-title {
+.blog-title {
   margin: 30px 0 2px;
   font-family: 'Crimson Text', serif;
   font-size: 36px;
+  font-weight: 300;
 }
-.blog .blog-author {
+.blog-author {
   font-family: 'Crimson Text', serif;
   font-size: 18px;
   line-height: 18px;
 }
-.blog .uppercase {
+.blog-page {
   margin: 23px 0 20px;
+}
+.uppercase {
   color: #a19159;
   font-size: 12px;
   text-transform: uppercase;
 }
-.blog .uppercase a {
+.uppercase a {
   color: #a19159;
 }
-.blog .bold {
+.bold {
   font-weight: 600;
 }
-.blog .underline {
+.underline {
   text-decoration: underline;
 }
-.blog .the-excerpt {
+.the-excerpt {
   font-size: 16px;
   line-height: 22px;
 }
@@ -5491,8 +5497,53 @@ footer .copyright-privacy a {
   padding: 0;
   list-style: none;
 }
-.rss {
+.rss-subscribe {
+  margin-top: 50px;
+  padding: 7px;
+  font-family: 'Crimson Text', serif;
+  font-size: 25px;
+  line-height: 26px;
+  text-transform: uppercase;
   border: 1px solid #58585b;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.rss-subscribe img {
+  padding: 2px 13px;
+}
+.screen-reader-text {
+  display: none;
+}
+#searchsubmit {
+  display: none;
+}
+.widget_search input[type='text'] {
+  height: 32px;
+  margin-top: 10px;
+  border: 1px solid #58585b;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.widget-title {
+  padding-top: 39px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 22px;
+  text-transform: uppercase;
+  border-top: 1px solid #58585b;
+}
+#sidebar li > a {
+  color: #a19159;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  text-decoration: underline;
+}
+/* ...................................the single blog post*/
+.single-post {
+  margin: 10px 0 73px;
 }
 /* ...................................the end*/
 img.size-auto,

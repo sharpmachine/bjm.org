@@ -14,38 +14,47 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+	<div class="image">
+		<?php the_post_thumbnail( array(620,280) ); ?>
+	</div>
+	<!-- !blog image -->
 
-					<div class="entry-meta">
-						<?php smm_posted_on(); ?>
-					</div><!-- .entry-meta -->
+	<h2 class="blog-title">
+		<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+	</h2>
+	<span class="blog-author">
+		By <?php the_author_posts_link() ?> // Posted on <?php the_time('F jS, Y') ?>
+	</span>
+	<!-- !blog title, author date -->
 
-					<div class="entry-content">
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'smm' ), 'after' => '</div>' ) ); ?>
-					</div><!-- .entry-content -->
+	<div class="uppercase">
+		<span>
+			<span class="bold">
+				Categroies: 
+			</span>
+			<span class="underline">
+				<?php the_category(',&nbsp;'); ?> //
+			</span>
+		</span>
+		<span>
+			<span class="bold">
+				&nbsp;Tags: 
+			</span>
+			<span class="underline">
+				<?php the_tags('',', '); ?> //
+			</span>
+		</span>
+		<span class="bold underline">
+			&nbsp;<?php comments_number( '0', '1', '%' ); ?>
+			Comments
+		</span>
+	</div>
+	<!-- !categories, tags, comments counter -->
 
-<?php if ( get_the_author_meta( 'description' ) ) : // If a user has filled out their description, show a bio on their entries  ?>
-					<div id="entry-author-info">
-						<div id="author-avatar">
-							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'smm_author_bio_avatar_size', 60 ) ); ?>
-						</div><!-- #author-avatar -->
-						<div id="author-description">
-							<h2><?php printf( esc_attr__( 'About %s', 'smm' ), get_the_author() ); ?></h2>
-							<?php the_author_meta( 'description' ); ?>
-							<div id="author-link">
-								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author">
-									<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'smm' ), get_the_author() ); ?>
-								</a>
-							</div><!-- #author-link	-->
-						</div><!-- #author-description -->
-					</div><!-- #entry-author-info -->
-<?php endif; ?>
 
-					<div class="entry-utility">
-						<?php smm_posted_in(); ?>
-					</div><!-- .entry-utility -->
-				</div><!-- #post-## -->
+	<div class="entry-content single-post">
+		<?php the_content(); ?>
+	</div>
+	<!-- .entry-content -->
 
 <?php endwhile; // end of the loop. ?>

@@ -1,10 +1,10 @@
-				<section id="sidebar" class="span3">
+				<section id="sidebar">
 					
 					<ul>
 
-						<div class="rss">
+						<div class="rss-subscribe">
 							<img src=" <?php bloginfo('template_directory');?>/img/rss-gray.png" alt="RSS">
-							Subscribe
+							<span>Subscribe</span>
 						</div>
 	
 					<?php
