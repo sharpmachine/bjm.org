@@ -436,3 +436,12 @@ function new_excerpt_more($more) {
 	return ' <a href="'. get_permalink($post->ID) . '"><p class="read-more">Read More</p></a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function the_short_title($limit) {
+    $title = get_the_title($post->ID);
+    if(strlen($title) > $limit) {
+        $title = substr($title, 0, $limit) . '...';
+    }
+    
+    echo $title;
+}

@@ -228,8 +228,10 @@ footer {
 
 .hero-slider {
 	margin-top: 18px;
-	height: 500px;
-	border: 1px solid #000;
+}
+
+.carousel-indicators li {
+	cursor: pointer;
 }
 
 /* ...................................the news*/
@@ -265,16 +267,22 @@ footer {
 		font-size: 35px;
 		font-weight: 100;
 		color: @gray;
-	}
 
-	.messages-news-blog-2nd{
-		font-family: @serifFont;
-		font-size: 60px;
-		font-weight: 100;
-		text-transform: uppercase;
-		color: @gray;
+		span {
+			display: block;
+			font-size: 60px;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
 	}
 }
+
+// .truncate {
+// 	width: 50px;
+// 	white-space: nowrap;
+// 	overflow: hidden;
+// 	text-overflow: ellipsis;
+// }
 
 /* ...................................the featured product*/
 
@@ -357,8 +365,9 @@ footer {
 .video {
 	margin-bottom: 80px;
 
-	.video-margins {
-		margin-left: 0px;
+	iframe {
+		// width: 100%;
+		// height: 100%;
 	}
 
 	.video-layout {
@@ -367,6 +376,31 @@ footer {
 		}
 	}
 }
+
+.big-video {
+	padding-bottom: 35.8%; /* 16:9 */
+}
+
+.little-video {
+	margin-bottom: 20px;
+	padding-bottom: 46.7%; /* 16:9 */
+}
+
+.video-wrapper {
+	position: relative;
+	// padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
 
 /* ...................................the facebook*/
 

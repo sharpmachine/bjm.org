@@ -27,6 +27,8 @@ jQuery(document).ready(function($) {
 	 $("a.close-menu").click(function(){
 	 	$(".bethel-menu .nav").slideUp();
 	 });
+
+	 $('#myCarousel').carousel();
 	
 });
 
