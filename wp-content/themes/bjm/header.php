@@ -81,7 +81,7 @@
       			<ul class="nav">
 							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
       			</ul>
-      			<ul class="social-icons inline pull-right ">
+      			<ul class="social-icons inline pull-right">
       				<li><a href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
       				<li><a href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
       				<li><a href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>

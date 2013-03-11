@@ -25,7 +25,6 @@ get_header(); ?>
 						</div>
 						<div class="the-excerpt"><?php the_excerpt(); ?></div>
 
-						Pagination
 					</div>
 
 					<?php endwhile; ?>
@@ -46,6 +45,7 @@ get_header(); ?>
 	
 </section>
 <!-- #page -->
+
  <div class="pagination">
  	<ul>
  		<li><a href="#">Prev</a></li>

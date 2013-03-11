@@ -67,19 +67,16 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="span10 copyright-privacy">
-						<div id="site-info">
+					<div class="span12 copyright">
 							&copy;<?php echo date ('Y'); ?> <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 							<a href="" >Privacy</a>
 							<a href="" >Terms & Conditions</a>
-					 		| <a href="http://twitter.github.com/bootstrap" target="_blank">Bootstrap Docs</a><!-- Remove for production -->
-						</div><!-- #site-info -->
+						<ul class="footer-icons inline pull-right">
+      				<li><a href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
+      				<li><a href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
+      				<li><a href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>
+      			</ul>
 					</div>
-					<div class="span2">
-							<a class="brand" href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a>
-	      			<a class="brand" href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a>
-	      			<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a>
-						</div>
 				</div>
 			</div>
 				

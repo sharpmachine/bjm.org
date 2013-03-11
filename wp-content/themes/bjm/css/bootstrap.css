@@ -5096,6 +5096,9 @@ header .top-menu {
 .social-icons {
   margin-top: 27px;
 }
+.social-icons li:nth-child(-n+2) {
+  border-right: 1px solid #a19159;
+}
 /* ...................................the footer*/
 footer {
   color: #58585b;
@@ -5175,7 +5178,7 @@ footer .donate button[type="submit"] {
   width: 100px;
   margin-top: 0;
 }
-footer .paypal-btn {
+.paypal-btn {
   width: 80px;
   padding: 0 10px;
   color: #58585b;
@@ -5196,21 +5199,25 @@ footer .paypal-btn {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-footer .paypal-btn span {
+.paypal-btn span {
   display: block;
   position: relative;
   height: 13px;
   top: -5px;
 }
-footer .copyright-privacy {
-  padding: 30px 0 100px;
+.copyright {
+  padding-top: 23px;
   color: #a19159;
   font-family: 'Crimson Text', serif;
   font-size: 15px;
+  font-weight: 600;
 }
-footer .copyright-privacy a {
-  color: #a19159;
+.copyright li:nth-child(-n+2) {
+  border-right: 1px solid #a19159;
+}
+.copyright > a {
   padding-right: 30px;
+  color: #a19159;
 }
 /* ...................................the slider*/
 .hero-slider {
@@ -5446,24 +5453,6 @@ footer .copyright-privacy a {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-/* ...................................the Q&A*/
-.q-and-a {
-  margin-bottom: 85px;
-  font-family: 'Crimson Text', serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 21px;
-}
-.q-and-a .questions {
-  padding: 42px 0;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.q-and-a .answers {
-  padding: 42px 0;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
 /* ...................................the blog page*/
 .blog {
   color: #414042;
@@ -5517,6 +5506,17 @@ footer .copyright-privacy a {
   padding: 0;
   list-style: none;
 }
+#sidebar li a {
+  color: #a19159;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+  text-decoration: underline;
+}
+#sidebar > ul > li:nth-child(n+4) {
+  margin-top: 50px;
+  border-top: 1px solid #58585b;
+}
 .rss-subscribe {
   margin-top: 50px;
   padding: 7px;
@@ -5552,14 +5552,43 @@ footer .copyright-privacy a {
   font-weight: 300;
   line-height: 22px;
   text-transform: uppercase;
-  border-top: 1px solid #58585b;
 }
-#sidebar li > a {
+/* ...................................the Q&A*/
+.qa-sidbar:nth-child(n+2) {
+  border-top: 1px solid #c1c1c2;
+}
+.qa-sidbar img {
+  float: left;
+}
+.qa-sidbar h3 {
+  line-height: 18px;
+}
+.qa-sidbar a {
   color: #a19159;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.answers {
+  color: #414042;
+}
+.answers h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 26px;
   font-weight: 300;
-  line-height: 30px;
-  text-decoration: underline;
+  line-height: 22px;
+}
+.answers h2:nth-child(n+2) {
+  padding-top: 47px;
+  border-top: 1px solid #c1c1c2;
+}
+.answers p {
+  font-family: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.read-more,
+iframe {
+  padding-bottom: 50px;
 }
 /* ...................................the single blog post*/
 .single-post {
