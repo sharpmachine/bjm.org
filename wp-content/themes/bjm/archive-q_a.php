@@ -2,13 +2,27 @@
 
 		<section id="page" class="span12">
 
-			<div class="container">
+			<div class="container ask-question">
 				<div class="row">
-					<div class="span4">
+					<div class="span5 aq-text">
+						Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class='curly-bracket' alt="amperstand">A
+						<img src="<?php bloginfo('template_directory'); ?>/img/curly-bracket.png" class="pull-right" alt="curly bracket">
+					</div>
+					<div class="span7 text-center">
+						<h2>Have a question?</h2>
+						<div class="ask">Go ahead and ask! If we answer it we'll notify you.</div>
+						<form action="">
+							<input type="text">
+							<button type="submit" class="btn">Submit</button>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span4 qa-sidbar">
 
 							<?php query_posts( 'post_type=q_a' ); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-							<div class="qa-sidbar">
+							<div class="qa-container">
 								<?php if (has_term('written' , 'qa_cat')): ?>
 									<img src="<?php bloginfo('template_directory'); ?>/img/info-icon.png" alt="">
 								<?php endif; ?>

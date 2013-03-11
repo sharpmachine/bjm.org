@@ -5554,27 +5554,63 @@ footer .donate button[type="submit"] {
   text-transform: uppercase;
 }
 /* ...................................the Q&A*/
-.qa-sidbar:nth-child(n+2) {
+.ask-question {
+  text-align: center;
+}
+.ask-question h2 {
+  color: #a19159;
+  font-family: 'Crimson Text', serif;
+  font-size: 60px;
+  font-weight: 300;
+}
+.ask-question input {
+  height: 60px;
+  width: 286px;
+  border: 1px solid #58595b;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.ask-question button {
+  margin: auto;
+  display: block;
+}
+.aq-text {
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  font-size: 140px;
+}
+.ask {
+  color: #58595b;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.qa-sidbar {
+  margin-top: 67px;
+}
+.qa-container:nth-child(n+2) {
   border-top: 1px solid #c1c1c2;
 }
-.qa-sidbar img {
+.qa-container img {
   float: left;
 }
-.qa-sidbar h3 {
+.qa-container h3 {
   line-height: 18px;
 }
-.qa-sidbar a {
+.qa-container a {
   color: #a19159;
   font-size: 14px;
   font-weight: 400;
 }
 .answers {
+  margin-top: 64px;
+  margin-bottom: 28px;
   color: #414042;
 }
 .answers h2 {
   font-family: 'Crimson Text', serif;
   font-size: 26px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 22px;
 }
 .answers h2:nth-child(n+2) {

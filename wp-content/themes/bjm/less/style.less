@@ -667,7 +667,49 @@ footer {
 
 /* ...................................the Q&A*/
 
+.ask-question {
+	text-align: center;
+
+	h2 {
+		color: @yellow;
+		font-family: @serifFont;
+		font-size: 60px;
+		font-weight: 300;
+	}
+
+	input {
+		height: 60px;
+		width: 286px;
+		border: 1px solid @fontGrayDarker;
+		.border-radius(2px);
+	}
+
+	button {
+		margin: auto;
+		display: block;
+	}
+}
+
+.aq-text {
+	color: @fontGray;
+	font-family: @serifFont;
+	font-size: 140px;
+}
+
+.curly-bracket {
+	
+}
+
+.ask {
+	color: @fontGrayDarker;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
 .qa-sidbar {
+	margin-top: 67px;
+}
+.qa-container {
 
 	&:nth-child(n+2) {
 			border-top: 1px solid @grayHorizontalLine;
@@ -689,13 +731,15 @@ footer {
 }
 
 .answers {
-
+	margin-top: 64px;
+	margin-bottom: 28px;
+	// margin: 64px 0 28px;
 	color: @fontGray;
 
 	h2 {
 		font-family: @serifFont;
 		font-size: 26px;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 22px;
 
 		&:nth-child(n+2) {
