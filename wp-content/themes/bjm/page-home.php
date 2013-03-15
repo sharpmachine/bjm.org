@@ -4,8 +4,6 @@
 */
 get_header(); ?>
 
-<section id="page" class="span12">
-
 <div class="hero-slider">
 	<div class="container">
 		<div class="row">
@@ -111,30 +109,33 @@ get_header(); ?>
 	</div>
 </div>
 
-<div class="feature-product">
-	<div class="container shadow">
+<!-- Featured Product -->
+<div class="featured-product">
+	<div class="container">
 		<div class="row">
-			<div class="span4">
-
-				<div class="product-image"><img src="<?php the_field('product_image'); ?>" /></div>
-
+			<div class="span4 product-image">
+				<img src="<?php the_field('product_image'); ?>" />
 			</div>
 			<div class="span8">
-				
-				<div class="product-title"><?php the_field('title'); ?></div>
-				<div class="product-endorsement">"<?php the_field('endorsement'); ?>"</div>
-				<div class="product-endorser-title">
-					<span class="product-endorser">- <?php the_field('endorser'); ?></span>
-					// <?php the_field('endorser_title'); ?>
+				<div class="product-title">
+					<?php the_field('title'); ?>
 				</div>
-				<div class="featured-product-buttons"><a href="<?php the_field('product_link'); ?>" class="product-link">Purchase</a><a href="<?php the_field(''); ?>" class="other-products">Other Products</a></div>
-
-				<!-- !Featured Product -->
-
+				<div class="product-endorsement">
+					"<?php the_field('endorsement'); ?>"
+				</div>
+				<div class="endorser-title">
+					<span class="product-endorser">&#8212; <?php the_field('endorser'); ?></span> // 
+					<?php the_field('endorser_title'); ?>
+				</div>
+				<div class="product-buttons">
+					<a href="<?php the_field('product_link'); ?>" class="btn product-link">Purchase</a>
+					<a href="<?php the_field(''); ?>" class="btn other-products">Other Products</a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<!-- !Featured Product -->
 
 <article class="video">
 	<div class="container">
@@ -169,54 +170,56 @@ get_header(); ?>
 	</div>
 </article>
 
-
+<!-- Facebook -->
 <div class="facebook">
 	<div class="container">
 		<div class="row">
-
-			<div class="span4 bill-photo">
-
-				<img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson">
-				
+			<div class="span4">
+				<img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson" class="bill-photo">
 			</div>
-			<div class="span8 facebook-borders">
-				
-				<img src="<?php bloginfo('template_directory'); ?>/img/big-facebook.png" alt="Facebook">
-				<div id="lifestream" class="facebook-status">&nbsp;</div>
-
-				<!-- !Facebook -->
-			
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="house-generals">
-	<div class="container background">
-		<div class="row">
 			<div class="span8">
-			
-			</div>
-			<div class="span4 opacity">
-
-				<div class="generals-heading">House of Generals</div>
-
-					<p>We love to honor leader around the world who are bringing the kingdom of heaven to earth but one of the mandates on my life and on our church family is also honor leaders who spearhead revivals of the past.</p>
-					<p>The Lord has made it very clear to us that a practical way we can do this is through what we have called The House of Generals ...</p>
-				
-					<div class="learn-more">
-						Learn More
+				<div class="row status-borders">
+					<div class="span1 facebook-gold">
+						<img src="<?php bloginfo('template_directory'); ?>/img/big-facebook.png" alt="Facebook">
 					</div>
-
+					<div class="span7 facebook-update">
+						<div id="lifestream" class="facebook-status">&nbsp;</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<!-- !Facebook -->
+
+<!-- House of Generals -->
+<div class="house-of-generals">
+	<div class="container">
+		<div class="row generals-background">
+			<div class="span8">
+				
+			</div>
+			<div class="span4 generals">
+				<div class="generals-title">
+					House of Generals
+				</div>
+				<div class="generals-text">
+					<p>We love to honor leaders around the world who are bringing the kingdom of heaven to earth but one of the mandates on my life and on our church family is to also honor leaders who spearheaded revivals of the past.</p>
+					<p>The Lord has made it very clear to us that a practical way we can do this is through what we have called The House of Generals...</p>
+				</div>
+				<div class="btn learn-more">
+					Learn More
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- !House of Generals -->
 
 <div class="q-and-a">
 	<div class="container">
 		<div class="row">
-			<div class="span4 questions">
+			<div class="span4 questions-home">
 
 				<?php query_posts( 'qa_cat=written&posts_per_page=1' ); ?>	
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -229,17 +232,16 @@ get_header(); ?>
 				<?php wp_reset_query(); ?>
 
 			</div>
-			<div class="span3 ">
+			<div class="span3 a-and-q-text">
 
-				Q&A
+				Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class="amperstand-home" alt="amperstand">A
 
 			</div>
-			<div class="span5 answers">
+			<div class="span5 answers-home">
 				
 				<?php query_posts( 'qa_cat=written&posts_per_page=1' ); ?>	
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php // the_excerpt(); ?>
-				<?php echo wp_trim_words( get_the_content(), 10, '...<a href=" ' . get_permalink(). '">Read More</a>' ); ?>
+				<?php echo wp_trim_words( get_the_content(), 10, '&nbsp;...&nbsp;<a href=" ' . get_permalink(). '">Read More</a>' ); ?>
 				<?php endwhile; ?>
 				<!-- post navigation -->
 				<?php else: ?>
@@ -251,7 +253,5 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-
-</section><!-- #page -->
 
 <?php get_footer(); ?>

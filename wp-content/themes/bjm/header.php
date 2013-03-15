@@ -92,6 +92,3 @@
     </div>
 
     </header>
-
-  	<div class="container">
-		<div class="row">

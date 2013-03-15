@@ -1,37 +1,48 @@
 <?php get_header(); ?>
 
-		<section id="page" class="span12">
-
+		<div>
 			<div class="container ask-question">
-				<div class="row">
-					<div class="span5 aq-text">
-						Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class='curly-bracket' alt="amperstand">A
-						<img src="<?php bloginfo('template_directory'); ?>/img/curly-bracket.png" class="pull-right" alt="curly bracket">
+				<div class="row ask-question-row">
+					<div class="span6 aq-text">
+						Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class="amperstand" alt="amperstand">A
+						<img src="<?php bloginfo('template_directory'); ?>/img/curly-bracket.png" class="curly-bracket" alt="curly bracket">
 					</div>
-					<div class="span7 text-center">
-						<h2>Have a question?</h2>
-						<div class="ask">Go ahead and ask! If we answer it we'll notify you.</div>
-						<form action="">
-							<input type="text">
-							<button type="submit" class="btn">Submit</button>
-						</form>
+					<div class="span6 ask-container">
+						<div class="align">
+							<h2>Have a question?</h2>
+							<div class="ask">Go ahead and ask! If we answer it we'll notify you.</div>
+							<form action="">
+								<input type="text">
+								<button type="submit" class="btn">Submit</button>
+							</form>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div>
+			<div class="container">
 				<div class="row">
 					<div class="span4 qa-sidbar">
 
 							<?php query_posts( 'post_type=q_a' ); ?>
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 							<div class="qa-container">
-								<?php if (has_term('written' , 'qa_cat')): ?>
-									<img src="<?php bloginfo('template_directory'); ?>/img/info-icon.png" alt="">
-								<?php endif; ?>
-								<?php if (has_term('video' , 'qa_cat')): ?>
-									<img src="<?php bloginfo('template_directory'); ?>/img/video-icon.png" alt="">
-								<?php endif; ?>
-								<h3>
+
+								<div class="pull-left question-icon">
+									<?php if (has_term('written' , 'qa_cat')): ?>
+											<img src="<?php bloginfo('template_directory'); ?>/img/info-icon.png" alt="Written Icon">
+									<?php endif; ?>
+									<?php if (has_term('video' , 'qa_cat')): ?>
+											<img src="<?php bloginfo('template_directory'); ?>/img/video-icon.png" alt="Video Icon">
+									<?php endif; ?>
+								</div>
+
+								<div class="question-title">
 									<a href="#<?php the_id(); ?>"><?php the_title(); ?></a>
-								</h3>
+								</div>
+
 							</div>
 							<?php endwhile; ?>
 							<!-- post navigation -->
@@ -61,8 +72,7 @@
 					</div>
 				</div>
 			</div>
-
-		</section><!-- #page -->
+		</div>
 
 
 <?php get_footer(); ?>

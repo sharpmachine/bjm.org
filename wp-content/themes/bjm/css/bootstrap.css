@@ -5031,7 +5031,6 @@ h2 {
 button[type="submit"] {
   width: 123px;
   height: 35px;
-  margin: 15px 0px 0 0;
   color: #58585b;
   font-family: 'Crimson Text', serif;
   font-size: 18px;
@@ -5102,122 +5101,97 @@ header .top-menu {
 /* ...................................the footer*/
 footer {
   color: #58585b;
+  margin-bottom: 318px;
 }
-footer a {
-  color: #58585b;
+footer .footer {
+  margin-top: 69px;
+  margin-bottom: 23px;
+  padding: 57px 0;
+  border-top: 1px solid #58585b;
+  border-bottom: 1px solid #58585b;
 }
-footer .footer-top {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  padding-top: 53px;
-  padding-bottom: 57px;
-}
-footer .newsletter {
-  padding-bottom: 4px;
+.newsletter {
+  margin-bottom: 6px;
   font-family: 'Crimson Text', serif;
   font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
 }
-footer .monthly-podcast {
-  font-family: 'Open Sans', sans-serif;
+.small-text {
+  margin-bottom: 6px;
   font-size: 11px;
   line-height: 14px;
   text-transform: uppercase;
 }
-footer .email-signup input[type="text"] {
-  width: 186px;
-  height: 30px;
-  margin: 0;
+.submit-email input {
+  width: 183px;
+  padding: 9px 0 9px 15px;
   color: #999999;
-  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  font-weight: 100;
-  border-color: #58585b;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  font-weight: 300;
+  border: 1px solid #58585b;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
-footer .email-signup button[type="submit"] {
+.submit-newsletter button {
+  margin-top: -15px;
+  float: right;
   margin-right: 20px;
 }
-footer .footer-menu {
-  color: #58585b;
-  font-family: 'Open Sans', sans-serif;
+.vertical-menu li {
   font-size: 14px;
-  font-weight: 100;
+  margin-bottom: 13px;
 }
-footer .footer-menu li {
-  margin-bottom: 10px;
-}
-footer .donate-text {
-  margin-bottom: 7px;
-  color: #58585b;
-  font-size: 11px;
-  line-height: 14px;
-  text-transform: uppercase;
-}
-footer .donate-bjm {
-  margin-bottom: 8px;
+.donate-to-bjm {
+  margin-bottom: 5px;
   font-family: 'Crimson Text', serif;
   font-size: 18px;
-  font-weight: 500;
+  text-transform: uppercase;
 }
-footer input[type="text"] {
-  width: 205px;
-  height: 30px;
+.amount-to-give form {
+  margin-bottom: 5px;
+}
+.amount-to-give input {
+  width: 203px;
+  padding: 9px 0 9px 15px;
   color: #999999;
-  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  font-weight: 100;
-  border-color: #58585b;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  font-weight: 300;
+  border: 1px solid #58585b;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
-footer .donate button[type="submit"] {
+.amount-to-give button {
   width: 100px;
-  margin-top: 0;
+  margin-top: 5px;
 }
 .paypal-btn {
-  width: 80px;
-  padding: 0 10px;
-  color: #58585b;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
-  font-style: italic;
-  font-weight: 700;
-  background-color: #f3f3f3;
-  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
-  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
-  border-color: #e2e2e2;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  width: 100px;
+  padding: 2px 12px 2px;
 }
-.paypal-btn span {
+.paypal-btn p {
   display: block;
   position: relative;
-  height: 13px;
+  height: 8px;
   top: -5px;
+  font-size: 9px;
+  font-style: italic;
+  font-weight: 700;
 }
 .copyright {
-  padding-top: 23px;
   color: #a19159;
-  font-family: 'Crimson Text', serif;
   font-size: 15px;
+  font-family: 'Crimson Text', serif;
   font-weight: 600;
 }
-.copyright li:nth-child(-n+2) {
-  border-right: 1px solid #a19159;
-}
-.copyright > a {
-  padding-right: 30px;
+.copyright a {
   color: #a19159;
+  margin-right: 32px;
+}
+.footer-icons li:nth-child(-n+2) {
+  border-right: 1px solid #a19159;
 }
 /* ...................................the slider*/
 .hero-slider {
@@ -5262,64 +5236,52 @@ footer .donate button[type="submit"] {
   text-transform: uppercase;
 }
 /* ...................................the featured product*/
-.feature-product .shadow {
-  margin: 65px 0 85px;
+.featured-product {
+  margin: 66px 0 86px;
+  padding: 57px 0;
+  color: #414042;
+  background-color: #eeeeee;
 }
-.feature-product .product-image {
-  margin: 50px 0 35px;
-}
-.feature-product .product-title {
-  margin: 62px 0 27px;
+.product-title {
+  margin: 37px 0 58px;
   font-family: 'Crimson Text', serif;
   font-size: 50px;
-  line-height: 82px;
 }
-.feature-product .product-endorsement {
+.product-endorsement {
   font-family: 'Crimson Text', serif;
   font-size: 30px;
   font-style: italic;
   line-height: 30px;
 }
-.feature-product .product-endorser-title {
-  margin-top: 45px;
+.endorser-title {
+  margin: 50px 0;
+  padding: 20px 0;
+  border-top: 1px solid #414042;
+  border-bottom: 1px solid #414042;
+}
+.product-endorser {
   font-size: 18px;
-  line-height: 52px;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  font-weight: 600;
 }
-.feature-product .product-endorser {
-  font-weight: 700;
-}
-.feature-product .featured-product-buttons {
-  margin: 60px 0 77px;
+.product-buttons {
   font-family: 'Crimson Text', serif;
-  font-size: 25px;
-  font-weight: 100;
-  line-height: 26px;
   text-transform: uppercase;
 }
-.feature-product .product-link {
-  width: 190px;
-  margin-right: 38px;
-  padding: 5px 25px;
-  color: #fff;
-  text-align: center;
-  background: #999999;
-  border: 1px solid #000;
+.product-buttons .btn {
+  padding: 11px 24px;
+  font-size: 25px;
+  border: 1px solid #414042;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
 }
-.feature-product .product-link a {
-  color: #fff;
+.product-link {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.3);
 }
-.feature-product .other-products {
-  width: 282px;
-  color: #000;
-  padding: 5px 25px;
-  text-align: center;
-  background: #eee;
-  border: 1px solid #000;
-}
-.feature-product .other-products a {
-  color: #000;
+.other-products {
+  margin-left: 31px;
+  background: rgba(0, 0, 0, 0);
 }
 /* ...................................the videos*/
 .video {
@@ -5354,55 +5316,96 @@ footer .donate button[type="submit"] {
 /* ...................................the facebook*/
 .facebook {
   padding: 90px 0;
+  background-color: #eeeeee;
+}
+.bill-photo {
+  margin-left: 10px;
+}
+.status-borders {
+  margin-top: 53px;
+  padding: 30px 0;
+  border-top: 1px solid #a19159;
+  border-bottom: 1px solid #a19159;
+}
+.facebook-gold {
+  border-right: 1px solid #a19159;
+}
+.facebook-update {
+  margin-right: -1px;
   color: #a19159;
   font-family: 'Crimson Text', serif;
   font-size: 18px;
-  line-height: 21px;
 }
-.facebook .bill-photo {
-  margin-right: -10px;
-  padding: 0 0px 0 10px;
-}
-.facebook .facebook-borders {
-  padding: 30px 0;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.facebook .facebook-status {
-  padding: 20px 20px;
-  border-left: 1px solid #000;
+.facebook-update a {
+  color: #a19159;
 }
 /* ...................................the house of generals*/
-.house-generals {
-  margin: 65px 0 78px;
-  font-size: 12px;
-  line-height: 20px;
+.house-of-generals {
+  margin: 66px 0;
+}
+.generals-background {
   background: url('../img/house-of-generals-bk.png');
 }
-.house-generals .opacity {
+.generals {
+  color: #414042;
+  font-size: 12px;
   background: rgba(255, 255, 255, 0.65);
 }
-.house-generals .generals-heading {
-  margin: 38px 40px 25px;
+.generals-title {
+  margin: 40px 40px 25px 40px;
+  padding-bottom: 10px;
   font-family: 'Crimson Text', serif;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #414042;
 }
-.house-generals p {
-  margin: 0 40px 20px;
+.generals-text {
+  margin-left: 40px;
+  margin-right: 40px;
+  line-height: 20px;
 }
-.house-generals .learn-more {
-  width: 135px;
-  margin: 0 40px 24px;
-  padding: 6px 0;
+.generals-text p:nth-child(1) {
+  padding-bottom: 6px;
+}
+.learn-more {
+  margin: 12px 40px 25px;
   font-family: 'Crimson Text', serif;
   font-size: 18px;
-  line-height: 18px;
-  text-align: center;
   text-transform: uppercase;
-  border: 1px solid #000000;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #414042;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+/* ...................................the homepage Q&A*/
+.questions-home {
+  padding: 42px 0;
+  font-family: 'Crimson Text', serif;
+  border-top: 1px solid #414042;
+  border-bottom: 1px solid #414042;
+}
+.a-and-q-text {
+  padding: 42px 0;
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  font-size: 136px;
+}
+.amperstand-home {
+  margin-right: -33px;
+  position: relative;
+  top: -33px;
+}
+.answers-home {
+  padding: 42px 0;
+  font-family: 'Crimson Text', serif;
+  border-top: 1px solid #414042;
+  border-bottom: 1px solid #414042;
+}
+.answers-home a {
+  font-style: italic;
+  text-decoration: underline;
 }
 /* ...................................the schedule*/
 .schedule img {
@@ -5412,6 +5415,7 @@ footer .donate button[type="submit"] {
   height: 100%;
   padding: 20px 0;
 }
+/* ...................................the schedule*/
 /* ...................................the invite*/
 .invite-bill {
   color: #414042;
@@ -5554,9 +5558,6 @@ footer .donate button[type="submit"] {
   text-transform: uppercase;
 }
 /* ...................................the Q&A*/
-.ask-question {
-  text-align: center;
-}
 .ask-question h2 {
   color: #a19159;
   font-family: 'Crimson Text', serif;
@@ -5564,6 +5565,7 @@ footer .donate button[type="submit"] {
   font-weight: 300;
 }
 .ask-question input {
+  margin-bottom: 18px;
   height: 60px;
   width: 286px;
   border: 1px solid #58595b;
@@ -5575,12 +5577,30 @@ footer .donate button[type="submit"] {
   margin: auto;
   display: block;
 }
+.ask-question-row {
+  padding: 37px 0;
+  background-color: #f4f4f4;
+}
 .aq-text {
+  text-align: center;
   color: #414042;
   font-family: 'Crimson Text', serif;
   font-size: 140px;
 }
+.amperstand {
+  margin-right: -33px;
+  position: relative;
+  top: -33px;
+}
+.ask-container {
+  text-align: center;
+}
+.ask-container .align {
+  position: relative;
+  left: -55px;
+}
 .ask {
+  padding: 15px 0;
   color: #58595b;
   font-size: 12px;
   text-transform: uppercase;
@@ -5591,16 +5611,13 @@ footer .donate button[type="submit"] {
 .qa-container:nth-child(n+2) {
   border-top: 1px solid #c1c1c2;
 }
-.qa-container img {
-  float: left;
-}
-.qa-container h3 {
-  line-height: 18px;
-}
 .qa-container a {
   color: #a19159;
   font-size: 14px;
   font-weight: 400;
+}
+.question-title {
+  vertical-align: top;
 }
 .answers {
   margin-top: 64px;
@@ -5678,8 +5695,50 @@ a.qa-aname {
   display: block;
   margin-bottom: 50px;
 }
-h4 {
-  font-size: 24px;
+/* ...................................the schedule*/
+.bottom {
+  float: right;
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  font-size: 36px;
+  font-weight: 400;
+}
+.loud {
+  float: left;
+}
+.date-display-start {
+  display: block;
+  margin-bottom: 14px;
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  font-size: 48px;
+  font-weight: 400;
+}
+.date-display-separator {
+  display: none;
+}
+.date-display-end {
+  padding-top: 17px;
+  display: block;
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  font-size: 48px;
+  font-weight: 400;
+  border-top: 1px solid #414042;
+}
+.prepend-1:nth-child(2) {
+  color: #414042;
+  font-size: 18px;
+}
+.prepend-1:nth-child(2) div:nth-child(1) {
+  font-weight: 600;
+}
+.prepend-1:nth-child(2) div:nth-child(1n+2) {
+  font-weight: 400;
+}
+.prepend-1:nth-child(2) a {
+  font-family: 'Crimson Text', serif;
+  float: right;
 }
 /* =Comments
 -------------------------------------------------------------- */

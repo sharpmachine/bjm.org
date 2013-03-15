@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<section id="page" class="span8">
+		<section id="page" class="span9">
 
 <?php
 	/* Queue the first post, that way we know
@@ -42,4 +42,5 @@
 		</section><!-- #page -->
 
 <?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

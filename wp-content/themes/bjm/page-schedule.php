@@ -26,7 +26,7 @@ get_header(); ?>
 						<div class="itinerary simplepadding ">
 
 							<div>
-								<h4 class="bottom"><strong>School with Randy Clark</strong></h4>
+								<h4 class="bottom"><strong>Kingdom Culture Conference</strong></h4>
 							</div>
 	  
 	  					<div class="prepend-1">
@@ -35,13 +35,21 @@ get_header(); ?>
 									<span class="date-display-separator"> - </span>
 									<span class="date-display-end">Mar 15, 2013</span>
 								</div>
-							<div>
-								<div>Singapore</div>
-								<div>	
-									<a href="http://www.kingdominvasion.sg/" target="_blank">http://www.kingdominvasion.sg/</a>
-								</div>				
+								<div>
+									<div>
+										Bethel Church
+									</div>
+									<div>
+										933 College View Dr
+									</div>
+									<div>
+										Redding, Ca, 96003, USA
+									</div>
+									<div>	
+										<a href="http://www.kingdominvasion.sg/" target="_blank">http://www.kingdominvasion.sg/</a>
+									</div>				
+								</div>
 							</div>
-						</div>
 						<hr />
 					</div>	
 

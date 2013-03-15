@@ -1,4 +1,4 @@
-				<section id="sidebar">
+				<section id="sidebar" class="span3">
 					
 					<ul>
 

@@ -26,7 +26,6 @@ h2 {
 button[type="submit"] {
 	width: 123px;
 	height: 35px;
-	margin: 15px 0px 0 0;
 	color: @gray;
 	font-family: @serifFont;
 	font-size: 18px;
@@ -102,134 +101,119 @@ header {
 }
 
 /* ...................................the footer*/
+
 footer {
 	color: @gray;
+	margin-bottom: 318px;
 
-	a {
-		color: @gray;
+	.footer {
+		margin-top: 69px;
+		margin-bottom: 23px;
+		padding: 57px 0;
+		border-top: 1px solid @gray;
+		border-bottom: 1px solid @gray;
 	}
+}
 
-	.footer-top {
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #000;
-		padding-top: 53px;
-		padding-bottom: 57px;
-	}
+.newsletter {
+	margin-bottom: 6px;
+	font-family: @serifFontFamily;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
 
-	.newsletter {
-		padding-bottom: 4px;
-		font-family: @serifFont;
-		font-size: 18px;
-		text-transform: uppercase;
-	}
+.small-text {
+	margin-bottom: 6px;
+	font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+}
 
-	.monthly-podcast {
-		font-family: @sansFont;
-		font-size: 11px;
-		line-height: 14px;
-		text-transform: uppercase;
-	}
-
-	.email-signup {
-
-		input[type="text"] {
-			width: 186px;
-			height: 30px;
-			margin: 0;
-			color: @grayLight;
-			font-family: @sansFont;
-			font-size: 14px;
-			font-weight: 100;
-			border-color: @gray;
-			.border-radius(0);
-		}
-
-		button[type="submit"] {
-			margin-right: 20px;
-		}
-	}
-
-	.footer-menu {
-		color: @gray;
-		font-family: @sansFont;
-		font-size: 14px;
-		font-weight: 100;
-
-		li {
-			margin-bottom: 10px;
-		}
-	}
-
-	.donate-text {
-		margin-bottom: 7px;
-		color: @gray;
-		font-size: 11px;
-		line-height: 14px;
-		text-transform: uppercase;
-	}
-
-	.donate-bjm {
-		margin-bottom: 8px;
-		font-family: @serifFont;
-		font-size: 18px;
-		font-weight: 500;
-	}
-
-	input[type="text"] {
-		width: 205px;
-		height: 30px;
+.submit-email  {
+	input{
+		width: 183px;
+		padding: 9px 0 9px 15px;
 		color: @grayLight;
-		font-family: @sansFont;
 		font-size: 14px;
-		font-weight: 100;
-		border-color: @gray;
-		.border-radius(0);
+		font-weight: 300;
+		border: 1px solid @gray;
+		.border-radius(2px);
 	}
-	
-	.donate {
-		button[type="submit"] {
-			width: 100px;
-			margin-top: 0;
-		}
+}
+
+.submit-newsletter button {
+	margin-top: -15px;
+	float: right;
+	margin-right: 20px;
+}
+
+.vertical-menu li {
+	font-size: 14px;
+	margin-bottom: 13px;
+}
+
+.donate-to-bjm {
+	margin-bottom: 5px;
+	font-family: @serifFontFamily;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.amount-to-give {
+
+	form {
+		margin-bottom: 5px;
+	}
+
+	input{
+		width: 203px;
+		padding: 9px 0 9px 15px;
+		color: @grayLight;
+		font-size: 14px;
+		font-weight: 300;
+		border: 1px solid @gray;
+		.border-radius(2px);
+	}
+
+	button {
+		width: 100px;
+		margin-top: 5px;
 	}
 }
 
 .paypal-btn {
-		width: 80px;
-		padding: 0 10px;
-		color: @gray;
-		font-family: @sansFont;
-		font-size: 10px;
-		font-style: italic;
-		font-weight: 700;
-		#gradient > .vertical(#ffffff, #e0e0e0);
-		border-color: #e2e2e2;
-		.border-radius(0);
+	width: 100px;
+	padding: 2px 12px 2px;
+	
 
-		span {
+	p {
 			display: block;
 			position: relative;
-			height: 13px;
+			height: 8px;
 			top: -5px;
+			font-size: 9px;
+			font-style: italic;
+			font-weight: 700;
 		}
-	}
+}
 
 .copyright {
-	padding-top: 23px;
 	color: @yellow;
-	font-family: @serifFont;
 	font-size: 15px;
+	font-family: @serifFontFamily;
 	font-weight: 600;
 
-	li:nth-child(-n+2) {
-		border-right: 1px solid @yellow;
+	a {
+		color: @yellow;
+		margin-right: 32px;
 	}
 }
 
-.copyright >	a {
-	padding-right: 30px;
-	color: @yellow;
+.footer-icons li:nth-child(-n+2) {
+	border-right: 1px solid @yellow;
 }
+
 
 /* ...................................the slider*/
 
@@ -293,78 +277,58 @@ footer {
 
 /* ...................................the featured product*/
 
-.feature-product {
+.featured-product {
+	margin: 66px 0 86px;
+	padding: 57px 0;
+	color: @fontGray;
+	background-color: @grayLighter;
+}
 
-	.shadow {
-		margin: 65px 0 85px;
-		//.box-shadow(inset 0px 0px 55px #999);
-	}
+.product-title {
+	margin: 37px 0 58px;
+	font-family: @serifFontFamily;
+	font-size: 50px;
+}
 
-	.product-image {
-		margin: 50px 0 35px;
-	}
+.product-endorsement {
+	font-family: @serifFontFamily;
+	font-size: 30px;
+	font-style: italic;
+	line-height: 30px;
+}
 
-	.product-title {
-		margin: 62px 0 27px;
-		font-family: @serifFont;
-		font-size: 50px;
-		line-height: 82px;
-	}
+.endorser-title {
+	margin: 50px 0;
+	padding: 20px 0;
+	border-top: 1px solid @fontGray;
+	border-bottom: 1px solid @fontGray;
+}
 
-	.product-endorsement {
-		font-family: @serifFont;
-		font-size: 30px;
-		font-style: italic;
-		line-height: 30px;
-	}
+.product-endorser {
+	font-size: 18px;
+	font-weight: 600;
+}
 
-	.product-endorser-title {
-		margin-top: 45px;
-		font-size: 18px;
-		line-height: 52px;
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #000;
-	}
+.product-buttons {
+	font-family: @serifFontFamily;
+	text-transform: uppercase;
 
-	.product-endorser {
-		font-weight: 700;
-	}
-
-	.featured-product-buttons {
-		margin: 60px 0 77px;
-		font-family: @serifFont;
+	.btn {
+		padding: 11px 24px;
 		font-size: 25px;
-		font-weight: 100;
-		line-height: 26px;
-		text-transform: uppercase;
+		border: 1px solid @fontGray;
+		.border-radius(1px);
+	}
+}
+
+.product-link {
+	color: @white;
+	background: rgba(0,0,0,0.30);
 	}
 
-	.product-link {
-		width: 190px;
-		margin-right: 38px;
-		padding: 5px 25px;
-		color: #fff;
-		text-align: center;
-		background: @grayLight;
-		border: 1px solid #000;
-
-		a {
-			color: #fff;
-		}
-	}
-
-	.other-products {
-		width: 282px;
-		color: #000;
-		padding: 5px 25px;
-		text-align: center;
-		background: #eee;
-		border: 1px solid #000;
-
-		a {
-			color: #000;
-		}
-	}
+.other-products {
+	margin-left: 31px;
+	background: rgba(0,0,0,0);
 }
 
 /* ...................................the videos*/
@@ -413,68 +377,113 @@ footer {
 
 .facebook {
 	padding: 90px 0;
+	background-color: @grayLighter;
+}
+
+.bill-photo {
+	margin-left: 10px;
+}
+
+.status-borders {
+	margin-top: 53px;
+	padding: 30px 0;
+	border-top: 1px solid @yellow;
+	border-bottom: 1px solid @yellow;
+}
+
+.facebook-gold {
+	border-right: 1px solid @yellow;
+}
+
+.facebook-update {
+	margin-right: -1px;
 	color: @yellow;
 	font-family: @serifFont;
 	font-size: 18px;
-	line-height: 21px;
 
-	.bill-photo {
-		margin-right: -10px;
-		padding: 0 0px 0 10px;
-	}
-
-	.facebook-borders {
-		padding: 30px 0;
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #000;
-		//background: url('../img/facebook-quotes.png');
-		// background: #fff;
-		// opacity:0.1;
-	}
-
-	.facebook-status {
-		padding: 20px 20px;
-		border-left: 1px solid #000;
+	a {
+		color: @yellow;
 	}
 }
 
 /* ...................................the house of generals*/
 
-.house-generals {
-	margin: 65px 0 78px;
-	font-size: 12px;
-	line-height: 20px;
+.house-of-generals {
+	margin: 66px 0;
+}
+
+.generals-background {
 	background: url('../img/house-of-generals-bk.png');
+}
 
-	.opacity {
-		background: rgba(255,255,255,0.65);
+.generals {
+	color: @fontGray;
+	font-size: 12px;
+	background: rgba(255,255,255,0.65);
+}
+
+.generals-title {
+	margin: 40px 40px 25px 40px;
+	padding-bottom: 10px;
+	font-family: @serifFontFamily;
+	font-size: 24px;
+	line-height: 24px;
+	text-transform: uppercase;
+	border-bottom: 1px solid @fontGray;
+}
+
+.generals-text {
+ margin-left: 40px;
+ margin-right: 40px;
+ line-height: 20px;
+
+ p:nth-child(1) {
+ 	padding-bottom: 6px;
+ }
+}
+
+.learn-more {
+	margin: 12px 40px 25px;
+	font-family: @serifFontFamily;
+	font-size: 18px;
+	text-transform: uppercase;
+	background: rgba(0,0,0,0);
+	border: 1px solid @fontGray;
+	.border-radius(1px);
+}
+
+/* ...................................the homepage Q&A*/
+
+.questions-home {
+	padding: 42px 0;
+	font-family: @serifFontFamily;
+	border-top: 1px solid @fontGray;
+	border-bottom: 1px solid @fontGray;
+}
+
+.a-and-q-text {
+	padding: 42px 0;
+	color: @fontGray;
+	font-family: @serifFont;
+	font-size: 136px;
+}
+
+.amperstand-home {
+	margin-right: -33px;
+	position: relative;
+	top: -33px;
+}
+
+.answers-home {
+	padding: 42px 0;
+	font-family: @serifFontFamily;
+	border-top: 1px solid @fontGray;
+	border-bottom: 1px solid @fontGray;
+
+	a {
+		font-style: italic;
+		text-decoration: underline;
 	}
-
-	.generals-heading {
-		margin: 38px 40px 25px;
-		font-family: @serifFont;
-		font-size: 24px;
-		line-height: 24px;
-		text-transform: uppercase;
-		border-bottom: 1px solid #000;
-	}
-
-	p {
-		margin: 0 40px 20px;
-	}
-
-	.learn-more {
-		width: 135px;
-		margin: 0 40px 24px;
-		padding: 6px 0;
-		font-family: @serifFont;
-		font-size: 18px;
-		line-height: 18px;
-		text-align: center;
-		text-transform: uppercase;
-		border: 1px solid @black;
-	}
-
 }
 
 /* ...................................the schedule*/
@@ -489,6 +498,8 @@ footer {
 		padding: 20px 0;
 	}
 }
+/* ...................................the schedule*/
+//see itinerary.less
 
 /* ...................................the invite*/
 
@@ -668,7 +679,6 @@ footer {
 /* ...................................the Q&A*/
 
 .ask-question {
-	text-align: center;
 
 	h2 {
 		color: @yellow;
@@ -678,6 +688,7 @@ footer {
 	}
 
 	input {
+		margin-bottom: 18px;
 		height: 60px;
 		width: 286px;
 		border: 1px solid @fontGrayDarker;
@@ -690,37 +701,53 @@ footer {
 	}
 }
 
+.ask-question-row {
+	padding: 37px 0;
+	background-color: @grayQandABackground;
+}
+
 .aq-text {
+	text-align: center;
 	color: @fontGray;
 	font-family: @serifFont;
 	font-size: 140px;
+}
+
+.amperstand {
+	margin-right: -33px;
+	position: relative;
+	top: -33px;
 }
 
 .curly-bracket {
 	
 }
 
+.ask-container {
+	text-align: center;
+
+	.align {
+		position: relative;
+		left: -55px;
+	}
+}
+
 .ask {
+	padding: 15px 0;
 	color: @fontGrayDarker;
 	font-size: 12px;
 	text-transform: uppercase;
 }
 
+
 .qa-sidbar {
 	margin-top: 67px;
 }
+
 .qa-container {
 
 	&:nth-child(n+2) {
 			border-top: 1px solid @grayHorizontalLine;
-	}
-
-	img {
-			float: left;
-		}
-
-	h3 {
-		line-height: 18px;
 	}
 
 	a {
@@ -728,6 +755,14 @@ footer {
 		font-size: 14px;
 		font-weight: 400;	
 	}	
+}
+
+.question-icon {
+	
+}
+
+.question-title {
+	vertical-align: top;
 }
 
 .answers {
