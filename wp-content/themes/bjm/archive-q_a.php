@@ -40,7 +40,7 @@
 								</div>
 
 								<div class="question-title">
-									<a href="#<?php the_id(); ?>"><?php the_title(); ?></a>
+									<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 								</div>
 
 							</div>

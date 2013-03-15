@@ -1,9 +1,13 @@
 <?php get_header(); ?>
 				
-		<section id="page" class="span8">
-
+<div>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
 			<?php get_template_part( 'loop', 'attachment' ); ?>
-
-		</section><!-- #content -->
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>

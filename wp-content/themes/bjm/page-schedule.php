@@ -4,7 +4,6 @@
 */
 get_header(); ?>
 
-<section id="page" class="span12">
 
 	<div class="schedule">
 		<div class="container">
@@ -58,9 +57,5 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-
-	<?php get_template_part( 'loop', 'page' ); ?>
-
-</section><!-- #page -->
 
 <?php get_footer(); ?>

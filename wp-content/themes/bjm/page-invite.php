@@ -4,7 +4,6 @@
 */
 get_header(); ?>
 
-<section id="page" class="span12">
 
 	<div class="invite-bill">
 		<div class="container">
@@ -169,6 +168,5 @@ get_header(); ?>
 	</div>
 
 
-</section><!-- #page -->
 
 <?php get_footer(); ?>

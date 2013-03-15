@@ -27,11 +27,21 @@
 
 </head>
 <body>
-		
-	<div id="logo">
-		<img src="http://www.domain.com/wp-content/themes/project_theme/images/logo.png" width="335" height="52" alt="Logo">
-		<p>We are currently undergoing routine maintenance.  Please check back soon.</p>
+
+<div>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+
+				<div id="logo">
+					<img src="http://www.domain.com/wp-content/themes/project_theme/images/logo.png" width="335" height="52" alt="Logo">
+					<p>We are currently undergoing routine maintenance.  Please check back soon.</p>
+				</div>
+
+			</div>
+		</div>
 	</div>
+</div>
 		
 </body>
 </html>

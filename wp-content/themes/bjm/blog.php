@@ -45,6 +45,7 @@ get_header(); ?>
 	
 <!-- #page -->
 
+<?php bootstrap_pagination(); ?>
  <div class="pagination">
  	<ul>
  		<li><a href="#">Prev</a></li>

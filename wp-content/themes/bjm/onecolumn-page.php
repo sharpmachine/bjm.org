@@ -8,10 +8,14 @@
 
 get_header(); ?>
 
-		<section id="page">
-
+<div class="page">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
 			<?php get_template_part( 'loop', 'page' ); ?>
-			
-		</section><!-- #page -->
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>
