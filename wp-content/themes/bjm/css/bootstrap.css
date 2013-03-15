@@ -5134,10 +5134,11 @@ footer .footer {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
+.submit-newsletter {
+  max-width: 200px;
+}
 .submit-newsletter button {
   margin-top: -15px;
-  float: right;
-  margin-right: 20px;
 }
 .vertical-menu li {
   font-size: 14px;
@@ -5149,11 +5150,14 @@ footer .footer {
   font-size: 18px;
   text-transform: uppercase;
 }
+.amount-to-give {
+  max-width: 220px;
+}
 .amount-to-give form {
   margin-bottom: 5px;
 }
 .amount-to-give input {
-  width: 203px;
+  max-width: 203px;
   padding: 9px 0 9px 15px;
   color: #999999;
   font-size: 14px;
@@ -5522,6 +5526,7 @@ footer .footer {
   border-top: 1px solid #58585b;
 }
 .rss-subscribe {
+  width: 204px;
   margin-top: 50px;
   padding: 7px;
   font-family: 'Crimson Text', serif;
@@ -5543,6 +5548,7 @@ footer .footer {
   display: none;
 }
 .widget_search input[type='text'] {
+  width: 206px;
   height: 32px;
   margin-top: 10px;
   border: 1px solid #58585b;

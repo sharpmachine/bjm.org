@@ -14,7 +14,7 @@
 						<input type="text" value="Email address" name="EMAIL" class="required email" onfocus="if (this.value=='you@something.com')this.value=' ';"onblur="if (this.value==' ')this.value='you@something.com';" id="mce-EMAIL">
 				</div>
 				<div class="submit-newsletter">
-						<button type="submit" value="Submit" class="btn" title="Subscribe" id="mc-embedded-subscribe">
+						<button type="submit" value="Submit" class="btn pull-right" title="Subscribe" id="mc-embedded-subscribe">
 							Submit
 						</button>
 					</form>
@@ -38,7 +38,7 @@
 				</div>
 				<div class="amount-to-give">
 					<form action="" method=POST>
-						<input type='text' size='6' name='amount' placeholder='Amount to give'>
+						<input type='text' name='amount' placeholder='Amount to give'>
 						<button type="submit" class="btn pull-right">
 							Submit
 						</button>
