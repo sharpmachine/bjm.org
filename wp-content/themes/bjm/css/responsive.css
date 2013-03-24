@@ -719,6 +719,104 @@
     width: 28px;
   }
 }
+/* ...................................the news*/
+.news .right-border {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+}
+/* ...................................the featured product*/
+.featured-product {
+  margin-bottom: 40px;
+  margin-top: 28px;
+  padding: 20px 10px;
+  text-align: center;
+}
+.product-title {
+  line-height: 50px;
+}
+.product-buttons a {
+  margin: 5px;
+}
+/* ...................................the videos*/
+.video {
+  margin-bottom: 21px;
+}
+.big-video {
+  margin-bottom: 70px;
+}
+.big-video iframe {
+  height: 230px;
+  width: 440px;
+}
+/* ...................................the facebook*/
+.facebook {
+  padding: 20px 20px;
+}
+.center-photo {
+  text-align: center;
+}
+.bill-photo {
+  margin-left: 0;
+}
+.status-borders {
+  margin: 10px 0 0;
+  padding: 10px 0;
+}
+.facebook-gold img {
+  float: left;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #a19159;
+}
+/* ...................................the house of generals*/
+.house-of-generals {
+  margin: 40px 0;
+}
+.generals-background .span8 {
+  display: none;
+}
+.generals-title {
+  margin: 0 20px;
+  padding-top: 10px;
+}
+.generals-text {
+  margin: 20px;
+  padding: 0px;
+}
+.learn-more {
+  margin: 0 20px 10px;
+}
+/* ...................................the Q&A*/
+.questions-home,
+.answers-home {
+  padding: 20px 0;
+}
+.a-and-q-text {
+  text-align: center;
+}
+/* ...................................the footer*/
+footer .footer {
+  margin-top: 40px;
+  padding: 10px 0;
+}
+.submit-newsletter {
+  margin-bottom: 20px;
+}
+.copyright a {
+  display: block;
+}
+footer {
+  margin-bottom: 20px;
+}
+footer .pull-right {
+  float: none;
+}
+ul.inline > li,
+ol.inline > li {
+  padding-left: 0;
+}
+/* ...................................*/
 @media (max-width: 767px) {
   body {
     padding-left: 20px;

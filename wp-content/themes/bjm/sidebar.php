@@ -1,11 +1,12 @@
 				<section id="sidebar" class="span3">
 					
 					<ul>
-
-						<div class="rss-subscribe">
-							<img src=" <?php bloginfo('template_directory');?>/img/rss-gray.png" alt="RSS">
-							<span>Subscribe</span>
-						</div>
+						<a href="#">
+							<button class="rss-subscribe">
+								<img src=" <?php bloginfo('template_directory');?>/img/rss-gray.png" alt="RSS">
+								Subscribe
+							</button>
+						</a>
 	
 					<?php
 					/* When we call the dynamic_sidebar() function, it'll spit out

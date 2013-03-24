@@ -5529,20 +5529,22 @@ footer .footer {
   border-top: 1px solid #58585b;
 }
 .rss-subscribe {
-  width: 204px;
+  height: 44px;
+  width: 220px;
   margin-top: 50px;
-  padding: 7px;
   font-family: 'Crimson Text', serif;
   font-size: 25px;
-  line-height: 26px;
   text-transform: uppercase;
-  border: 1px solid #58585b;
+  background-color: #ffffff;
+  border: 1px solid #414042;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 .rss-subscribe img {
-  padding: 2px 13px;
+  position: relative;
+  top: -4px;
+  padding-right: 20px;
 }
 .screen-reader-text {
   display: none;
@@ -5554,6 +5556,7 @@ footer .footer {
   width: 206px;
   height: 32px;
   margin-top: 10px;
+  margin-bottom: -19px;
   border: 1px solid #58585b;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;

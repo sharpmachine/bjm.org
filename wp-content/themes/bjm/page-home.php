@@ -111,7 +111,7 @@ get_header(); ?>
 
 <!-- Featured Product -->
 <div class="featured-product">
-	<div class="container">
+	<div class="container f-product-mobile">
 		<div class="row">
 			<div class="span4 product-image">
 				<img src="<?php the_field('product_image'); ?>" />
@@ -174,7 +174,7 @@ get_header(); ?>
 <div class="facebook">
 	<div class="container">
 		<div class="row">
-			<div class="span4">
+			<div class="span4 center-photo">
 				<img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson" class="bill-photo">
 			</div>
 			<div class="span8">
@@ -223,7 +223,7 @@ get_header(); ?>
 
 				<?php query_posts( 'qa_cat=written&posts_per_page=1' ); ?>	
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<a href=""><?php the_title(); ?></a>
+				<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
 				<?php endwhile; ?>
 				<!-- post navigation -->
 				<?php else: ?>
