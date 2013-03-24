@@ -1,64 +1,56 @@
 /* ...................................the schedule*/
 
-// style the name of the conference
-.bottom {
-	// position: relative;
-	// left: 240px;
-	float: right;
-	color: @fontGray;
-	font-family: @serifFont;
-	font-size: 36px;
-	font-weight: 400;
+.bethel-schedule {
+	.views-row:nth-child(n+2) {
+		border-top: 1px solid @fontGray;
+	}
 }
 
-// float the dates to the left
-.loud {
-	float:left;
+// all of schedules font family & color
+.itinerary {
+	color: @fontGray;
+	font-family: @serifFontFamily;
 }
 
-// style event start date
-.date-display-start {
-	display: block;
-	margin-bottom: 14px;
-	color: @fontGray;
-	font-family: @serifFont;
+// date size
+.date-display-start, .date-display-end {
 	font-size: 48px;
-	font-weight: 400;
+	font-family: @serifFontFamily;
 }
 
-
-// hide the dash from the original site
+// hide dash separator
 .date-display-separator {
 	display: none;
 }
 
-// style event end date
-.date-display-end {
-	padding-top: 17px;
-	display: block;
-	color: @fontGray;
-	font-family: @serifFont;
-	font-size: 48px;
+// conference name
+strong {
+	font-size: 36px;
 	font-weight: 400;
-	border-top: 1px solid @fontGray;
 }
 
-// style location name and address
 .prepend-1:nth-child(2) {
-	color: @fontGray;
+	font-family: @sansFont;
 	font-size: 18px;
 
-	div:nth-child(1){
-		font-weight: 600;
+	// location name
+	div:nth-child(2){
+		div:nth-child(1) {
+			font-weight: 600;
+		}
 	}
 
+	// location address
 	div:nth-child(1n+2) {
-		font-weight: 400;
+		font-weight: 300;
 	}
 
+	// event link
 	a {
 		font-family: @serifFont;
-		float: right;
 	}
 }
 
+hr {
+	display: none;
+}

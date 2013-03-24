@@ -5461,6 +5461,9 @@ footer .footer {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.invite-submit {
+  max-width: 1100px;
+}
 /* ...................................the blog page*/
 .blog {
   color: #414042;
@@ -5583,7 +5586,7 @@ footer .footer {
   margin: auto;
   display: block;
 }
-.ask-question-row {
+.q-and-a-background {
   padding: 37px 0;
   background-color: #f4f4f4;
 }
@@ -5611,40 +5614,7 @@ footer .footer {
   font-size: 12px;
   text-transform: uppercase;
 }
-.qa-sidbar {
-  margin-top: 67px;
-}
-.qa-container:nth-child(n+2) {
-  border-top: 1px solid #c1c1c2;
-}
-.qa-container a {
-  color: #a19159;
-  font-size: 14px;
-  font-weight: 400;
-}
-.question-title {
-  vertical-align: top;
-}
-.answers {
-  margin-top: 64px;
-  margin-bottom: 28px;
-  color: #414042;
-}
-.answers h2 {
-  font-family: 'Crimson Text', serif;
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 22px;
-}
-.answers h2:nth-child(n+2) {
-  padding-top: 47px;
-  border-top: 1px solid #c1c1c2;
-}
-.answers p {
-  font-family: 16px;
-  font-weight: 300;
-  line-height: 22px;
-}
+/* ...................................the Q&A sidebar*/
 .read-more,
 iframe {
   padding-bottom: 50px;
@@ -5702,49 +5672,40 @@ a.qa-aname {
   margin-bottom: 50px;
 }
 /* ...................................the schedule*/
-.bottom {
-  float: right;
+.bethel-schedule .views-row:nth-child(n+2) {
+  border-top: 1px solid #414042;
+}
+.itinerary {
   color: #414042;
   font-family: 'Crimson Text', serif;
-  font-size: 36px;
-  font-weight: 400;
 }
-.loud {
-  float: left;
-}
-.date-display-start {
-  display: block;
-  margin-bottom: 14px;
-  color: #414042;
-  font-family: 'Crimson Text', serif;
+.date-display-start,
+.date-display-end {
   font-size: 48px;
-  font-weight: 400;
+  font-family: 'Crimson Text', serif;
 }
 .date-display-separator {
   display: none;
 }
-.date-display-end {
-  padding-top: 17px;
-  display: block;
-  color: #414042;
-  font-family: 'Crimson Text', serif;
-  font-size: 48px;
+strong {
+  font-size: 36px;
   font-weight: 400;
-  border-top: 1px solid #414042;
 }
 .prepend-1:nth-child(2) {
-  color: #414042;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
-.prepend-1:nth-child(2) div:nth-child(1) {
+.prepend-1:nth-child(2) div:nth-child(2) div:nth-child(1) {
   font-weight: 600;
 }
 .prepend-1:nth-child(2) div:nth-child(1n+2) {
-  font-weight: 400;
+  font-weight: 300;
 }
 .prepend-1:nth-child(2) a {
   font-family: 'Crimson Text', serif;
-  float: right;
+}
+hr {
+  display: none;
 }
 /* =Comments
 -------------------------------------------------------------- */

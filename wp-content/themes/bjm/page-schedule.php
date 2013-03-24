@@ -51,11 +51,82 @@ get_header(); ?>
 							</div>
 						<hr />
 					</div>	
-
-
 				</div>
+
+
+				<div class="views-row views-row-1 views-row-odd views-row-first">
+    
+						<div class="itinerary simplepadding ">
+
+							<div>
+								<h4 class="bottom"><strong>Kingdom Culture Conference</strong></h4>
+							</div>
+	  
+	  					<div class="prepend-1">
+								<div class="loud">
+									<span class="date-display-start">Mar 13, 2013</span>
+									<span class="date-display-separator"> - </span>
+									<span class="date-display-end">Mar 15, 2013</span>
+								</div>
+								<div>
+									<div>
+										Bethel Church
+									</div>
+									<div>
+										933 College View Dr
+									</div>
+									<div>
+										Redding, Ca, 96003, USA
+									</div>
+									<div>	
+										<a href="http://www.kingdominvasion.sg/" target="_blank">http://www.kingdominvasion.sg/</a>
+									</div>				
+								</div>
+							</div>
+						<hr />
+					</div>	
+				</div>
+
+
+				<div class="views-row views-row-1 views-row-odd views-row-first">
+    
+						<div class="itinerary simplepadding ">
+
+							<div>
+								<h4 class="bottom"><strong>Kingdom Culture Conference</strong></h4>
+							</div>
+	  
+	  					<div class="prepend-1">
+								<div class="loud">
+									<span class="date-display-start">Mar 13, 2013</span>
+									<span class="date-display-separator"> - </span>
+									<span class="date-display-end">Mar 15, 2013</span>
+								</div>
+								<div>
+									<div>
+										Bethel Church
+									</div>
+									<div>
+										933 College View Dr
+									</div>
+									<div>
+										Redding, Ca, 96003, USA
+									</div>
+									<div>	
+										<a href="http://www.kingdominvasion.sg/" target="_blank">http://www.kingdominvasion.sg/</a>
+									</div>				
+								</div>
+							</div>
+						<hr />
+					</div>	
+				</div>
+
+
+
+
 			</div>
 		</div>
 	</div>
+
 
 <?php get_footer(); ?>
