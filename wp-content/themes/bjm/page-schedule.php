@@ -4,7 +4,6 @@
 */
 get_header(); ?>
 
-
 	<div class="schedule">
 		<div class="container">
 
