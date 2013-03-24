@@ -5672,6 +5672,10 @@ a.qa-aname {
   margin-bottom: 50px;
 }
 /* ...................................the schedule*/
+.bethel-schedule {
+  margin-top: 62px;
+  margin-bottom: -65px;
+}
 .bethel-schedule .views-row:nth-child(n+2) {
   border-top: 1px solid #414042;
 }
@@ -5681,13 +5685,30 @@ a.qa-aname {
 }
 .date-display-start,
 .date-display-end {
+  display: block;
   font-size: 48px;
   font-family: 'Crimson Text', serif;
+}
+.date-display-start {
+  position: relative;
+  left: 0px;
+  top: -38px;
+}
+.date-display-end {
+  position: relative;
+  left: 0;
+  top: -16px;
+  max-width: 300px;
+  padding-top: 15px;
+  border-top: 1px solid #414042;
 }
 .date-display-separator {
   display: none;
 }
 strong {
+  position: relative;
+  left: 318px;
+  top: 0px;
   font-size: 36px;
   font-weight: 400;
 }
@@ -5696,12 +5717,21 @@ strong {
   font-size: 18px;
 }
 .prepend-1:nth-child(2) div:nth-child(2) div:nth-child(1) {
+  position: relative;
+  left: 159px;
+  top: -23px;
   font-weight: 600;
 }
 .prepend-1:nth-child(2) div:nth-child(1n+2) {
+  position: relative;
+  left: 159px;
+  top: -26px;
   font-weight: 300;
 }
 .prepend-1:nth-child(2) a {
+  position: relative;
+  left: 250px;
+  top: -20px;
   font-family: 'Crimson Text', serif;
 }
 hr {

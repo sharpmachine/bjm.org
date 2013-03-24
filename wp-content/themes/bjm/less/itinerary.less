@@ -1,6 +1,9 @@
 /* ...................................the schedule*/
 
 .bethel-schedule {
+	margin-top: 62px;
+	margin-bottom: -65px;
+
 	.views-row:nth-child(n+2) {
 		border-top: 1px solid @fontGray;
 	}
@@ -14,8 +17,25 @@
 
 // date size
 .date-display-start, .date-display-end {
+	display: block;
 	font-size: 48px;
 	font-family: @serifFontFamily;
+}
+
+.date-display-start {
+	position: relative;
+	left: 0px;
+	top: -38px;
+
+}
+
+.date-display-end {
+	position: relative;
+	left: 0;
+	top: -16px;
+	max-width: 300px;
+	padding-top: 15px;
+	border-top: 1px solid @fontGray;
 }
 
 // hide dash separator
@@ -25,6 +45,9 @@
 
 // conference name
 strong {
+	position: relative;
+	left: 318px;
+	top: 0px;
 	font-size: 36px;
 	font-weight: 400;
 }
@@ -35,18 +58,28 @@ strong {
 
 	// location name
 	div:nth-child(2){
+
 		div:nth-child(1) {
+			position: relative;
+			left: 159px;
+			top: -23px;
 			font-weight: 600;
 		}
 	}
 
 	// location address
 	div:nth-child(1n+2) {
+		position: relative;
+		left: 159px;
+		top: -26px;
 		font-weight: 300;
 	}
 
 	// event link
 	a {
+		position: relative;
+		left: 250px;
+		top: -20px;
 		font-family: @serifFont;
 	}
 }
