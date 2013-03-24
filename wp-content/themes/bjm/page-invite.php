@@ -155,7 +155,10 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="row">
-				<div class="span12 invite-submit">
+				<div class="span8">
+					
+				</div>
+				<div class="span4 invite-submit">
 					
 					<button type="submit" value="Submit" class="btn pull-right">Submit</button>
 

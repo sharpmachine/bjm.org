@@ -5,7 +5,7 @@
 				<div class="row ask-question-row">
 					<div class="span6 aq-text">
 						Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class="amperstand" alt="amperstand">A
-						<img src="<?php bloginfo('template_directory'); ?>/img/curly-bracket.png" class="curly-bracket" alt="curly bracket">
+						<img src="<?php bloginfo('template_directory'); ?>/img/curly-bracket.png" class="curly-bracket visible-desktop" alt="curly bracket">
 					</div>
 					<div class="span6 ask-container">
 						<div class="align">
@@ -22,7 +22,7 @@
 		</div>
 
 
-<div>
+<div class="archive-q-a">
 	<div class="container">
 		<div class="row">
 			<div class="span4">
