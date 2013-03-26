@@ -11,7 +11,7 @@
 				</div>
 				<div class="submit-email">
 					<form action="http://ibethel.us1.list-manage2.com/subscribe/post?u=b824912e75c6e72f2ace5ded3&amp;id=c45a6c9961" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-						<input type="text" value="Email address" name="EMAIL" class="required email" onfocus="if (this.value=='you@something.com')this.value=' ';"onblur="if (this.value==' ')this.value='you@something.com';" id="mce-EMAIL">
+						<input type="text" value="Email address" name="EMAIL" class="required email span3" onfocus="if (this.value=='you@something.com')this.value=' ';"onblur="if (this.value==' ')this.value='you@something.com';" id="mce-EMAIL">
 				</div>
 				<div class="submit-newsletter">
 						<button type="submit" value="Submit" class="btn pull-right" title="Subscribe" id="mc-embedded-subscribe">
@@ -38,7 +38,7 @@
 				</div>
 				<div class="amount-to-give">
 					<form action="" method=POST>
-						<input type='text' name='amount' placeholder='Amount to give'>
+						<input type='text' name='amount' placeholder='Amount to give' class="span3">
 						<button type="submit" class="btn pull-right">
 							Submit
 						</button>

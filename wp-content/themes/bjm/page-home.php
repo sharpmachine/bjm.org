@@ -10,36 +10,42 @@ get_header(); ?>
 			<div class="span12">
 
 				<div id="myCarousel" class="carousel slide">
-					<ol class="carousel-indicators">
-				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				    <li data-target="#myCarousel" data-slide-to="1"></li>
-				    <li data-target="#myCarousel" data-slide-to="2"></li>
-				  </ol>
-
 				   <!-- Carousel items -->
 					<div class="carousel-inner">
-						<div class="item">
-							<img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+						<div class="item active">
+							<img src="<?php bloginfo('template_directory'); ?>/img/bill-hero.jpg" alt="">
 							<div class="carousel-caption">
-								<h4>First Thumbnail label</h4>
-								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								<div class="inner">
+									<h4>First Thumbnail label</h4>
+									<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								</div>					
 							</div>
 						</div>
 						<div class="item">
-							<img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+							<img src="<?php bloginfo('template_directory'); ?>/img/bill-hero.jpg" alt="">
 							<div class="carousel-caption">
+								<div class="inner">
 								<h4>Second Thumbnail label</h4>
 								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								</div>					
 							</div>
 						</div>
-						<div class="item active">
-							<img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
+						<div class="item">
+							<img src="<?php bloginfo('template_directory'); ?>/img/bill-hero.jpg" alt="">
 							<div class="carousel-caption">
+								<div class="inner">
 								<h4>Third Thumbnail label</h4>
 								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								</div>					
 							</div>
 						</div>
 					</div>
+
+					<ol class="carousel-indicators">
+				    <li data-target="#myCarousel" data-slide-to="0" class="active"><span></span></li>
+				    <li data-target="#myCarousel" data-slide-to="1"><span></span></li>
+				    <li data-target="#myCarousel" data-slide-to="2"><span></span></li>
+				  </ol>
 
 					<!-- Carousel nav -->
 					<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
@@ -110,7 +116,7 @@ get_header(); ?>
 </div>
 
 <!-- Featured Product -->
-<div class="featured-product">
+<div class="featured-product boxy">
 	<div class="container f-product-mobile">
 		<div class="row">
 			<div class="span4 product-image">
@@ -136,6 +142,16 @@ get_header(); ?>
 	</div>
 </div>
 <!-- !Featured Product -->
+
+<div class="boxy">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<h1>Brandon is a genius!</h1>
+			</div>
+		</div>
+	</div>
+</div>
 
 <article class="video">
 	<div class="container">
@@ -171,7 +187,7 @@ get_header(); ?>
 </article>
 
 <!-- Facebook -->
-<div class="facebook">
+<div class="facebook boxy">
 	<div class="container">
 		<div class="row">
 			<div class="span4 center-photo">

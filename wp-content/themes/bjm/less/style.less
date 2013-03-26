@@ -6,34 +6,48 @@ body {
 	color: @gray;
 	font-family: @sansFont;
 	font-size: 16px;
+}
 
-	a {
-		color: @gray;
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: @serifFontFamily;
+	font-weight: 400;
 }
 
 h1 {
 	color: @yellow;
-	font-family: @serifFont;
 	font-size: 40px;
 }
 
 h2 {
-	font-family: @serifFont;
 	font-size: 24px;
+}
+
+a {
+	color: @gray;
 }
 
 button[type="submit"] {
 	width: 123px;
 	height: 35px;
 	color: @gray;
-	font-family: @serifFont;
+	font-family: @serifFontFamily;
 	font-size: 18px;
 	font-weight: 900;
 	text-transform: uppercase;
 	#gradient > .vertical(#ffffff, #e0e0e0);
 	border-color: #e2e2e2;
 	.border-radius(0);
+}
+
+.boxy {
+	background: url('../img/shadow-top.png') top center no-repeat,
+	url('../img/shadow-bottom.png') center 100% no-repeat;
+	background-color: @grayLighter;
 }
 
 /* ...................................the header*/
@@ -225,10 +239,52 @@ footer {
 	margin-top: 18px;
 }
 
-.carousel-indicators li {
-	cursor: pointer;
+.carousel-indicators {
+	top: auto;
+	right: auto;
+	bottom: 40px;
+	left: 27%;
+
+	li {
+		.square(12px);
+		// padding: 1px;
+		background-color: transparent;
+		border: 1px solid @gray;
+		.border-radius(50%);
+		cursor: pointer;
+
+		&.active {
+			background: transparent;
+
+			span {
+				background: @white;
+				display: block;
+				.border-radius(50%);
+				margin: auto;
+				margin-top: 2px;
+				.square(8px);
+			}
+		}
+	}
 }
 
+.carousel-caption {
+	float: right;
+	left: auto;
+	width: 380px;
+	height: 100%;
+	padding: 0;
+	background: rgba(255,255,255, 0.75);
+
+	h4,
+	p {
+		color: @fontGray;
+	}
+
+	.inner {
+		padding: 50px 80px 30px 60px;
+	}
+}
 /* ...................................the news*/
 
 .news {
@@ -410,6 +466,20 @@ footer {
 	}
 }
 
+#lifestream {
+	height: 82px;
+}
+
+.lifestream {
+	display: table;
+	height: 100%;
+}
+
+.lifestream-facebook_page {
+	display: table-cell;
+	vertical-align: middle;
+}
+
 /* ...................................the house of generals*/
 
 .house-of-generals {
@@ -529,6 +599,7 @@ footer {
 	h1 {
 		padding-bottom: 11px;
 		font-size: 60px;
+		font-weight: 400;
 	}
 
 	.itineary-text {
@@ -763,6 +834,115 @@ footer {
 .single-post {
 		margin: 10px 0 73px;
 	}
+
+/* ...................................the house of generals*/
+
+blockquote {
+	border-left: none;
+	
+	p {
+		color: @yellow;
+		font-family: @serifFontFamily;
+		font-size: 36px;
+		border: none;
+	}
+}
+
+.HoG-text {
+	blockquote,
+	blockquote p {
+		width: 200px;
+	}
+
+	p {
+		width: 740px;
+		float: left;
+	}
+
+	blockquote
+	 {
+	 	clear: both;
+
+		&:nth-child(odd) {
+			float: left;
+		}
+
+		&:nth-child(even) {
+			float: right;
+		}
+	}
+}
+
+.donate-mf {
+	background-color: @grayLighter;
+
+	textarea {
+		width: 215px;
+		height: 50px;
+	}
+
+	.submit-newsletter {
+		max-width: 229px;
+	}
+}
+
+.materials {
+	color: @black;
+	margin: 27px 0 48px;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+.materials-text {
+	margin-bottom: 100px;
+	color: @fontGray;
+	font-size: 16px;
+
+	div:nth-child(2) {
+		margin-top: 28px;
+	}
+}
+
+.money-bag {
+	margin-left: 25px;
+}
+
+.donate-money, .donate-materials {
+	margin-bottom: 38px;
+	color: @yellow;
+	font-family: @serifFontFamily;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+
+.or {
+	margin-top: 52px;
+	color: @yellow;
+	font-family: @serifFontFamily;
+	font-size: 72px;
+	line-height: 72px;
+	text-align: center;
+}
+
+.donate-margin {
+	margin-left: 0;
+	width: 240px;
+}
+
+.shadow-bottom {
+	margin-top: 51px;
+}
+
+/* ...................................the good news*/
+
+.good-news {
+	h1 {
+		color: @yellow;
+		font-family: @serifFontFamily;
+		font-size: 140px;
+		font-weight: 400;
+	}
+}
 
 /* ...................................the end*/
 

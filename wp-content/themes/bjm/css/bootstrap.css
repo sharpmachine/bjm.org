@@ -5016,17 +5016,24 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
-body a {
-  color: #58585b;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
 }
 h1 {
   color: #a19159;
-  font-family: 'Crimson Text', serif;
   font-size: 40px;
 }
 h2 {
-  font-family: 'Crimson Text', serif;
   font-size: 24px;
+}
+a {
+  color: #58585b;
 }
 button[type="submit"] {
   width: 123px;
@@ -5048,6 +5055,10 @@ button[type="submit"] {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+}
+.boxy {
+  background: url('../img/shadow-top.png') top center no-repeat, url('../img/shadow-bottom.png') center 100% no-repeat;
+  background-color: #eeeeee;
 }
 /* ...................................the header*/
 header {
@@ -5201,8 +5212,50 @@ footer .footer {
 .hero-slider {
   margin-top: 18px;
 }
+.carousel-indicators {
+  top: auto;
+  right: auto;
+  bottom: 40px;
+  left: 27%;
+}
 .carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 1px solid #58585b;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
   cursor: pointer;
+}
+.carousel-indicators li.active {
+  background: transparent;
+}
+.carousel-indicators li.active span {
+  background: #ffffff;
+  display: block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 2px;
+  width: 8px;
+  height: 8px;
+}
+.carousel-caption {
+  float: right;
+  left: auto;
+  width: 380px;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.75);
+}
+.carousel-caption h4,
+.carousel-caption p {
+  color: #414042;
+}
+.carousel-caption .inner {
+  padding: 50px 80px 30px 60px;
 }
 /* ...................................the news*/
 .news {
@@ -5343,6 +5396,17 @@ footer .footer {
 .facebook-update a {
   color: #a19159;
 }
+#lifestream {
+  height: 82px;
+}
+.lifestream {
+  display: table;
+  height: 100%;
+}
+.lifestream-facebook_page {
+  display: table-cell;
+  vertical-align: middle;
+}
 /* ...................................the house of generals*/
 .house-of-generals {
   margin: 66px 0;
@@ -5441,6 +5505,7 @@ footer .footer {
 .itineary h1 {
   padding-bottom: 11px;
   font-size: 60px;
+  font-weight: 400;
 }
 .itineary-contact {
   color: #58585b;
@@ -5625,6 +5690,90 @@ iframe {
 /* ...................................the single blog post*/
 .single-post {
   margin: 10px 0 73px;
+}
+/* ...................................the house of generals*/
+blockquote {
+  border-left: none;
+}
+blockquote p {
+  color: #a19159;
+  font-family: 'Crimson Text', serif;
+  font-size: 36px;
+  border: none;
+}
+.HoG-text blockquote,
+.HoG-text blockquote p {
+  width: 200px;
+}
+.HoG-text p {
+  width: 740px;
+  float: left;
+}
+.HoG-text blockquote {
+  clear: both;
+}
+.HoG-text blockquote:nth-child(odd) {
+  float: left;
+}
+.HoG-text blockquote:nth-child(even) {
+  float: right;
+}
+.donate-mf {
+  background-color: #eeeeee;
+}
+.donate-mf textarea {
+  width: 215px;
+  height: 50px;
+}
+.donate-mf .submit-newsletter {
+  max-width: 229px;
+}
+.materials {
+  color: #000000;
+  margin: 27px 0 48px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.materials-text {
+  margin-bottom: 100px;
+  color: #414042;
+  font-size: 16px;
+}
+.materials-text div:nth-child(2) {
+  margin-top: 28px;
+}
+.money-bag {
+  margin-left: 25px;
+}
+.donate-money,
+.donate-materials {
+  margin-bottom: 38px;
+  color: #a19159;
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.or {
+  margin-top: 52px;
+  color: #a19159;
+  font-family: 'Crimson Text', serif;
+  font-size: 72px;
+  line-height: 72px;
+  text-align: center;
+}
+.donate-margin {
+  margin-left: 0;
+  width: 240px;
+}
+.shadow-bottom {
+  margin-top: 51px;
+}
+/* ...................................the good news*/
+.good-news h1 {
+  color: #a19159;
+  font-family: 'Crimson Text', serif;
+  font-size: 140px;
+  font-weight: 400;
 }
 /* ...................................the end*/
 img.size-auto,

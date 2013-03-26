@@ -1,7 +1,27 @@
 <?php get_header(); ?>
 
-<div>
+<div class="good-news">
 	<div class="container">
+		<div class="row">
+			<div class="top-shadow">
+				<img src="<?php bloginfo('template_directory'); ?>/img/shadow-top.png" alt="Top Shadow">
+			</div>
+		</div>
+		<div class="row">
+			<div class="span12">
+				<h1>Good <img src="<?php bloginfo('template_directory'); ?>/img/healing-icon.png " alt="Good News"> News</h1>
+			</div>
+			<div class="testimonies">
+				Testimonies from the road.
+
+				<a href="" class="btn">poop</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="top-shadow">
+				<img src="<?php bloginfo('template_directory'); ?>/img/shadow-bottom.png" alt="Top Bottom">
+			</div>
+		</div>
 		<div class="row">
 			<div class="span9">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
