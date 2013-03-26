@@ -271,10 +271,36 @@ footer {
 .carousel-caption {
 	float: right;
 	left: auto;
-	width: 380px;
+	width: 40.5%;
 	height: 100%;
 	padding: 0;
 	background: rgba(255,255,255, 0.75);
+
+	h4 {
+		margin-bottom: 22px;
+		padding-bottom: 6px;
+		font-size: 24px;
+		line-height: 24px;
+		text-transform: uppercase;
+		border-bottom: 1px solid @fontGray;
+	}
+
+	p {
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	a {
+		width: 105px;
+		height: 21px;
+		margin-top: 28px;
+		font-family: @serifFontFamily;
+		font-size: 18px;
+		text-transform: uppercase;
+		background: transparent;
+		border: 1px solid @fontGray;
+		.border-radius(0);
+	}
 
 	h4,
 	p {
@@ -285,6 +311,30 @@ footer {
 		padding: 50px 80px 30px 60px;
 	}
 }
+
+.carousel-control {
+	width: 50px;
+	height: 95px;
+	margin-top: 0;
+	line-height: 70px;
+	font-size: 90px;
+	font-family: @serifFontFamily;
+	font-weight: 400;
+	background: rgba(255,255,255,0.4);
+	border: none;
+	.border-radius(0);
+}
+
+.carousel-control.left {
+	left: 0;
+	.border-right-radius(10px);
+}
+
+.carousel-control.right {
+	right: 0;
+	.border-left-radius(10px);
+}
+
 /* ...................................the news*/
 
 .news {
@@ -540,6 +590,7 @@ footer {
 	color: @fontGray;
 	font-family: @serifFont;
 	font-size: 136px;
+	text-align: center;
 }
 
 .amperstand-home {
@@ -558,7 +609,90 @@ footer {
 		font-style: italic;
 		text-decoration: underline;
 	}
+
+// vertical carousel 
+
+	.qa-Carousel {
+		width: 100%;
+	}
+
+	.vertical .carousel-inner {
+	  height: 100%;
+	}
+
+	.carousel.vertical .item {
+	  -webkit-transition: 0.6s ease-in-out top;
+	     -moz-transition: 0.6s ease-in-out top;
+	      -ms-transition: 0.6s ease-in-out top;
+	       -o-transition: 0.6s ease-in-out top;
+	          transition: 0.6s ease-in-out top;
+	}
+
+	.carousel.vertical .active {
+	  top: 0;
+	}
+
+	.carousel.vertical .next {
+	  top: 400px;
+	}
+
+	.carousel.vertical .prev {
+	  top: -400px;
+	}
+
+	.carousel.vertical .next.left,
+	.carousel.vertical .prev.right {
+	  top: 0;
+	}
+
+	.carousel.vertical .active.left {
+	  top: -400px;
+	}
+
+	.carousel.vertical .active.right {
+	  top: 400px;
+	}
+
+	.carousel.vertical .item {
+	    left: 0;
+	}
+
+
+	.carousel-control {
+		width: 20px;
+		height: 20px;
+		color: @black;
+		background: none;
+		text-decoration: none;
+		opacity: 1;
+
+		&.left {
+			position: relative;
+			left: 0;
+			top: -100px;
+		}
+
+		&.right {
+			position: relative;
+			left: 0;
+			top: 100px;
+		}
+	}
+
+	.questions {
+		float: left;
+		width: 33%;
+	}
+
+	.answers {
+		float: right;
+		width: 33%;
+	}
+
+	// !vertical carousel
 }
+
+
 
 /* ...................................the schedule*/
 

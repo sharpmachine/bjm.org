@@ -29,6 +29,12 @@ jQuery(document).ready(function($) {
 	 });
 
 	 $('#myCarousel').carousel();
+
+	 $('#myCarousel .item:first-child').addClass('active');
+
+	 $('#myCarousel .dots:first-child').addClass('active');
+
+	 $('#qa-Carousel').carousel();
 	
 });
 

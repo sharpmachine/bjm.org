@@ -12,44 +12,41 @@ get_header(); ?>
 				<div id="myCarousel" class="carousel slide">
 				   <!-- Carousel items -->
 					<div class="carousel-inner">
-						<div class="item active">
-							<img src="<?php bloginfo('template_directory'); ?>/img/bill-hero.jpg" alt="">
-							<div class="carousel-caption">
-								<div class="inner">
-									<h4>First Thumbnail label</h4>
-									<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-								</div>					
-							</div>
-						</div>
+
+						<?php if(get_field('hero_slide')): ?>
+				 		<?php while (has_sub_field('hero_slide')): ?>
 						<div class="item">
-							<img src="<?php bloginfo('template_directory'); ?>/img/bill-hero.jpg" alt="">
+							<img src="<?php the_sub_field('slide_image'); ?>" alt="<?php the_sub_field('slide_title'); ?>">
 							<div class="carousel-caption">
 								<div class="inner">
-								<h4>Second Thumbnail label</h4>
-								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+									<h4><?php the_sub_field('slide_title'); ?></h4>
+									<?php the_sub_field('slide_description'); ?>
+
+									<?php if(get_sub_field('external_link')): ?>
+										<a href="<?php the_sub_field('external_link'); ?>" class="btn">Read More</a>
+									<?php else: ?>
+										<a href="<?php the_sub_field('internal_link'); ?>" class="btn">Read More</a>
+
+									<?php endif; ?>
 								</div>					
 							</div>
 						</div>
-						<div class="item">
-							<img src="<?php bloginfo('template_directory'); ?>/img/bill-hero.jpg" alt="">
-							<div class="carousel-caption">
-								<div class="inner">
-								<h4>Third Thumbnail label</h4>
-								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-								</div>					
-							</div>
-						</div>
+
+						<?php endwhile; ?>
+					 	<?php endif; ?>
 					</div>
 
 					<ol class="carousel-indicators">
-				    <li data-target="#myCarousel" data-slide-to="0" class="active"><span></span></li>
-				    <li data-target="#myCarousel" data-slide-to="1"><span></span></li>
-				    <li data-target="#myCarousel" data-slide-to="2"><span></span></li>
+						<?php if(get_field('hero_slide')): ?>
+				 		<?php while (has_sub_field('hero_slide')): ?>
+				   		<li data-target="#myCarousel" data-slide-to="0" class="dots "><span></span></li>
+				    <?php endwhile; ?>
+					 	<?php endif; ?>
 				  </ol>
 
 					<!-- Carousel nav -->
-					<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-					<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="<?php bloginfo( 'template_directory' ); ?>/img/left-arrow.png" alt=""></a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="<?php bloginfo( 'template_directory' ); ?>/img/right-arrow.png" alt=""></a>
 				</div>
 
 			</div>
@@ -143,16 +140,6 @@ get_header(); ?>
 </div>
 <!-- !Featured Product -->
 
-<div class="boxy">
-	<div class="container">
-		<div class="row">
-			<div class="span12">
-				<h1>Brandon is a genius!</h1>
-			</div>
-		</div>
-	</div>
-</div>
-
 <article class="video">
 	<div class="container">
 		<div class="row">
@@ -235,36 +222,38 @@ get_header(); ?>
 <div class="q-and-a">
 	<div class="container">
 		<div class="row">
-			<div class="span4 questions-home">
-
-				<?php query_posts( 'qa_cat=written&posts_per_page=1' ); ?>	
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-				<?php endwhile; ?>
-				<!-- post navigation -->
-				<?php else: ?>
-				<!-- no posts found -->
-				<?php endif; ?>
-				<?php wp_reset_query(); ?>
-
-			</div>
-			<div class="span3 a-and-q-text">
-
-				Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class="amperstand-home" alt="amperstand">A
-
-			</div>
-			<div class="span5 answers-home">
-				
-				<?php query_posts( 'qa_cat=written&posts_per_page=1' ); ?>	
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php echo wp_trim_words( get_the_content(), 10, '&nbsp;...&nbsp;<a href=" ' . get_permalink(). '">Read More</a>' ); ?>
-				<?php endwhile; ?>
-				<!-- post navigation -->
-				<?php else: ?>
-				<!-- no posts found -->
-				<?php endif; ?>
-				<!-- !Q&A -->
-				
+			<div class="span12 answers-home">
+				<!-- Vertical Carousel -->
+	        <div id="qa-Carousel" class="carousel slide vertical">
+						<div class="a-and-q-text">
+							Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class="amperstand-home" alt="amperstand">A
+						</div>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+            	<?php query_posts( 'qa_cat=written' ); ?>	
+							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+								<div class="item">
+									<div class="questions">
+										<a href="<?php the_permalink() ?>">
+											<?php echo wp_trim_words( get_the_title(), 15); ?>
+										</a>
+									</div>
+									<div class="answers">
+										<?php echo wp_trim_words( get_the_content(), 15, "&nbsp;...&nbsp;<a href=" . get_permalink(). ">Read More</a>" ); ?>
+									</div>
+								</div>
+							<?php endwhile; ?>
+							<!-- post navigation -->
+							<?php else: ?>
+							<!-- no posts found -->
+							<?php endif; ?>
+							<?php wp_reset_query(); ?>                
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#qa-Carousel" data-slide="prev"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-up.png" alt=""></a>
+            <a class="carousel-control right" href="#qa-Carousel" data-slide="next"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-down.png" alt=""></a>
+	        </div>
+	       <!-- !Vertical Carousel -->
 			</div>
 		</div>
 	</div>

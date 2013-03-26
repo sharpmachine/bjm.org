@@ -5245,10 +5245,35 @@ footer .footer {
 .carousel-caption {
   float: right;
   left: auto;
-  width: 380px;
+  width: 40.5%;
   height: 100%;
   padding: 0;
   background: rgba(255, 255, 255, 0.75);
+}
+.carousel-caption h4 {
+  margin-bottom: 22px;
+  padding-bottom: 6px;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #414042;
+}
+.carousel-caption p {
+  font-size: 12px;
+  line-height: 20px;
+}
+.carousel-caption a {
+  width: 105px;
+  height: 21px;
+  margin-top: 28px;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #414042;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .carousel-caption h4,
 .carousel-caption p {
@@ -5256,6 +5281,38 @@ footer .footer {
 }
 .carousel-caption .inner {
   padding: 50px 80px 30px 60px;
+}
+.carousel-control {
+  width: 50px;
+  height: 95px;
+  margin-top: 0;
+  line-height: 70px;
+  font-size: 90px;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.carousel-control.left {
+  left: 0;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+}
+.carousel-control.right {
+  right: 0;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
 }
 /* ...................................the news*/
 .news {
@@ -5459,6 +5516,7 @@ footer .footer {
   color: #414042;
   font-family: 'Crimson Text', serif;
   font-size: 136px;
+  text-align: center;
 }
 .amperstand-home {
   margin-right: -33px;
@@ -5474,6 +5532,67 @@ footer .footer {
 .answers-home a {
   font-style: italic;
   text-decoration: underline;
+}
+.answers-home .qa-Carousel {
+  width: 100%;
+}
+.answers-home .vertical .carousel-inner {
+  height: 100%;
+}
+.answers-home .carousel.vertical .item {
+  -webkit-transition: 0.6s ease-in-out top;
+  -moz-transition: 0.6s ease-in-out top;
+  -ms-transition: 0.6s ease-in-out top;
+  -o-transition: 0.6s ease-in-out top;
+  transition: 0.6s ease-in-out top;
+}
+.answers-home .carousel.vertical .active {
+  top: 0;
+}
+.answers-home .carousel.vertical .next {
+  top: 400px;
+}
+.answers-home .carousel.vertical .prev {
+  top: -400px;
+}
+.answers-home .carousel.vertical .next.left,
+.answers-home .carousel.vertical .prev.right {
+  top: 0;
+}
+.answers-home .carousel.vertical .active.left {
+  top: -400px;
+}
+.answers-home .carousel.vertical .active.right {
+  top: 400px;
+}
+.answers-home .carousel.vertical .item {
+  left: 0;
+}
+.answers-home .carousel-control {
+  width: 20px;
+  height: 20px;
+  color: #000000;
+  background: none;
+  text-decoration: none;
+  opacity: 1;
+}
+.answers-home .carousel-control.left {
+  position: relative;
+  left: 0;
+  top: -100px;
+}
+.answers-home .carousel-control.right {
+  position: relative;
+  left: 0;
+  top: -100px;
+}
+.answers-home .questions {
+  float: left;
+  width: 33%;
+}
+.answers-home .answers {
+  float: right;
+  width: 33%;
 }
 /* ...................................the schedule*/
 .schedule img {

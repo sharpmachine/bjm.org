@@ -13,8 +13,6 @@
 			</div>
 			<div class="testimonies">
 				Testimonies from the road.
-
-				<a href="" class="btn">poop</a>
 			</div>
 		</div>
 		<div class="row">
