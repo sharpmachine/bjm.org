@@ -12,19 +12,19 @@ get_header(); ?>
 
 					<h2>How to invite Bill</h2>
 					<?php get_template_part( 'loop', 'page' ); ?>
-					
+					<?php the_field('hg_title'); ?>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="itineary">
+	<div class="itineary boxy">
 		<div class="container">
 			<div class="row">
 				<div class="span12">
 						
-						<h1>Bill's itinerary is full through 2013.</h1>
-						<div class="itineary-text">Request for 2013 will not be considered. Thank you for understanding.</div>
+						<h1><?php the_field('availability_large_gold_text'); ?></h1>
+						<div class="itineary-text"><?php the_field('availability_small_gray_text'); ?></div>
 
 				</div>
 			</div>

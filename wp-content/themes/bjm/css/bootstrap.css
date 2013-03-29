@@ -5012,7 +5012,7 @@ a.badge:hover {
 Project Name: Bill Johnson Ministries
 */
 body {
-  color: #58585b;
+  color: #999999;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
@@ -5466,7 +5466,8 @@ footer .footer {
 }
 /* ...................................the house of generals*/
 .house-of-generals {
-  margin: 66px 0;
+  margin-bottom: 66px;
+  margin-top: 66px;
 }
 .generals-background {
   background: url('../img/house-of-generals-bk.png');
@@ -5477,7 +5478,7 @@ footer .footer {
   background: rgba(255, 255, 255, 0.65);
 }
 .generals-title {
-  margin: 40px 40px 25px 40px;
+  margin: 140px 40px 25px 40px;
   padding-bottom: 10px;
   font-family: 'Crimson Text', serif;
   font-size: 24px;
@@ -5512,11 +5513,20 @@ footer .footer {
   border-bottom: 1px solid #414042;
 }
 .a-and-q-text {
+  position: absolute;
+  top: -45px;
+  z-index: 999;
   padding: 42px 0;
+  left: 37%;
+  width: 219px;
   color: #414042;
   font-family: 'Crimson Text', serif;
   font-size: 136px;
   text-align: center;
+  background-color: #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 .amperstand-home {
   margin-right: -33px;
@@ -5526,8 +5536,6 @@ footer .footer {
 .answers-home {
   padding: 42px 0;
   font-family: 'Crimson Text', serif;
-  border-top: 1px solid #414042;
-  border-bottom: 1px solid #414042;
 }
 .answers-home a {
   font-style: italic;
@@ -5537,9 +5545,13 @@ footer .footer {
   width: 100%;
 }
 .answers-home .vertical .carousel-inner {
-  height: 100%;
+  height: 50px;
+  padding: 45px 0;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 .answers-home .carousel.vertical .item {
+  height: 140px;
   -webkit-transition: 0.6s ease-in-out top;
   -moz-transition: 0.6s ease-in-out top;
   -ms-transition: 0.6s ease-in-out top;
@@ -5577,22 +5589,26 @@ footer .footer {
   opacity: 1;
 }
 .answers-home .carousel-control.left {
+  height: 14px !important;
   position: relative;
   left: 0;
   top: -100px;
 }
 .answers-home .carousel-control.right {
+  height: 14px;
   position: relative;
   left: 0;
-  top: -100px;
+  top: 10px;
 }
 .answers-home .questions {
   float: left;
   width: 33%;
+  height: 140px;
 }
 .answers-home .answers {
   float: right;
   width: 33%;
+  height: 140px;
 }
 /* ...................................the schedule*/
 .schedule img {
@@ -5888,11 +5904,22 @@ blockquote p {
   margin-top: 51px;
 }
 /* ...................................the good news*/
+.good-news {
+  padding: 96px 0;
+}
 .good-news h1 {
   color: #a19159;
-  font-family: 'Crimson Text', serif;
   font-size: 140px;
-  font-weight: 400;
+  text-align: center;
+}
+.good-news h4 {
+  padding-top: 17px;
+  color: #414042;
+  font-size: 60px;
+  text-align: center;
+}
+.good-news h2 {
+  color: #414042;
 }
 /* ...................................the end*/
 img.size-auto,

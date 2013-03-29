@@ -3,7 +3,7 @@ Project Name: Bill Johnson Ministries
 */
 
 body {
-	color: @gray;
+	color: @grayLight;
 	font-family: @sansFont;
 	font-size: 16px;
 }
@@ -533,7 +533,8 @@ footer {
 /* ...................................the house of generals*/
 
 .house-of-generals {
-	margin: 66px 0;
+	margin-bottom: 66px;
+	margin-top: 66px;
 }
 
 .generals-background {
@@ -547,7 +548,7 @@ footer {
 }
 
 .generals-title {
-	margin: 40px 40px 25px 40px;
+	margin: 140px 40px 25px 40px;
 	padding-bottom: 10px;
 	font-family: @serifFontFamily;
 	font-size: 24px;
@@ -586,11 +587,18 @@ footer {
 }
 
 .a-and-q-text {
+	position: absolute;
+	top: -45px;
+	z-index: 999;
 	padding: 42px 0;
+	left: 37%;
+	width: 219px;
 	color: @fontGray;
 	font-family: @serifFont;
 	font-size: 136px;
 	text-align: center;
+	background-color: @white;
+	.border-radius(50%); 
 }
 
 .amperstand-home {
@@ -602,8 +610,8 @@ footer {
 .answers-home {
 	padding: 42px 0;
 	font-family: @serifFontFamily;
-	border-top: 1px solid @fontGray;
-	border-bottom: 1px solid @fontGray;
+	// border-top: 1px solid @fontGray;
+	// border-bottom: 1px solid @fontGray;
 
 	a {
 		font-style: italic;
@@ -617,10 +625,14 @@ footer {
 	}
 
 	.vertical .carousel-inner {
-	  height: 100%;
+	  height: 50px;
+	  padding: 45px 0;
+	  border-top: 1px solid @black;
+	  border-bottom: 1px solid @black;
 	}
 
 	.carousel.vertical .item {
+		height: 140px;
 	  -webkit-transition: 0.6s ease-in-out top;
 	     -moz-transition: 0.6s ease-in-out top;
 	      -ms-transition: 0.6s ease-in-out top;
@@ -655,6 +667,7 @@ footer {
 
 	.carousel.vertical .item {
 	    left: 0;
+
 	}
 
 
@@ -667,26 +680,34 @@ footer {
 		opacity: 1;
 
 		&.left {
+			height: 14px !important;
 			position: relative;
 			left: 0;
 			top: -100px;
 		}
 
 		&.right {
+			height: 14px;
 			position: relative;
 			left: 0;
-			top: 100px;
+			top: 10px;
 		}
 	}
+
+	// .carousel-inner {
+	// 	height: 125px;
+	// }
 
 	.questions {
 		float: left;
 		width: 33%;
+		height: 140px;
 	}
 
 	.answers {
 		float: right;
 		width: 33%;
+		height: 140px;
 	}
 
 	// !vertical carousel
@@ -1070,11 +1091,23 @@ blockquote {
 /* ...................................the good news*/
 
 .good-news {
+	padding: 96px 0;
+
 	h1 {
 		color: @yellow;
-		font-family: @serifFontFamily;
 		font-size: 140px;
-		font-weight: 400;
+		text-align: center;
+	}
+
+	h4 {
+		padding-top: 17px;
+		color: @fontGray;
+		font-size: 60px;
+		text-align: center;
+	}
+
+	h2 {
+		color: @fontGray;
 	}
 }
 

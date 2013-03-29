@@ -204,14 +204,17 @@ get_header(); ?>
 			</div>
 			<div class="span4 generals">
 				<div class="generals-title">
-					House of Generals
+					<?php the_field('hg_title'); ?>
 				</div>
 				<div class="generals-text">
-					<p>We love to honor leaders around the world who are bringing the kingdom of heaven to earth but one of the mandates on my life and on our church family is to also honor leaders who spearheaded revivals of the past.</p>
-					<p>The Lord has made it very clear to us that a practical way we can do this is through what we have called The House of Generals...</p>
+					<?php the_field('hg_description'); ?>
 				</div>
 				<div class="btn learn-more">
-					Learn More
+					<?php if(the_field('hg_external_link')): ?>
+						<a href="<?php the_field('hg_external_link'); ?> ">Learn More</a>
+					<?php else: ?>
+						<a href="<?php the_field('hg_internal_link'); ?> ">Learn More</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -250,8 +253,8 @@ get_header(); ?>
 							<?php wp_reset_query(); ?>                
             </div>
             <!-- Carousel nav -->
-            <a class="carousel-control left" href="#qa-Carousel" data-slide="prev"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-up.png" alt=""></a>
-            <a class="carousel-control right" href="#qa-Carousel" data-slide="next"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-down.png" alt=""></a>
+            <!-- <a class="carousel-control left" href="#qa-Carousel" data-slide="prev"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-up.png" alt=""></a>
+            <a class="carousel-control right" href="#qa-Carousel" data-slide="next"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-down.png" alt=""></a> -->
 	        </div>
 	       <!-- !Vertical Carousel -->
 			</div>
