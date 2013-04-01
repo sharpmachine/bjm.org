@@ -5994,6 +5994,35 @@ blockquote p {
   margin: 0;
   font-family: 'Crimson Text', serif;
 }
+/* ...................................the about*/
+.about {
+  margin-bottom: 72px;
+}
+.about-article {
+  color: #414042;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.about-article h3 {
+  padding-bottom: 8px;
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  font-size: 36px;
+  border-bottom: 1px solid #414042;
+}
+.about-article h1 {
+  margin: 33px 0 75px;
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  font-size: 110px;
+}
+.about-article p:nth-child(1) {
+  margin-top: 53px;
+}
+.about-article p {
+  margin-bottom: 18px;
+  line-height: 22px;
+}
 /* ...................................the end*/
 img.size-auto,
 img.size-full,
