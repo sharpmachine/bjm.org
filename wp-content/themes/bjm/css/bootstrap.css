@@ -151,11 +151,11 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #0088cc;
+  color: #a19159;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #70653e;
   text-decoration: underline;
 }
 .img-rounded {
@@ -2340,28 +2340,28 @@ table th[class*="span"],
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-color: #9a8b55;
+  background-image: -moz-linear-gradient(top, #a19159, #918250);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a19159), to(#918250));
+  background-image: -webkit-linear-gradient(top, #a19159, #918250);
+  background-image: -o-linear-gradient(top, #a19159, #918250);
+  background-image: linear-gradient(to bottom, #a19159, #918250);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa19159', endColorstr='#ff918250', GradientType=0);
 }
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
   color: #333333;
   text-decoration: none;
   outline: 0;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-color: #9a8b55;
+  background-image: -moz-linear-gradient(top, #a19159, #918250);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a19159), to(#918250));
+  background-image: -webkit-linear-gradient(top, #a19159, #918250);
+  background-image: -o-linear-gradient(top, #a19159, #918250);
+  background-image: linear-gradient(to bottom, #a19159, #918250);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa19159', endColorstr='#ff918250', GradientType=0);
 }
 .dropdown-menu .disabled > a,
 .dropdown-menu .disabled > a:hover {
@@ -2687,17 +2687,17 @@ input[type="button"].btn-block {
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #006dcc;
-  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
-  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
-  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-color: #9e9759;
+  background-image: -moz-linear-gradient(top, #a19159, #99a159);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a19159), to(#99a159));
+  background-image: -webkit-linear-gradient(top, #a19159, #99a159);
+  background-image: -o-linear-gradient(top, #a19159, #99a159);
+  background-image: linear-gradient(to bottom, #a19159, #99a159);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
-  border-color: #0044cc #0044cc #002a80;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa19159', endColorstr='#ff99a159', GradientType=0);
+  border-color: #99a159 #99a159 #6a703e;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #0044cc;
+  *background-color: #99a159;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2708,12 +2708,12 @@ input[type="button"].btn-block {
 .btn-primary.disabled,
 .btn-primary[disabled] {
   color: #ffffff;
-  background-color: #0044cc;
-  *background-color: #003bb3;
+  background-color: #99a159;
+  *background-color: #899150;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #003399 \9;
+  background-color: #7a8047 \9;
 }
 .btn-warning {
   color: #ffffff;
@@ -2907,13 +2907,13 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #0088cc;
+  color: #a19159;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
 .btn-link:hover {
-  color: #005580;
+  color: #70653e;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3052,7 +3052,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #0044cc;
+  background-color: #99a159;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: #f89406;
@@ -3227,7 +3227,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0088cc;
+  background-color: #a19159;
 }
 .nav-list [class^="icon-"],
 .nav-list [class*=" icon-"] {
@@ -3307,7 +3307,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #a19159;
 }
 .nav-stacked > li {
   float: none;
@@ -3361,13 +3361,13 @@ input[type="submit"].btn.btn-mini {
   border-radius: 6px;
 }
 .nav .dropdown-toggle .caret {
-  border-top-color: #0088cc;
-  border-bottom-color: #0088cc;
+  border-top-color: #a19159;
+  border-bottom-color: #a19159;
   margin-top: 6px;
 }
 .nav .dropdown-toggle:hover .caret {
-  border-top-color: #005580;
-  border-bottom-color: #005580;
+  border-top-color: #70653e;
+  border-bottom-color: #70653e;
 }
 /* move down carets for tabs */
 .nav-tabs .dropdown-toggle .caret {
@@ -4522,7 +4522,7 @@ input[type="submit"].btn.btn-mini {
   transition: all 0.2s ease-in-out;
 }
 a.thumbnail:hover {
-  border-color: #0088cc;
+  border-color: #a19159;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -5033,7 +5033,10 @@ h2 {
   font-size: 24px;
 }
 a {
-  color: #58585b;
+  color: #a19159;
+}
+a:hover {
+  color: #918250;
 }
 button[type="submit"] {
   width: 123px;
@@ -5770,13 +5773,13 @@ footer .footer {
   text-transform: uppercase;
 }
 /* ...................................the Q&A*/
-.ask-question h2 {
+.ask-question-row h2 {
   color: #a19159;
   font-family: 'Crimson Text', serif;
   font-size: 60px;
   font-weight: 300;
 }
-.ask-question input {
+.ask-question-row input {
   margin-bottom: 18px;
   height: 60px;
   width: 286px;
@@ -5785,7 +5788,7 @@ footer .footer {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.ask-question button {
+.ask-question-row button {
   margin: auto;
   display: block;
 }
@@ -5816,6 +5819,31 @@ footer .footer {
   color: #58595b;
   font-size: 12px;
   text-transform: uppercase;
+}
+.answer-block {
+  padding: 15px 0;
+  border-bottom: 1px solid #b2b2b3;
+}
+.answer-block img {
+  display: block;
+  position: relative;
+  top: 4px;
+  float: left;
+  width: 29px;
+  height: 30px;
+  margin-right: 15px;
+}
+.answer-title {
+  float: left;
+  width: 256px;
+}
+.answer-title a {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+}
+.answer-title a a:hover {
+  text-decoration: none;
 }
 /* ...................................the Q&A sidebar*/
 .read-more,
@@ -5920,6 +5948,51 @@ blockquote p {
 }
 .good-news h2 {
   color: #414042;
+}
+/* ...................................the contact*/
+.map h3 {
+  margin-top: 33px;
+  color: #414042;
+  font-size: 36px;
+}
+.map h2 {
+  margin-top: 33px;
+  color: #a19159;
+  font-size: 36px;
+}
+.send-a-message {
+  color: #58595b;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.send-a-message h4 {
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.send-a-message .control-label {
+  text-align: left;
+}
+.send-a-message .form-horizontal .control-group {
+  margin-bottom: 7px;
+}
+.send-a-message input[type='text'],
+.send-a-message input[type='email'] {
+  background: transparent;
+}
+.note {
+  color: #a19159;
+  font-size: 18px;
+}
+.note h6 {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+.note p {
+  padding: 0;
+  margin: 0;
+  font-family: 'Crimson Text', serif;
 }
 /* ...................................the end*/
 img.size-auto,

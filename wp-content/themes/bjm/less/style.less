@@ -28,7 +28,11 @@ h2 {
 }
 
 a {
-	color: @gray;
+	color: @yellow;
+
+	&:hover {
+		color: darken(@linkColor, 5%);
+	}
 }
 
 button[type="submit"] {
@@ -917,7 +921,7 @@ footer {
 
 /* ...................................the Q&A*/
 
-.ask-question {
+.ask-question-row {
 
 	h2 {
 		color: @yellow;
@@ -977,6 +981,43 @@ footer {
 	font-size: 12px;
 	text-transform: uppercase;
 }
+
+.answer-block {
+	// clear: both;
+	// height: 50px;
+	padding: 15px 0;
+	border-bottom: 1px solid #b2b2b3;
+
+	img {
+		display: block;
+		position: relative;
+		top: 4px;
+		float: left;
+		width: 29px;
+		height: 30px;
+		margin-right: 15px;
+	}
+}
+
+.answer-title {
+	float: left;
+	width: 256px;
+
+	a {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 1;
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+// .qa-sidebar {
+// 	position: fixed;
+// 	top:600px;
+// }
 
 /* ...................................the Q&A sidebar*/
 
@@ -1108,6 +1149,64 @@ blockquote {
 
 	h2 {
 		color: @fontGray;
+	}
+}
+
+/* ...................................the contact*/
+
+.map {
+
+	h3 {
+		margin-top: 33px;
+		color: @fontGray;
+		font-size: 36px;
+	}
+
+	h2 {
+		margin-top: 33px;
+		color: @yellow;
+		font-size: 36px;
+	}
+}
+
+.send-a-message {
+	color: @fontGrayDarker;
+	font-size: 12px;
+	text-transform: uppercase;
+
+	h4 {
+		color: @black;
+		font-family: @sansFont;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	.control-label {
+		text-align: left;
+	}
+
+	.form-horizontal .control-group {
+		margin-bottom: 7px;
+	}
+
+	input[type='text'], 
+	input[type='email'] {
+		background: transparent;
+	}
+}
+
+.note {
+	color: @yellow;
+	font-size: 18px;
+
+	h6 {
+		font-family: @sansFont;
+		text-transform: uppercase;
+	}
+
+	p {
+		padding: 0;
+		margin: 0;
+		font-family: @serifFontFamily;
 	}
 }
 

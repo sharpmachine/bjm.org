@@ -12,7 +12,6 @@ get_header(); ?>
 
 					<h2>How to invite Bill</h2>
 					<?php get_template_part( 'loop', 'page' ); ?>
-					<?php the_field('hg_title'); ?>
 				</div>
 			</div>
 		</div>

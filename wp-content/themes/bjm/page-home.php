@@ -64,11 +64,7 @@ get_header(); ?>
 					<?php query_posts( 'cat=5&posts_per_page=4' ); ?>	
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<li><h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3></li>
-					<?php endwhile; ?>
-					<!-- post navigation -->
-					<?php else: ?>
-					<!-- no posts found -->
-					<?php endif; ?>
+					<?php endwhile; endif; ?>
 					<?php wp_reset_query(); ?>
 				</ul>
 				<!-- !Life Messages -->
@@ -81,11 +77,7 @@ get_header(); ?>
 					<?php query_posts( 'post_type=g_n&posts_per_page=4' ); ?>	
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<li><h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3></li>
-					<?php endwhile; ?>
-					<!-- post navigation -->
-					<?php else: ?>
-					<!-- no posts found -->
-					<?php endif; ?>
+					<?php endwhile; endif; ?>
 					<?php wp_reset_query(); ?>
 				</ul>
 				<!-- !Good News -->
@@ -98,11 +90,7 @@ get_header(); ?>
 					<?php query_posts( 'cat=-5&posts_per_page=4' ); ?>	
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<li><h3><a href="<?php the_permalink() ?>"><?php the_short_title(20); ?></a></h3></li>
-					<?php endwhile; ?>
-					<!-- post navigation -->
-					<?php else: ?>
-					<!-- no posts found -->
-					<?php endif; ?>
+					<?php endwhile; endif; ?>
 					<?php wp_reset_query(); ?>
 				</ul>
 				<!-- !Blog -->
@@ -151,7 +139,8 @@ get_header(); ?>
 
 					<?php if(get_field('vimeo_id')): ?>
 						<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-				<?php endif; endwhile; ?>
+					<?php endif; ?>
+				<?php endwhile; ?>
 			</div>
 			<div class="span4">
 				<div class="row">
@@ -166,6 +155,7 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 					<?php endwhile; ?>
+					<?php wp_reset_query(); ?>
 					<!-- !Videos -->
 				</div>
 			</div>
@@ -210,16 +200,13 @@ get_header(); ?>
 					<?php the_field('hg_description'); ?>
 				</div>
 				<div class="btn learn-more">
-					<?php if(the_field('hg_external_link')): ?>
-						<a href="<?php the_field('hg_external_link'); ?> ">Learn More</a>
-					<?php else: ?>
-						<a href="<?php the_field('hg_internal_link'); ?> ">Learn More</a>
-					<?php endif; ?>
+						<a href="">Learn More</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 <!-- !House of Generals -->
 
 <div class="q-and-a">

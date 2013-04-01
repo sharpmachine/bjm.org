@@ -12,7 +12,7 @@ global $post;
 		
 		
 // vars
-$location = $this->parent->get_acf_location($post->ID);
+$location = apply_filters('acf/field_group/get_location', array(), $post->ID);
 
 
 // at lease 1 location rule
@@ -61,18 +61,20 @@ if( empty($location['rules']) )
 									'taxonomy'		=>	__("Taxonomy",'acf'),
 								),
 								__("Other",'acf') => array(
-									'ef_taxonomy'	=>	__("Taxonomy (Add / Edit)",'acf'),
+									'ef_taxonomy'	=>	__("Taxonomy Term (Add / Edit)",'acf'),
 									'ef_user'		=>	__("User (Add / Edit)",'acf'),
-									'ef_media'		=>	__("Media (Edit)",'acf')
+									'ef_media'		=>	__("Media Attachment (Edit)",'acf')
 								)
 							);
 							
 
 							// validate
-							if($this->parent->is_field_unlocked('options_page'))
+							/*
+if($this->parent->is_field_unlocked('options_page'))
 							{
 								$choices[__("Options Page",'acf')]['options_page'] = __("Options Page",'acf');
 							}
+*/
 							
 							
 							// allow custom location rules
@@ -88,7 +90,7 @@ if( empty($location['rules']) )
 								'optgroup' => true,
 							);
 							
-							$this->parent->create_field($args);							
+							do_action('acf/create_field', $args);							
 							
 						?></td>
 						<td class="operator"><?php 	
@@ -104,7 +106,7 @@ if( empty($location['rules']) )
 							
 							
 							// create field
-							$this->parent->create_field(array(
+							do_action('acf/create_field', array(
 								'type'	=>	'select',
 								'name'	=>	'location[rules]['.$k.'][operator]',
 								'value'	=>	$rule['operator'],
@@ -114,7 +116,7 @@ if( empty($location['rules']) )
 						?></td>
 						<td class="value"><?php 
 							
-							$this->ajax_acf_location(array(
+							$this->ajax_render_location(array(
 								'key' => $k,
 								'value' => $rule['value'],
 								'param' => $rule['param'],
@@ -134,7 +136,7 @@ if( empty($location['rules']) )
 				</table>
 				<ul class="hl clearfix">
 					<li style="padding:4px 4px 0 0;"><?php _e("match",'acf'); ?></li>
-					<li><?php $this->parent->create_field(array(
+					<li><?php do_action('acf/create_field', array(
 									'type'	=>	'select',
 									'name'	=>	'location[allorany]',
 									'value'	=>	$location['allorany'],
