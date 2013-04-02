@@ -850,6 +850,7 @@ footer {
 /* ...................................the invite*/
 
 .invite-bill {
+	margin-bottom: 70px;
 	color: @fontGray;
 	font-size: 16px;
 	line-height: 22px;
@@ -863,7 +864,7 @@ footer {
 }
 
 .itineary {
-	margin: 70px 0 80px;
+	margin-bottom: 80px;
 	padding: 140px 0 190px;
 	font-size: 16px;
 	line-height: 22px;
@@ -892,7 +893,6 @@ footer {
 	}
 
 	input[type="text"] {
-		width: 286px;
 		height: 30px;
 		border: 1px solid @gray;
 		.border-radius(0);
@@ -903,53 +903,63 @@ footer {
 	max-width: 1100px;
 }
 
+#searchform {
+	input[type="text"] {
+		background: url(../img/search-form.png) no-repeat 190px center;
+	}
+}
 
 /* ...................................the blog page*/
 .blog {
 	color: @fontGray;
 }
 
-	.image {
-		margin-top: 50px;
+.post-excerpt{
+	margin-top: 20px;
+
+	&:nth-child(odd) {
+		clear: both;
+	}
+}
+
+
+
+.blog-title {
+	margin: 30px 0 2px;
+	font-family: @serifFont;
+	font-size: 36px;
+	font-weight: 300;
+
+	a {
+		color: @fontGray;
+	}
+}
+
+.blog-author {
+	font-family: @serifFont;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.blog-page {
+		margin: 23px 0 20px;
 	}
 
+.uppercase {
+	
+	color: @yellow;
+	font-size: 12px;
+	text-transform: uppercase;
 
-	.blog-title {
-		margin: 30px 0 2px;
-		font-family: @serifFont;
-		font-size: 36px;
-		font-weight: 300;
-
-		a {
-			color: @fontGray;
-		}
-	}
-
-	.blog-author {
-		font-family: @serifFont;
-		font-size: 18px;
-		line-height: 18px;
-	}
-
-	.blog-page {
-			margin: 23px 0 20px;
-		}
-
-	.uppercase {
-		
+	a {
 		color: @yellow;
-		font-size: 12px;
-		text-transform: uppercase;
-
-		a {
-			color: @yellow;
-		}
 	}
+}
 
-	.the-excerpt {
-		font-size: 16px;
-		line-height: 22px;
-	}
+.the-excerpt {
+	font-size: 16px;
+	line-height: 22px;
+}
 
 
 .read-more {
@@ -1130,7 +1140,7 @@ footer {
 
 /* ...................................the Q&A sidebar*/
 
-.read-more, iframe {
+iframe {
 	padding-bottom: 50px;
 }
 

@@ -5721,6 +5721,7 @@ footer .footer {
 /* ...................................the schedule*/
 /* ...................................the invite*/
 .invite-bill {
+  margin-bottom: 70px;
   color: #414042;
   font-size: 16px;
   line-height: 22px;
@@ -5732,7 +5733,7 @@ footer .footer {
   font-size: 36px;
 }
 .itineary {
-  margin: 70px 0 80px;
+  margin-bottom: 80px;
   padding: 140px 0 190px;
   font-size: 16px;
   line-height: 22px;
@@ -5754,7 +5755,6 @@ footer .footer {
   padding-bottom: 38px;
 }
 .itineary-contact input[type="text"] {
-  width: 286px;
   height: 30px;
   border: 1px solid #58585b;
   -webkit-border-radius: 0;
@@ -5764,12 +5764,18 @@ footer .footer {
 .invite-submit {
   max-width: 1100px;
 }
+#searchform input[type="text"] {
+  background: url(../img/search-form.png) no-repeat 190px center;
+}
 /* ...................................the blog page*/
 .blog {
   color: #414042;
 }
-.image {
-  margin-top: 50px;
+.post-excerpt {
+  margin-top: 20px;
+}
+.post-excerpt:nth-child(odd) {
+  clear: both;
 }
 .blog-title {
   margin: 30px 0 2px;
@@ -5944,7 +5950,6 @@ footer .footer {
   left: auto;
 }
 /* ...................................the Q&A sidebar*/
-.read-more,
 iframe {
   padding-bottom: 50px;
 }
@@ -6293,22 +6298,22 @@ a.qa-aname {
 .bethel-schedule .views-row:nth-child(n+2) {
   border-top: 1px solid #414042;
 }
-.itinerary {
+.content-inner .itinerary {
   color: #414042;
   font-family: 'Crimson Text', serif;
 }
-.date-display-start,
-.date-display-end {
+.content-inner .date-display-start,
+.content-inner .date-display-end {
   display: block;
   font-size: 48px;
   font-family: 'Crimson Text', serif;
 }
-.date-display-start {
+.content-inner .date-display-start {
   position: relative;
   left: 0px;
   top: -38px;
 }
-.date-display-end {
+.content-inner .date-display-end {
   position: relative;
   left: 0;
   top: -16px;
@@ -6316,39 +6321,39 @@ a.qa-aname {
   padding-top: 15px;
   border-top: 1px solid #414042;
 }
-.date-display-separator {
+.content-inner .date-display-separator {
   display: none;
 }
-strong {
+.content-inner strong {
   position: relative;
   left: 318px;
   top: 0px;
   font-size: 36px;
   font-weight: 400;
 }
-.prepend-1:nth-child(2) {
+.content-inner .prepend-1:nth-child(2) {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
-.prepend-1:nth-child(2) div:nth-child(2) div:nth-child(1) {
+.content-inner .prepend-1:nth-child(2) div:nth-child(2) div:nth-child(1) {
   position: relative;
   left: 159px;
   top: -23px;
   font-weight: 600;
 }
-.prepend-1:nth-child(2) div:nth-child(1n+2) {
+.content-inner .prepend-1:nth-child(2) div:nth-child(1n+2) {
   position: relative;
   left: 159px;
   top: -26px;
   font-weight: 300;
 }
-.prepend-1:nth-child(2) a {
+.content-inner .prepend-1:nth-child(2) a {
   position: relative;
   left: 250px;
   top: -20px;
   font-family: 'Crimson Text', serif;
 }
-hr {
+.content-inner hr {
   display: none;
 }
 /* =Comments

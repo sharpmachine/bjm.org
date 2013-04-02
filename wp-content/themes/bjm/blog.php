@@ -14,7 +14,7 @@ get_header(); ?>
 				<div class="row">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-					<div class="span4">
+					<div class="span4 post-excerpt">
 						<div class="image"><?php the_post_thumbnail( array(300,165) ); ?></div>
 						<h2 class="blog-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<div class="blog-author">By <?php the_author_posts_link() ?></div>
@@ -25,10 +25,11 @@ get_header(); ?>
 							<div class="bold underline"><?php comments_number( '0', '1', '%' ); ?>  Comments</div>
 						</div>
 						<div class="the-excerpt"><?php the_excerpt(); ?></div>
+						<div class="clearfix"></div>
 					</div>
 
 				<?php endwhile; ?>
-				<?php bootstrap_pagination(); ?>
+			
 				<!-- no posts found -->
 				</div>
 				<?php endif; ?>	
