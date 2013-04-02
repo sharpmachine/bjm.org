@@ -25,7 +25,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="span4 qa-sidebar">
-				<div data-spy="affix" data-offset-top="10">
+				<div class="affix" data-spy="affix" data-offset-top="460">
 				<?php query_posts( 'post_type=q_a' ); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					

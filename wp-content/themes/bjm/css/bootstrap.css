@@ -5939,6 +5939,10 @@ footer .footer {
 .answer-title a a:hover {
   text-decoration: none;
 }
+.affix {
+  top: 40px;
+  left: auto;
+}
 /* ...................................the Q&A sidebar*/
 .read-more,
 iframe {
