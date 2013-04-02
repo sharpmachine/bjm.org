@@ -19,7 +19,7 @@ get_header(); ?>
 					<div class="blog-author">By <?php the_author_posts_link() ?></div>
 					<div class="blog-author">Posted on <?php the_time('F jS, Y') ?></div>
 					<div class="uppercase blog-page">
-						<div><span class="bold">Categroies: </span><span class="underline"><?php the_category(',&nbsp;'); ?></span></div>
+						<div><span class="bold">Categories: </span><span class="underline"><?php the_category(',&nbsp;'); ?></span></div>
 						<div><span class="bold">Tags: </span><span class="underline"><?php the_tags('',', '); ?></span></div>
 						<div class="bold underline"><?php comments_number( '0', '1', '%' ); ?>  Comments</div>
 					</div>

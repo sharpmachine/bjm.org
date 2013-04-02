@@ -5012,7 +5012,7 @@ a.badge:hover {
 Project Name: Bill Johnson Ministries
 */
 body {
-  color: #999999;
+  color: #414042;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
@@ -5062,6 +5062,24 @@ button[type="submit"] {
 .boxy {
   background: url('../img/shadow-top.png') top center no-repeat, url('../img/shadow-bottom.png') center 100% no-repeat;
   background-color: #eeeeee;
+}
+.boxy-no-color {
+  background: url('../img/shadow-top.png') top center no-repeat, url('../img/shadow-bottom.png') center 100% no-repeat;
+}
+.pagination ul > li > a {
+  color: #414042;
+  font-family: 'Crimson Text', serif;
+  border: 1px solid #58585b;
+}
+.pagination-large ul > li > a {
+  margin: 0 3px;
+  padding: 11.5px 17px;
+}
+.pagination-large ul > li:first-child > a,
+.pagination-large ul > li:last-child > a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 /* ...................................the header*/
 header {
@@ -5680,6 +5698,9 @@ footer .footer {
   font-size: 36px;
   font-weight: 300;
 }
+.blog-title a {
+  color: #414042;
+}
 .blog-author {
   font-family: 'Crimson Text', serif;
   font-size: 18px;
@@ -5695,12 +5716,6 @@ footer .footer {
 }
 .uppercase a {
   color: #a19159;
-}
-.bold {
-  font-weight: 600;
-}
-.underline {
-  text-decoration: underline;
 }
 .the-excerpt {
   font-size: 16px;
@@ -5852,6 +5867,7 @@ iframe {
 }
 /* ...................................the single blog post*/
 .single-post {
+  color: #414042;
   margin: 10px 0 73px;
 }
 /* ...................................the house of generals*/
@@ -5932,6 +5948,16 @@ blockquote p {
   margin-top: 51px;
 }
 /* ...................................the good news*/
+.filter {
+  color: #999999;
+  margin-top: 62px;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.filter img {
+  margin: 0 5px;
+}
 .good-news {
   padding: 96px 0;
 }
@@ -5948,6 +5974,47 @@ blockquote p {
 }
 .good-news h2 {
   color: #414042;
+}
+.goodnews-post {
+  margin-top: 20px;
+  border-top: 1px solid #999999;
+}
+.goodnews-post h2 {
+  margin-top: 20px;
+}
+.goodnews-post h2 a {
+  color: #414042;
+  font-size: 36px;
+}
+.goodnews-post .blog-author,
+.goodnews-post a {
+  color: #414042;
+  margin-bottom: 20px;
+}
+.goodnews-post .uppercase {
+  text-transform: uppercase;
+}
+.goodnews-post .underline > a {
+  color: #a19159;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+.bold {
+  font-weight: 600;
+}
+.excerpt p {
+  margin-top: 20px;
+  color: #414042;
+  font-size: 16px;
+  line-height: 22px;
+}
+.excerpt .read-more,
+.excerpt iframe {
+  padding-bottom: 27px;
+}
+.excerpt iframe {
+  margin-top: 25px;
 }
 /* ...................................the contact*/
 .map h3 {
