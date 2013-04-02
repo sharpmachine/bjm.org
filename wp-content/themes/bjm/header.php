@@ -48,44 +48,44 @@
 
 		<header>
 
-		<div class="navbar navbar-static-top bethel-menu">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-      			<span class="icon-bar"></span>
-      			<span class="icon-bar"></span>
-      			<span class="icon-bar"></span>
-					</a>
-					<div class="nav-collapse">
-      			<ul class="nav ">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
-      			</ul>
-							
-					</div><!--/.nav-collapse -->
-					
-        </div>
-        <div class="bethel-menu-toggle">Bethel Menu</div>
-    </div>
+			<div class="navbar navbar-static-top bethel-menu visible-desktop">
+					<div class="container">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	      			<span class="icon-bar"></span>
+	      			<span class="icon-bar"></span>
+	      			<span class="icon-bar"></span>
+						</a>
+						<div class="nav-collapse">
+	      		
+								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'Bethel Menu' ) ); ?>
+	      	
+								
+						</div><!--/.nav-collapse -->
+						
+	        </div>
+	        <div class="bethel-menu-toggle"><div class="chevron"></div> Bethel Menu <div class="chevron"></div></div>
+	    </div>
 
-    <div class="navbar navbar-static-top ">
-				<div class="container bill-menu">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-      			<span class="icon-bar"></span>
-      			<span class="icon-bar"></span>
-      			<span class="icon-bar"></span>
-					</a>
-					<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson-signature.png"></a>
-					<div class="nav-collapse">
-      			<ul class="nav">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
-      			</ul>
-      			<ul class="social-icons inline pull-right">
-      				<li><a href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
-      				<li><a href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
-      				<li><a href="<?php bloginfo('rss_url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>
-      			</ul>
-      			
-					</div><!--/.nav-collapse -->
-        </div>
-    </div>
+	    <div class="navbar navbar-static-top ">
+					<div class="container bill-menu">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	      			<span class="icon-bar"></span>
+	      			<span class="icon-bar"></span>
+	      			<span class="icon-bar"></span>
+						</a>
+						<a class="brand" href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson-signature.png"></a>
+						<div class="nav-collapse">
+	      			<ul class="nav">
+								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>
+	      			</ul>
+	      			<ul class="social-icons inline pull-right">
+	      				<li><a href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
+	      				<li><a href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
+	      				<li><a href="<?php bloginfo('rss_url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>
+	      			</ul>
+	      			
+						</div><!--/.nav-collapse -->
+	        </div>
+	    </div>
 
     </header>

@@ -20,13 +20,13 @@
 					</form>
 				</div>
 			</div>
-			<div class="span2 vertical-menu">
+			<div class="span2 vertical-menu hidden-phone">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>	
 			</div>
-			<div class="span2 vertical-menu">
+			<div class="span2 vertical-menu hidden-phone">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'footer-menu-1' ) ); ?>
 			</div>
-			<div class="span2 vertical-menu">
+			<div class="span2 vertical-menu hidden-phone">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'footer-menu-2' ) ); ?>
 			</div>
 			<div class="span3">
@@ -87,6 +87,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-affix.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/lifestream.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/slide-in.js"></script>
 
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>
