@@ -35,6 +35,8 @@ jQuery(document).ready(function($) {
 	 $('#myCarousel .dots:first-child').addClass('active');
 
 	 $('#qa-Carousel').carousel();
+
+	 $('#qa-Carousel .item:first-child').addClass('active');
 	
 });
 

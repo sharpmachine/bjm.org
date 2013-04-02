@@ -42,6 +42,7 @@ button[type="submit"] {
 	font-family: @serifFontFamily;
 	font-size: 18px;
 	font-weight: 900;
+	line-height: 1.8;
 	text-transform: uppercase;
 	#gradient > .vertical(#ffffff, #e0e0e0);
 	border-color: #e2e2e2;
@@ -99,10 +100,12 @@ header {
 
 .bill-menu {
 	text-transform: uppercase;
-	border-bottom: 1px solid @yellow;
 
 	.nav > li > a {
+		padding: 10px 20px 10px;
 		color: @grayDarker;
+		font-size: 20px;
+		letter-spacing: 2px;
 	}
 
 	.nav {
@@ -113,6 +116,15 @@ header {
 .social-icons {
 	margin-top: 27px;
 
+	img {
+		padding-right: 5px;	}
+
+	li:last-child {
+		img {
+			padding-right: 0;
+		}
+	}
+
 	li:nth-child(-n+2) {
 		border-right: 1px solid @yellow;
 	}
@@ -122,12 +134,12 @@ header {
 
 footer {
 	color: @gray;
-	margin-bottom: 318px;
+	margin-bottom: 10px;
 
 	.footer {
 		margin-top: 69px;
 		margin-bottom: 23px;
-		padding: 57px 0;
+		padding: 60px 0 40px;
 		border-top: 1px solid @gray;
 		border-bottom: 1px solid @gray;
 	}
@@ -225,6 +237,7 @@ footer {
 	font-size: 15px;
 	font-family: @serifFontFamily;
 	font-weight: 600;
+	letter-spacing: 2px;
 
 	a {
 		color: @yellow;
@@ -347,7 +360,6 @@ footer {
 	a{
 		font-size: 18px;
 		font-weight: 400;
-		color: @yellow;
 	}
 
 	ul {
@@ -356,6 +368,7 @@ footer {
 		list-style-image:url('../img/yellow-arrow.png');
 
 		h3 {
+			font-family: @sansFont;
 			line-height: 27px;
 		}
 	}
@@ -368,10 +381,12 @@ footer {
 	}
 
 	.messages-news-blog {
+		color: @gray;
 		font-family: @serifFont;
 		font-size: 35px;
 		font-weight: 100;
-		color: @gray;
+		letter-spacing: 5px;
+		
 
 		span {
 			display: block;
@@ -382,13 +397,6 @@ footer {
 	}
 }
 
-// .truncate {
-// 	width: 50px;
-// 	white-space: nowrap;
-// 	overflow: hidden;
-// 	text-overflow: ellipsis;
-// }
-
 /* ...................................the featured product*/
 
 .featured-product {
@@ -396,6 +404,13 @@ footer {
 	padding: 57px 0;
 	color: @fontGray;
 	background-color: @grayLighter;
+}
+
+.product-image {
+	img {
+		position: relative;
+		top: 5px;
+	}
 }
 
 .product-title {
@@ -413,7 +428,7 @@ footer {
 
 .endorser-title {
 	margin: 50px 0;
-	padding: 20px 0;
+	padding: 15px 0;
 	border-top: 1px solid @fontGray;
 	border-bottom: 1px solid @fontGray;
 }
@@ -490,17 +505,27 @@ footer {
 /* ...................................the facebook*/
 
 .facebook {
-	padding: 90px 0;
+	padding: 90px 0 37px;
 	background-color: @grayLighter;
 }
 
 .bill-photo {
+	display: block;
+	.square(271px);
 	margin-left: 10px;
+	.box-shadow(0px 20px 35px -20px @black);
+}
+
+.status {
+	height: 400px;
+	margin-top: -70px;
+	background: url(../img/facebook-quotes.png) no-repeat center center;
 }
 
 .status-borders {
-	margin-top: 53px;
+	margin-top: 135px;
 	padding: 30px 0;
+	background-color: rgba(238, 238, 238, 0.8);
 	border-top: 1px solid @yellow;
 	border-bottom: 1px solid @yellow;
 }
@@ -517,6 +542,7 @@ footer {
 
 	a {
 		color: @yellow;
+		text-decoration: underline;
 	}
 }
 
@@ -531,18 +557,20 @@ footer {
 
 .lifestream-facebook_page {
 	display: table-cell;
+	letter-spacing: 2px;
+	line-height: 1.2;
 	vertical-align: middle;
 }
 
 /* ...................................the house of generals*/
 
 .house-of-generals {
-	margin-bottom: 66px;
-	margin-top: 66px;
+	min-height: 425px;
+	margin: 65px 0 65px;
 }
 
 .generals-background {
-	background: url('../img/house-of-generals-bk.png');
+	// background: url('../img/house-of-generals-bk.png');
 }
 
 .generals {
@@ -552,7 +580,7 @@ footer {
 }
 
 .generals-title {
-	margin: 140px 40px 25px 40px;
+	margin: 40px 40px 25px 40px;
 	padding-bottom: 10px;
 	font-family: @serifFontFamily;
 	font-size: 24px;
@@ -579,6 +607,10 @@ footer {
 	background: rgba(0,0,0,0);
 	border: 1px solid @fontGray;
 	.border-radius(1px);
+
+	a {
+		color: @fontGray;
+	}
 }
 
 /* ...................................the homepage Q&A*/
@@ -592,17 +624,21 @@ footer {
 
 .a-and-q-text {
 	position: absolute;
-	top: -45px;
+	top: -73px;
+	left: 33%;
 	z-index: 999;
-	padding: 42px 0;
-	left: 37%;
-	width: 219px;
+	width: 300px;
+	padding: 65px 0;
 	color: @fontGray;
 	font-family: @serifFont;
-	font-size: 136px;
+	font-size: 140px;
 	text-align: center;
 	background-color: @white;
-	.border-radius(50%); 
+	.border-radius(50%);
+
+	img {
+		.opacity(80);
+	}
 }
 
 .amperstand-home {
@@ -612,10 +648,8 @@ footer {
 }
 
 .answers-home {
-	padding: 42px 0;
+	margin-bottom: -30px;
 	font-family: @serifFontFamily;
-	// border-top: 1px solid @fontGray;
-	// border-bottom: 1px solid @fontGray;
 
 	a {
 		font-style: italic;
@@ -629,14 +663,12 @@ footer {
 	}
 
 	.vertical .carousel-inner {
-	  height: 50px;
-	  padding: 45px 0;
+	  height: 123px;
 	  border-top: 1px solid @black;
 	  border-bottom: 1px solid @black;
 	}
 
 	.carousel.vertical .item {
-		height: 140px;
 	  -webkit-transition: 0.6s ease-in-out top;
 	     -moz-transition: 0.6s ease-in-out top;
 	      -ms-transition: 0.6s ease-in-out top;
@@ -676,43 +708,76 @@ footer {
 
 
 	.carousel-control {
-		width: 20px;
-		height: 20px;
+		position: relative;
+		display: block;
+		float: left;
+		clear: both;
+		width: 16px !important;
+		height: 11px !important;
 		color: @black;
 		background: none;
 		text-decoration: none;
 		opacity: 1;
 
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
 		&.left {
-			height: 14px !important;
+			// height: 14px !important;
 			position: relative;
 			left: 0;
-			top: -100px;
+			top: -85px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid @black;
+			.border-radius(0);
 		}
 
 		&.right {
-			height: 14px;
+			// height: 14px;
 			position: relative;
-			left: 0;
-			top: 10px;
+			// left: -20px;
+			top: -75px;
 		}
 	}
 
-	// .carousel-inner {
-	// 	height: 125px;
-	// }
+	.questions,
+	.answers {
+		display: table;
+		height: 122px;
+		color: @gray;
+		letter-spacing: 1px;
+		line-height: 1.2;
+	}
 
 	.questions {
 		float: left;
-		width: 33%;
-		height: 140px;
+		width: 255px;
+		margin-left: 40px;
+
+		a {
+			display: table-cell;
+			vertical-align: middle;
+			font-style: normal;
+			text-decoration: none;
+		}
 	}
 
 	.answers {
 		float: right;
-		width: 33%;
-		height: 140px;
+		// width: 33%;
+		width: 310px;
+		height: 122px;
+
+		p {
+			display: table-cell;
+			vertical-align: middle;
+		}
 	}
+
+	
 
 	// !vertical carousel
 }

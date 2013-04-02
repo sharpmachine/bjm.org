@@ -32,11 +32,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic|Open+Sans:300italic,400italic,600italic,700italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
 
     	<!-- Le fav and touch icons -->
-    	<link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    	<link rel="shortcut icon" href="../img/favicon.ico">
 
 		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-1.7.min.js"></script>
 		<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js"></script><![endif]-->
@@ -85,7 +81,7 @@
       			<ul class="social-icons inline pull-right">
       				<li><a href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
       				<li><a href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
-      				<li><a href="<?php bloginfo('url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>
+      				<li><a href="<?php bloginfo('rss_url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>
       			</ul>
       			
 					</div><!--/.nav-collapse -->

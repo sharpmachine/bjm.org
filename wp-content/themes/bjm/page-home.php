@@ -14,7 +14,7 @@ get_header(); ?>
 					<div class="carousel-inner">
 
 						<?php if(get_field('hero_slide')): ?>
-				 		<?php while (has_sub_field('hero_slide')): ?>
+						<?php while (has_sub_field('hero_slide')): ?>
 						<div class="item">
 							<img src="<?php the_sub_field('slide_image'); ?>" alt="<?php the_sub_field('slide_title'); ?>">
 							<div class="carousel-caption">
@@ -33,15 +33,15 @@ get_header(); ?>
 						</div>
 
 						<?php endwhile; ?>
-					 	<?php endif; ?>
+						<?php endif; ?>
 					</div>
 
 					<ol class="carousel-indicators">
 						<?php if(get_field('hero_slide')): ?>
-				 		<?php while (has_sub_field('hero_slide')): ?>
-				   		<li data-target="#myCarousel" data-slide-to="0" class="dots "><span></span></li>
-				    <?php endwhile; ?>
-					 	<?php endif; ?>
+						<?php while (has_sub_field('hero_slide')): ?>
+						<li data-target="#myCarousel" data-slide-to="0" class="dots "><span></span></li>
+					<?php endwhile; ?>
+						<?php endif; ?>
 				  </ol>
 
 					<!-- Carousel nav -->
@@ -120,7 +120,7 @@ get_header(); ?>
 				</div>
 				<div class="product-buttons">
 					<a href="<?php the_field('product_link'); ?>" class="btn product-link">Purchase</a>
-					<a href="<?php the_field(''); ?>" class="btn other-products">Other Products</a>
+					<a href="http://store.ibethel.org/index.php?manufacturers_id=1&ref=1&affiliate_banner_id=1" class="btn other-products">Other Products</a>
 				</div>
 			</div>
 		</div>
@@ -168,9 +168,10 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="span4 center-photo">
-				<img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson" class="bill-photo">
+				<!-- <img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson" class="bill-photo"> -->
+				<img src="https://graph.facebook.com/billjohnsonministries/picture?width=271&height=271" class="bill-photo">
 			</div>
-			<div class="span8">
+			<div class="span8 status">
 				<div class="row status-borders">
 					<div class="span1 facebook-gold">
 						<img src="<?php bloginfo('template_directory'); ?>/img/big-facebook.png" alt="Facebook">
@@ -188,21 +189,20 @@ get_header(); ?>
 <!-- House of Generals -->
 <div class="house-of-generals">
 	<div class="container">
-		<div class="row generals-background">
-			<div class="span8">
-				
-			</div>
-			<div class="span4 generals">
-				<div class="generals-title">
-					<?php the_field('hg_title'); ?>
+		<div class="row">
+			<div class="span12" style="background-image:url(<?php the_field('hg_background_image'); ?>);">
+				<div class="span4 generals pull-right">
+					<div class="generals-title">
+						<?php the_field('hg_title'); ?>
+					</div>
+					<div class="generals-text">
+						<?php the_field('hg_description'); ?>
+					</div>
+					<div class="btn learn-more">
+							<a href="<?php bloginfo( 'url' ); ?>/house-of-generals">Learn More</a>
+					</div>
 				</div>
-				<div class="generals-text">
-					<?php the_field('hg_description'); ?>
-				</div>
-				<div class="btn learn-more">
-						<a href="">Learn More</a>
-				</div>
-			</div>
+			</div><!-- background -->
 		</div>
 	</div>
 </div>
@@ -214,36 +214,32 @@ get_header(); ?>
 		<div class="row">
 			<div class="span12 answers-home">
 				<!-- Vertical Carousel -->
-	        <div id="qa-Carousel" class="carousel slide vertical">
-						<div class="a-and-q-text">
-							Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class="amperstand-home" alt="amperstand">A
+				<div id="qa-Carousel" class="carousel slide vertical">
+					<div class="a-and-q-text">
+						Q<img src="<?php bloginfo('template_directory'); ?>/img/amperstand.png" class="amperstand-home" alt="amperstand">A
+					</div>
+			<!-- Carousel items -->
+					<div class="carousel-inner">
+					<?php query_posts( 'qa_cat=written' ); ?>	
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<div class="item">
+							<div class="questions">
+								<a href="<?php the_permalink() ?>">
+									<?php echo wp_trim_words( get_the_title(), 15); ?>
+								</a>
+							</div>
+							<div class="answers">
+								<p><?php echo wp_trim_words( get_the_content(), 15, "&nbsp;...&nbsp;<a href=" . get_permalink(). ">Read More</a>" ); ?></p>
+							</div>
 						</div>
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-            	<?php query_posts( 'qa_cat=written' ); ?>	
-							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-								<div class="item">
-									<div class="questions">
-										<a href="<?php the_permalink() ?>">
-											<?php echo wp_trim_words( get_the_title(), 15); ?>
-										</a>
-									</div>
-									<div class="answers">
-										<?php echo wp_trim_words( get_the_content(), 15, "&nbsp;...&nbsp;<a href=" . get_permalink(). ">Read More</a>" ); ?>
-									</div>
-								</div>
-							<?php endwhile; ?>
-							<!-- post navigation -->
-							<?php else: ?>
-							<!-- no posts found -->
-							<?php endif; ?>
-							<?php wp_reset_query(); ?>                
-            </div>
-            <!-- Carousel nav -->
-            <!-- <a class="carousel-control left" href="#qa-Carousel" data-slide="prev"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-up.png" alt=""></a>
-            <a class="carousel-control right" href="#qa-Carousel" data-slide="next"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-down.png" alt=""></a> -->
-	        </div>
-	       <!-- !Vertical Carousel -->
+						<?php endwhile; endif; ?>
+						<?php wp_reset_query(); ?>                
+					</div>
+					<!-- Carousel nav -->
+					<a class="carousel-control left" href="#qa-Carousel" data-slide="prev"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-up.png" alt=""></a>
+					<a class="carousel-control right" href="#qa-Carousel" data-slide="next"><img src="<?php bloginfo( 'template_directory' ); ?>/img/scroll-down.png" alt=""></a>
+			</div>
+		   <!-- !Vertical Carousel -->
 			</div>
 		</div>
 	</div>

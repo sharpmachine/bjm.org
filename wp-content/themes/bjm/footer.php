@@ -56,8 +56,8 @@
 		<div class="row">
 			<div class="span10 copyright">
 				&copy;<?php echo date ('Y'); ?> <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				<a href="" >Privacy</a>
-				<a href="" >Terms & Conditions</a>
+				<a href="<?php bloginfo('url'); ?>/privacy-policy" >Privacy</a>
+				<a href="<?php bloginfo( 'url' ); ?>/terms-conditions" >Terms & Conditions</a>
 			</div>
 			<div class="span2">
 				<ul class="footer-icons inline pull-right">
