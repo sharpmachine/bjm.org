@@ -34,6 +34,7 @@
 			</span>
 			<span class="underline">
 				<?php the_category(',&nbsp;'); ?> //
+				<?php echo get_the_term_list( $post->ID, 'gn_cat'); ?>
 			</span>
 		</span>
 		<span>
@@ -54,6 +55,9 @@
 
 	<div class="entry-content single-post">
 		<?php the_content(); ?>
+		<?php if(get_field('vimeo_id')): ?>
+			<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		<?php endif; ?>
 	</div>
 	<!-- .entry-content -->
 

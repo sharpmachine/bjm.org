@@ -3,7 +3,7 @@ Project Name: Bill Johnson Ministries
 */
 
 body {
-	color: @grayLight;
+	color: @fontGray;
 	font-family: @sansFont;
 	font-size: 16px;
 }
@@ -54,6 +54,30 @@ button[type="submit"] {
 	url('../img/shadow-bottom.png') center 100% no-repeat;
 	background-color: @grayLighter;
 }
+
+.boxy-no-color {
+	background: url('../img/shadow-top.png') top center no-repeat,
+	url('../img/shadow-bottom.png') center 100% no-repeat;
+}
+
+// borders
+.pagination ul > li > a {
+	color: @fontGray;
+	font-family: @serifFontFamily;
+	border: 1px solid @gray;
+}
+
+.pagination-large ul > li > a {
+	margin: 0 3px;
+	padding: 11.5px 17px;
+}
+
+// no border radius
+.pagination-large ul > li:first-child > a, 
+.pagination-large ul > li:last-child > a {
+	.border-radius(0);
+}
+
 
 /* ...................................the header*/
 header {
@@ -871,6 +895,10 @@ footer {
 		font-family: @serifFont;
 		font-size: 36px;
 		font-weight: 300;
+
+		a {
+			color: @fontGray;
+		}
 	}
 
 	.blog-author {
@@ -892,14 +920,6 @@ footer {
 		a {
 			color: @yellow;
 		}
-	}
-
-	.bold {
-		font-weight: 600;
-	}
-
-	.underline {
-		text-decoration: underline;
 	}
 
 	.the-excerpt {
@@ -1093,6 +1113,7 @@ footer {
 /* ...................................the single blog post*/
 
 .single-post {
+		color: @fontGray;
 		margin: 10px 0 73px;
 	}
 
@@ -1196,6 +1217,18 @@ blockquote {
 
 /* ...................................the good news*/
 
+.filter {
+	color: @grayLight;
+	margin-top: 62px;
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+
+	img {
+		margin: 0 5px;
+	}
+}
+
 .good-news {
 	padding: 96px 0;
 
@@ -1217,6 +1250,56 @@ blockquote {
 	}
 }
 
+.goodnews-post {
+	margin-top: 20px;
+	border-top: 1px solid @grayLight;
+
+	h2 {
+		margin-top: 20px;
+	}
+
+	h2 a {
+		color: @fontGray;
+		font-size: 36px;
+	}
+
+	.blog-author, a {
+		color: @fontGray;
+		margin-bottom: 20px;
+	}
+
+	.uppercase {
+		text-transform: uppercase;
+	}
+
+	.underline > a{
+		color: @yellow;
+		font-size: 14px;
+		font-weight: 300;
+		text-decoration: underline;
+	}
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.excerpt {
+	p {
+		margin-top: 20px;
+		color: @fontGray;
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	.read-more, iframe {
+		padding-bottom: 27px;
+	}
+
+	iframe {
+		margin-top: 25px;
+	}
+}
 /* ...................................the contact*/
 
 .map {
@@ -1272,6 +1355,41 @@ blockquote {
 		padding: 0;
 		margin: 0;
 		font-family: @serifFontFamily;
+	}
+}
+/* ...................................the about*/
+
+.about {
+	margin-bottom: 72px;
+}
+
+.about-article {
+	color: @fontGray;
+	font-size: 16px;
+	margin-top: 15px;
+
+	h3 {
+		padding-bottom: 8px;
+		color: @fontGray;
+		font-family: @serifFontFamily;
+		font-size: 36px;
+		border-bottom: 1px solid @fontGray;
+	}
+
+	h1 {
+		margin: 33px 0 75px;
+		color: @fontGray;
+		font-family: @serifFontFamily;
+		font-size: 110px;
+	}
+
+	p:nth-child(1) {
+		margin-top: 53px;
+	}
+
+	p {
+		margin-bottom: 18px;
+		line-height: 22px;
 	}
 }
 

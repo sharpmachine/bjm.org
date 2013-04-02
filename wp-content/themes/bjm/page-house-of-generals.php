@@ -24,11 +24,10 @@ get_header(); ?>
 	</div>
 </div>
 
-<div class="donate-mf">
+<div class="donate-mf boxy">
 	<div class="container">
 		<div class="row">
 			<div class="span12">
-				<img src="<?php bloginfo('template_directory'); ?>/img/shadow-top.png" alt="">
 				<div class="materials">
 					Donate materials or finances
 				</div>
@@ -88,11 +87,6 @@ get_header(); ?>
 						</button>
 					</form>
 				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span12 shadow-bottom">
-				<img src="<?php bloginfo('template_directory'); ?>/img/shadow-bottom.png" alt="">
 			</div>
 		</div>
 	</div>
