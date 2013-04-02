@@ -253,6 +253,7 @@ footer {
 		color: @grayLight;
 		font-size: 14px;
 		font-weight: 300;
+		background: transparent;
 		border: 1px solid @gray;
 		.border-radius(2px);
 	}
@@ -1141,44 +1142,42 @@ footer {
 	}
 
 /* ...................................the house of generals*/
-
-blockquote {
-	border-left: none;
-	
-	p {
-		color: @yellow;
-		font-family: @serifFontFamily;
-		font-size: 36px;
-		border: none;
+.HoG-video {
+	iframe {
+		margin-bottom: 25px;
 	}
 }
 
-.HoG-text {
-	blockquote,
-	blockquote p {
-		width: 200px;
-	}
+blockquote {
+	width: 220px;
+	border: none;
 
 	p {
-		width: 740px;
-		float: left;
+	color: @yellow;
+	font-family: @serifFontFamily;
+	font-size: 36px;
+	line-height: 28px;
 	}
+}
 
-	blockquote
-	 {
-	 	clear: both;
+.bq {
+	padding-bottom: 40px;
 
-		&:nth-child(odd) {
+	&:nth-child(odd) {
+		blockquote {
 			float: left;
 		}
+	}
 
-		&:nth-child(even) {
+	&:nth-child(even) {
+		blockquote {
 			float: right;
 		}
 	}
 }
 
 .donate-mf {
+	margin-top: 20px;
 	background-color: @grayLighter;
 
 	textarea {
@@ -1188,12 +1187,17 @@ blockquote {
 
 	.submit-newsletter {
 		max-width: 229px;
+		margin-bottom: 140px;
+
+		button {
+			width: 100px;
+		}
 	}
 }
 
 .materials {
 	color: @black;
-	margin: 27px 0 48px;
+	margin: 75px 0 48px;
 	font-size: 24px;
 	text-transform: uppercase;
 }
@@ -1232,10 +1236,15 @@ blockquote {
 .donate-margin {
 	margin-left: 0;
 	width: 240px;
-}
 
-.shadow-bottom {
-	margin-top: 51px;
+	textarea {
+		color: @grayLight;
+		font-size: 14px;
+		font-weight: 300;
+		background: transparent;
+		border: 1px solid @gray;
+		.border-radius(2px);
+	}
 }
 
 /* ...................................the good news*/

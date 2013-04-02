@@ -8,7 +8,9 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="span12">
-				Viemo Video
+				
+				<iframe src="http://player.vimeo.com/video/23348197?title=0&amp;byline=0" width="940" height="527" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
 			</div>
 		</div>
 	</div>
@@ -18,7 +20,10 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="span12">
-				<?php get_template_part( 'loop', 'page' ); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php the_content(); ?>
+				<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
@@ -82,7 +87,7 @@ get_header(); ?>
 							<textarea rows="5">Add list of materials to be donated here</textarea>
 				</div>
 				<div class="submit-newsletter">
-						<button type="submit" value="Submit" class="btn pull-right" title="Subscribe" id="mc-embedded-subscribe">
+						<button type="submit" class="btn pull-right">
 							Submit
 						</button>
 					</form>
