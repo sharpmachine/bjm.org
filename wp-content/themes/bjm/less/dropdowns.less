@@ -10,7 +10,7 @@
 }
 .dropdown-toggle {
   // The caret makes the toggle a bit too tall in IE7
-  *margin-bottom: -3px;
+  // *margin-bottom: -3px;
 }
 .dropdown-toggle:active,
 .open .dropdown-toggle {
@@ -19,56 +19,58 @@
 
 // Dropdown arrow/caret
 // --------------------
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: top;
-  border-top:   4px solid @black;
-  border-right: 4px solid transparent;
-  border-left:  4px solid transparent;
-  content: "";
-}
+// .caret {
+//   display: inline-block;
+//   width: 0;
+//   height: 0;
+//   vertical-align: top;
+//   border-top:   4px solid @black;
+//   border-right: 4px solid transparent;
+//   border-left:  4px solid transparent;
+//   content: "";
+// }
 
 // Place the caret
-.dropdown .caret {
-  margin-top: 8px;
-  margin-left: 2px;
-}
+// .dropdown .caret {
+//   margin-top: 8px;
+//   margin-left: 2px;
+// }
 
 // The dropdown menu (ul)
 // ----------------------
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: auto;
   z-index: @zindexDropdown;
   display: none; // none by default, but block on "open" of the menu
+  // display: block;
   float: left;
-  min-width: 160px;
+  width: 940px;
+  height: 50px;
   padding: 5px 0;
   margin: 2px 0 0; // override default ul
   list-style: none;
-  background-color: @dropdownBackground;
-  border: 1px solid #ccc; // Fallback for IE7-8
-  border: 1px solid @dropdownBorder;
-  *border-right-width: 2px;
-  *border-bottom-width: 2px;
-  .border-radius(6px);
-  .box-shadow(0 5px 10px rgba(0,0,0,.2));
-  -webkit-background-clip: padding-box;
-     -moz-background-clip: padding;
-          background-clip: padding-box;
+  // background-color: @dropdownBackground;
+  // border: 1px solid #ccc; // Fallback for IE7-8
+  // border: 1px solid @dropdownBorder;
+  // *border-right-width: 2px;
+  // *border-bottom-width: 2px;
 
   // Aligns the dropdown menu to right
-  &.pull-right {
-    right: 0;
-    left: auto;
-  }
+  // &.pull-right {
+  //   right: 0;
+  //   left: auto;
+  // }
 
   // Dividers (basically an hr) within the dropdown
   .divider {
     .nav-divider(@dropdownDividerTop, @dropdownDividerBottom);
+  }
+
+  li {
+    float: left;
+    // width: 100px;
   }
 
   // Links within the dropdown menu

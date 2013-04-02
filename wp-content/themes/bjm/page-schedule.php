@@ -17,9 +17,9 @@ get_header(); ?>
 			<div class="row">
 				<div class="span12 bethel-schedule">
 
-					<!-- <iframe style="background: none; position: relative; height: 100%" src="http://www.ibethel.org/api?t=itinerary&amp;author=billjohnson&amp;styles=<?php bloginfo('template_directory'); ?>/css/itinerary.css" height="100%" width="100%" frameborder="0"></iframe> -->
+					<iframe style="background: none; width: 940px; height:5000px;" src="http://www.ibethel.org/api?t=itinerary&amp;author=billjohnson&amp;styles=<?php bloginfo('template_directory'); ?>/css/itinerary.css" height="100%" width="100%" frameborder="0"></iframe>
 					
-					<div class="views-row views-row-1 views-row-odd views-row-first">
+					<!-- <div class="views-row views-row-1 views-row-odd views-row-first">
     
 						<div class="itinerary simplepadding ">
 
@@ -118,11 +118,11 @@ get_header(); ?>
 							</div>
 						<hr />
 					</div>	
-				</div>
+				</div> -->
 
 
 
-
+				<div class="clearfix"></div>
 			</div>
 		</div>
 	</div>

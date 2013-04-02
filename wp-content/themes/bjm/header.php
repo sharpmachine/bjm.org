@@ -50,18 +50,9 @@
 
 			<div class="navbar navbar-static-top bethel-menu visible-desktop">
 					<div class="container">
-						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	      			<span class="icon-bar"></span>
-	      			<span class="icon-bar"></span>
-	      			<span class="icon-bar"></span>
-						</a>
-						<div class="nav-collapse">
-	      		
+						<div class="menu-wrapper">
 								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'Bethel Menu' ) ); ?>
-	      	
-								
-						</div><!--/.nav-collapse -->
-						
+	      		</div>
 	        </div>
 	        <div class="bethel-menu-toggle"><div class="chevron"></div> Bethel Menu <div class="chevron"></div></div>
 	    </div>
