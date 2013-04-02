@@ -17,7 +17,7 @@ get_header(); ?>
 						<?php while (has_sub_field('hero_slide')): ?>
 						<div class="item">
 							<img src="<?php the_sub_field('slide_image'); ?>" alt="<?php the_sub_field('slide_title'); ?>">
-							<div class="carousel-caption">
+							<div class="carousel-caption hidden-phone">
 								<div class="inner">
 									<h4><?php the_sub_field('slide_title'); ?></h4>
 									<?php the_sub_field('slide_description'); ?>
@@ -36,7 +36,7 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 
-					<ol class="carousel-indicators">
+					<ol class="carousel-indicators hidden-phone">
 						<?php if(get_field('hero_slide')): ?>
 						<?php while (has_sub_field('hero_slide')): ?>
 						<li data-target="#myCarousel" data-slide-to="0" class="dots "><span></span></li>
