@@ -4,7 +4,7 @@
 */
 get_header(); ?>
 
-<div class="hero-slider">
+<div class="hero-slider module">
 	<div class="container">
 		<div class="row">
 			<div class="span12">
@@ -54,7 +54,7 @@ get_header(); ?>
 	</div>
 </div>
 
-<div class="news">
+<div class="news module">
 	<div class="container">
 		<div class="row">
 			<div class="span4">
@@ -101,7 +101,7 @@ get_header(); ?>
 </div>
 
 <!-- Featured Product -->
-<div class="featured-product boxy">
+<div class="featured-product boxy module">
 	<div class="container f-product-mobile">
 		<div class="row">
 			<div class="span4 product-image">
@@ -128,7 +128,7 @@ get_header(); ?>
 </div>
 <!-- !Featured Product -->
 
-<article class="video">
+<article class="video module">
 	<div class="container">
 		<div class="row">
 			<div class="span8 video-wrapper big-video">
@@ -164,7 +164,7 @@ get_header(); ?>
 </article>
 
 <!-- Facebook -->
-<div class="facebook boxy">
+<div class="facebook boxy module">
 	<div class="container">
 		<div class="row">
 			<div class="span4 center-photo">
@@ -187,7 +187,7 @@ get_header(); ?>
 <!-- !Facebook -->
 
 <!-- House of Generals -->
-<div class="house-of-generals">
+<div class="house-of-generals module">
 	<div class="container">
 		<div class="row">
 			<div class="span12" style="background-image:url(<?php the_field('hg_background_image'); ?>);">
@@ -209,7 +209,7 @@ get_header(); ?>
 
 <!-- !House of Generals -->
 
-<div class="q-and-a">
+<div class="q-and-a module">
 	<div class="container">
 		<div class="row">
 			<div class="span12 answers-home">

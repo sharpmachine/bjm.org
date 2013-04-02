@@ -87,6 +87,7 @@
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-typeahead.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap-affix.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/lifestream.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/slide-in.js"></script>
 
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>
