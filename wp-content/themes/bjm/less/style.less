@@ -275,6 +275,7 @@ footer {
 		color: @grayLight;
 		font-size: 14px;
 		font-weight: 300;
+		background: transparent;
 		border: 1px solid @gray;
 		.border-radius(2px);
 	}
@@ -871,6 +872,7 @@ footer {
 /* ...................................the invite*/
 
 .invite-bill {
+	margin-bottom: 70px;
 	color: @fontGray;
 	font-size: 16px;
 	line-height: 22px;
@@ -884,7 +886,7 @@ footer {
 }
 
 .itineary {
-	margin: 70px 0 80px;
+	margin-bottom: 80px;
 	padding: 140px 0 190px;
 	font-size: 16px;
 	line-height: 22px;
@@ -913,7 +915,6 @@ footer {
 	}
 
 	input[type="text"] {
-		width: 286px;
 		height: 30px;
 		border: 1px solid @gray;
 		.border-radius(0);
@@ -924,53 +925,63 @@ footer {
 	max-width: 1100px;
 }
 
+#searchform {
+	input[type="text"] {
+		background: url(../img/search-form.png) no-repeat 190px center;
+	}
+}
 
 /* ...................................the blog page*/
 .blog {
 	color: @fontGray;
 }
 
-	.image {
-		margin-top: 50px;
+.post-excerpt{
+	margin-top: 20px;
+
+	&:nth-child(odd) {
+		clear: both;
+	}
+}
+
+
+
+.blog-title {
+	margin: 30px 0 2px;
+	font-family: @serifFont;
+	font-size: 36px;
+	font-weight: 300;
+
+	a {
+		color: @fontGray;
+	}
+}
+
+.blog-author {
+	font-family: @serifFont;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.blog-page {
+		margin: 23px 0 20px;
 	}
 
+.uppercase {
+	
+	color: @yellow;
+	font-size: 12px;
+	text-transform: uppercase;
 
-	.blog-title {
-		margin: 30px 0 2px;
-		font-family: @serifFont;
-		font-size: 36px;
-		font-weight: 300;
-
-		a {
-			color: @fontGray;
-		}
-	}
-
-	.blog-author {
-		font-family: @serifFont;
-		font-size: 18px;
-		line-height: 18px;
-	}
-
-	.blog-page {
-			margin: 23px 0 20px;
-		}
-
-	.uppercase {
-		
+	a {
 		color: @yellow;
-		font-size: 12px;
-		text-transform: uppercase;
-
-		a {
-			color: @yellow;
-		}
 	}
+}
 
-	.the-excerpt {
-		font-size: 16px;
-		line-height: 22px;
-	}
+.the-excerpt {
+	font-size: 16px;
+	line-height: 22px;
+}
 
 
 .read-more {
@@ -1144,14 +1155,14 @@ footer {
 	}
 }
 
-// .qa-sidebar {
-// 	position: fixed;
-// 	top:600px;
-// }
+.affix {
+	top: 40px; 
+  left: auto;
+}
 
 /* ...................................the Q&A sidebar*/
 
-.read-more, iframe {
+iframe {
 	padding-bottom: 50px;
 }
 
@@ -1163,44 +1174,42 @@ footer {
 	}
 
 /* ...................................the house of generals*/
-
-blockquote {
-	border-left: none;
-	
-	p {
-		color: @yellow;
-		font-family: @serifFontFamily;
-		font-size: 36px;
-		border: none;
+.HoG-video {
+	iframe {
+		margin-bottom: 25px;
 	}
 }
 
-.HoG-text {
-	blockquote,
-	blockquote p {
-		width: 200px;
-	}
+blockquote {
+	width: 220px;
+	border: none;
 
 	p {
-		width: 740px;
-		float: left;
+	color: @yellow;
+	font-family: @serifFontFamily;
+	font-size: 36px;
+	line-height: 28px;
 	}
+}
 
-	blockquote
-	 {
-	 	clear: both;
+.bq {
+	padding-bottom: 40px;
 
-		&:nth-child(odd) {
+	&:nth-child(odd) {
+		blockquote {
 			float: left;
 		}
+	}
 
-		&:nth-child(even) {
+	&:nth-child(even) {
+		blockquote {
 			float: right;
 		}
 	}
 }
 
 .donate-mf {
+	margin-top: 20px;
 	background-color: @grayLighter;
 
 	textarea {
@@ -1210,12 +1219,17 @@ blockquote {
 
 	.submit-newsletter {
 		max-width: 229px;
+		margin-bottom: 140px;
+
+		button {
+			width: 100px;
+		}
 	}
 }
 
 .materials {
 	color: @black;
-	margin: 27px 0 48px;
+	margin: 75px 0 48px;
 	font-size: 24px;
 	text-transform: uppercase;
 }
@@ -1254,10 +1268,15 @@ blockquote {
 .donate-margin {
 	margin-left: 0;
 	width: 240px;
-}
 
-.shadow-bottom {
-	margin-top: 51px;
+	textarea {
+		color: @grayLight;
+		font-size: 14px;
+		font-weight: 300;
+		background: transparent;
+		border: 1px solid @gray;
+		.border-radius(2px);
+	}
 }
 
 /* ...................................the good news*/

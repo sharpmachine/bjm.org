@@ -4,7 +4,6 @@
 */
 get_header(); ?>
 
-
 	<div class="invite-bill">
 		<div class="container">
 			<div class="row">
@@ -17,6 +16,7 @@ get_header(); ?>
 		</div>
 	</div>
 
+<?php if(get_field('schedule_is_full')): ?>
 	<div class="itineary boxy">
 		<div class="container">
 			<div class="row">
@@ -29,6 +29,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+<?php endif; ?>
 
 	<div class="itineary-contact">
 		<div class="container">
@@ -40,127 +41,54 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<form action="" method="post">
+			<form action="request.php" method="post">
 
 			<div class="row">
 				<div class="span4">
 
-					Contact Person name
-					<div><input type="text"></div>
+					<label>Contact Person name</label>
+					<input type="text" class="span4">
+					<label>Title/Position</label>
+					<input type="text" class="span4">
+					<label>E-mail Address</label>
+					<input type="text" class="span4">
+					<label>Phone Number</label>
+					<input type="text" class="span4">
+					<label>Phone Number 2</label>
+					<input type="text" class="span4">
+					
+				</div>
+
+				<div class="span4">
+
+					<label>Organization Name</label>
+					<input type="text" class="span4">
+					<label>Senior Leadership</label>
+					<input type="text" class="span4">
+					<label>Website</label>
+					<input type="text" class="span4">
+					<label>Address</label>
+					<input type="text" class="span4">
+					<label>Address Line 2</label>
+					<input type="text" class="span4">
 					
 				</div>
 				<div class="span4">
 
-					Organization Name
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					City
-					<div><input type="text"></div>
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="span4">
-
-					Title/Position
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					Senior Leadership
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					Country
-					<div><input type="text"></div>
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="span4">
-
-					E-mail Address
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					Website
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					State/Province
-					<div><input type="text"></div>
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="span4">
-
-					Phone Number
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					Address
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					Zip/Postcode
-					<div><input type="text"></div>
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="span4">
-
-					Phone Number 2
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					Address Line 2
-					<div><input type="text"></div>
-					
-				</div>
-				<div class="span4">
-
-					Phone
-					<div><input type="text"></div>
-					
-				</div>
-			</div>
-			<div class="row">
-				<div class="span8">
-					
-				</div>
-				<div class="span4">
-					
-					Fax
-					<div><input type="text"></div>
-
-				</div>
-			</div>
-			<div class="row">
-				<div class="span8">
-					
-				</div>
-				<div class="span4 invite-submit">
-					
+					<label>City</label>
+					<input type="text" class="span4">
+					<label>Country</label>
+					<input type="text" class="span4">
+					<label>State/Province</label>
+					<input type="text" class="span4">
+					<label>Zip/Postcode</label>
+					<input type="text" class="span4">
+					<label>Phone</label>
+					<input type="text" class="span4">
+					<label>Fax</label>
+					<input type="text" class="span4">
 					<button type="submit" value="Submit" class="btn pull-right">Submit</button>
-
+					
 				</div>
 			</div>
 
@@ -168,7 +96,5 @@ get_header(); ?>
 
 		</div>
 	</div>
-
-
 
 <?php get_footer(); ?>
