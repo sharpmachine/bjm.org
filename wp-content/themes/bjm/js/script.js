@@ -40,7 +40,11 @@ jQuery(document).ready(function($) {
 	 $('#qa-Carousel .item:first-child').addClass('active');
 
 	 $("#searchform input[type=text]").attr('placeholder','Search');
-	
+
+	 $(".donate-materials input.wpcf7-email").attr('placeholder','Email');
+
+	 $(".donate-materials input.material-list").attr('placeholder','List materials to be donated');
+
 });
 
 

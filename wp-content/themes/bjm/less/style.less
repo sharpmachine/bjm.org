@@ -100,7 +100,7 @@ header {
 	}
  	
  	.menu-wrapper {
- 		width: 636px;
+ 		width: 718px;
  		margin: 0 auto;
  	}
 
@@ -168,6 +168,7 @@ header {
 }
 
 .bill-menu {
+	margin-bottom: 20px;
 	text-transform: uppercase;
 
 	.nav > li > a {
@@ -321,10 +322,6 @@ footer {
 
 
 /* ...................................the slider*/
-
-.hero-slider {
-	margin-top: 18px;
-}
 
 .carousel-indicators {
 	top: auto;
@@ -1020,7 +1017,7 @@ footer {
 .rss-subscribe {
 	height: 44px;
 	width: 220px;
-	margin-top: 50px;
+	margin-top: 0px;
 	font-family: @serifFontFamily;
 	font-size: 25px;
 	text-transform: uppercase;
@@ -1060,7 +1057,14 @@ footer {
 	text-transform: uppercase;
 }
 
-/* ...................................the Q&A*/
+.goodnews-sidebar {
+
+	margin-top: 50px;
+	font-family: ;
+	border-top: 1px solid @gray;
+}
+
+/* ...................................the Q&A page*/
 
 .ask-question-row {
 
@@ -1071,17 +1075,27 @@ footer {
 		font-weight: 300;
 	}
 
-	input {
+	textarea {
 		margin-bottom: 18px;
 		height: 60px;
-		width: 286px;
-		border: 1px solid @fontGrayDarker;
+		width: 300px;
+		background: transparent;
+		border: 1px solid @grayLight;
 		.border-radius(2px);
 	}
 
-	button {
-		margin: auto;
-		display: block;
+	input[type='submit'] {
+		width: 123px;
+		height: 35px;
+		margin-right: -15px;
+		color: @gray;
+		font-family: @serifFontFamily;
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 1.8;
+		text-transform: uppercase;
+		#gradient > .vertical(#ffffff, #e0e0e0);
+		border: 1px solid #e2e2e2;
 	}
 }
 
@@ -1170,10 +1184,10 @@ iframe {
 
 .single-post {
 		color: @fontGray;
-		margin: 10px 0 73px;
+		margin: 10px 0 -25px;
 	}
 
-/* ...................................the house of generals*/
+/* ...................................the house of generals page*/
 .HoG-video {
 	iframe {
 		margin-bottom: 25px;
@@ -1209,75 +1223,100 @@ blockquote {
 }
 
 .donate-mf {
-	margin-top: 20px;
-	background-color: @grayLighter;
-
-	textarea {
-		width: 215px;
-		height: 50px;
-	}
-
-	.submit-newsletter {
-		max-width: 229px;
-		margin-bottom: 140px;
-
-		button {
-			width: 100px;
-		}
-	}
-}
-
-.materials {
+	padding: 55px 0 40px;
 	color: @black;
-	margin: 75px 0 48px;
-	font-size: 24px;
-	text-transform: uppercase;
-}
 
-.materials-text {
-	margin-bottom: 100px;
-	color: @fontGray;
-	font-size: 16px;
+	h3 {
+		font-family: @sansFont;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
 
-	div:nth-child(2) {
-		margin-top: 28px;
+	p:nth-child(-n+1) {
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	h2 {
+		margin: -11px -10px 29px 0;
+		color: @yellow;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+
+	input {
+		background: transparent;
+		border: 1px solid @grayLight;
+	}
+
+	.paypal-btn {
+		position: relative;
+		top: -55px;
 	}
 }
 
-.money-bag {
-	margin-left: 25px;
+.give-money {
+	margin-top: 90px;
 }
 
-.donate-money, .donate-materials {
-	margin-bottom: 38px;
-	color: @yellow;
-	font-family: @serifFontFamily;
-	font-size: 24px;
-	text-transform: uppercase;
+.money-bag,
+.drawer{
+	img {
+		margin-left: 20px;
+	}
 }
+
+.donate-btn {
+	width: 100px !important;
+	float: right;
+}	
 
 .or {
-	margin-top: 52px;
+	margin-top: 55px;
 	color: @yellow;
 	font-family: @serifFontFamily;
 	font-size: 72px;
-	line-height: 72px;
 	text-align: center;
+
 }
 
-.donate-margin {
-	margin-left: 0;
-	width: 240px;
+.donation {
+	margin-left: 0px;
+	margin-top: 0;
+	padding: 0;
 
-	textarea {
-		color: @grayLight;
-		font-size: 14px;
-		font-weight: 300;
-		background: transparent;
-		border: 1px solid @gray;
-		.border-radius(2px);
+	input {
+		margin-bottom: 20px;
 	}
 }
+
+.donate-materials {
+	h2 {
+		margin-bottom: 0px;
+	}
+
+	input[type='text'] {
+			margin-bottom: 10px;
+			width: 100%;
+		}
+
+	input[type='submit'] {
+		float: right;
+		width: 100px;
+		height: 35px;
+		margin-right: -15px;
+		color: @gray;
+		font-family: @serifFontFamily;
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 1.8;
+		text-transform: uppercase;
+		#gradient > .vertical(#ffffff, #e0e0e0);
+		border-color: #e2e2e2;
+		.border-radius(0);
+	}
+}
+
 
 /* ...................................the good news*/
 

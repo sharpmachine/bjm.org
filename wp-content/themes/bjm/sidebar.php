@@ -19,5 +19,16 @@
 					
 	
 				<?php endif; ?>
+				<li class="widget-container">
+					<h3 class="widget-title">Recent Good News</h3>
+					<ul class="">
+						<?php query_posts( 'post_type=g_n&posts_per_page=4' ); ?>	
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+						<?php endwhile; endif; ?>
+						<?php wp_reset_query(); ?>
+					</ul>
+				</li>
 				
+				</ul>
 				</section><!-- #sidebar -->

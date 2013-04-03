@@ -33,65 +33,44 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="span12">
-				<div class="materials">
-					Donate materials or finances
-				</div>
+				<h3>Donate Materials Or Finances</h3>
+				<p>
+					 If you have materials relating to past revivals or revivalists you would like to donate which would be beneficial to The House of Generals please email us with details.
+				</p>
+				<p>
+					Likewise if you wish to make a financial contribution please do so below.
+				</p>
 			</div>
 		</div>
-		<div class="row">
-			<div class="span12 materials-text">
-				<div>If you have materials relating to past revivals or revivalists you would like to donate which would be beneficial to The House of Generals please email us with details.</div>
-				<div>Likewise if you wish to make a financial contribution please do so below.</div>
+		<div class="row give-money">
+			<div class="span2 money-bag">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/money-bag.png" alt="Donate Money">
 			</div>
-		</div>
-		<div class="row">
-			<div class="span2">
-				<img src="<?php bloginfo('template_directory'); ?>/img/money-bag.png" alt="" class="pull-left money-bag" />
-			</div>
-			<div class="span3 donate-margin">
-				<div class="donate-money">
-					Donate Money
-				</div>
-				<div class="amount-to-give">
-					<form action="" method=POST>
-						<input type='text' name='amount' placeholder='Amount to be given'>
-						<button type="submit" class="btn pull-right">
-							Submit
-						</button>
-					</form>
-				</div>
+			<div class="span3 donation">
+				<h2>Donate Money</h2>
+				<form>
+				  <fieldset>
+				    <input type="text" placeholder="Amount to be given">
+				    <button type="submit" class="btn donate-btn">Submit</button>
+				  </fieldset>
+				</form>
 				<div class="paypal">
-					<form action="" method="post">
-						<input type="hidden">
-						<input type="hidden">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
 						<button class="btn paypal-btn"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
 					</form>
 				</div>
-
 			</div>
-
 			<div class="span2 or">
 				OR
 			</div>
-
-			<div class="span2">
-				<img src="<?php bloginfo('template_directory'); ?>/img/drawer.png" alt="">
+			<div class="span2 drawer">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/drawer.png" alt="Donate Materials">
 			</div>
-			<div class="span3 donate-margin">
-				<div class="donate-materials">
-					Donate Materials
-				</div>
-				<div class="submit-email">
-					<form action="" method="post" class="validate">
-						<form method="post" action="">
-							<textarea rows="5">Add list of materials to be donated here</textarea>
-				</div>
-				<div class="submit-newsletter">
-						<button type="submit" class="btn pull-right">
-							Submit
-						</button>
-					</form>
-				</div>
+			<div class="span3 donate-materials">
+				<h2>Donate Materials</h2>
+				<?php echo do_shortcode( '[contact-form-7 id="1113" title="Donate Materials"]' ); ?>
 			</div>
 		</div>
 	</div>

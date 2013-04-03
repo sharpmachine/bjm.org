@@ -1,37 +1,22 @@
+<div class="row">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-
- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		<h2 class="entry-title">
-			<a href="<?php the_permalink(); ?>"><?php the_title();  ?></a>
-		</h2>
-		<div><?php smm_posted_on(); ?></div>
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array (100, 100) ); ?></a>
-
-		<?php the_excerpt(); ?>
-
-		<div class="entry-utility">
-		<?php if ( count( get_the_category() ) ) : ?>
-			<span class="cat-links">
-				<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
-			</span>
-			<span class="meta-sep">|</span>
-		<?php endif; ?>
-		<?php
-			$tags_list = get_the_tag_list( '', ', ' );
-			if ( $tags_list ):
-		?>
-			<span class="tag-links">
-				<?php printf( __( '<span class="%1$s">Tagged</span> %2$s', 'smm' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
-			</span>
-			<span class="meta-sep">|</span>
-		<?php endif; ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'smm' ), __( '1 Comment', 'smm' ), __( '% Comments', 'smm' ) ); ?></span>
-			<?php edit_post_link( __( 'Edit', 'smm' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-		</div><!-- .entry-utility -->
-	</article><!-- #post -->
+		<div class="span4 post-excerpt">
+			<div class="image"><?php the_post_thumbnail( array(300,165) ); ?></div>
+			<h2 class="blog-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+			<div class="blog-author">By <?php the_author_posts_link() ?></div>
+			<div class="blog-author">Posted on <?php the_time('F jS, Y') ?></div>
+			<div class="uppercase blog-page">
+				<div><span class="bold">Categories: </span><span class="underline"><?php the_category(',&nbsp;'); ?></span></div>
+				<div><span class="bold">Tags: </span><span class="underline"><?php the_tags('',', '); ?></span></div>
+				<div class="bold underline"><?php comments_number( '0', '1', '%' ); ?>  Comments</div>
+			</div>
+			<div class="the-excerpt"><?php the_excerpt(); ?></div>
+			<div class="clearfix"></div>
+		</div>
 
 	<?php endwhile; ?>
 
-<?php bootstrap_pagination(); ?>
-
+	<!-- no posts found -->
+</div>
+<?php endif; ?>	

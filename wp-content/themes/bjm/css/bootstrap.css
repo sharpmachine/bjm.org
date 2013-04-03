@@ -5084,7 +5084,7 @@ header .top-menu {
   border-bottom: 1px solid #a19159;
 }
 .bethel-menu .menu-wrapper {
-  width: 636px;
+  width: 718px;
   margin: 0 auto;
 }
 .bethel-menu .nav {
@@ -5149,6 +5149,7 @@ header .top-menu {
   text-decoration: underline;
 }
 .bill-menu {
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 .bill-menu .nav > li > a {
@@ -5274,9 +5275,6 @@ footer .footer {
   border-right: 1px solid #a19159;
 }
 /* ...................................the slider*/
-.hero-slider {
-  margin-top: 18px;
-}
 .carousel-indicators {
   top: auto;
   right: auto;
@@ -5850,7 +5848,7 @@ footer .footer {
 .rss-subscribe {
   height: 44px;
   width: 220px;
-  margin-top: 50px;
+  margin-top: 0px;
   font-family: 'Crimson Text', serif;
   font-size: 25px;
   text-transform: uppercase;
@@ -5888,25 +5886,47 @@ footer .footer {
   line-height: 22px;
   text-transform: uppercase;
 }
-/* ...................................the Q&A*/
+.goodnews-sidebar {
+  margin-top: 50px;
+  font-family: ;
+  border-top: 1px solid #58585b;
+}
+/* ...................................the Q&A page*/
 .ask-question-row h2 {
   color: #a19159;
   font-family: 'Crimson Text', serif;
   font-size: 60px;
   font-weight: 300;
 }
-.ask-question-row input {
+.ask-question-row textarea {
   margin-bottom: 18px;
   height: 60px;
-  width: 286px;
-  border: 1px solid #58595b;
+  width: 300px;
+  background: transparent;
+  border: 1px solid #999999;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.ask-question-row button {
-  margin: auto;
-  display: block;
+.ask-question-row input[type='submit'] {
+  width: 123px;
+  height: 35px;
+  margin-right: -15px;
+  color: #58585b;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.8;
+  text-transform: uppercase;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  border: 1px solid #e2e2e2;
 }
 .q-and-a-background {
   padding: 37px 0;
@@ -5972,9 +5992,9 @@ iframe {
 /* ...................................the single blog post*/
 .single-post {
   color: #414042;
-  margin: 10px 0 73px;
+  margin: 10px 0 -25px;
 }
-/* ...................................the house of generals*/
+/* ...................................the house of generals page*/
 .HoG-video iframe {
   margin-bottom: 25px;
 }
@@ -5998,66 +6018,88 @@ blockquote p {
   float: right;
 }
 .donate-mf {
-  margin-top: 20px;
-  background-color: #eeeeee;
-}
-.donate-mf textarea {
-  width: 215px;
-  height: 50px;
-}
-.donate-mf .submit-newsletter {
-  max-width: 229px;
-  margin-bottom: 140px;
-}
-.donate-mf .submit-newsletter button {
-  width: 100px;
-}
-.materials {
+  padding: 55px 0 40px;
   color: #000000;
-  margin: 75px 0 48px;
+}
+.donate-mf h3 {
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   text-transform: uppercase;
 }
-.materials-text {
-  margin-bottom: 100px;
-  color: #414042;
+.donate-mf p:nth-child(-n+1) {
   font-size: 16px;
+  line-height: 22px;
 }
-.materials-text div:nth-child(2) {
-  margin-top: 28px;
-}
-.money-bag {
-  margin-left: 25px;
-}
-.donate-money,
-.donate-materials {
-  margin-bottom: 38px;
+.donate-mf h2 {
+  margin: -11px -10px 29px 0;
   color: #a19159;
-  font-family: 'Crimson Text', serif;
   font-size: 24px;
   text-transform: uppercase;
+}
+.donate-mf input {
+  background: transparent;
+  border: 1px solid #999999;
+}
+.donate-mf .paypal-btn {
+  position: relative;
+  top: -55px;
+}
+.give-money {
+  margin-top: 90px;
+}
+.money-bag img,
+.drawer img {
+  margin-left: 20px;
+}
+.donate-btn {
+  width: 100px !important;
+  float: right;
 }
 .or {
-  margin-top: 52px;
+  margin-top: 55px;
   color: #a19159;
   font-family: 'Crimson Text', serif;
   font-size: 72px;
-  line-height: 72px;
   text-align: center;
 }
-.donate-margin {
-  margin-left: 0;
-  width: 240px;
+.donation {
+  margin-left: 0px;
+  margin-top: 0;
+  padding: 0;
 }
-.donate-margin textarea {
-  color: #999999;
-  font-size: 14px;
-  font-weight: 300;
-  background: transparent;
-  border: 1px solid #58585b;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+.donation input {
+  margin-bottom: 20px;
+}
+.donate-materials h2 {
+  margin-bottom: 0px;
+}
+.donate-materials input[type='text'] {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.donate-materials input[type='submit'] {
+  float: right;
+  width: 100px;
+  height: 35px;
+  margin-right: -15px;
+  color: #58585b;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.8;
+  text-transform: uppercase;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e0e0e0));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: -o-linear-gradient(top, #ffffff, #e0e0e0);
+  background-image: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  border-color: #e2e2e2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 /* ...................................the good news*/
 .filter {
