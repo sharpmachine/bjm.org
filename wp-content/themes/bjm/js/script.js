@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
 	 $('#qa-Carousel .item:first-child').addClass('active');
 
 	 $("#searchform input[type=text]").attr('placeholder','Search');
-	
+
 });
 
 

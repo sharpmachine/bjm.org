@@ -2,6 +2,11 @@
 Project Name: Bill Johnson Ministries
 */
 
+html,
+body {
+	height: 100%;
+}
+
 body {
 	color: @fontGray;
 	font-family: @sansFont;
@@ -796,7 +801,6 @@ footer {
 		}
 
 		&.left {
-			// height: 14px !important;
 			position: relative;
 			left: 0;
 			top: -85px;
@@ -806,9 +810,7 @@ footer {
 		}
 
 		&.right {
-			// height: 14px;
 			position: relative;
-			// left: -20px;
 			top: -75px;
 		}
 	}
@@ -837,7 +839,6 @@ footer {
 
 	.answers {
 		float: right;
-		// width: 33%;
 		width: 310px;
 		height: 122px;
 
@@ -846,28 +847,8 @@ footer {
 			vertical-align: middle;
 		}
 	}
-
-	
-
 	// !vertical carousel
 }
-
-
-
-/* ...................................the schedule*/
-
-.schedule {
-	img {
-		margin-top: 18px;
-	}
-
-	.bethel-schedule {
-		height: 100%;
-		padding: 20px 0;
-	}
-}
-/* ...................................the schedule*/
-//see itinerary.less
 
 /* ...................................the invite*/
 
@@ -944,8 +925,6 @@ footer {
 	}
 }
 
-
-
 .blog-title {
 	margin: 30px 0 2px;
 	font-family: @serifFont;
@@ -983,7 +962,6 @@ footer {
 	line-height: 22px;
 }
 
-
 .read-more {
 	margin-top: 23px;
 	color: @yellow;
@@ -995,7 +973,6 @@ footer {
 }
 
 /* ...................................the sidebar*/
-
 #sidebar {
 	ul {
 		margin: 0;
@@ -1061,7 +1038,6 @@ footer {
 }
 
 /* ...................................the Q&A*/
-
 .ask-question-row {
 
 	h2 {
@@ -1103,10 +1079,6 @@ footer {
 	top: -33px;
 }
 
-.curly-bracket {
-	
-}
-
 .ask-container {
 	text-align: center;
 
@@ -1124,8 +1096,6 @@ footer {
 }
 
 .answer-block {
-	// clear: both;
-	// height: 50px;
 	padding: 15px 0;
 	border-bottom: 1px solid #b2b2b3;
 
@@ -1156,18 +1126,22 @@ footer {
 }
 
 .affix {
-	top: 40px; 
-  left: auto;
+	position: fixed;
+	top: 0; 
+}
+
+.affix-bottom {
+	position: absolute;
+	top: auto;
+	bottom: 270px;
 }
 
 /* ...................................the Q&A sidebar*/
-
 iframe {
 	padding-bottom: 50px;
 }
 
 /* ...................................the single blog post*/
-
 .single-post {
 		color: @fontGray;
 		margin: 10px 0 73px;
@@ -1280,7 +1254,6 @@ blockquote {
 }
 
 /* ...................................the good news*/
-
 .filter {
 	color: @grayLight;
 	margin-top: 62px;
@@ -1421,8 +1394,8 @@ blockquote {
 		font-family: @serifFontFamily;
 	}
 }
-/* ...................................the about*/
 
+/* ...................................the about*/
 .about {
 	margin-bottom: 72px;
 }
@@ -1458,7 +1431,6 @@ blockquote {
 }
 
 /* ...................................the end*/
-
 img.size-auto,
 img.size-full,
 img.size-large,
@@ -1492,35 +1464,6 @@ img.alignleft,
 img.alignright,
 img.aligncenter {
 	margin-bottom: 12px;
-}
-
-
-
-
-
-
-
-
-
-
-.entry-title {
-	
-}
-
-.entry-meta {
-	
-}
-
-.entry-utility {
-	
-}
-
-.entry-content {
-	
-}
-
-.entry-summary {
-	
 }
 
 .lifestream {

@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>Down for Maintenance</title>
-
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic|Open+Sans:300italic,400italic,600italic,700italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
 <style type="text/css">
 	body
 	{
-		background-color: #000;
-		color: #fff;
-		font-family: Arial, Helvetica, sans-serif;
+		background-color: #fff;
+		color: #413f41;
+		font-family: 'Open Sans', sans-serif;
 	}
 	
 	#logo
 	{
-		width: 355px;
+		width: 247px;
 		margin: 50px auto;
 	}
 	
@@ -34,7 +34,7 @@
 			<div class="span12">
 
 				<div id="logo">
-					<img src="http://www.domain.com/wp-content/themes/project_theme/images/logo.png" width="335" height="52" alt="Logo">
+					<img src="http://localhost/bjm.org/wp-content/themes/bjm/img/bill-johnson-signature.png" width="247" height="56" alt="Logo">
 					<p>We are currently undergoing routine maintenance.  Please check back soon.</p>
 				</div>
 
