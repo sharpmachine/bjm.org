@@ -1,6 +1,4 @@
-// @import "reset.less";
 @import "variables.less";
-// @import "bootstrap.less";
 /* ...................................the schedule*/
 
 
@@ -13,22 +11,28 @@
 	}
 }
 
-.content-inner {
-
-
-
 // all of schedules font family & color
 .itinerary {
 	clear: both;
 	width: 920px;
-	height: 280px;
+	height: 240px;
 	color: @fontGray;
 	font-family: @serifFontFamily;
 	border-bottom: 1px solid #999;
 }
 
+// conference name
 h4.bottom {
+	position: relative;
+	top: 40px;
+	left: 320px;
 	width: 460px;
+	margin-bottom: 50px;
+
+	strong {
+		font-size: 36px;
+		font-weight: 400;
+	}
 }
 
 // date size
@@ -39,18 +43,12 @@ h4.bottom {
 }
 
 .date-display-start {
-	position: relative;
-	left: 0px;
-	top: -38px;
-
+	padding-bottom: 20px;
+	line-height: 1;
 }
 
 .date-display-end {
-	position: relative;
-	left: 0;
-	top: -16px;
-	max-width: 300px;
-	padding-top: 15px;
+	line-height: 1;
 	border-top: 1px solid @fontGray;
 }
 
@@ -59,19 +57,12 @@ h4.bottom {
 	display: none;
 }
 
-// conference name
-strong {
-	position: relative;
-	left: 318px;
-	top: 0px;
-	font-size: 36px;
-	font-weight: 400;
-}
-
 .prepend-1 {
 	width: 920px;
 
 	.loud {
+		position: relative;
+		top: -57px;
 		float: left;
 		width: 300px;
 		margin-right: 20px;
@@ -82,46 +73,24 @@ strong {
 	div:nth-child(2) {
 		float: left;
 		width: 590px;
+		font-family: @sansFont;
+		font-size: 18px;
+
+		div:first-child {
+			font-weight: bold;
+
+			&:after {
+				content:(" //");
+			}
+		}
+
+		a {
+			color: @yellow;
+		}
 	}
 }
-
-// .prepend-1:nth-child(2) {
-// 	font-family: @sansFont;
-// 	font-size: 18px;
-// 	// width: 450px;
-
-// 	// location name
-// 	div:nth-child(2){
-// 		color: red;
-
-// 		div:nth-child(1) {
-// 			position: relative;
-// 			left: 159px;
-// 			top: -23px;
-
-// 			font-weight: 600;
-// 		}
-// 	}
-
-// 	// location address
-// 	div:nth-child(1n+2) {
-// 		position: relative;
-// 		left: 159px;
-// 		top: -26px;
-// 		font-weight: 300;
-// 	}
-
-// 	// event link
-// 	a {
-// 		position: relative;
-// 		left: 250px;
-// 		top: -20px;
-// 		font-family: @serifFont;
-// 	}
-// }
 
 hr {
 	display: none;
 }
 
-}

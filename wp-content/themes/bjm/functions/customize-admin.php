@@ -33,11 +33,11 @@ function custom_login_logo() {
   echo '<style type="text/css">
     h1 a 
     {
-    	 background-image:url('.get_bloginfo('template_directory').'/img/logo.png) !important;
-		 background-size: 200px 200px !important;
-    	 width: 200px !important; /* Same width as logo */
-    	 height: 200px !important; /* Same height as logo */
-	     margin-left: -20px !important; /* adjust to center logo above login box */
+       	 background-image:url('.get_bloginfo('template_directory').'/img/bill-johnson-signature.png) !important;
+		 background-size: 247px 56px !important;
+    	 width: 247px !important; /* Same width as logo */
+    	 height: 56px !important; /* Same height as logo */
+	     margin-left: 40px !important; /* adjust to center logo above login box */
 	 }
     </style>';
 }

@@ -41,10 +41,13 @@ jQuery(document).ready(function($) {
 
 	 $("#searchform input[type=text]").attr('placeholder','Search');
 
+<<<<<<< HEAD
 	 $(".donate-materials input.wpcf7-email").attr('placeholder','Email');
 
 	 $(".donate-materials input.material-list").attr('placeholder','List materials to be donated');
 
+=======
+>>>>>>> ca4e126d79c19768a8b5830baa2a10847b950e2a
 });
 
 
