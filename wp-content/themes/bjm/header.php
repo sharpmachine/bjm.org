@@ -16,23 +16,26 @@
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    	<title><?php wp_title("",true); ?> | <?php bloginfo('name'); ?> </title>
+		
+    <title><?php wp_title("",true); ?> | <?php bloginfo('name'); ?></title>
+    
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<meta name="description" content="">
-    	<meta name="author" content="Sharp Machine Media">
+    <meta name="description" content="">
+    <meta name="author" content="Sharp Machine Media">
 	
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-    	<!-- Le styles -->
-    	<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
-    	
-    	<link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic|Open+Sans:300italic,400italic,600italic,700italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+		
+    <!-- Le styles -->
+    <link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
+		
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-		<!-- Google Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic|Open+Sans:300italic,400italic,600italic,700italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
-
-    	<!-- Le fav and touch icons -->
-    	<link rel="shortcut icon" href="../img/favicon.ico">
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
 		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-1.7.min.js"></script>
 		<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js"></script><![endif]-->
