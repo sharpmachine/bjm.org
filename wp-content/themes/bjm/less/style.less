@@ -66,20 +66,38 @@ button[type="submit"] {
 }
 
 // borders
-.pagination ul > li > a {
+.pagination {
+	margin: 0;
+
+	a.prev,
+	a.next {
+		color: @yellow;
+	}
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
 	color: @fontGray;
 	font-family: @serifFontFamily;
 	border: 1px solid @gray;
 }
 
-.pagination-large ul > li > a {
+.pagination-large ul > li > a,
+.pagination-large ul > li > span {
 	margin: 0 3px;
 	padding: 11.5px 17px;
 }
 
+.pagination-large ul > li > span {
+	color: @white;
+	background-color: @gray;
+}
+
 // no border radius
 .pagination-large ul > li:first-child > a, 
-.pagination-large ul > li:last-child > a {
+.pagination-large ul > li:last-child > a,
+.pagination-large ul > li:first-child > span,
+.pagination-large ul > li:last-child > span {
 	.border-radius(0);
 }
 
@@ -212,8 +230,8 @@ footer {
 	margin-bottom: 10px;
 
 	.footer {
-		margin-top: 69px;
-		margin-bottom: 23px;
+		margin-top: 70px;
+		margin-bottom: 10px;
 		padding: 60px 0 40px;
 		border-top: 1px solid @gray;
 		border-bottom: 1px solid @gray;
@@ -287,8 +305,27 @@ footer {
 	}
 
 	button {
-		width: 100px;
 		margin-top: 5px;
+	}
+}
+
+#donate-modal {
+	display: none;
+
+	.modal-header {
+		padding: 20px 15px;
+	}
+
+	hr {
+		display: block;
+	}
+
+	.paypal {
+		margin-top: 20px;
+	}
+
+	form {
+		margin-bottom: 0;
 	}
 }
 
@@ -905,17 +942,36 @@ footer {
 
 #searchform {
 	input[type="text"] {
-		background: url(../img/search-form.png) no-repeat 190px center;
+		background: url(../img/search-form.png) no-repeat 185px center;
 	}
 }
 
 /* ...................................the blog page*/
 .blog {
 	color: @fontGray;
+
+	.blog-title {
+		height: 86px;
+	}
+
+	.the-excerpt {
+
+		p {
+			height: 110px;
+			overflow: hidden;
+		}
+
+		p.read-more {
+			height: 22px;
+			margin-bottom: 30px;
+		}
+	}
 }
 
 .post-excerpt{
-	margin-top: 20px;
+	// margin-top: 20px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid @gray;
 
 	&:nth-child(odd) {
 		clear: both;
@@ -931,6 +987,10 @@ footer {
 	a {
 		color: @fontGray;
 	}
+}
+
+.meta-details {
+	height: 60px;
 }
 
 .blog-author {
@@ -995,17 +1055,20 @@ footer {
 	height: 44px;
 	width: 220px;
 	margin-top: 0px;
+	padding-top: 6px;
+	color: @fontGray;
 	font-family: @serifFontFamily;
 	font-size: 25px;
+	text-align: left;
 	text-transform: uppercase;
 	background-color: @white;
-	border: 1px solid @fontGray;
+	border: 2px solid #9B9B9D;
 	.border-radius(3px);
 
 	img {
 		position: relative;
 		top: -4px;
-		padding-right: 20px;
+		padding: 0 10px 0 10px;
 	}
 }
 
@@ -1018,11 +1081,13 @@ footer {
 }
 
 .widget_search input[type='text'] {
-	width: 206px;
+	width: 161px;
 	height: 32px;
 	margin-top: 10px;
+	padding-left: 15px;
+	padding-right: 40px;
 	margin-bottom: -19px;
-	border: 1px solid @gray;
+	border: 2px solid #9b9b9d;
 	.border-radius(3px);
 }
 
@@ -1155,6 +1220,10 @@ iframe {
 .single-post {
 		color: @fontGray;
 		margin: 10px 0 -25px;
+
+		iframe.vimeo {
+			margin: 20px 0;
+		}
 	}
 
 /* ...................................the house of generals page*/
@@ -1290,11 +1359,13 @@ blockquote {
 
 /* ...................................the good news*/
 .filter {
+	margin-bottom: 30px;
+	padding-bottom: 20px;
 	color: @grayLight;
-	margin-top: 62px;
 	font-size: 12px;
 	line-height: 18px;
 	text-transform: uppercase;
+	border-bottom: 1px solid @grayLight;
 
 	img {
 		margin: 0 5px;
@@ -1302,12 +1373,18 @@ blockquote {
 }
 
 .good-news {
+	margin-bottom: 60px;
 	padding: 96px 0;
 
 	h1 {
 		color: @yellow;
 		font-size: 140px;
 		text-align: center;
+
+		img {
+			position: relative;
+			top: -15px;
+		}
 	}
 
 	h4 {
@@ -1323,11 +1400,11 @@ blockquote {
 }
 
 .goodnews-post {
-	margin-top: 20px;
-	border-top: 1px solid @grayLight;
+	margin-bottom: 35px;
+	border-bottom: 1px solid @grayLight;
 
 	h2 {
-		margin-top: 20px;
+		margin-top: -7px;
 	}
 
 	h2 a {
@@ -1335,7 +1412,7 @@ blockquote {
 		font-size: 36px;
 	}
 
-	.blog-author, a {
+	.blog-author {
 		color: @fontGray;
 		margin-bottom: 20px;
 	}
@@ -1372,6 +1449,7 @@ blockquote {
 		margin-top: 25px;
 	}
 }
+
 /* ...................................the contact*/
 
 .map {

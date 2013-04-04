@@ -9,7 +9,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="span12">
 				
-				<iframe src="http://player.vimeo.com/video/23348197?title=0&amp;byline=0" width="940" height="527" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+				<iframe src="http://player.vimeo.com/video/<?php the_field('hog_video_id'); ?>?title=0&amp;byline=0" width="940" height="527" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 			</div>
 		</div>

@@ -38,6 +38,8 @@ if ( ! function_exists( 'smm_setup' ) ):
  */
 remove_action('wp_head', 'wp_generator');  
 
+add_image_size( 'blog_thumb', 300, 165, true );
+
 function smm_setup() {
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
@@ -92,7 +94,7 @@ add_filter( 'wp_page_menu_args', 'smm_page_menu_args' );
  * @return int
  */
 function smm_excerpt_length( $length ) {
-	return 40;
+	return 30;
 }
 add_filter( 'excerpt_length', 'smm_excerpt_length' );
 
@@ -103,7 +105,7 @@ add_filter( 'excerpt_length', 'smm_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function smm_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'smm' ) . '</a>';
+	return ' <p class="read-more"><a href="'. get_permalink() . '">' . __( 'Read More', 'smm' ) . '</a></p>';
 }
 
 /**
@@ -353,7 +355,7 @@ function bootstrap_pagination(){
 	$total_pages = $wp_query->max_num_pages;
 	if ($total_pages > 1){
 	  $current_page = max(1, get_query_var('paged'));
-	  echo '<div class="pagination">';
+	  echo '<div class="pagination pagination-large my-pagination">';
 	  echo paginate_links(array(
 	      'base' => get_pagenum_link(1) . '%_%',
 	      'format' => 'page/%#%',
@@ -376,11 +378,11 @@ add_action('wp_enqueue_scripts', 'getgo_method');
 
 
 // Modified the_excerpt from Continue Reading to Read More
-function new_excerpt_more($more) {
-       global $post;
-	return ' <a href="'. get_permalink($post->ID) . '"><p class="read-more">Read More</p></a>';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
+// function new_excerpt_more($more) {
+//        global $post;
+// 	return ' <a href="'. get_permalink($post->ID) . '"><p class="read-more">Read More</p></a>';
+// }
+// add_filter('excerpt_more', 'new_excerpt_more');
 
 function the_short_title($limit) {
     $title = get_the_title($post->ID);

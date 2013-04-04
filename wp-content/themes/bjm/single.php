@@ -3,7 +3,7 @@
 <div class="single-post">
 	<div class="container">
 		<div class="row">
-			<div class="span9">
+			<div class="span8">
 			
 				<?php
 				/* Run the loop to output the post.
@@ -14,7 +14,7 @@
 				?>
 				
 			</div>
-			<div class="span3">
+			<div class="span3 pull-right">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>

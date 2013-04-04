@@ -35,7 +35,7 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ) ?>/img/favicon.ico">
 
 		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-1.7.min.js"></script>
 		<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js"></script><![endif]-->

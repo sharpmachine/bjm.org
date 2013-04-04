@@ -15,7 +15,11 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	<div class="image">
-		<?php the_post_thumbnail( array(620,280) ); ?>
+		<?php if ( has_post_thumbnail() ) {
+		the_post_thumbnail(array(620,341));
+		} else { ?>
+		<img src="<?php bloginfo('template_directory'); ?>/img/default-img.jpg" alt="<?php the_title(); ?>" />
+		<?php } ?>
 	</div>
 	<!-- !blog image -->
 
@@ -56,7 +60,7 @@
 	<div class="entry-content single-post">
 		<?php the_content(); ?>
 		<?php if(get_field('vimeo_id')): ?>
-			<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="700" height="394" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe class="vimeo" src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="349" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		<?php endif; ?>
 	</div>
 	<!-- .entry-content -->

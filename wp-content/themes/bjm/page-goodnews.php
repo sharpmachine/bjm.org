@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+/*
+* Template Name: Good News
+*/
+get_header(); ?>
 
 <div class="good-news boxy-no-color">
 	<div class="container">
@@ -14,13 +18,23 @@
 <div>
 	<div class="container">
 		<div class="row">
-			<div class="span8 ">
-
+			<div class="span12">
 				<div class="filter">
 					Filter By <a href="http://localhost/bjm.org/gn-category/written/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/written-filter.png" alt="Written"></a><a href="http://localhost/bjm.org/gn-category/video/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/video-filter.png" alt="Video"></a>
 				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span8">
 				
-				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+					<?php 
+					  $temp = $wp_query; 
+					  $wp_query = null; 
+					  $wp_query = new WP_Query(); 
+					  $wp_query->query('post_per_page=10&post_type=g_n'.'&paged='.$paged); 
+
+					  while ($wp_query->have_posts()) : $wp_query->the_post(); 
+					?>
 
 					<div class="goodnews-post">
 
@@ -51,19 +65,17 @@
 								<?php echo get_the_term_list( $post->ID, 'gn_tag', ' ', ', ' ); ?>
 							</span>
 						</div>
-						<div class="bold uppercase underline">
+						<div class="bold uppercase underline hidden">
 								<?php comments_number( '0', '1', '%' ); ?> Comments
 						</div>
 						
-					</div>
-							
-						<!-- !categories, tags, comments counter -->
-
-					<div class="excerpt">
-						<?php the_excerpt(); ?>
-						<?php if(get_field('vimeo_id')): ?>
-							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-						<?php endif; ?>
+						<div class="excerpt">
+							<?php the_excerpt(); ?>
+							<?php if(get_field('vimeo_id')): ?>
+								<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							<?php endif; ?>
+						</div>
+					
 					</div>
 
 						<!-- .entry-content -->
@@ -72,10 +84,15 @@
 				<?php bootstrap_pagination(); ?>
 			</div>
 			
+			<?php 
+  $wp_query = null; 
+  $wp_query = $temp;  // Reset
+?>
+			
 			<div class="span3 pull-right">
-				<div class="row">
-					<?php get_sidebar(); ?>
-				</div>
+			
+				<?php get_sidebar(); ?>
+				
 			</div>
 		</div>
 	</div>

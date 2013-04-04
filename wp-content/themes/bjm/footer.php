@@ -1,57 +1,79 @@
 		<footer>
 			<div class="container">
-				<div class="row footer">
-					<div class="span3">
-						<div class="newsletter">
-							Newsletter Sign Up
+				<div class="footer">
+					<div class="row">
+						<div class="span3">
+							<div class="newsletter">
+								Newsletter Sign Up
+							</div>
+							<div class="small-text">
+								Sign up to receive exclusive podcasts monthly
+							</div>
+							<div class="submit-email">
+								<form action="http://ibethel.us1.list-manage2.com/subscribe/post?u=b824912e75c6e72f2ace5ded3&amp;id=c45a6c9961" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+									<input type="text" value="Email address" name="EMAIL" class="required email span3" onfocus="if (this.value=='you@something.com')this.value=' ';"onblur="if (this.value==' ')this.value='you@something.com';" id="mce-EMAIL">
+							</div>
+							<div class="submit-newsletter">
+									<button type="submit" value="Submit" class="btn pull-right" title="Subscribe" id="mc-embedded-subscribe">
+										Submit
+									</button>
+								</form>
+							</div>
 						</div>
-						<div class="small-text">
-							Sign up to receive exclusive podcasts monthly
+						<div class="span2 vertical-menu hidden-phone">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>	
 						</div>
-						<div class="submit-email">
-							<form action="http://ibethel.us1.list-manage2.com/subscribe/post?u=b824912e75c6e72f2ace5ded3&amp;id=c45a6c9961" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-								<input type="text" value="Email address" name="EMAIL" class="required email span3" onfocus="if (this.value=='you@something.com')this.value=' ';"onblur="if (this.value==' ')this.value='you@something.com';" id="mce-EMAIL">
+						<div class="span2 vertical-menu hidden-phone">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'footer-menu-1' ) ); ?>
 						</div>
-						<div class="submit-newsletter">
-								<button type="submit" value="Submit" class="btn pull-right" title="Subscribe" id="mc-embedded-subscribe">
-									Submit
-								</button>
-							</form>
+						<div class="span2 vertical-menu hidden-phone">
+							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'footer-menu-2' ) ); ?>
+						</div>
+						<div class="span3">
+							<div class="donate-to-bjm">
+								Donate to BJM
+							</div>
+							<div class="small-text">
+								Thank you for your interest in supporting Bill Johnson Minstries.
+							</div>
+							<div class="amount-to-give">
+								<form action="" method=POST>
+									<input type='text' name='amount' placeholder='Amount to give' class="span3">
+									<button type="submit" class="btn pull-right" data-toggle="modal" href="#donate-modal">
+										Continue
+									</button>
+								</form>
+							</div>
+							
+							<div class="modal" id="donate-modal">
+								<div class="modal-header">
+									<a class="close" data-dismiss="modal">&times;</a>
+									<h3><img src="<?php bloginfo( 'template_directory' ); ?>/img/donate_header.png" alt="Donate Header"></h3>
+								</div>
+								<div class="modal-body">
+									<p><strong>Confirm donation amount:</strong></p>
+									<p>You have entered <strong>$4.00</strong> as the amount you would like to donate.</p>
+									<hr>
+									<div class="alert">
+										<p>If you wish to give via PayPal, please use the Donate button below to be redirected to PayPal.</p>
+											<div class="paypal">
+												<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+													<input type="hidden" name="cmd" value="_s-xclick">
+													<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
+													<button class="btn paypal-btn"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
+												</form>
+										</div>
+									</div><!-- .alert -->
+								</div>
+								<div class="modal-footer">
+									<a href="#" class="btn btn-primary">Continue</a>
+									<a data-dismiss="modal" class="btn">Cancel</a>
+								</div>
+							</div><!-- #donate-modal -->
 						</div>
 					</div>
-					<div class="span2 vertical-menu hidden-phone">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker ) ); ?>	
-					</div>
-					<div class="span2 vertical-menu hidden-phone">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'footer-menu-1' ) ); ?>
-					</div>
-					<div class="span2 vertical-menu hidden-phone">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'footer-menu-2' ) ); ?>
-					</div>
-					<div class="span3">
-						<div class="donate-to-bjm">
-							Donate to BJM
-						</div>
-						<div class="small-text">
-							Thank you for your interest in supporting Bill Johnson Minstries.
-						</div>
-						<div class="amount-to-give">
-							<form action="" method=POST>
-								<input type='text' name='amount' placeholder='Amount to give' class="span3">
-								<button type="submit" class="btn pull-right">
-									Submit
-								</button>
-							</form>
-						</div>
-						<div class="paypal">
-							<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-								<input type="hidden" name="cmd" value="_s-xclick">
-								<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
-								<button class="btn paypal-btn"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
-							</form>
-						</div>
-					</div>
-				</div>
+				</div><!-- .footer -->
+				
 				<div class="row">
 					<div class="span10 copyright">
 						&copy;<?php echo date ('Y'); ?> <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
