@@ -1,4 +1,76 @@
 /* Author: 
 
-*/// Allows you to use the $ shortcut.  Put all your code  inside this wrapper
-jQuery(document).ready(function(e){e("#lifestream").lifestream({limit:1,list:[{service:"facebook_page",user:"54557413386"}]});e(".bethel-menu-toggle").click(function(){e(".bethel-menu .nav").slideToggle();e(".chevron").toggleClass("chevron-rotate")});e("a.close-menu").click(function(){e(".bethel-menu .nav").slideUp()});e("#myCarousel").carousel();e("#myCarousel .item:first-child").addClass("active");e("#myCarousel .dots:first-child").addClass("active");e("#qa-Carousel").carousel();e("#qa-Carousel .item:first-child").addClass("active");e("#searchform input[type=text]").attr("placeholder","Search");e(".donate-materials input.wpcf7-email").attr("placeholder","Email");e(".donate-materials input.material-list").attr("placeholder","List materials to be donated")});
+*/
+
+// Allows you to use the $ shortcut.  Put all your code  inside this wrapper
+jQuery(document).ready(function($) {
+	
+	// // Forces WordPress to place nice with dropdowns
+ // 	$("li.dropdown > a").addClass('dropdown-toggle');
+	// $("li.dropdown > a").attr('data-toggle','dropdown');
+	// $("a.dropdown-toggle").append('<b class="caret"></b>');
+
+	 $("#lifestream").lifestream({
+	 	limit: 1, 
+    list:[ 
+      { 
+        service: "facebook_page",
+        user: "54557413386"
+      }
+    ]
+  });
+
+	 $(".bethel-menu-toggle").click(function(){
+	 	$(".bethel-menu .nav").slideToggle();
+	 	$(".chevron").toggleClass("chevron-rotate");
+	 });
+
+	 $("a.close-menu").click(function(){
+	 	$(".bethel-menu .nav").slideUp();
+	 });
+
+	 $('#myCarousel').carousel();
+
+	 $('#myCarousel .item:first-child').addClass('active');
+
+	 $('#myCarousel .dots:first-child').addClass('active');
+
+	 $('#qa-Carousel').carousel();
+
+	 $('#qa-Carousel .item:first-child').addClass('active');
+
+	 $("#searchform input[type=text]").attr('placeholder','Search');
+
+	 $(".donate-materials input.wpcf7-email").attr('placeholder','Email');
+
+	 $(".donate-materials input.material-list").attr('placeholder','List materials to be donated');
+<<<<<<< HEAD
+=======
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 82437a8a3e1e22e4d292dc948b4872378e1078dc
+
+	 // $('#myModal').modal();
+});
