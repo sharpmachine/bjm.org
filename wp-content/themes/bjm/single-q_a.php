@@ -10,11 +10,10 @@
 			<div class="span6 ask-container">
 				<div class="align">
 					<h2>Have a question?</h2>
-					<div class="ask">Go ahead and ask! If we answer it we'll notify you.</div>
-						<form action="">
-							<input type="text">
-							<button type="submit" class="btn">Submit</button>
-						</form>
+
+					<div class="ask">Go ahead and ask! Check back to see if we answered it.</div>
+					<?php echo do_shortcode( '[contact-form-7 id="1114" title="Ask A Question"]' ); ?>
+
 				</div>
 			</div>
 		</div>
@@ -26,7 +25,7 @@
 		<div class="row">
 		
 			<div class="span4 qa-sidebar visible-desktop">
-				<div class="affix-top" data-spy="affix" data-offset-top="460">
+				<div class="affix-top" data-spy="affix" data-offset-top="525">
 				<?php query_posts( 'post_type=q_a' ); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					
