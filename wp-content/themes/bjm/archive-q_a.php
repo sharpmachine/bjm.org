@@ -10,15 +10,10 @@
 			<div class="span6 ask-container">
 				<div class="align">
 					<h2>Have a question?</h2>
-<<<<<<< HEAD
-					<div class="ask">Go ahead and ask! Check back to see if we answered it.</div>
-					<?php echo do_shortcode( '[contact-form-7 id="1114" title="Ask A Question"]' ); ?>
-=======
 
 					<div class="ask">Go ahead and ask! Check back to see if we answered it.</div>
 					<?php echo do_shortcode( '[contact-form-7 id="1114" title="Ask A Question"]' ); ?>
 
->>>>>>> 2496c5e51498ef1172340826ce8b90efe080f84c
 				</div>
 			</div>
 		</div>
