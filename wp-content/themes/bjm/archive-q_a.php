@@ -10,10 +10,15 @@
 			<div class="span6 ask-container">
 				<div class="align">
 					<h2>Have a question?</h2>
+<<<<<<< HEAD
 
 					<div class="ask">Go ahead and ask! Check back to see if we answered it.</div>
 					<?php echo do_shortcode( '[contact-form-7 id="1114" title="Ask A Question"]' ); ?>
 
+=======
+					<div class="ask">Go ahead and ask! Check back to see if we answered it.</div>
+					<?php echo do_shortcode( '[contact-form-7 id="1114" title="Ask A Question"]' ); ?>
+>>>>>>> ccc4c4f0036606a3aff75534d8b9d4a523506a32
 				</div>
 			</div>
 		</div>
@@ -51,7 +56,7 @@
 						<h2><?php the_title(); ?></h2>
 						<?php the_excerpt(); ?>
 						<?php if(get_field('vimeo_id')): ?>
-							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="349" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 						<?php endif; ?>
 					</div><!-- .answer -->
 				<?php endwhile; endif; ?>

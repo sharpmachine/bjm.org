@@ -52,7 +52,7 @@
 						<h2><?php the_title(); ?></h2>
 						<?php the_content(); ?>
 						<?php if(get_field('vimeo_id')): ?>
-							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="349" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 						<?php endif; ?>
 					</div><!-- .answer -->
 				<?php endwhile; endif; ?>
