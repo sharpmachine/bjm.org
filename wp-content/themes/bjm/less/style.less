@@ -556,9 +556,10 @@ footer {
 }
 
 .product-title {
-	margin: 37px 0 58px;
+	margin: 25px 0 41px;
 	font-family: @serifFontFamily;
 	font-size: 50px;
+	line-height: 1;
 }
 
 .product-endorsement {
@@ -707,7 +708,6 @@ footer {
 /* ...................................the house of generals*/
 
 .house-of-generals {
-	min-height: 425px;
 	margin: 65px 0 65px;
 }
 
@@ -752,6 +752,23 @@ footer {
 
 	a {
 		color: @fontGray;
+	}
+}
+
+.house-of-generals {
+
+	overflow: hidden;
+
+	.carousel {
+		margin-bottom: 0;
+	}
+	.carousel-caption {
+		width: 32%;
+
+		a {
+			border: none;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -1542,7 +1559,6 @@ iframe {
 		position: relative;
 		left: -70px;
 		width: 98%;
-		margin: 0 50px 0 0;
 		padding: 9px 2px;
 		color: @grayLight;
 		font-size: 14px;
@@ -1553,7 +1569,7 @@ iframe {
 	}
 
 	textarea {
-		height: 80px;
+		height: 65px;
 		margin-top: 55px;
 	}
 
@@ -1776,4 +1792,9 @@ div.wpcf7-response-output {
 }
 div.wpcf7-mail-sent-ok {
 	border: 1px solid @yellow !important;
+}
+
+/*..................................the utilities */
+iframe.vimeo {
+	width: 100%;
 }

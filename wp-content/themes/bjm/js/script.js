@@ -36,6 +36,8 @@ jQuery(document).ready(function($) {
 	 $('#myCarousel .dots:first-child').addClass('active');
 
 	 $('#qa-Carousel').carousel();
+	 
+	 // $('#house-of-generals').carousel();
 
 	 $('#qa-Carousel .item:first-child').addClass('active');
 
@@ -44,5 +46,7 @@ jQuery(document).ready(function($) {
 	 $(".donate-materials input.wpcf7-email").attr('placeholder','Email');
 
 	 $(".donate-materials input.material-list").attr('placeholder','List materials to be donated');
+
+	 $('.filter a').tooltip();
 
 });
