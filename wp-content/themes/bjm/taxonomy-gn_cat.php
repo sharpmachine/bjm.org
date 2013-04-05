@@ -11,53 +11,60 @@
 	</div>
 </div>
 
-<div>
-	<div class="container">
-		<div class="row">
-			<div class="span8 ">
 
-				<div class="filter">
-					Filter By <a href="http://localhost/bjm.org/gn-category/written/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/written-filter.png" alt="Written"></a><a href="http://localhost/bjm.org/gn-category/video/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/video-filter.png" alt="Video"></a>
-				</div>
-				
-				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<div class="container">
+	<div class="row">
+	
+		<div class="span12 filter">
+			Filter By 
+			<a href="<?php bloginfo( 'url' ); ?>/goodnews-category/written/">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/written-filter.png" alt="Written">
+			</a>
+			<a href="<?php bloginfo( 'url' ); ?>/goodnews-category/video/">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/img/video-filter.png" alt="Video">
+			</a>
+		</div><!-- .filter -->
+		
+	</div>
+	
+	<div class="row">
+		<div class="span8">
+			
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-					<div class="goodnews-post">
+				<div class="goodnews-post module">
+					<h2>
+						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+					</h2>
 
-						<h2>
-							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-						</h2>
-
-						<div class="blog-author">
-							<div>By <?php the_author_posts_link(); ?></div>
-							<div>Posted on <?php the_time('F jS, Y'); ?></div>
-						</div>
-
-						<!-- !blog title, author date -->
-						
-						<div>
-							<span class="bold uppercase">
-								Categories: 
-							</span>
-							<span class="underline">
-								<?php echo get_the_term_list( $post->ID, 'gn_cat'); ?>
-							</span>
-						</div>
-						<div>
-							<span class="bold uppercase">
-								Tags: 
-							</span>
-							<span class="underline">
-								<?php echo get_the_term_list( $post->ID, 'gn_tag', ' ', ', ' ); ?>
-							</span>
-						</div>
-						<div class="bold uppercase underline">
-								<?php comments_number( '0', '1', '%' ); ?> Comments
-						</div>
-						
+					<div class="blog-author">
+						<div>By <?php the_author_posts_link(); ?></div>
+						<div>Posted on <?php the_time('F jS, Y'); ?></div>
 					</div>
-							
-						<!-- !categories, tags, comments counter -->
+
+					<!-- !blog title, author date -->
+					
+					<div class="cats">
+						<span class="bold uppercase">
+							Categories: 
+						</span>
+						<span class="underline">
+							<?php echo get_the_term_list( $post->ID, 'gn_cat'); ?>
+						</span>
+					</div>
+					<div class="tags">
+						<span class="bold uppercase">
+							Tags: 
+						</span>
+						<span class="underline">
+							<?php echo get_the_term_list( $post->ID, 'gn_tag', ' ', ', ' ); ?>
+						</span>
+					</div>
+					<div class="bold uppercase underline hidden">
+							<?php comments_number( '0', '1', '%' ); ?> Comments
+					</div>
+						
+					<!-- !categories, tags, comments counter -->
 
 					<div class="excerpt">
 						<?php the_excerpt(); ?>
@@ -65,19 +72,18 @@
 							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="340" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 						<?php endif; ?>
 					</div>
+				</div><!-- .goodnews -->
 
-						<!-- .entry-content -->
-
-				<?php endwhile; // end of the loop. ?>
-				<?php bootstrap_pagination(); ?>
-			</div>
+			<?php endwhile; // end of the loop. ?>
 			
-			<div class="span3 pull-right">
-				<div class="row">
-					<?php get_sidebar(); ?>
-				</div>
-			</div>
+			<?php bootstrap_pagination(); ?>
+			
 		</div>
+		
+		<div class="span3 pull-right">
+			<?php get_sidebar(); ?>
+		</div>
+		
 	</div>
 </div>
 

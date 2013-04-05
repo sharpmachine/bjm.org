@@ -1,5 +1,16 @@
 <?php get_header(); ?>
 
+<div class="good-news boxy-no-color">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<h1>Good <img src="<?php bloginfo('template_directory'); ?>/img/healing-icon.png " alt="Good News"> News</h1>
+				<h4>Testimonies from the road.</h4>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="single-post">
 	<div class="container">
 		<div class="row">
@@ -14,9 +25,11 @@
 				?>
 				
 			</div>
+			
 			<div class="span3 pull-right">
 				<?php get_sidebar(); ?>
 			</div>
+			
 		</div>
 	</div>
 </div>

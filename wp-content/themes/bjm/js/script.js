@@ -44,33 +44,5 @@ jQuery(document).ready(function($) {
 	 $(".donate-materials input.wpcf7-email").attr('placeholder','Email');
 
 	 $(".donate-materials input.material-list").attr('placeholder','List materials to be donated');
-<<<<<<< HEAD
-=======
 
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 82437a8a3e1e22e4d292dc948b4872378e1078dc
-
-	 // $('#myModal').modal();
 });

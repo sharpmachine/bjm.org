@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row blog">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-		<div class="span4 post-excerpt">
+		<div class="span4 post-excerpt module">
 			<div class="image">
 				<?php if ( has_post_thumbnail() ) {
 				the_post_thumbnail('blog_thumb');
@@ -21,11 +21,12 @@
 		</div>
 
 	<?php endwhile; ?>
-	
 
 </div>
+
 <div class="clearfix"></div>
-<?php bootstrap_pagination(); ?>
+
+	<?php bootstrap_pagination(); ?>
 <?php endif; ?>	
 
 
