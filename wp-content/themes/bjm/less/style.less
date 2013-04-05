@@ -40,6 +40,10 @@ a {
 	}
 }
 
+blockquote {
+	border-color: @yellow;
+}
+
 button[type="submit"] {
 	width: 123px;
 	height: 35px;
@@ -362,8 +366,37 @@ footer {
 	border-right: 1px solid @yellow;
 }
 
+/*..................................the shrink 300 */
+.shrink-300 {
+	height: 350px;
+	overflow: hidden;
+
+	img {
+		position: relative;
+		top: -40px;
+	}
+}
+
 
 /* ...................................the slider*/
+
+#myCarousel {
+	height: 350px;
+
+	.carousel-inner {
+		height: 350px;
+
+		.inner {
+			max-height: 270px;
+			overflow: hidden;
+
+			p {
+				max-height: 120px;
+				overflow: hidden;
+			}
+		}
+	}
+}
 
 .carousel-indicators {
 	top: auto;
@@ -1233,17 +1266,22 @@ iframe {
 	}
 }
 
-blockquote {
+.HoG-text {
+
+	blockquote {
 	width: 220px;
 	border: none;
 
-	p {
-	color: @yellow;
-	font-family: @serifFontFamily;
-	font-size: 36px;
-	line-height: 28px;
+		p {
+		color: @yellow;
+		font-family: @serifFontFamily;
+		font-size: 36px;
+		line-height: 28px;
+		}
 	}
+
 }
+
 
 .bq {
 	padding-bottom: 40px;

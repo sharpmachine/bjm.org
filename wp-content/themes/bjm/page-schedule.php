@@ -8,7 +8,7 @@ get_header(); ?>
 	<div class="container">
 
 		<div class="row">
-			<div class="span12">
+			<div class="span12 shrink-300">
 				<img src="<?php bloginfo('template_directory'); ?>/img/schedule-image.png" alt="Schedule">
 			</div>
 		</div>

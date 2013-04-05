@@ -11,7 +11,7 @@
 							</div>
 							<div class="submit-email">
 								<form action="http://ibethel.us1.list-manage2.com/subscribe/post?u=b824912e75c6e72f2ace5ded3&amp;id=c45a6c9961" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-									<input type="text" value="Email address" name="EMAIL" class="required email span3" onfocus="if (this.value=='you@something.com')this.value=' ';"onblur="if (this.value==' ')this.value='you@something.com';" id="mce-EMAIL">
+									<input type="text" name="EMAIL" class="required email span3" onfocus="if (this.value=='you@something.com')this.value=' ';"onblur="if (this.value==' ')this.value='you@something.com';" id="mce-EMAIL" placeholder="Email address">
 							</div>
 							<div class="submit-newsletter">
 									<button type="submit" value="Submit" class="btn pull-right" title="Subscribe" id="mc-embedded-subscribe">
@@ -119,6 +119,8 @@
 
 	<!-- Remove these before deploying to production -->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/hashgrid.js" type="text/javascript"></script>
+
+	<!-- Google Analytics: UA-2614909-11 -->
 
 	<?php wp_footer(); ?>
 	</body>
