@@ -46,7 +46,6 @@ get_header(); ?>
 				</h2>
 
 				<div class="blog-author">
-					<div>By <?php the_author_posts_link(); ?></div>
 					<div>Posted on <?php the_time('F jS, Y'); ?></div>
 				</div>
 
