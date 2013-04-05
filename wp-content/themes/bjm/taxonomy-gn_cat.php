@@ -13,19 +13,8 @@
 
 
 <div class="container">
-	<div class="row">
-	
-		<div class="span12 filter">
-			Filter By 
-			<a href="<?php bloginfo( 'url' ); ?>/goodnews-category/written/">
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/written-filter.png" alt="Written">
-			</a>
-			<a href="<?php bloginfo( 'url' ); ?>/goodnews-category/video/">
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/video-filter.png" alt="Video">
-			</a>
-		</div><!-- .filter -->
-		
-	</div>
+
+	<?php include('goodnews-filter.php'); ?>
 	
 	<div class="row">
 		<div class="span8">

@@ -186,26 +186,36 @@ get_header(); ?>
 </div>
 <!-- !Facebook -->
 
-<!-- House of Generals -->
 <div class="house-of-generals module">
 	<div class="container">
 		<div class="row">
-			<div class="span12" style="background-image:url(<?php the_field('hg_background_image'); ?>);">
-				<div class="span4 generals pull-right">
-					<div class="generals-title">
-						<?php the_field('hg_title'); ?>
-					</div>
-					<div class="generals-text">
-						<?php the_field('hg_description'); ?>
-					</div>
-					<div class="btn learn-more">
-							<a href="<?php bloginfo( 'url' ); ?>/house-of-generals">Learn More</a>
+			<div class="span12">
+				<div id="house-of-generals" class="carousel slide">
+					<div class="hog-info">
+						<div class="item">
+							<img src="<?php the_field('hg_background_image'); ?>" alt="">
+							<div class="carousel-caption">
+								<div class="generals-title">
+									<?php the_field('hg_title'); ?>
+								</div>
+								<div class="generals-text">
+									<?php the_field('hg_description'); ?>
+								</div>
+								<div class="btn learn-more">
+										<a href="<?php bloginfo( 'url' ); ?>/house-of-generals">Learn More</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div><!-- background -->
+			</div>
 		</div>
 	</div>
 </div>
+
+
+<!-- House of Generals -->
+
 
 <!-- !House of Generals -->
 
