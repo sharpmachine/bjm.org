@@ -138,7 +138,7 @@ get_header(); ?>
 					?>
 
 					<?php if(get_field('vimeo_id')): ?>
-						<iframe class="vimeo" src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<iframe class="vimeo" src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?byline=0&amp;portrait=0" width="620" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 					<?php endif; ?>
 				<?php endwhile; ?>
 			</div>
@@ -151,7 +151,7 @@ get_header(); ?>
 						?>
 					<div class="span4 video-wrapper little-video">
 						<?php if(get_field('vimeo_id')): ?>
-							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="300" height="170" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?byline=0&amp;portrait=0" width="300" height="170" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 						<?php endif; ?>
 					</div>
 					<?php endwhile; ?>
