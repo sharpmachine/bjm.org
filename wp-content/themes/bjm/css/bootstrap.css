@@ -5056,6 +5056,17 @@ button[type="submit"] {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+input[type="text"],
+input[type="email"] {
+  padding: 9px 0 9px 13px;
+  color: #999999;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid #58585b;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
 .boxy {
   background: url('../img/shadow-top.png') top center no-repeat, url('../img/shadow-bottom.png') center 100% no-repeat;
   background-color: #eeeeee;
@@ -5207,8 +5218,11 @@ footer .footer {
   border-top: 1px solid #58585b;
   border-bottom: 1px solid #58585b;
 }
+footer form {
+  margin-bottom: 0;
+}
 .newsletter {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   font-family: 'Crimson Text', serif;
   font-size: 18px;
   font-weight: 600;
@@ -5220,22 +5234,8 @@ footer .footer {
   line-height: 14px;
   text-transform: uppercase;
 }
-.submit-email input {
-  width: 183px;
-  padding: 9px 0 9px 15px;
-  color: #999999;
-  font-size: 14px;
-  font-weight: 300;
-  border: 1px solid #58585b;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-.submit-newsletter {
-  max-width: 200px;
-}
 .submit-newsletter button {
-  margin-top: -15px;
+  margin-top: 5px;
 }
 .vertical-menu li {
   font-size: 14px;
@@ -5247,23 +5247,8 @@ footer .footer {
   font-size: 18px;
   text-transform: uppercase;
 }
-.amount-to-give {
-  max-width: 220px;
-}
 .amount-to-give form {
   margin-bottom: 5px;
-}
-.amount-to-give input {
-  max-width: 203px;
-  padding: 9px 0 9px 15px;
-  color: #999999;
-  font-size: 14px;
-  font-weight: 300;
-  background: transparent;
-  border: 1px solid #58585b;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
 }
 .amount-to-give button {
   margin-top: 5px;
@@ -5609,7 +5594,7 @@ footer .footer {
 }
 /* ...................................the house of generals*/
 .house-of-generals {
-  margin: 65px 0 65px;
+  margin: 65px 0 75px;
 }
 .generals {
   color: #414042;
@@ -6120,7 +6105,7 @@ iframe {
   line-height: 22px;
 }
 .donate-mf h2 {
-  margin: -11px -10px 29px 0;
+  margin: -11px -10px 30px 0;
   color: #a19159;
   font-size: 24px;
   text-transform: uppercase;
@@ -6146,10 +6131,14 @@ iframe {
 }
 .or {
   margin-top: 55px;
+  margin-left: 30px;
   color: #a19159;
   font-family: 'Crimson Text', serif;
   font-size: 72px;
   text-align: center;
+}
+.drawer {
+  margin-left: 10px;
 }
 .donation {
   margin-left: 0px;
@@ -6157,7 +6146,7 @@ iframe {
   padding: 0;
 }
 .donation input {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .donate-materials h2 {
   margin-bottom: 0px;
