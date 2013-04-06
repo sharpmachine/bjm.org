@@ -9,7 +9,7 @@
 				<img src="<?php bloginfo('template_directory'); ?>/img/default-img.jpg" alt="<?php the_title(); ?>" />
 				<?php } ?>
 			</div>
-			<h2 class="blog-title visible-desktop"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_short_title(35); ?></a></h2>
+			<h2 class="blog-title visible-desktop visible-phone"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_short_title(35); ?></a></h2>
 			<h2 class="blog-title visible-tablet"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_short_title(18); ?></a></h2>
 			<div class="blog-author">By <?php the_author_posts_link() ?></div>
 			<div class="blog-author">Posted on <?php the_time('F jS, Y') ?></div>

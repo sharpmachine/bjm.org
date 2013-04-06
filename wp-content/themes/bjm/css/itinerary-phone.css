@@ -1,0 +1,38 @@
+/* ...................................the schedule*/
+.itinerary h4 {
+  position: relative;
+  top: 235px;
+  color: #58585b;
+  font-size: 36px;
+}
+.date-display-start,
+.date-display-end {
+  display: block;
+  font-size: 40px;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+}
+.date-display-start {
+  padding-bottom: 20px;
+  line-height: 1;
+}
+.date-display-end {
+  line-height: 1;
+  border-top: 1px solid #414042;
+}
+.date-display-separator {
+  display: none;
+}
+.prepend-1 div:nth-child(1) {
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+.prepend-1 div:nth-child(2) div:nth-child(2) {
+  font-family: 'Open Sans', sans-serif;
+}
+.prepend-1 a {
+  color: #a19159;
+  font-family: 'Open Sans', sans-serif;
+}

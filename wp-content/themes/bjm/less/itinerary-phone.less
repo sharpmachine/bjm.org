@@ -1,0 +1,63 @@
+@import "variables.less";
+/* ...................................the schedule*/
+
+// title
+.itinerary {
+	h4 {
+		position: relative;
+		top: 235px;
+		color: @gray;
+		font-size: 36px;
+	}
+}
+
+// --------------
+
+// date size
+.date-display-start, 
+.date-display-end {
+	display: block;
+	font-size: 40px;
+	font-family: @serifFontFamily;
+	font-weight: 400;
+}
+
+.date-display-start {
+	padding-bottom: 20px;
+	line-height: 1;
+}
+
+.date-display-end {
+	line-height: 1;
+	border-top: 1px solid @fontGray;
+}
+
+// hide dash separator
+.date-display-separator {
+	display: none;
+}
+
+// --------------
+
+.prepend-1 {
+	// location name
+	div:nth-child(1) {
+		margin-top: 50px;
+		font-family: @sansFont;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	// city & country
+	div:nth-child(2) {
+		div:nth-child(2){
+			font-family: @sansFont;
+		}
+	}
+
+	// event link
+	a {
+		color: @yellow;
+		font-family: @sansFont;
+	}
+}
