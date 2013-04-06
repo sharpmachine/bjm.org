@@ -57,7 +57,7 @@ get_header(); ?>
 <div class="news module">
 	<div class="container">
 		<div class="row">
-			<div class="span4">
+			<div class="span4 recent-posts">
 
 				<h3 class="messages-news-blog">Life <span>Messages</span></h3>
 				<ul>
@@ -70,7 +70,7 @@ get_header(); ?>
 				<!-- !Life Messages -->
 
 			</div>
-			<div class="span3 offset1 right-border">
+			<div class="span3 recent-posts offset1 right-border">
 
 				<h3 class="messages-news-blog">Good <span>News</span></h3>
 				<ul class="truncate">
@@ -83,7 +83,7 @@ get_header(); ?>
 				<!-- !Good News -->
 
 			</div>
-			<div class="span3 right-border">
+			<div class="span3 recent-posts right-border">
 
 				<h3 class="messages-news-blog">Bill's <span>Blog</span></h3>
 				<ul>
@@ -102,7 +102,7 @@ get_header(); ?>
 
 <!-- Featured Product -->
 <div class="featured-product boxy module">
-	<div class="container f-product-mobile">
+	<div class="container f-product-mobile no-pad">
 		<div class="row">
 			<div class="span4 product-image">
 				<img src="<?php the_field('product_image'); ?>" />
@@ -138,7 +138,7 @@ get_header(); ?>
 					?>
 
 					<?php if(get_field('vimeo_id')): ?>
-						<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						<iframe class="vimeo" src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="370" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 					<?php endif; ?>
 				<?php endwhile; ?>
 			</div>
@@ -165,7 +165,7 @@ get_header(); ?>
 
 <!-- Facebook -->
 <div class="facebook boxy module">
-	<div class="container">
+	<div class="container no-pad">
 		<div class="row">
 			<div class="span4 center-photo">
 				<!-- <img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson" class="bill-photo"> -->
@@ -195,15 +195,28 @@ get_header(); ?>
 						<div class="item">
 							<img src="<?php the_field('hg_background_image'); ?>" alt="">
 							<div class="carousel-caption">
-								<div class="generals-title">
-									<?php the_field('hg_title'); ?>
-								</div>
-								<div class="generals-text">
-									<?php the_field('hg_description'); ?>
-								</div>
-								<div class="btn learn-more">
+								<div class="hidden-phone">
+									<div class="generals-title">
+										<?php the_field('hg_title'); ?>
+									</div>
+									<div class="generals-text">
+										<?php the_field('hg_description'); ?>
+									</div>
+									<div class="btn learn-more">
 										<a href="<?php bloginfo( 'url' ); ?>/house-of-generals">Learn More</a>
+									</div>
 								</div>
+								
+								<div class="visible-phone">
+									<div class="generals-title">
+										<?php the_field('hg_title'); ?>
+									</div>
+									
+									<div class="btn learn-more">
+										<a href="<?php bloginfo( 'url' ); ?>/house-of-generals">Learn More</a>
+									</div>
+								</div>
+								
 							</div>
 						</div>
 					</div>
