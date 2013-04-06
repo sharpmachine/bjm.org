@@ -27,6 +27,7 @@
   line-height: 1;
 }
 .date-display-end {
+  width: 60%;
   line-height: 1;
   border-top: 1px solid #414042;
 }
