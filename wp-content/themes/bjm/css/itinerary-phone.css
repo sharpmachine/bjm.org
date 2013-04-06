@@ -1,12 +1,22 @@
 /* ...................................the schedule*/
+.views-row {
+  margin-top: -157px;
+}
+.itinerary {
+  color: #414042;
+}
 .itinerary h4 {
   position: relative;
-  top: 235px;
-  color: #58585b;
+  top: 266px;
+  left: 0;
+  font-family: 'Crimson Text', serif;
   font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
 }
 .date-display-start,
 .date-display-end {
+  color: #414042;
   display: block;
   font-size: 40px;
   font-family: 'Crimson Text', serif;
@@ -23,8 +33,15 @@
 .date-display-separator {
   display: none;
 }
+strong {
+  font-weight: 400;
+}
+.prepend-1 {
+  margin-bottom: 50px;
+  color: #414042;
+}
 .prepend-1 div:nth-child(1) {
-  margin-top: 50px;
+  margin-top: 85px;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: bold;
