@@ -1,13 +1,22 @@
 @import "variables.less";
 /* ...................................the schedule*/
 
-// title
+
+.views-row {
+	margin-top: -157px;
+}
+
+// conference title
 .itinerary {
+	color: @fontGray;
 	h4 {
 		position: relative;
-		top: 235px;
-		color: @gray;
+		top: 266px;
+		left: 0;
+		font-family: @serifFontFamily;
 		font-size: 36px;
+		font-weight: 400;
+		line-height: 1;
 	}
 }
 
@@ -16,6 +25,7 @@
 // date size
 .date-display-start, 
 .date-display-end {
+	color: @fontGray;
 	display: block;
 	font-size: 40px;
 	font-family: @serifFontFamily;
@@ -28,6 +38,7 @@
 }
 
 .date-display-end {
+	width: 60%;
 	line-height: 1;
 	border-top: 1px solid @fontGray;
 }
@@ -37,12 +48,18 @@
 	display: none;
 }
 
+strong {
+	font-weight: 400;
+}
+
 // --------------
 
 .prepend-1 {
+	margin-bottom: 50px;
+	color: @fontGray;
 	// location name
 	div:nth-child(1) {
-		margin-top: 50px;
+		margin-top: 85px;
 		font-family: @sansFont;
 		font-size: 18px;
 		font-weight: bold;
