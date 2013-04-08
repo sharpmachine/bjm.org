@@ -53,6 +53,7 @@
 								<div class="modal-body">
 									<p><strong>Confirm donation amount:</strong></p>
 									<p>You have entered <strong>$4.00</strong> as the amount you would like to donate.</p>
+
 									<hr>
 									<div class="alert">
 										<p>If you wish to give via PayPal, please use the Donate button below to be redirected to PayPal.</p>
