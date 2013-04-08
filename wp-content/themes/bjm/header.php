@@ -92,5 +92,5 @@
 						</div><!--/.nav-collapse -->
 	        </div>
 	    </div>
-
+<a href="http://maps.google.com/maps?saddr=&daddr=Metro Autopark AG, Weisenhausplatz 19, 3001 Berne, Switzerland">Get Directions</a>
     </header>

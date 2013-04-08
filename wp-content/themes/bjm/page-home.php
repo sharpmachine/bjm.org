@@ -76,7 +76,14 @@ get_header(); ?>
 				<ul class="truncate">
 					<?php query_posts( 'post_type=g_n&posts_per_page=4' ); ?>	
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<li><h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3></li>
+					<li>
+						<h3 class="hidden-phone">
+							<a href="<?php the_permalink() ?>"><?php the_short_title(20); ?></a>
+						</h3>
+						<h3 class="visible-phone">
+							<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+						</h3>
+					</li>
 					<?php endwhile; endif; ?>
 					<?php wp_reset_query(); ?>
 				</ul>
@@ -89,7 +96,14 @@ get_header(); ?>
 				<ul>
 					<?php query_posts( 'cat=-5&posts_per_page=4' ); ?>	
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<li><h3><a href="<?php the_permalink() ?>"><?php the_short_title(20); ?></a></h3></li>
+					<li>
+						<h3 class="hidden-phone">
+							<a href="<?php the_permalink() ?>"><?php the_short_title(20); ?></a>
+						</h3>
+						<h3 class="visible-phone">
+							<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+						</h3>
+					</li>
 					<?php endwhile; endif; ?>
 					<?php wp_reset_query(); ?>
 				</ul>

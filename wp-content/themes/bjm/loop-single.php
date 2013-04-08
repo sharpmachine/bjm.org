@@ -1,16 +1,3 @@
-<?php
-/**
- * The loop that displays a single post.
- *
- * The loop displays the posts and the post content.  See
- * http://codex.wordpress.org/The_Loop to understand it and
- * http://codex.wordpress.org/Template_Tags to understand
- * the tags used in it.
- *
- * This can be overridden in child themes with loop-single.php.
- *
- */
-?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -60,7 +47,7 @@
 	<div class="entry-content single-post">
 		<?php the_content(); ?>
 		<?php if(get_field('vimeo_id')): ?>
-			<iframe class="vimeo" src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="349" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe class="vimeo" src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?byline=0&amp;portrait=0" width="620" height="349" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		<?php endif; ?>
 	</div>
 	<!-- .entry-content -->
