@@ -37,9 +37,11 @@ get_header(); ?>
 					</div>
 
 					<ol class="carousel-indicators hidden-phone">
+						<?php $i = 0; ?>
 						<?php if(get_field('hero_slide')): ?>
 						<?php while (has_sub_field('hero_slide')): ?>
-						<li data-target="#myCarousel" data-slide-to="0" class="dots "><span></span></li>
+						<li data-target="#myCarousel" data-slide-to="<?php echo $i; ?>" class="dots "><span></span></li>
+						<?php $i++; ?>
 					<?php endwhile; ?>
 						<?php endif; ?>
 				  </ol>
