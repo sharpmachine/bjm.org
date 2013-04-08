@@ -13,6 +13,8 @@
 
 <div class="single-post">
 	<div class="container">
+	
+	<?php include('goodnews-filter.php'); ?>
 		<div class="row">
 			<div class="span8 ">
 

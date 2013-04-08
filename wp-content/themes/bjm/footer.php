@@ -111,7 +111,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/js/lifestream.js"></script>
 	<!--<script src="<?php bloginfo('template_directory'); ?>/js/slide-in.js"></script>-->
 	<script src="https://raw.github.com/flesler/jquery.scrollTo/master/jquery.scrollTo.min.js"></script>
-  <script src="https://raw.github.com/davist11/jQuery-One-Page-Nav/master/jquery.nav.js"></script>
+  	<script src="https://raw.github.com/davist11/jQuery-One-Page-Nav/master/jquery.nav.js"></script>
 
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins.js"></script>

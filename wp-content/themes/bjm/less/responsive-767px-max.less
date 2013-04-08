@@ -4,11 +4,11 @@
 
 @media (max-width: 767px) {
 
-  html,
-  body {
-  height: 100%;
-  overflow-x: hidden;
-}
+    html,
+    body {
+    height: 100%;
+    overflow-x: hidden;
+  }
 
   // Padding to set content in a bit
   .container {
@@ -165,6 +165,11 @@
 
     h3.messages-news-blog {
       margin-bottom: 20px;
+      font-size: 30px; 
+
+      span {
+        font-size: 54px;
+      }
     }
   }
 
@@ -261,9 +266,9 @@
     }
   }
 
-.donate-materials input[type='submit'] {
-  margin-right: 0;
-}
+  .donate-materials input[type='submit'] {
+    margin-right: 0;
+  }
 
   /* ...................................the news*/
   .news {
@@ -342,7 +347,7 @@
   }
 
   .facebook-gold {
-    // padding-top: 20px;
+    
     img {
       float: left;
       margin-right: 10px;
@@ -366,28 +371,28 @@
   }
 
   .generals-title {
-    margin: 0 20px;
+    margin: 0 10px;
     padding-top: 10px;
+    border-bottom: 1px solid @white
+  }
+
+  .house-of-generals .carousel-caption {
+    width: 100%;
     color: @white;
-    text-shadow: 1px 1px 3px @black;
-    border-bottom: 1px solid @white;
-  }
+    background: transparent;
+    text-shadow: 1px 1px 1px @black;
 
-  .generals-text {
-    margin: 20px;
-    padding: 0px;
-  }
+    .learn-more {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      margin: 0;
+      border-color: @white;
 
-  .learn-more {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0 20px 10px;
-    border-color: @white;
-
-    a {
-      color: @white;
-      text-shadow: 1px 1px 3px @black;
+      a {
+        color: @white;
+        text-shadow: 1px 1px 1px @black;
+      }
     }
   }
 
@@ -439,101 +444,6 @@
     padding-left: 0;
   }
 
-  /* ...................................the schedule*/
-
-  .bethel-schedule {
-    margin-top: 0;
-    margin-bottom: -30px;
-
-    .views-row:nth-child(n+2) {
-      border-top: 1px solid @fontGray;
-    }
-  }
-
-  .schedule .bethel-schedule {
-    padding: 0;
-  }
-
-  // all of schedules font family & color
-  .itinerary {
-    margin: 20px 0 55px;
-    color: @fontGray;
-    font-family: @serifFontFamily;
-  }
-
-  // date size
-  .date-display-start, .date-display-end {
-    display: block;
-    font-size: 48px;
-    font-family: @serifFontFamily;
-  }
-
-  .date-display-start {
-    position: relative;
-    left: 0px;
-    top: -38px;
-
-  }
-
-  .date-display-end {
-    position: relative;
-    left: 0;
-    top: -16px;
-    max-width: 300px;
-    padding-top: 15px;
-    border-top: 1px solid @fontGray;
-  }
-
-  // hide dash separator
-  .date-display-separator {
-    display: none;
-  }
-
-  // conference name
-  strong {
-    position: relative;
-    left: 0;
-    top: 100px;
-    font-size: 36px;
-    font-weight: 400;
-  }
-
-  .prepend-1:nth-child(2) {
-    font-family: @sansFont;
-    font-size: 18px;
-
-    // location name
-    div:nth-child(2){
-
-      div:nth-child(1) {
-        position: relative;
-        left: 0;
-        top: 20px;
-        font-weight: 600;
-      }
-    }
-
-    // location address
-    div:nth-child(1n+2) {
-      position: relative;
-      left: 0;
-      top: 20px;
-      font-weight: 300;
-    }
-
-    // event link
-    a {
-      position: relative;
-      left: 0;
-      top: 0;
-      font-family: @serifFont;
-    }
-  }
-
-  hr {
-    display: none;
-  }
-
   /* ...................................the invite*/
 
   .itineary {
@@ -577,6 +487,36 @@
       font-size: 32px;
       line-height: 1;
     }
+  }
+
+  /* ...................................the bill page*/
+
+  .shrink-300 {
+    height: 100%;
+  }
+
+  .about {
+    margin-bottom: 0;
+  }
+
+  /* ...................................the sidebar*/
+
+  #sidebar {
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid @gray;
+  }
+
+  #recent-posts-2 {
+    margin-top: 30px;
+  }
+
+  .widget-title {
+    padding-top: 10px;
+  }
+
+  #sidebar > ul > li:nth-child(n+4) {
+    margin-top: 16px;
   }
 
 }
@@ -652,56 +592,5 @@
     padding: 10px;
     margin: -10px;
   }
-
-  /* ...................................the bill page*/
-
-  .shrink-300 {
-    height: 100%;
-  }
-
-  .about {
-    margin-bottom: 0;
-  }
-
-  /* ...................................the sidebar*/
-
-  #sidebar {
-    margin-top: 26px;
-    padding-top: 20px;
-    border-top: 1px solid @gray;
-  }
-
-  #recent-posts-2 {
-    margin-top: 30px;
-  }
-
-  .widget-title {
-    padding-top: 10px;
-  }
-
-  #sidebar > ul > li:nth-child(n+4) {
-    margin-top: 16px;
-  }
-
-  /* ...................................the good news page*/
-
-  // .good-news { 
-  //   margin-bottom: 30px;
-  //   padding: 30px 0;
-
-  //   h1 {
-  //     font-size: 70px;
-  //     img {
-  //       display: block;
-  //       margin: 25px auto -10px;
-  //     }
-  //   }
-
-  //   h4 {
-  //     font-size: 32px;
-  //     line-height: 1;
-  //   }
-  // }
-
 
 }

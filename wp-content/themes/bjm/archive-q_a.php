@@ -25,7 +25,7 @@
 		<div class="row">
 		
 			<div class="span4 qa-sidebar visible-desktop">
-				<div class="affix-top" data-spy="affix" data-offset-top="525" data-offset-bottom="320">
+				<div class="qas affix-top" data-spy="affix" data-offset-top="525" data-offset-bottom="398">
 				<?php query_posts( 'post_type=q_a' ); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					
@@ -51,7 +51,9 @@
 						<h2><?php the_title(); ?></h2>
 						<?php the_excerpt(); ?>
 						<?php if(get_field('vimeo_id')): ?>
-							<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="349" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							<div class="video-wrapper-single">
+								<iframe src="http://player.vimeo.com/video/<?php the_field('vimeo_id'); ?>" width="620" height="349" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							</div>
 						<?php endif; ?>
 					</div><!-- .answer -->
 				<?php endwhile; endif; ?>
