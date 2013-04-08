@@ -17,6 +17,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
+		
 		<title>
 			<?php
 			global $page, $paged;
@@ -30,7 +31,8 @@
 			?>
 		</title>
     
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="">
     <meta name="author" content="Sharp Machine Media">
 	
@@ -92,5 +94,4 @@
 						</div><!--/.nav-collapse -->
 	        </div>
 	    </div>
-<a href="http://maps.google.com/maps?saddr=&daddr=Metro Autopark AG, Weisenhausplatz 19, 3001 Berne, Switzerland">Get Directions</a>
     </header>

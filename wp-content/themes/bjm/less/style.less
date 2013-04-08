@@ -496,6 +496,13 @@ footer {
 	background: rgba(255,255,255,0.4);
 	border: none;
 	.border-radius(0);
+
+	img {
+		display: block;
+		width: 23px;
+		height: 45px;
+		margin: 25px auto 0 auto;
+	}
 }
 
 .carousel-control.left {
@@ -604,6 +611,7 @@ footer {
 		font-size: 25px;
 		border: 1px solid @fontGray;
 		.border-radius(1px);
+		text-shadow: none;
 	}
 }
 
@@ -1133,7 +1141,8 @@ footer {
 	img {
 		position: relative;
 		top: -4px;
-		padding: 0 10px 0 10px;
+		left: 10px;
+		padding-right: 10px;
 	}
 }
 
@@ -1424,7 +1433,7 @@ iframe {
 		font-family: @serifFontFamily;
 		font-size: 18px;
 		font-weight: 900;
-		line-height: 1.8;
+		line-height: 2;
 		text-transform: uppercase;
 		#gradient > .vertical(#ffffff, #e0e0e0);
 		border-color: #e2e2e2;
