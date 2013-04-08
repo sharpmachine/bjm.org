@@ -10,7 +10,12 @@
 	 $donation_for = 'BJM';
 	 $ministry_name = 'Bill Johnson Ministries';
  }
-?><HTML>
+?>
+
+
+<?php if ($_GET['site'] == 'benij.org') { ?>
+
+<HTML>
 <HEAD>
 <TITLE>Donate - <?php print $ministry_name;?></TITLE>
 <STYLE STYLE="TEXT/CSS">
@@ -21,12 +26,15 @@ body {font-family:tahoma;font-size:12px;}
 </HEAD>
 <BODY>
 <center>
-<img src="../images/donate_header<?php if ($_GET['site'] == 'benij.org') print '_benij';?>.png">
+<img src="../images/donate_header_benij.png">
 <br><br>
 
 <?php
 
+  } 
+
 if (empty($_POST['amount'])) {
+
 ?>
 
 Thank you for your interest in supporting <?php print $ministry_name;?>.
@@ -48,13 +56,14 @@ $x_Description = $_POST['description'];
 $x_Amount = number_format($_POST['amount'],2);
 
 ?>
-<b>Confirm donation amount:</b><br><br>
-You have entered <b>$<?php print $x_Amount; ?></b> as the amount you would like to donate.
+
+<p><strong>Confirm donation amount:</strong></p>
+<p>You have entered <strong>$<?php print $x_Amount; ?></strong> as the amount you would like to donate.</p>
+
 
 <br><br>
 If this is correct - please click Continue.
-
-<BR /><BR />
+<br><br>
 <FORM action="https://secure.authorize.net/gateway/transact.dll" method="POST">
 <!--
 https://developer.authorize.net/param_dump.asp
@@ -75,7 +84,7 @@ $amount = $x_Amount;
 
 // Trim $ sign if it exists
 if (substr($amount, 0,1) == "$") {
-	$amount = substr($amount,1);
+  $amount = substr($amount,1);
 }
 // I would validate the Order here before generating a fingerprint
 
@@ -115,27 +124,35 @@ hr {height:.5px;color:silver;}
 <INPUT type="hidden" name="x_logo_url" value="https://www.bjm.org/images/donate_header<?php if ($_GET['site'] == 'benij.org') print '_benij';?>.png">
 <INPUT type="hidden" name="x_show_form" value="PAYMENT_FORM">
 <INPUT type="hidden" name="x_test_request" value="FALSE">
-<INPUT type="submit" value="Continue">
+<INPUT type="submit" value="Continue" class="btn btn-primary">
 </FORM>
 
 <?php
 }
 ?>
 
-<br /><br />
+             
 
-If you wish to give via PayPal, please use the Donate button below to be redirected to PayPal.
 
-<br /><br />
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+<hr>
+
+<div class="alert">
+  <p>If you wish to give via PayPal, please use the Donate button below to be redirected to PayPal.</p>
+    <div class="paypal">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="amount" value="<?php echo $_POST['amount']; ?>">
 <input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
-<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+<button class="btn paypal-btn"><a href="#"><img src="/wp-content/themes/bjm//img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
+      </form>
+  </div>
+</div><!-- .alert -->
 
+
+<?php if ($_GET['site'] == 'benij.org') { ?>
 </center>
 </BODY>
 </HTML>
+<?php } ?>

@@ -53,7 +53,6 @@
 								<div class="modal-body">
 								</div>
 								<div class="modal-footer">
-									<a href="#" class="btn btn-primary">Continue</a>
 									<a data-dismiss="modal" class="btn">Cancel</a>
 								</div>
 							</div><!-- #donate-modal -->
