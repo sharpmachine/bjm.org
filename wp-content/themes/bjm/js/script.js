@@ -6,8 +6,8 @@
 jQuery(document).ready(function($) {
 	
 	// // Forces WordPress to place nice with dropdowns
- // 	$("li.dropdown > a").addClass('dropdown-toggle');
-	// $("li.dropdown > a").attr('data-toggle','dropdown');
+ 	$("li.dropdown > a").addClass('dropdown-toggle');
+	$("li.dropdown > a").attr('data-toggle','dropdown');
 	// $("a.dropdown-toggle").append('<b class="caret"></b>');
 
 	 $("#lifestream").lifestream({
@@ -36,8 +36,6 @@ jQuery(document).ready(function($) {
 	 $('#myCarousel .dots:first-child').addClass('active');
 
 	 $('#qa-Carousel').carousel();
-	 
-	 // $('#house-of-generals').carousel();
 
 	 $('#qa-Carousel .item:first-child').addClass('active');
 
