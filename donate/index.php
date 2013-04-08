@@ -1,4 +1,7 @@
 <?php
+  if (empty($_POST['amount']) && !empty($_GET['amount'])) {
+    $_POST['amount'] = $_GET['amount'];
+  }
  if ($_GET['site'] == 'benij.org') {
 	 $donation_for = 'BeniJ';
 	 $ministry_name = 'Beni Johnson Ministries';
@@ -35,19 +38,6 @@ To give by online with your credit/debit card, please enter the amount you would
 <b>Amount $ </b> <input type=text size=6 name=amount>
 <br><br>
 <input type=submit value="Continue">
-</form>
-
-<br /><br />
-
-If you wish to give via PayPal, please use the Donate button below to be redirected to PayPal.
-
-<br /><br />
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
-<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
 <?php
@@ -132,14 +122,20 @@ hr {height:.5px;color:silver;}
 }
 ?>
 
+<br /><br />
+
+If you wish to give via PayPal, please use the Donate button below to be redirected to PayPal.
+
+<br /><br />
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="amount" value="<?php echo $_POST['amount']; ?>">
+<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
+<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110306-1/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
 </center>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-2614909-11");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script></BODY>
+</BODY>
 </HTML>

@@ -47,4 +47,18 @@ jQuery(document).ready(function($) {
 
 	 $('.filter a').tooltip();
 
+   $('#donate-form').submit(function(event){
+
+      var value_entered = $(this).find('input:text[name=amount]').val();
+      var submit_path = '/donate?amount=' + value_entered.toString();
+      $('#donate-modal').modal({
+        remote: submit_path
+      });
+      event.preventDefault();
+      return false;
+   });
+  $('body').on('hidden', '#donate-modal', function () {
+    $(this).removeData('modal');
+  });
+
 });

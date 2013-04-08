@@ -37,9 +37,9 @@
 								Thank you for your interest in supporting Bill Johnson Minstries.
 							</div>
 							<div class="amount-to-give">
-								<form action="" method=POST>
+								<form action="/donate" id="donate-form" method=POST>
 									<input type='text' name='amount' placeholder='Amount to give' class="span3">
-									<button type="submit" class="btn pull-right" data-toggle="modal" href="#donate-modal">
+									<button type="submit" class="btn pull-right">
 										Continue
 									</button>
 								</form>
@@ -51,20 +51,6 @@
 									<h3><img src="<?php bloginfo( 'template_directory' ); ?>/img/donate_header.png" alt="Donate Header"></h3>
 								</div>
 								<div class="modal-body">
-									<p><strong>Confirm donation amount:</strong></p>
-									<p>You have entered <strong>$4.00</strong> as the amount you would like to donate.</p>
-
-									<hr>
-									<div class="alert">
-										<p>If you wish to give via PayPal, please use the Donate button below to be redirected to PayPal.</p>
-											<div class="paypal">
-												<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-													<input type="hidden" name="cmd" value="_s-xclick">
-													<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
-													<button class="btn paypal-btn"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
-												</form>
-										</div>
-									</div><!-- .alert -->
 								</div>
 								<div class="modal-footer">
 									<a href="#" class="btn btn-primary">Continue</a>
