@@ -37,8 +37,13 @@
 								Thank you for your interest in supporting Bill Johnson Minstries.
 							</div>
 							<div class="amount-to-give">
-								<form action="/donate" id="donate-form" method=POST>
-									<input type='text' name='amount' placeholder='Amount to give' class="span3">
+								<form action="" id="donate-form" method=POST>
+ 
+  									<div class="control-group">
+										<div class="controls">										
+    								<input type='text' name='amount' placeholder='Amount to give' class="span3">
+  									</div>
+									
 									<button type="submit" class="btn pull-right">
 										Continue
 									</button>

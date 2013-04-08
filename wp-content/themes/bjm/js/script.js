@@ -50,13 +50,44 @@ jQuery(document).ready(function($) {
    $('#donate-form').submit(function(event){
 
       var value_entered = $(this).find('input:text[name=amount]').val();
-      var submit_path = '/donate?amount=' + value_entered.toString();
-      $('#donate-modal').modal({
-        remote: submit_path
-      });
+
+      if($.isNumeric(value_entered)) {
+        $(this).find(".control-group").removeClass("error"); 
+        $(this).find(".help-inline").remove();  
+        $(this).find(".help-inline").text("");
+        var submit_path = '/donate?amount=' + value_entered.toString();
+        $('#donate-modal').modal({
+          remote: submit_path
+        });
+
+      } else {
+        $(this).find(".control-group").addClass("error").prepend("<span class=\"help-inline\">Please enter a number</span>");           
+      }  
       event.preventDefault();
       return false;
    });
+
+   $('#generals-donate-form').submit(function(event){
+
+      var value_entered = $(this).find('input:text[name=amount]').val();
+
+      if($.isNumeric(value_entered)) {
+        $(this).find(".control-group").removeClass("error"); 
+        $(this).find(".help-inline").remove();  
+        $(this).find(".help-inline").text("");
+        var submit_path = '/donate?designation=houseofgenerals&amount=' + value_entered.toString();
+        $('#donate-modal').modal({
+          remote: submit_path
+        });
+
+      } else {
+        $(this).find(".help-inline").remove();          
+        $(this).find(".control-group").addClass("error").prepend("<span class=\"help-inline\">Please enter a number</span>");           
+      }  
+      event.preventDefault();
+      return false;
+   });
+
   $('body').on('hidden', '#donate-modal', function () {
     $(this).removeData('modal');
   });

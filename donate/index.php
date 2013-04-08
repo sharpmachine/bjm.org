@@ -6,6 +6,10 @@
 	 $donation_for = 'BeniJ';
 	 $ministry_name = 'Beni Johnson Ministries';
  }
+ else if ($_GET['designation'] == 'houseofgenerals') {
+   $donation_for = 'House of Generals';
+   $ministry_name = 'Bill Johnson Ministries';
+ } 
  else {
 	 $donation_for = 'BJM';
 	 $ministry_name = 'Bill Johnson Ministries';
@@ -145,7 +149,7 @@ hr {height:.5px;color:silver;}
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="amount" value="<?php echo $_POST['amount']; ?>">
 <input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
-<button class="btn paypal-btn"><a href="#"><img src="/wp-content/themes/bjm//img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
+<button class="btn paypal-btn"><a href="#"><img src="/wp-content/themes/bjm/img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
       </form>
   </div>
 </div><!-- .alert -->

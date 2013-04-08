@@ -48,19 +48,15 @@ get_header(); ?>
 			</div>
 			<div class="span3 donation">
 				<h2>Donate Money</h2>
-				<form>
+				<form id="generals-donate-form" method=POST>
 				  <fieldset>
-				    <input type="text" placeholder="Amount to be given" class="span3">
+  					<div class="control-group">
+							<div class="controls">					  	
+				    		<input type="text" name="amount" placeholder="Amount to be given" class="span3">
+  						</div>				    
 				    <button type="submit" class="btn donate-btn">Submit</button>
 				  </fieldset>
 				</form>
-				<!-- <div class="paypal">
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_s-xclick">
-						<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
-						<button class="btn paypal-btn"><a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
-					</form>
-				</div> -->
 			</div>
 			<div class="span2 or">
 				OR
