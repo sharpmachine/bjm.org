@@ -20,7 +20,7 @@ get_header(); ?>
 				
 				<iframe class="visible-tablet" style="background: none; width: 100%; height: 5150px;" src="http://www.ibethel.org/api?t=itinerary&amp;author=billjohnson&amp;styles=<?php bloginfo('template_directory'); ?>/css/itinerary-tablet.css" height="100%" width="100%" scrolling="no" frameborder="0"></iframe>
 
-				<iframe class="visible-phone" style="background: none; width: 100%; height: 3210px;" src="http://www.ibethel.org/api?t=itinerary&amp;author=billjohnson&amp;styles=<?php bloginfo('template_directory'); ?>/css/itinerary-phone.css" height="100%" width="100%" scrolling="no" frameborder="0"></iframe>
+				<iframe class="visible-phone" style="background: none; width: 100%; height: 3210px;" src="http://www.ibethel.org/api?t=itinerary&amp;author=billjohnson&amp;styles=<?php bloginfo('template_directory'); ?>/css/itinerary-phone.css" height="100%" width="100%" scrolling="yes" frameborder="0"></iframe>
 			</div>
 		</div>
 		

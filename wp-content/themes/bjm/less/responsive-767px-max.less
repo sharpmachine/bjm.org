@@ -4,10 +4,21 @@
 
 @media (max-width: 767px) {
 
-    html,
-    body {
+  html,
+  body {
     height: 100%;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  footer {
+    button {
+      margin-top: -3px;
+    }
+
+    .submit-email {
+      margin-bottom: 20px;
+    }
   }
 
   // Padding to set content in a bit
@@ -258,6 +269,7 @@
 
   .or {
     height: 60px;
+    margin-top: 80px;
   }
 
   .donate-materials {
