@@ -167,7 +167,7 @@ get_header(); ?>
 			</div>
 			<div class="span4">
 				<div class="row">
-					<?php query_posts('showposts=2'); ?>
+					<?php query_posts(array('posts_per_page' => 3, 'post_type' => array('g_n', 'post'))); ?>
 						<?php while (have_posts()) : the_post();
 							if (in_array ($post->ID, $do_not_duplicate)) continue;
 							update_post_caches($post);
