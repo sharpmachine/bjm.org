@@ -572,8 +572,8 @@ footer {
 /* ...................................the featured product*/
 
 .featured-product {
-	margin: 66px 0 86px;
-	padding: 57px 0;
+	margin: 65px 0;
+	padding: 55px 0;
 	color: @fontGray;
 	background-color: @grayLighter;
 }
@@ -637,7 +637,7 @@ footer {
 /* ...................................the videos*/
 
 .video {
-	margin-bottom: 80px;
+	margin-bottom: 45px;
 
 	.video-layout {
 		&:last-child {
@@ -1128,10 +1128,10 @@ footer {
 }
 
 .rss-subscribe {
-	height: 44px;
-	width: 220px;
+	display: block;
+	height: 28px;
 	margin-top: 0px;
-	padding-top: 6px;
+	padding-top: 10px;
 	color: @fontGray;
 	font-family: @serifFontFamily;
 	font-size: 25px;
@@ -1140,6 +1140,10 @@ footer {
 	background-color: @white;
 	border: 2px solid #9B9B9D;
 	.border-radius(3px);
+
+	&:hover {
+		text-decoration: none;
+	}
 
 	img {
 		position: relative;
@@ -1403,7 +1407,6 @@ footer {
 }
 
 .donate-btn {
-	width: 100px !important;
 	float: right;
 }	
 

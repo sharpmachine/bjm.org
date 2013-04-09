@@ -16,7 +16,15 @@ get_header(); ?>
 						<?php if(get_field('hero_slide')): ?>
 						<?php while (has_sub_field('hero_slide')): ?>
 						<div class="item">
-							<img src="<?php the_sub_field('slide_image'); ?>" alt="<?php the_sub_field('slide_title'); ?>">
+							<?php if(get_sub_field('external_link')): ?>
+								<a href="<?php the_sub_field('external_link'); ?>">
+									<img src="<?php the_sub_field('slide_image'); ?>" alt="<?php the_sub_field('slide_title'); ?>">	
+								</a>
+								<?php else: ?>
+								<a href="<?php the_sub_field('internal_link'); ?>">
+									<img src="<?php the_sub_field('slide_image'); ?>" alt="<?php the_sub_field('slide_title'); ?>">	
+								</a>
+							<?php endif; ?>
 							<div class="carousel-caption hidden-phone">
 								<div class="inner">
 									<h4><?php the_sub_field('slide_title'); ?></h4>
@@ -24,9 +32,8 @@ get_header(); ?>
 
 									<?php if(get_sub_field('external_link')): ?>
 										<a href="<?php the_sub_field('external_link'); ?>" class="btn">Read More</a>
-									<?php else: ?>
+										<?php else: ?>
 										<a href="<?php the_sub_field('internal_link'); ?>" class="btn">Read More</a>
-
 									<?php endif; ?>
 								</div>					
 							</div>

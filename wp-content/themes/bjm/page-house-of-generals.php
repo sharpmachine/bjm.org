@@ -54,7 +54,7 @@ get_header(); ?>
 				    		<input type="text" name="amount" placeholder="Amount to be given" class="span3">
   						</div>
   									    
-				    <button type="submit" class="btn donate-btn">Submit</button>
+				    <button type="submit" class="btn donate-btn">Continue</button>
 				    </div>
 				</form>
 			</div>

@@ -92,10 +92,34 @@ jQuery(document).ready(function($) {
     $(this).removeData('modal');
   }); 
 
-  // $('iframe').load(function() {
-  //   this.style.height =
-  //   this.contents().find('.view-content').height();
-  // });
+  // Slide in for desktops only
+  if( $(window).width() > 768 )
+    {
+      $.ajax({
+        url: '/bjm.org/wp-content/themes/bjm/js/slide-in.js',
+        dataType: "script"
+      });
+    }
 
-
+  //  Placeholder for IE
+  $('[placeholder]').focus(function() {
+    var input = $(this);
+    if (input.val() == input.attr('placeholder')) {
+      input.val('');
+      input.removeClass('placeholder');
+    }
+  }).blur(function() {
+    var input = $(this);
+    if (input.val() == '' || input.val() == input.attr('placeholder')) {
+      input.addClass('placeholder');
+      input.val(input.attr('placeholder'));
+    }
+  }).blur().parents('form').submit(function() {
+    $(this).find('[placeholder]').each(function() {
+      var input = $(this);
+      if (input.val() == input.attr('placeholder')) {
+        input.val('');
+      }
+    })
+  });
 });

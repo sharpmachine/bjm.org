@@ -2,11 +2,9 @@
 	<section id="sidebar" class="span3">
 		
 		<ul>
-			<a href="<?php bloginfo( 'rss_url' ) ?>">
-				<button class="rss-subscribe">
-					<img src=" <?php bloginfo('template_directory');?>/img/rss-gray.png" alt="RSS">
+			<a href="<?php bloginfo( 'rss_url' ) ?>" class="rss-subscribe">
+				<img src=" <?php bloginfo('template_directory');?>/img/rss-gray.png" alt="RSS">
 					Subscribe
-				</button>
 			</a>
 
 		<?php

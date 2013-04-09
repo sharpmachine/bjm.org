@@ -1,0 +1,26 @@
+.carousel-caption,
+.carousel-control { 
+   background:transparent;
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF); 
+   zoom: 1;
+} 
+
+.product-link {
+   background:transparent;
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000); 
+   zoom: 1;
+}
+
+.status-borders {
+   background:transparent;
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FEEEEEE,endColorstr=#7FEEEEEE); 
+   zoom: 1;
+}
+
+.bethel-menu .menu-wrapper {
+	width: 784px;
+}
+
+.rss-subscribe img {
+	top: -8px;
+}

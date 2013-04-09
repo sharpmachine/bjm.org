@@ -31,26 +31,27 @@
 			?>
 		</title>
     
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="description" content="">
-    <meta name="author" content="Sharp Machine Media">
 	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <meta name="description" content="">
+	    <meta name="author" content="Sharp Machine Media">
+		
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-    
-    <!-- Google Fonts -->
+	    
+	    <!-- Google Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,400italic,600italic|Open+Sans:300italic,400italic,600italic,700italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
-		
-    <!-- Le styles -->
-    <link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
-		
+			
+	    <!-- Le styles -->
+	    <link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
+	    <link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
+	    <!--[if lte IE 8]><link href="<?php bloginfo('template_directory'); ?>/css/ie8.css" rel="stylesheet"><![endif]-->
+			
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-    <!-- Le fav icon -->
-    <link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ) ?>/img/favicon.ico">
+	    <!-- Le fav icon -->
+	    <link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ) ?>/img/favicon.ico">
 
-		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-1.7.min.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr_2.6.2-min.js"></script>
 		<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js"></script><![endif]-->
 	
 		<?php
@@ -70,7 +71,7 @@
 								<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav', 'walker' => new Bootstrap_Menu_Walker, 'menu' => 'Bethel Menu' ) ); ?>
 	      		</div>
 	        </div>
-	        <div class="bethel-menu-toggle"><div class="chevron"></div> Bethel Menu <div class="chevron"></div></div>
+	        <div class="bethel-menu-toggle"><div class="chevron"></div> Bethel Sites <div class="chevron"></div></div>
 	    </div>
 
 	    <div class="navbar navbar-static-top ">

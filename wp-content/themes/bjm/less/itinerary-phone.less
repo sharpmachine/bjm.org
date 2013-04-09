@@ -1,80 +1,53 @@
 @import "variables.less";
 /* ...................................the schedule*/
 
-
-.views-row {
-	margin-top: -157px;
+body {
+	margin: 0;
+	padding: 0;
+	color: @fontGray;
 }
 
-// conference title
-.itinerary {
-	color: @fontGray;
-	h4 {
-		position: relative;
-		top: 266px;
-		left: 0;
-		font-family: @serifFontFamily;
-		font-size: 36px;
+h4.bottom {
+	margin: 10px 0;
+	font-family: @serifFontFamily;
+	font-size: 26px;
+	line-height: 1;
+
+	strong {
 		font-weight: 400;
-		line-height: 1;
 	}
 }
 
-// --------------
-
-// date size
-.date-display-start, 
-.date-display-end {
-	color: @fontGray;
-	display: block;
-	font-size: 40px;
+.loud {
+	font-size: 20px;
 	font-family: @serifFontFamily;
 	font-weight: 400;
+
+	&:after {
+		content:(" ") !important;
+	}
 }
 
-.date-display-start {
-	padding-bottom: 20px;
-	line-height: 1;
-}
-
-.date-display-end {
-	width: 60%;
-	line-height: 1;
-	border-top: 1px solid @fontGray;
-}
-
-// hide dash separator
-.date-display-separator {
-	display: none;
-}
-
-strong {
+.date-display-start, 
+.date-display-end,
+.date-display-single {
 	font-weight: 400;
 }
 
-// --------------
-
 .prepend-1 {
-	margin-bottom: 50px;
-	color: @fontGray;
-	// location name
-	div:nth-child(1) {
-		margin-top: 85px;
-		font-family: @sansFont;
-		font-size: 18px;
-		font-weight: bold;
-	}
+	font-family: @sansFont;
 
-	// city & country
-	div:nth-child(2) {
-		div:nth-child(2){
-			font-family: @sansFont;
+	div:nth-child(1) {
+		font-weight: 700;
+
+		&:after {
+			content:(" //");
 		}
 	}
+}
 
-	// event link
-	a {
-		color: @yellow;
-		font-family: @sansFont;
-	}
+a {
+	color: @yellow;
+	font-family: @sansFont;
+	font-weight: normal;
 }

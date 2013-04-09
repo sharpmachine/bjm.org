@@ -376,14 +376,6 @@ function getgo_method() {
  
 add_action('wp_enqueue_scripts', 'getgo_method');
 
-
-// Modified the_excerpt from Continue Reading to Read More
-// function new_excerpt_more($more) {
-//        global $post;
-// 	return ' <a href="'. get_permalink($post->ID) . '"><p class="read-more">Read More</p></a>';
-// }
-// add_filter('excerpt_more', 'new_excerpt_more');
-
 function the_short_title($limit) {
     $title = get_the_title($post->ID);
     if(strlen($title) > $limit) {
@@ -392,3 +384,10 @@ function the_short_title($limit) {
     
     echo $title;
 }
+
+function myfeed_request($qv) {
+	if (isset($qv['feed']) && !isset($qv['post_type']))
+		$qv['post_type'] = array('post', 'g_n', 'q_a');
+	return $qv;
+}
+add_filter('request', 'myfeed_request');
