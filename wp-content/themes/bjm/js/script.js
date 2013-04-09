@@ -92,4 +92,10 @@ jQuery(document).ready(function($) {
     $(this).removeData('modal');
   });
 
+  // $('iframe').load(function() {
+  //   this.style.height =
+  //   this.contents().find('.view-content').height();
+  // });
+
+
 });
