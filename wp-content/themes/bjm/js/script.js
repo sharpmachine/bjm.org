@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
         $(this).find(".control-group").removeClass("error"); 
         $(this).find(".help-inline").remove();  
         $(this).find(".help-inline").text("");
-        var submit_path = '/donate?amount=' + value_entered.toString();
+        var submit_path = '/bjm.org/donate?amount=' + value_entered.toString();
         $('#donate-modal').modal({
           remote: submit_path
         });
@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
         $(this).find(".control-group").removeClass("error"); 
         $(this).find(".help-inline").remove();  
         $(this).find(".help-inline").text("");
-        var submit_path = '/donate?designation=houseofgenerals&amount=' + value_entered.toString();
+        var submit_path = '/bjm.org/donate?designation=houseofgenerals&amount=' + value_entered.toString();
         $('#donate-modal').modal({
           remote: submit_path
         });
@@ -90,6 +90,6 @@ jQuery(document).ready(function($) {
 
   $('body').on('hidden', '#donate-modal', function () {
     $(this).removeData('modal');
-  });
+  }); 
 
 });

@@ -49,13 +49,13 @@ get_header(); ?>
 			<div class="span3 donation">
 				<h2>Donate Money</h2>
 				<form id="generals-donate-form" method=POST>
-				  <fieldset>
   					<div class="control-group">
-							<div class="controls">					  	
+						<div class="controls">					  	
 				    		<input type="text" name="amount" placeholder="Amount to be given" class="span3">
-  						</div>				    
+  						</div>
+  									    
 				    <button type="submit" class="btn donate-btn">Submit</button>
-				  </fieldset>
+				    </div>
 				</form>
 			</div>
 			<div class="span2 or">

@@ -63,11 +63,6 @@ $x_Amount = number_format($_POST['amount'],2);
 
 <p><strong>Confirm donation amount:</strong></p>
 <p>You have entered <strong>$<?php print $x_Amount; ?></strong> as the amount you would like to donate.</p>
-
-
-<br><br>
-If this is correct - please click Continue.
-<br><br>
 <FORM action="https://secure.authorize.net/gateway/transact.dll" method="POST">
 <!--
 https://developer.authorize.net/param_dump.asp
@@ -128,17 +123,12 @@ hr {height:.5px;color:silver;}
 <INPUT type="hidden" name="x_logo_url" value="https://www.bjm.org/images/donate_header<?php if ($_GET['site'] == 'benij.org') print '_benij';?>.png">
 <INPUT type="hidden" name="x_show_form" value="PAYMENT_FORM">
 <INPUT type="hidden" name="x_test_request" value="FALSE">
-<INPUT type="submit" value="Continue" class="btn btn-primary">
+<INPUT type="submit" value="Continue" class="btn btn-primary" style="color: #fff;">
 </FORM>
 
 <?php
 }
 ?>
-
-             
-
-
-
 
 <hr>
 
@@ -148,8 +138,13 @@ hr {height:.5px;color:silver;}
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="amount" value="<?php echo $_POST['amount']; ?>">
-<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
-<button class="btn paypal-btn"><a href="#"><img src="/wp-content/themes/bjm/img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
+<?php if ($_GET['designation'] == 'houseofgenerals') { ?>
+	<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
+<?php } else { ?>
+	<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
+<?php } ?>
+
+<button class="btn paypal-btn"><a href="#"><img src="/bjm.org/wp-content/themes/bjm/img/paypal.png" alt="Paypal"><p>Donate</p></a></button>
       </form>
   </div>
 </div><!-- .alert -->

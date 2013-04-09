@@ -248,6 +248,10 @@ footer {
 	color: @gray;
 	margin-bottom: 10px;
 
+	.control-group {
+		margin-bottom: 0;
+	}
+
 	.footer {
 		margin-top: 70px;
 		margin-bottom: 10px;
@@ -1354,6 +1358,10 @@ footer {
 	padding: 55px 0 40px;
 	color: @black;
 
+	.control-group {
+		margin-bottom: 0;
+	}
+
 	h3 {
 		font-family: @sansFont;
 		font-size: 24px;
@@ -1429,7 +1437,8 @@ footer {
 		margin-bottom: 0px;
 	}
 
-	input[type='text'] {
+	input[type='text'],
+	input[type='email'] {
 			margin-bottom: 10px;
 			width: 100%;
 		}
@@ -1836,14 +1845,8 @@ div.wpcf7-mail-sent-ok {
 }
 
 /*..................................the utilities */
-// iframe.vimeo {
-// 	width: 100%;
-// }
-
-
 .video-wrapper-single {
 	position: relative;
-	// margin-bottom: 30px;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
