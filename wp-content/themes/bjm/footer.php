@@ -41,7 +41,8 @@
  
   									<div class="control-group">
 										<div class="controls">										
-    								<input type='text' name='amount' placeholder='Amount to give' class="span3">
+    										<input type='text' name='amount' placeholder='Amount to give' class="span3">
+  										</div>
   									</div>
 									
 									<button type="submit" class="btn pull-right">
@@ -58,7 +59,7 @@
 								<div class="modal-body">
 								</div>
 								<div class="modal-footer">
-									<a data-dismiss="modal" class="btn">Cancel</a>
+									<a data-dismiss="modal" class="btn btn-danger">Cancel</a>
 								</div>
 							</div><!-- #donate-modal -->
 						</div>

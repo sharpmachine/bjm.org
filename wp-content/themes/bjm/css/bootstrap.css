@@ -5222,6 +5222,9 @@ footer {
   color: #58585b;
   margin-bottom: 10px;
 }
+footer .control-group {
+  margin-bottom: 0;
+}
 footer .footer {
   margin-top: 70px;
   margin-bottom: 10px;
@@ -6110,6 +6113,9 @@ footer form {
   padding: 55px 0 40px;
   color: #000000;
 }
+.donate-mf .control-group {
+  margin-bottom: 0;
+}
 .donate-mf h3 {
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
@@ -6166,7 +6172,8 @@ footer form {
 .donate-materials h2 {
   margin-bottom: 0px;
 }
-.donate-materials input[type='text'] {
+.donate-materials input[type='text'],
+.donate-materials input[type='email'] {
   margin-bottom: 10px;
   width: 100%;
 }
