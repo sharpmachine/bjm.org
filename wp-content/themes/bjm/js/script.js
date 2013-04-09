@@ -96,7 +96,7 @@ jQuery(document).ready(function($) {
   if( $(window).width() > 768 )
     {
       $.ajax({
-        url: '/bjm.org/wp-content/themes/bjm/js/slide-in.js',
+        url: '/bjm.org/wp-content/themes/bjm/js/slide-in-min.js',
         dataType: "script"
       });
     }
