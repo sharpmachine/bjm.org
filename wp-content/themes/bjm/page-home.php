@@ -4,7 +4,7 @@
 */
 get_header(); ?>
 
-<div class="hero-slider module">
+<div class="hero-slider">
 	<div class="container">
 		<div class="row">
 			<div class="span12">
