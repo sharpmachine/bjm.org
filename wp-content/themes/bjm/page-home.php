@@ -32,9 +32,12 @@ get_header(); ?>
 
 									<?php if(get_sub_field('external_link')): ?>
 										<a href="<?php the_sub_field('external_link'); ?>" class="btn">Read More</a>
-										<?php else: ?>
+									<?php endif; ?>
+									
+									<?php if(get_sub_field('internal_link')): ?>
 										<a href="<?php the_sub_field('internal_link'); ?>" class="btn">Read More</a>
 									<?php endif; ?>
+									
 								</div>					
 							</div>
 						</div>
