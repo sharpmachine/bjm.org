@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
   }); 
 
   // Slide in for desktops only
-  if( $(window).width() > 768 )
+  if( $(window).width() > 769 )
     {
       $.ajax({
         url: '/bjm.org/wp-content/themes/bjm/js/slide-in-min.js',

@@ -71,11 +71,18 @@ get_header(); ?>
 		<div class="row">
 			<div class="span4 recent-posts">
 
-				<h3 class="messages-news-blog">Life <span>Messages</span></h3>
+				<h3 class="messages-news-blog"><a href="<?php bloginfo( 'url' ); ?>/category/life-messages/">Life <span>Messages</span></a></h3>
 				<ul>
 					<?php query_posts( 'cat=5&posts_per_page=4' ); ?>	
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<li><h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3></li>
+					<li>
+						<h3 class="hidden-phone">
+							<a href="<?php the_permalink() ?>"><?php the_short_title(30); ?></a>
+						</h3>
+						<h3 class="visible-phone">
+							<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+						</h3>
+					</li>
 					<?php endwhile; endif; ?>
 					<?php wp_reset_query(); ?>
 				</ul>
@@ -84,13 +91,13 @@ get_header(); ?>
 			</div>
 			<div class="span3 recent-posts offset1 right-border">
 
-				<h3 class="messages-news-blog">Good <span>News</span></h3>
+				<h3 class="messages-news-blog"><a href="<?php bloginfo( 'url' ); ?>/goodnews">Good <span>News</span></a></h3>
 				<ul class="truncate">
 					<?php query_posts( 'post_type=g_n&posts_per_page=4' ); ?>	
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<li>
 						<h3 class="hidden-phone">
-							<a href="<?php the_permalink() ?>"><?php the_short_title(20); ?></a>
+							<a href="<?php the_permalink() ?>"><?php the_short_title(30); ?></a>
 						</h3>
 						<h3 class="visible-phone">
 							<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
@@ -104,7 +111,7 @@ get_header(); ?>
 			</div>
 			<div class="span3 recent-posts right-border">
 
-				<h3 class="messages-news-blog">Bill's <span>Blog</span></h3>
+				<h3 class="messages-news-blog"><a href="<?php bloginfo( 'url' ); ?>/blog">Bill's <span>Blog</span></a></h3>
 				<ul>
 					<?php query_posts( 'cat=-5&posts_per_page=4' ); ?>	
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -126,33 +133,28 @@ get_header(); ?>
 	</div>
 </div>
 
-<!-- Featured Product -->
-<div class="featured-product boxy module">
-	<div class="container f-product-mobile no-pad">
+<!-- Facebook -->
+<div class="facebook boxy module">
+	<div class="container no-pad">
 		<div class="row">
-			<div class="span4 product-image">
-				<img src="<?php the_field('product_image'); ?>" />
+			<div class="span4 center-photo">
+				<!-- <img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson" class="bill-photo"> -->
+				<img src="https://graph.facebook.com/billjohnsonministries/picture?width=271&height=271" class="bill-photo">
 			</div>
-			<div class="span8">
-				<div class="product-title">
-					<?php the_field('title'); ?>
-				</div>
-				<div class="product-endorsement">
-					"<?php the_field('endorsement'); ?>"
-				</div>
-				<div class="endorser-title">
-					<span class="product-endorser">&#8212; <?php the_field('endorser'); ?></span> // 
-					<?php the_field('endorser_title'); ?>
-				</div>
-				<div class="product-buttons">
-					<a href="<?php the_field('product_link'); ?>" class="btn product-link">Purchase</a>
-					<a href="http://store.ibethel.org/index.php?manufacturers_id=1&ref=1&affiliate_banner_id=1" class="btn other-products">Other Products</a>
+			<div class="span8 status">
+				<div class="row status-borders">
+					<div class="span1 facebook-gold">
+						<img src="<?php bloginfo('template_directory'); ?>/img/big-facebook.png" alt="Facebook">
+					</div>
+					<div class="span7 facebook-update">
+						<div id="lifestream" class="facebook-status">&nbsp;</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- !Featured Product -->
+<!-- !Facebook -->
 
 <article class="video module">
 	<div class="container">
@@ -189,28 +191,33 @@ get_header(); ?>
 	</div>
 </article>
 
-<!-- Facebook -->
-<div class="facebook boxy module">
-	<div class="container no-pad">
+<!-- Featured Product -->
+<div class="featured-product boxy module">
+	<div class="container f-product-mobile no-pad">
 		<div class="row">
-			<div class="span4 center-photo">
-				<!-- <img src="<?php bloginfo('template_directory'); ?>/img/bill-johnson.png" alt="Bill Johnson" class="bill-photo"> -->
-				<img src="https://graph.facebook.com/billjohnsonministries/picture?width=271&height=271" class="bill-photo">
+			<div class="span4 product-image">
+				<img src="<?php the_field('product_image'); ?>" />
 			</div>
-			<div class="span8 status">
-				<div class="row status-borders">
-					<div class="span1 facebook-gold">
-						<img src="<?php bloginfo('template_directory'); ?>/img/big-facebook.png" alt="Facebook">
-					</div>
-					<div class="span7 facebook-update">
-						<div id="lifestream" class="facebook-status">&nbsp;</div>
-					</div>
+			<div class="span8">
+				<div class="product-title">
+					<?php the_field('title'); ?>
+				</div>
+				<div class="product-endorsement">
+					"<?php the_field('endorsement'); ?>"
+				</div>
+				<div class="endorser-title">
+					<span class="product-endorser">&#8212; <?php the_field('endorser'); ?></span> // 
+					<?php the_field('endorser_title'); ?>
+				</div>
+				<div class="product-buttons">
+					<a href="<?php the_field('product_link'); ?>" class="btn product-link">Purchase</a>
+					<a href="http://store.ibethel.org/index.php?manufacturers_id=1&ref=1&affiliate_banner_id=1" class="btn other-products">Other Products</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- !Facebook -->
+<!-- !Featured Product -->
 
 <div class="house-of-generals module">
 	<div class="container">

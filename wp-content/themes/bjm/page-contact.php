@@ -7,7 +7,7 @@ get_header(); ?>
 <div class="map">
 	<div class="container">
 		<div class="row">
-			<div class="span12 shrink-300">
+			<div class="span12">
 				<img src="<?php bloginfo( 'template_directory' ); ?>/img/bing-map.jpg " alt="map">
 			</div>
 		</div>
