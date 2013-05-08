@@ -9,10 +9,8 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="span9">
-
-				<?php query_posts( 'showposts=10&post_type=post' ) ?>
+				<?php // query_posts( 'showposts=10&post_type=post' ) ?>
 				<?php get_template_part( 'loop', 'blog' ); ?>
-			
 			</div>
 			<div class="span3">
 				<?php get_sidebar(); ?>

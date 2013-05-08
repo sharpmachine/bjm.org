@@ -139,7 +139,7 @@ hr {height:.5px;color:silver;}
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="amount" value="<?php echo $_POST['amount']; ?>">
 <?php if ($_GET['designation'] == 'houseofgenerals') { ?>
-	<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
+	<input type="hidden" name="hosted_button_id" value="JUD5STEKAV8VW">
 <?php } else { ?>
 	<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
 <?php } ?>
