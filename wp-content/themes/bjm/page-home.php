@@ -25,6 +25,7 @@ get_header(); ?>
 									<img src="<?php the_sub_field('slide_image'); ?>" alt="<?php the_sub_field('slide_title'); ?>">	
 								</a>
 							<?php endif; ?>
+							<?php if (get_sub_field('slide_title')): ?>
 							<div class="carousel-caption hidden-phone">
 								<div class="inner">
 									<h4><?php the_sub_field('slide_title'); ?></h4>
@@ -40,6 +41,7 @@ get_header(); ?>
 									
 								</div>					
 							</div>
+							<?php endif; ?>
 						</div>
 
 						<?php endwhile; ?>
