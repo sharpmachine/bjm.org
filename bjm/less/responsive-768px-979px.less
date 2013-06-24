@@ -1,0 +1,176 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  // Fixed grid
+  #grid > .core(@gridColumnWidth768, @gridGutterWidth768);
+
+  // Fluid grid
+  #grid > .fluid(@fluidGridColumnWidth768, @fluidGridGutterWidth768);
+
+  // Input grid
+  #grid > .input(@gridColumnWidth768, @gridGutterWidth768);
+
+  // No need to reset .thumbnails here since it's the same @gridGutterWidth
+
+  	/*..................................the hero slider */
+  	#myCarousel .carousel-inner a img {
+  		top: 0;
+  	}
+
+	/* ...................................the invite page*/
+
+	.invite-bill {
+		margin-bottom: 60px;
+	}
+
+	.itineary {
+		margin-bottom: 60px;
+  	padding: 40px 0;
+	}
+
+	/* ...................................the bill page*/
+	.about {
+		margin-bottom: 0;
+	}
+
+	.about-article {
+		h1 {
+			font-size: 90px;
+		}
+
+		.span9 p {
+			margin-left: 30px;
+		}
+	}
+
+	/* ...................................the Q&A page*/
+
+	.aq-text {
+		padding-top: 12px;
+	}
+
+	.curly-bracket {
+		position: relative;
+		top: -9px;
+		left: -20px;
+	}
+
+	/* ...................................the blog page*/
+
+	.rss-subscribe {
+		width: 166px;
+	}
+
+	.widget_search input[type='text'] {
+		width: 107px;
+	}
+
+	.rss-subscribe img {
+		left: 0;
+		padding-right: 0;
+	}
+
+	.single-post iframe.vimeo {
+		width: 100%;
+	}
+
+	/* ...................................the good news page*/
+
+	.good-news h1 {
+		font-size: 130px;
+	}
+
+	.excerpt iframe {
+		width: 100%;
+	}
+
+	/* ...................................the the house of generals page*/
+
+	.donate-mf {
+		padding: 30px 0;
+
+		h2 {
+			font-size: 18px;
+		}
+	}
+
+	 iframe {
+		width: 100%;
+	}
+
+	.money-bag img, .drawer img {
+		margin-left: 0;
+	}
+
+	.money-bag {
+		width: 70px;
+	}
+
+	.or {
+		margin-left: 30px;
+	}
+
+  .social-icons {
+  	float: left;
+  	margin-top: 0;
+  	padding-left: 10px;
+  }
+
+  .news .right-border {
+  	margin-left: 32px;
+  }
+
+  .news .messages-news-blog a span {
+  	font-size: 44px;
+  }
+
+  .little-video {
+  	padding-bottom: 44.5%;
+  }
+
+  .bill-photo {
+  	.square(200px);
+  	margin-top: 35px;
+  }
+
+  .house-of-generals {
+  	margin-bottom: 65px;
+  }
+
+  .house-of-generals .carousel {
+  	p {
+  		font-size: 11px;
+  		line-height: 1.5;
+  	}
+  }
+
+  .generals-title {
+  	margin: 10px 40px 5px;
+  	padding-bottom: 5px;
+  	font-size: 15px;
+  }
+
+  .a-and-q-text {
+  	top: -50px;
+  	left: 37%;
+  	width: auto;
+  	padding: 50px 0;
+  	font-size: 122px;
+  }
+
+  .answers-home .questions {
+  	width: 230px;
+  }
+
+  .answers-home .answers {
+  	width: 235px;
+  }
+
+  .donate-to-bjm {
+  	margin-bottom: 12px;
+  }
+}

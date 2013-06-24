@@ -1,0 +1,53 @@
+@import "variables.less";
+/* ...................................the schedule*/
+
+body {
+	margin: 0;
+	padding: 0;
+	color: @fontGray;
+}
+
+h4.bottom {
+	margin: 10px 0;
+	font-family: @serifFontFamily;
+	font-size: 26px;
+	line-height: 1;
+
+	strong {
+		font-weight: 400;
+	}
+}
+
+.loud {
+	font-size: 20px;
+	font-family: @serifFontFamily;
+	font-weight: 400;
+
+	&:after {
+		content:(" ") !important;
+	}
+}
+
+.date-display-start, 
+.date-display-end,
+.date-display-single {
+	font-weight: 400;
+}
+
+.prepend-1 {
+	font-family: @sansFont;
+
+	div:nth-child(1) {
+		font-weight: 700;
+
+		&:after {
+			content:(" //");
+		}
+	}
+}
+
+a {
+	color: @yellow;
+	font-family: @sansFont;
+	font-weight: normal;
+}

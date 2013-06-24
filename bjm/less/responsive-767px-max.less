@@ -1,0 +1,607 @@
+//
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+
+@media (max-width: 767px) {
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  footer {
+    button {
+      margin-top: -3px;
+    }
+
+    .submit-email {
+      margin-bottom: 20px;
+    }
+  }
+
+  // Padding to set content in a bit
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  // Negative indent the now static "fixed" navbar
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  // Remove padding on container given explicit padding set on body
+  .container-fluid {
+    padding: 0;
+  }
+
+  // TYPOGRAPHY
+  // ----------
+  // Reset horizontal dl
+  .dl-horizontal {
+    dt {
+      float: none;
+      clear: none;
+      width: auto;
+      text-align: left;
+    }
+    dd {
+      margin-left: 0;
+    }
+  }
+
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+  .container {
+    width: auto;
+  }
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows and thumbnails
+  .row,
+  .thumbnails {
+    margin-left: 0;
+  }
+  .thumbnails > li {
+    float: none;
+    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+  }
+  // Make all grid-sized elements block level again
+  [class*="span"],
+  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+  .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    .box-sizing(border-box);
+  }
+  .span12,
+  .row-fluid .span12 {
+    width: 100%;
+    .box-sizing(border-box);
+  }
+  .row-fluid [class*="offset"]:first-child {
+		margin-left: 0;
+	}
+
+  // FORM FIELDS
+  // -----------
+  // Make span* classes full width
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    .input-block-level();
+  }
+  // But don't let it screw up prepend/append inputs
+  .input-prepend input,
+  .input-append input,
+  .input-prepend input[class*="span"],
+  .input-append input[class*="span"] {
+    display: inline-block; // redeclare so they don't wrap to new lines
+    width: auto;
+  }
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    position: fixed;
+    top:   20px;
+    left:  20px;
+    right: 20px;
+    width: auto;
+    margin: 0;
+    &.fade  { top: -100px; }
+    &.fade.in { top: 20px; }
+  }
+
+  .navbar-static-top {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #myCarousel .carousel-inner a img {
+      top: 0;
+  }
+
+  .boxy {
+    .no-pad {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .social-icons {
+    float: left;
+    margin-top: 0;
+    padding-left: 15px;
+  }
+
+  #myCarousel {
+    height: auto;
+
+    .carousel-inner {
+      height: auto;
+    }
+
+    .carousel-control {
+      top: 30%;
+    }
+  }
+
+  .recent-posts {
+    padding-bottom: 10px;
+    border-bottom: 1px solid @grayLight;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    h3.messages-news-blog a{
+      margin-bottom: 20px;
+      font-size: 30px; 
+
+      span {
+        font-size: 54px;
+      }
+    }
+  }
+
+  /*..................................the footer */
+  .amount-to-give button {
+    margin-top: -3px;
+  }
+
+  /*..................................the invite */
+  .invite-bill {
+    margin-bottom: 20px;
+  }
+
+  .invite-bill h2 {
+    margin-top: 0;
+  }
+
+  .itineary {
+    margin-bottom: 20px;
+  }
+
+  /*..................................the contact */
+  .map h3 {
+    margin-top: 20px;
+  }
+
+  .map h2 {
+    float: left;
+    margin-top: 0;
+  }
+
+  .send-a-message {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+
+  .form-horizontal .control-label, .wpcf7-form .control-label {
+    width: auto;
+  }
+
+  .form-horizontal .controls, .wpcf7-form .controls {
+    margin-left: 145px;
+  }
+
+  .send-a-message .your-message label {
+    margin-top: 0;
+  }
+
+  .send-a-message textarea {
+    margin-top: 0;
+  }
+
+  .note {
+    margin-bottom: 0;
+  }
+
+  span.wpcf7-not-valid-tip {
+    left: -30% !important;
+  }
+
+  /*..................................the house of generals page */
+  .give-money {
+    margin-top: 20px;
+  }
+
+  .money-bag,
+  .drawer {
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .donate-mf {
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  .donation input {
+    margin-bottom: 10px;
+  }
+
+  .or {
+    height: 60px;
+    margin-top: 80px;
+  }
+
+  .donate-materials {
+    br {
+      display: none;
+    }
+  }
+
+  .donate-materials input[type='submit'] {
+    margin-right: 0;
+  }
+
+  /* ...................................the news*/
+  .news {
+    margin-top: 0;
+  }
+
+  .news .right-border {
+    margin-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .news ul {
+    margin-top: 0;
+  }
+
+  /* ...................................the featured product*/
+
+  .featured-product {
+    margin-bottom: 40px;
+    margin-top: 28px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .product-title {
+    line-height: 50px;
+  }
+
+  .product-buttons {
+    a {
+      margin: 5px;
+    }
+  }
+
+  /* ...................................the videos*/
+
+  .video {
+    margin-bottom: 20px;
+  }
+
+  .big-video {
+    margin-bottom: 20px;
+    padding-bottom: 46.7%;
+  }
+
+  /* ...................................the facebook*/
+
+  .facebook {
+    padding: 40px 20px;
+    background: url(../img/facebook-quotes.png) no-repeat center center @grayLighter;
+  }
+
+  .center-photo {
+      text-align: center;
+  }
+
+  .bill-photo {
+    margin: 0 auto;
+  }
+
+  #lifestream {
+    height: auto;
+  }
+
+  .status {
+    height: auto;
+    margin-top: 50px;
+    background: none;
+  }
+
+  .status-borders {
+    margin: 10px 0 0;
+    padding: 10px 0;
+  }
+
+  .facebook-gold {
+    
+    img {
+      float: left;
+      margin-right: 10px;
+      margin-top: 15px;
+      padding-right: 10px;
+      border-right: 1px solid @yellow;
+    }
+  }
+
+  /* ...................................the house of generals*/
+
+  .house-of-generals {
+    margin: 40px 0;
+  }
+
+  .generals-background {
+
+    .span8 {
+      display: none;
+    }
+  }
+
+  .generals-title {
+    margin: 0 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid @white
+  }
+
+  .house-of-generals .carousel-caption {
+    width: 100%;
+    color: @white;
+    background: transparent;
+    text-shadow: 1px 1px 1px @black;
+
+    .learn-more {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      margin: 0;
+      border-color: @white;
+
+      a {
+        color: @white;
+        text-shadow: 1px 1px 1px @black;
+      }
+    }
+  }
+
+  /* ...................................the Q&A*/
+
+  .questions-home, .answers-home {
+    padding: 20px 0;
+  }
+
+  .a-and-q-text {
+    position: static;
+    width: auto;
+    margin: -30px auto 30px auto;
+    padding: 0;
+  }
+
+  .answers-home .questions {
+    width: auto;
+  }
+
+  .answers-home .answers {
+    display: none;
+  }
+
+  /*..................................the schedule */
+  .bethel-schedule {
+    margin-top: 20px;
+  }
+
+  /* ...................................the footer*/
+
+  footer .footer  {
+    margin-top: 40px;
+    padding: 10px 0;
+  }
+
+  .submit-newsletter {
+    margin-bottom: 20px;
+  }
+
+  .copyright a {
+    display: block;
+  }
+
+  footer {
+    margin-bottom: 20px;
+
+    .pull-right {
+      float: none;
+    }
+  }
+
+  ul.inline > li, ol.inline > li {
+    padding-left: 0;
+  }
+
+  /* ...................................the invite*/
+
+  .itineary {
+    padding: 40px 0;
+  }
+
+  /*..................................the Q&A page */
+
+ .q-and-a-background {
+    margin-bottom: 20px;
+  }
+
+  .aq-text {
+    margin: 43px 0 40px;
+  }
+
+  .ask-container .align {
+    left: 0;
+  }
+
+  .archive-q-a strong {
+    top: auto;
+    font-size: inherit;
+    font-weight: bold;
+  }
+
+  /*..................................the good news page */
+  .good-news { 
+    margin-bottom: 30px;
+    padding: 30px 0;
+
+    h1 {
+      font-size: 70px;
+      img {
+        display: block;
+        margin: 25px auto -10px;
+      }
+    }
+
+    h4 {
+      font-size: 32px;
+      line-height: 1;
+    }
+  }
+
+  /* ...................................the bill page*/
+
+  // .shrink-300 {
+  //   height: 100%;
+  // }
+
+  .about {
+    margin-bottom: 0;
+  }
+
+  /* ...................................the sidebar*/
+
+  #sidebar {
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid @gray;
+  }
+
+  #recent-posts-2 {
+    margin-top: 30px;
+  }
+
+  .widget-title {
+    padding-top: 10px;
+  }
+
+  #sidebar > ul > li:nth-child(n+4) {
+    margin-top: 16px;
+  }
+
+}
+
+
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+
+  // Smooth out the collapsing/expanding nav
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0); // activate the GPU
+  }
+
+  // Block level the page header small tag for readability
+  .page-header h1 small {
+    display: block;
+    line-height: @baseLineHeight;
+  }
+
+  // Update checkboxes for iOS
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+
+  // Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  // Medias
+  // Reset float and spacing to stack
+  .media .pull-left,
+  .media .pull-right  {
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  // Remove side margins since we stack instead of indent
+  .media-object {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  // Modals
+  .modal {
+    top:   10px;
+    left:  10px;
+    right: 10px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+
+}
