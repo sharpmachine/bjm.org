@@ -109,3 +109,13 @@ form p.help-block {
 	border-color: #e2e2e2;
 	.border-radius(0);
 }
+
+label[for="trip_event_detail_attributes_expected_attendance"] {
+	&:after {
+		display: block;
+		color: @yellow;
+		font-size: 0.8em;
+		text-transform: none;
+		content: "(This in no way influences our decision to accept the invitation but is necessary to accurately assess the amount of product we may need to send.)";
+	}
+}
