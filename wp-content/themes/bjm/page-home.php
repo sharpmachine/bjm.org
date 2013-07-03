@@ -99,7 +99,7 @@ get_header(); ?>
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<li>
 						<h3 class="hidden-phone">
-							<a href="<?php the_permalink() ?>"><?php the_short_title(30); ?></a>
+							<a href="<?php the_permalink() ?>"><?php the_short_title(20); ?></a>
 						</h3>
 						<h3 class="visible-phone">
 							<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
