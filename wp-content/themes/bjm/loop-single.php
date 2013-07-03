@@ -2,11 +2,15 @@
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	<div class="image">
-		<?php if ( has_post_thumbnail() ) {
-		the_post_thumbnail(array(620,341));
-		} else { ?>
-		<img src="<?php bloginfo('template_directory'); ?>/img/default-img.jpg" alt="<?php the_title(); ?>" />
-		<?php } ?>
+
+		<?php if (!( is_singular('g_n') || in_category( 'video'))): ?>
+			<?php if ( has_post_thumbnail() ) {
+			the_post_thumbnail(array(620,341));
+			} else { ?>
+			<img src="<?php bloginfo('template_directory'); ?>/img/default-img.jpg" alt="<?php the_title(); ?>" />
+			<?php } ?>
+		<?php endif; ?>
+		
 	</div>
 	<!-- !blog image -->
 
@@ -21,7 +25,7 @@
 	<div class="uppercase">
 		<span>
 			<span class="bold">
-				Categroies: 
+				Categories: 
 			</span>
 			<span class="underline">
 				<?php the_category(',&nbsp;'); ?> //
