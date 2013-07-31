@@ -7,7 +7,7 @@
 								Newsletter Sign Up
 							</div>
 							<div class="small-text">
-								Sign up to receive exclusive podcasts monthly
+								Sign up to receive exclusive monthly podcasts
 							</div>
 							<div class="submit-email">
 								<form action="http://ibethel.us1.list-manage2.com/subscribe/post?u=b824912e75c6e72f2ace5ded3&amp;id=c45a6c9961" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
