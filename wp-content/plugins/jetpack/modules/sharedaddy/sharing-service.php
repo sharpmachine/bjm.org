@@ -44,7 +44,6 @@ class Sharing_Service {
 		$services = array(
 			'email'         => 'Share_Email',
 			'print'         => 'Share_Print',
-			'digg'          => 'Share_Digg',
 			'facebook'      => 'Share_Facebook',
 			'linkedin'      => 'Share_LinkedIn',
 			'reddit'        => 'Share_Reddit',
@@ -437,8 +436,16 @@ function sharing_add_header() {
 		$service->display_header();
 	}
 
-	if ( count( $enabled['all'] ) > 0 )
-		wp_enqueue_style( 'sharedaddy', plugin_dir_url( __FILE__ ) .'sharing.css', array(), JETPACK__VERSION );
+	if ( count( $enabled['all'] ) > 0 ) {
+		// @todo: Remove this opt-out filter in the future
+		if ( ( ! defined( 'IS_WPCOM' ) ) || ( ! IS_WPCOM ) || apply_filters( 'wpl_sharing_2014_1', true ) ) {
+			wp_enqueue_style( 'sharedaddy', plugin_dir_url( __FILE__ ) .'sharing.css', array(), JETPACK__VERSION );
+			wp_enqueue_style( 'genericons' );
+		} else {
+			wp_enqueue_style( 'sharedaddy', plugin_dir_url( __FILE__ ) .'sharing-legacy.css', array(), JETPACK__VERSION );
+		}
+	}
+			
 }
 add_action( 'wp_head', 'sharing_add_header', 1 );
 
@@ -459,6 +466,9 @@ add_action( 'template_redirect', 'sharing_process_requests', 9 );
 
 function sharing_display( $text = '', $echo = false ) {
 	global $post, $wp_current_filter;
+
+	if ( empty( $post ) )
+		return $text;
 
 	if ( is_preview() ) {
 		return $text;
@@ -500,7 +510,7 @@ function sharing_display( $text = '', $echo = false ) {
 	if ( !is_feed() ) {
 		if ( is_singular() && in_array( get_post_type(), $global['show'] ) ) {
 			$show = true;
-		} elseif ( in_array( 'index', $global['show'] ) && ( is_home() || is_archive() || is_search() ) ) {
+		} elseif ( in_array( 'index', $global['show'] ) && ( is_home() || is_archive() || is_search() || in_array( get_post_type(), $global['show'] ) ) ) {
 			$show = true;
 		}
 	}
@@ -620,7 +630,7 @@ function get_base_recaptcha_lang_code() {
 		'tr'    => 'tr'
 	);
 
-	$blog_lang_code = function_exists( 'get_blog_lang_code' ) ? get_blog_lang_code() : get_bloginfo( 'language' ); 
+	$blog_lang_code = function_exists( 'get_blog_lang_code' ) ? get_blog_lang_code() : get_bloginfo( 'language' );
 	if( isset( $base_recaptcha_lang_code_mapping[ $blog_lang_code ] ) )
 		return $base_recaptcha_lang_code_mapping[ $blog_lang_code ];
 

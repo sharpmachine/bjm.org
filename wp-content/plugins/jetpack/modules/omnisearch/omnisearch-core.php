@@ -27,6 +27,11 @@ class Jetpack_Omnisearch {
 		require_once( dirname(__FILE__) . '/omnisearch-comments.php' );
 		new Jetpack_Omnisearch_Comments;
 
+		if ( current_user_can( 'upload_files' ) ) {
+			require_once( dirname(__FILE__) . '/omnisearch-media.php' );
+			new Jetpack_Omnisearch_Media;
+		}
+
 		if ( current_user_can( 'install_plugins' ) ) {
 			require_once( dirname(__FILE__) . '/omnisearch-plugins.php' );
 			new Jetpack_Omnisearch_Plugins;
@@ -44,9 +49,12 @@ class Jetpack_Omnisearch {
 		if ( wp_style_is( 'genericons', 'registered' ) ) {
 			$deps = array( 'genericons' );
 		}
-
-		wp_register_style( 'omnisearch-admin',   plugins_url( 'omnisearch.css',         __FILE__ ), $deps );
-		wp_register_style( 'omnisearch-jetpack', plugins_url( 'omnisearch-jetpack.css', __FILE__ ) );
+		if( is_rtl() ) {
+			wp_register_style( 'omnisearch-admin', plugins_url( 'rtl/omnisearch-rtl.css', __FILE__ ), $deps );
+		} else {
+			wp_register_style( 'omnisearch-admin', plugins_url( 'omnisearch.css', __FILE__ ), $deps );
+		}
+		
 	}
 
 	function jetpack_admin_menu() {

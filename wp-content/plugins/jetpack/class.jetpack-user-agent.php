@@ -164,6 +164,8 @@ class Jetpack_User_Agent_Info {
 	 	  	return  'iphone-unknown';
 	   	elseif ( $this->is_ipad( 'ipad-not-safari' ) )
 	   		return 'ipad-unknown';
+	   	elseif ( $this->is_Nintendo_3DS() )
+	   		return 'nintendo-3ds';
 	   	else {
 	   		$agent = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 	   		$dumb_agents = $this->dumb_agents;
@@ -335,6 +337,12 @@ class Jetpack_User_Agent_Info {
 		}
 		elseif ( $this->is_kindle_touch() ) {
 			$this->matched_agent = 'kindle-touch';
+			$this->isTierIphone = true;
+			$this->isTierRichCss = false;
+			$this->isTierGenericMobile = false;
+		}
+		elseif ( $this->is_Nintendo_3DS() ) {
+			$this->matched_agent = 'nintendo-3ds';
 			$this->isTierIphone = true;
 			$this->isTierRichCss = false;
 			$this->isTierGenericMobile = false;
@@ -654,6 +662,7 @@ class Jetpack_User_Agent_Info {
 	 *  The rendering engine is on Opera's server.)
 	 *
 	 * Opera/9.80 (Windows NT 6.1; Opera Mobi/14316; U; en) Presto/2.7.81 Version/11.00"
+	 * Opera/9.50 (Nintendo DSi; Opera/507; U; en-US)
 	 */
 	static function is_opera_mobile( ) {
 
@@ -663,6 +672,8 @@ class Jetpack_User_Agent_Info {
 		$ua = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 
 		if ( strpos( $ua, 'opera' ) !== false && strpos( $ua, 'mobi' ) !== false )
+			return true;
+		elseif ( strpos( $ua, 'opera' ) !== false && strpos( $ua, 'nintendo dsi' ) !== false )
 			return true;
 		else
 			return false;
@@ -1326,38 +1337,69 @@ class Jetpack_User_Agent_Info {
 		return false;
 	}
 
+  /*
+	 * Detects if the current browser is Nintendo 3DS handheld.
+	 *
+	 * example: Mozilla/5.0 (Nintendo 3DS; U; ; en) Version/1.7498.US
+	 * can differ in language, version and region
+	 */
+	static function is_Nintendo_3DS() {
+	 	if ( empty( $_SERVER['HTTP_USER_AGENT'] ) ) {
+			return false;
+		}
+
+		$ua = strtolower( $_SERVER['HTTP_USER_AGENT'] );
+		if ( strpos( $ua, 'nintendo 3ds' ) !== false ) {
+	   		return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Was the current request made by a known bot?
+	 *
+	 * @return boolean
+	 */
 	static function is_bot() {
-		static $is_bot = false;
-		static $first_run = true;
+		static $is_bot = null;
 
-		if ( $first_run ) {
-			$first_run = false;
-
-		/*
-			$bot_ips = array( );
-
-			foreach ( $bot_ips as $bot_ip ) {
-				if ( $_SERVER['REMOTE_ADDR'] == $bot_ip )
-					$is_bot = true;
-			}
-		*/
-
-			$agent = strtolower( $_SERVER['HTTP_USER_AGENT'] );
-
-			$bot_agents = array(
-				'alexa', 'altavista', 'ask jeeves', 'attentio', 'baiduspider', 'bingbot', 'chtml generic', 'crawler', 'fastmobilecrawl',
-				'feedfetcher-google', 'firefly', 'froogle', 'gigabot', 'googlebot', 'googlebot-mobile', 'heritrix', 'ia_archiver', 'irlbot',
-				'infoseek', 'jumpbot', 'lycos', 'mediapartners', 'mediobot', 'motionbot', 'msnbot', 'mshots', 'openbot',
-				'pythumbnail', 'scooter', 'slurp', 'snapbot', 'spider', 'surphace scout', 'taptubot', 'technoratisnoop',
-				'teoma', 'twiceler', 'yahooseeker', 'yahooysmcm', 'yammybot',
-			);
-
-			foreach ( $bot_agents as $bot_agent ) {
-				if ( false !== strpos( $agent, $bot_agent ) )
-					$is_bot = true;
-			}
+		if ( is_null( $is_bot ) ) {
+			$is_bot = Jetpack_User_Agent_Info::is_bot_user_agent( $_SERVER['HTTP_USER_AGENT'] );
 		}
 
 		return $is_bot;
 	}
+
+	/**
+	 * Is the given user-agent a known bot?
+	 * If you want an is_bot check for the current request's UA, use is_bot() instead of passing a user-agent to this method.
+	 *
+	 * @param $ua (string) A user-agent string
+	 * @return boolean
+	 */
+	static function is_bot_user_agent( $ua = null ) {
+
+		if ( empty( $ua ) )
+			return false;
+
+		$bot_agents = array(
+			'alexa', 'altavista', 'ask jeeves', 'attentio', 'baiduspider', 'bingbot', 'chtml generic', 'crawler', 'fastmobilecrawl',
+			'feedfetcher-google', 'firefly', 'froogle', 'gigabot', 'googlebot', 'googlebot-mobile', 'heritrix', 'ia_archiver', 'irlbot',
+			'infoseek', 'jumpbot', 'lycos', 'mediapartners', 'mediobot', 'motionbot', 'msnbot', 'mshots', 'openbot',
+			'pss-webkit-request',
+			'pythumbnail', 'scooter', 'slurp', 'snapbot', 'spider', 'taptubot', 'technoratisnoop',
+			'teoma', 'twiceler', 'yahooseeker', 'yahooysmcm', 'yammybot',
+		);
+
+		foreach ( $bot_agents as $bot_agent ) {
+			if ( false !== stripos( $ua, $bot_agent ) ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+
+
 }

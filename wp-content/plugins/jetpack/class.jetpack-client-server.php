@@ -3,15 +3,11 @@
 /**
  * Client = Plugin
  * Client Server = API Methods the Plugin must respond to
- *
- * @todo Roll this into Jetpack?  There's only one 'public' method now: ::authorize().
  */
 class Jetpack_Client_Server {
 	function authorize() {
 		$data = stripslashes_deep( $_GET );
-
 		$args = array();
-
 		$redirect = isset( $data['redirect'] ) ? esc_url_raw( (string) $data['redirect'] ) : '';
 
 		do {
@@ -87,8 +83,8 @@ class Jetpack_Client_Server {
 				break;
 			}
 
-			if ( $active_modules = Jetpack::get_option( 'active_modules' ) ) {
-				Jetpack::delete_option( 'active_modules' );
+			if ( $active_modules = Jetpack_Options::get_option( 'active_modules' ) ) {
+				Jetpack_Options::delete_option( 'active_modules' );
 
 				Jetpack::activate_default_modules( 999, 1, $active_modules );
 			} else {
@@ -117,7 +113,7 @@ class Jetpack_Client_Server {
 			return 1;
 		} else {
 			// If the plugin is not in the usual place, try looking through all active plugins.
-			$active_plugins = get_option( 'active_plugins', array() );
+			$active_plugins = Jetpack::get_active_plugins();
 			foreach ( $active_plugins as $plugin ) {
 				$data = get_plugin_data( WP_PLUGIN_DIR . '/' . $plugin );
 				if ( $data['Name'] == $probable_title ) {
@@ -149,7 +145,7 @@ class Jetpack_Client_Server {
 		$redirect = isset( $data['redirect'] ) ? esc_url_raw( (string) $data['redirect'] ) : '';
 
 		$body = array(
-			'client_id' => Jetpack::get_option( 'id' ),
+			'client_id' => Jetpack_Options::get_option( 'id' ),
 			'client_secret' => $client_secret->secret,
 			'grant_type' => 'authorization_code',
 			'code' => $data['code'],
@@ -167,7 +163,7 @@ class Jetpack_Client_Server {
 				'Accept' => 'application/json',
 			),
 		);
-		$response = Jetpack_Client::_wp_remote_request( Jetpack::fix_url_for_bad_hosts( Jetpack::api_url( 'token' ), $args ), $args );
+		$response = Jetpack_Client::_wp_remote_request( Jetpack::fix_url_for_bad_hosts( Jetpack::api_url( 'token' ) ), $args );
 
 		if ( is_wp_error( $response ) ) {
 			return new Jetpack_Error( 'token_http_request_failed', $response->get_error_message() );

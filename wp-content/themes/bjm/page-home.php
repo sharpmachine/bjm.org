@@ -162,7 +162,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="span8 video-wrapper big-video">
-				<?php $featured_query = new WP_Query( array('posts_per_page' => 1, 'post_type' => array('g_n', 'post'))); 
+				<?php $featured_query = new WP_Query( array('posts_per_page' => 1, 'post_type' => array('post'))); 
 					while ($featured_query->have_posts()) : $featured_query->the_post();
 					$do_not_duplicate[] = $post->ID 
 					?>
@@ -174,7 +174,7 @@ get_header(); ?>
 			</div>
 			<div class="span4">
 				<div class="row">
-					<?php query_posts(array('posts_per_page' => 3, 'post_type' => array('g_n', 'post'))); ?>
+					<?php query_posts(array('posts_per_page' => 2, 'post_type' => array('g_n'))); ?>
 						<?php while (have_posts()) : the_post();
 							if (in_array ($post->ID, $do_not_duplicate)) continue;
 							update_post_caches($post);
@@ -228,7 +228,9 @@ get_header(); ?>
 				<div id="house-of-generals" class="carousel slide">
 					<div class="hog-info">
 						<div class="item">
-							<img src="<?php the_field('hg_background_image'); ?>" alt="">
+							<a href="<?php bloginfo( 'url' ); ?>/house-of-generals">
+								<img src="<?php the_field('hg_background_image'); ?>" alt="">
+							</a>
 							<div class="carousel-caption">
 								<div class="hidden-phone">
 									<div class="generals-title">

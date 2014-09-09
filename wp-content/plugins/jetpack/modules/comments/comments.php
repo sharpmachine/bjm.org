@@ -172,7 +172,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 	}
 
 	/**
-	 * Noop teh default comment form output, get some options, and output our
+	 * Noop the default comment form output, get some options, and output our
 	 * tricked out totally radical comment form.
 	 *
 	 * @since JetpackComments (1.4)
@@ -200,7 +200,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 		}
 
 		$params  = array(
-			'blogid'               => Jetpack::get_option( 'id' ),
+			'blogid'               => Jetpack_Options::get_option( 'id' ),
 			'postid'               => get_the_ID(),
 			'comment_registration' => ( get_option( 'comment_registration' ) ? '1' : '0' ), // Need to explicitly send a '1' or a '0' for these
 			'require_name_email'   => ( get_option( 'require_name_email' )   ? '1' : '0' ),
@@ -227,15 +227,15 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 				$params['_wp_unfiltered_html_comment'] = wp_create_nonce( 'unfiltered-html-comment_' . get_the_ID() );
 		}
 
-		$signature = Jetpack_Comments::sign_remote_comment_parameters( $params, Jetpack::get_option( 'blog_token' ) );
+		$signature = Jetpack_Comments::sign_remote_comment_parameters( $params, Jetpack_Options::get_option( 'blog_token' ) );
 		if ( is_wp_error( $signature ) ) {
 			$signature = 'error';
 		}
 
 		$params['sig']    = $signature;
-		$url_origin       = ( is_ssl() ? 'https' : 'http' ) . '://jetpack.wordpress.com';
+		$url_origin       = set_url_scheme( 'http://jetpack.wordpress.com' );
 		$url              = "{$url_origin}/jetpack-comment/?" . http_build_query( $params );
-		$url              = "{$url}#parent=" . urlencode( ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+		$url              = "{$url}#parent=" . urlencode( set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ) );
 		$this->signed_url = $url;
 		$height           = $params['comment_registration'] || is_user_logged_in() ? '315' : '430'; // Iframe can be shorter if we're not allowing guest commenting
 		$transparent      = ( $params['color_scheme'] == 'transparent' ) ? 'true' : 'false';
@@ -267,7 +267,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 	 * @since JetpackComments (1.4)
 	 */
 	public function watch_comment_parent() {
-		$url_origin = ( is_ssl() ? 'https' : 'http' ) . '://jetpack.wordpress.com';
+		$url_origin = set_url_scheme( 'http://jetpack.wordpress.com' );
 	?>
 
 		<!--[if IE]>
@@ -286,9 +286,9 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 
 			tellFrameNewParent = function() {
 				if ( comm_par ) {
-					frame.src = <?php echo json_encode( esc_url_raw( $this->signed_url ) ); ?> + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+					frame.src = "<?php echo esc_url_raw( $this->signed_url ); ?>" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
 				} else {
-					frame.src = <?php echo json_encode( esc_url_raw( $this->signed_url ) ); ?>;
+					frame.src = "<?php echo esc_url_raw( $this->signed_url ); ?>";
 				}
 			};
 
@@ -377,7 +377,7 @@ class Jetpack_Comments extends Highlander_Comments_Base {
 		if ( FALSE !== strpos( $post_array['hc_avatar'], '.gravatar.com' ) )
 			$post_array['hc_avatar'] = htmlentities( $post_array['hc_avatar'] );
 
-		$check = Jetpack_Comments::sign_remote_comment_parameters( $post_array, Jetpack::get_option( 'blog_token' ) );
+		$check = Jetpack_Comments::sign_remote_comment_parameters( $post_array, Jetpack_Options::get_option( 'blog_token' ) );
 		if ( is_wp_error( $check ) ) {
 			wp_die( $check );
 		}

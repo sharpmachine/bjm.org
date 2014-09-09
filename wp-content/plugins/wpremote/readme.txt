@@ -1,9 +1,9 @@
 === The WP Remote WordPress Plugin ===
-Contributors: humanmade, joehoyle, mattheu, tcrsavage, willmot
+Contributors: humanmade, willmot, joehoyle, danielbachhuber, mattheu, pauldewouters, cuvelier, tcrsavage
 Tags: wpremote, remote administration, multiple wordpress
-Requires at least: 2.9
-Tested up to: 3.5
-Stable tag: 2.6
+Requires at least: 3.0
+Tested up to: 3.8.1
+Stable tag: 2.7.4
 
 WP Remote is a free web app that enables you to easily manage all of your WordPress powered sites from one place.
 
@@ -29,7 +29,72 @@ You can email us at support@wpremote.com for support.
 2. Activate the plugin.
 3. Sign up for an account at wpremote.com and add your site.
 
+== Screenshots ==
+
+1. The WP Remote dashboard at wpremote.com
+2. See all of the plugins and themes needing update across all Sites in one view.
+3. Download nightly Automatic Backups (Premium feature).
+
 == Changelog ==
+
+#### 2.7.3 (12 May 2014)
+
+* Added the ability to return basic content information for the site - post count, user count, plugin count etc.
+* Updated contribution guidelines
+
+#### 2.7.2 (22 January 2014)
+
+* Misc improvements to the accuracy of the backup restart mechanism.
+* Inline styles to insure the API key prompt always appears, even if a theme or plugin may hide admin notices.
+
+#### 2.7.1 (23 December 2013)
+
+* Bug fix: Restore plugin and theme installation mechanism.
+* Bug fix: On some hosts where `getmypid()` wasn't permitted, the backup process would be prematurely reported as killed.
+
+#### 2.7.0 (19 November 2013)
+
+* Improved durability of backups where the backup process can take more than 90 seconds.
+* New API support for posts, comments, and fixed support for users (oops).
+* Reporting and update integration with premium plugins that support ManageWP's API implementation.
+* Plugin, theme, and core updates now respect the `DISALLOW_FILE_MODS` constant.
+
+#### 2.6.7 (27 October 2013)
+
+* API improvement: specify database- and file-only backups
+* Bug fix: Make the backup download URL accessible on Apache servers again. The protective .htaccess was being generated with the wrong key.
+
+#### 2.6.6 (23 October 2013)
+
+* Bug fix: Due to some files moving around, WP Remote wasn't able to properly update the current version of the plugin.
+
+#### 2.6.5 (23 October 2013)
+
+* Incorporated a more reliable plugin re-activation process after update.
+* Bug fix: Properly delete backup folders for failed backups. Users may want to look inside of `/wp-content/` for any folders named as `*-backups`. If they were created by WP Remote, they can be safely deleted.
+* Bug fix: Log the proper fields in history when a new user is created.
+
+#### 2.6.4 (2 October 2013)
+
+* Misc API improvements for Premium.
+* Bug fix: Disable all premium plugin and theme updates. Causing fatals too often.
+* Bug fix: Restore FTP-based core, theme, and plugin updates by properly accessing the passed credentials.
+
+#### 2.6.3 (10 September 2013)
+
+* Bug fix: Disabled updating BackupBuddy through WP Remote for BackupBuddy v4.1.1 and greater. BackupBuddy changed its custom update mechanism (as it's a premium plugin), which caused the WP Remote plugin not to function properly.
+
+#### 2.6.2 (2 September 2013)
+
+* Bug fix: Reactivating plugin after plugin upgrade.
+
+#### 2.6.1 (26 August 2013)
+
+* Add multiple API keys to your WP Remote plugin with a `wpr_api_keys` filter if you'd like to use more than WP Remote account with the site.
+* Plugin now supports localization. Please feel free to [submit your translation](http://translate.hmn.md/projects).
+* Update `HM Backup` to v2.3
+* Bug fix: Properly handle timestamp values in database backups.
+* Bug fix: Use super randomized backup directories.
 
 #### 2.6
 
@@ -113,3 +178,7 @@ You can email us at support@wpremote.com for support.
 * Start keeping a changelog of plugin changes
 * Pass home_url, site_url and admin_url to WP Remote instead of guessing at them, fixes issues with the urls being wrong for non-standard WordPress installs
 * Better error message when you have the wrong API key entered.
+
+## Contribution guidelines ##
+
+see https://github.com/humanmade/WP-Remote-WordPress-Plugin/blob/master/CONTRIBUTING.md

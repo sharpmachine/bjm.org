@@ -8,6 +8,25 @@
  * currently registered hooks and the presence of specific files in admin/plugin folders.
  */
 abstract class ameMenuItem {
+	const unclickableTemplateId = '>special:none';
+	const unclickableTemplateClass = 'ame-unclickable-menu-item';
+
+	/**
+	 * @var array A partial list of files in /wp-admin/. Correct as of WP 3.8-RC1, 2013.12.04.
+	 * When trying to determine if a menu links to one of the default WP admin pages, it's faster
+	 * to check this list than to hit the disk.
+	 */
+	private static $known_wp_admin_files = array(
+		'customize.php' => true, 'edit-comments.php' => true, 'edit-tags.php' => true, 'edit.php' => true,
+		'export.php' => true, 'import.php' => true, 'index.php' => true, 'link-add.php' => true,
+		'link-manager.php' => true, 'media-new.php' => true, 'nav-menus.php' => true, 'options-discussion.php' => true,
+		'options-general.php' => true, 'options-media.php' => true, 'options-permalink.php' => true,
+		'options-reading.php' => true, 'options-writing.php' => true, 'plugin-editor.php' => true,
+		'plugin-install.php' => true, 'plugins.php' => true, 'post-new.php' => true, 'profile.php' => true,
+		'theme-editor.php' => true, 'themes.php' => true, 'tools.php' => true, 'update-core.php' => true,
+		'upload.php' => true, 'user-new.php' => true, 'users.php' => true, 'widgets.php' => true,
+	);
+
 	/**
 	 * Convert a WP menu structure to an associative array.
 	 *
@@ -18,14 +37,15 @@ abstract class ameMenuItem {
 	 */
 	public static function fromWpItem($item, $position = 0, $parent = '') {
 		static $separator_count = 0;
+		$default_css_class = empty($parent) ? 'menu-top' : '';
 		$item = array(
 			'menu_title'   => $item[0],
 			'access_level' => $item[1], //= required capability
 			'file'         => $item[2],
 			'page_title'   => (isset($item[3]) ? $item[3] : ''),
-			'css_class'    => (isset($item[4]) ? $item[4] : 'menu-top'),
+			'css_class'    => (isset($item[4]) ? $item[4] : $default_css_class),
 			'hookname'     => (isset($item[5]) ? $item[5] : ''), //Used as the ID attr. of the generated HTML tag.
-			'icon_url'     => (isset($item[6]) ? $item[6] : 'images/generic.png'),
+			'icon_url'     => (isset($item[6]) ? $item[6] : 'dashicons-admin-generic'),
 			'position'     => $position,
 			'parent'       => $parent,
 		);
@@ -71,14 +91,16 @@ abstract class ameMenuItem {
 			'access_level' => 'read',
 			'extra_capability' => '',
 			'file' => '',
+			'page_heading' => '',
 	        'position' => 0,
 	        'parent' => '',
 
 	        //Fields that apply only to top level menus.
 	        'css_class' => 'menu-top',
 	        'hookname' => '',
-	        'icon_url' => 'images/generic.png',
+	        'icon_url' => 'dashicons-admin-generic',
 	        'separator' => false,
+			'colors' => false,
 
 	        //Internal fields that may not map directly to WP menu structures.
 			'open_in' => 'same_window', //'new_window', 'iframe' or 'same_window' (the default)
@@ -103,6 +125,7 @@ abstract class ameMenuItem {
 			'items' => array(), //List of sub-menu items.
 			'grant_access' => array(), //Per-role and per-user access. Supersedes role_access.
 			'role_access' => array(), //Per-role access settings.
+			'colors' => null,
 
 			'custom' => false,  //True if item is made-from-scratch and has no template.
 			'missing' => false, //True if our template is no longer present in the default admin menu. Note: Stored values will be ignored. Set upon merging.
@@ -118,12 +141,15 @@ abstract class ameMenuItem {
 		return array(
 			'menu_title' => 'Custom Menu',
 			'access_level' => 'read',
+			'extra_capability' => '',
 			'page_title' => '',
 			'css_class' => 'menu-top',
 			'hookname' => '',
-			'icon_url' => 'images/generic.png',
+			'icon_url' => 'dashicons-admin-generic',
 			'open_in' => 'same_window',
 			'is_plugin_page' => false,
+			'page_heading' => '',
+			'colors' => false,
 		);
 	}
 
@@ -193,6 +219,10 @@ abstract class ameMenuItem {
 			}
 		}
 
+		if ($parent_file === 'profile.php') {
+			$parent_file = 'users.php';
+		}
+
 		return $parent_file . '>' . $item_file;
 	}
 
@@ -218,10 +248,7 @@ abstract class ameMenuItem {
   /**
    * Apply custom menu filters to an item of the custom menu.
    *
-   * Calls two types of filters :
-   * 	'custom_admin_$item_type' with the entire $item passed as the argument.
-   * 	'custom_admin_$item_type-$field' with the value of a single field of $item as the argument.
-   *
+   * Calls a 'custom_admin_$item_type' filter with the entire $item passed as the argument.
    * Used when converting the current custom menu to a WP-format menu.
    *
    * @param array $item Associative array representing one menu item (either top-level or submenu).
@@ -230,12 +257,7 @@ abstract class ameMenuItem {
    * @return array Filtered menu item.
    */
 	public static function apply_filters($item, $item_type, $extra = null){
-		$item = apply_filters("custom_admin_{$item_type}", $item, $extra);
-		foreach($item as $field => $value){
-			$item[$field] = apply_filters("custom_admin_{$item_type}-$field", $value, $extra);
-		}
-
-		return $item;
+		return apply_filters("custom_admin_{$item_type}", $item, $extra);
 	}
 
 	/**
@@ -376,11 +398,28 @@ abstract class ameMenuItem {
 		}
 		$pageFile = self::remove_query_from($page_url);
 
-		$hasHook = (get_plugin_page_hook($page_url, $parent_page_url) !== null);
+		//Check our hard-coded list of admin pages first. It's measurably faster than
+		//hitting the disk with is_file().
+		if ( isset(self::$known_wp_admin_files[$pageFile]) ) {
+			return false;
+		}
+		//Now actually check the filesystem.
 		$adminFileExists = is_file(ABSPATH . '/wp-admin/' . $pageFile);
-		$pluginFileExists = ($page_url != 'index.php') && is_file(WP_PLUGIN_DIR . '/' . $pageFile);
+		if ( $adminFileExists ) {
+			return false;
+		}
 
-		return !$adminFileExists && ($hasHook || $pluginFileExists);
+		$hasHook = (get_plugin_page_hook($page_url, $parent_page_url) !== null);
+		if ( $hasHook ) {
+			return true;
+		}
+
+		$pluginFileExists = ($page_url != 'index.php') && is_file(WP_PLUGIN_DIR . '/' . $pageFile);
+		if ( $pluginFileExists ) {
+			return true;
+		}
+
+		return false;
 	}
 
 	/**
