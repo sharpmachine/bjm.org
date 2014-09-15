@@ -59,6 +59,20 @@
 				wp_enqueue_script( 'comment-reply' );
 			wp_head();
 			?>
+
+			<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js" type="text/javascript"></script>
+    <script src="//travel.ibethel.org/assets/api/v1/itineraries.js" type="text/javascript"></script>
+    <script>
+      jQuery(function() {
+        new Itinerary({
+          id: "bill-johnson",
+          root: "#itineraries"
+          // emptyMessage: 'No trips found.', // [Optional] A message to populate the root element with in the event of an empty result (default shown here)
+          // errorMessage: 'Unable to load trips. Please try again later.', // [Optional] A message to populate the root element with in the event of an error (default shown here)
+          // template: $('#itinerary-template').html() // [Optional] A handlebars.js template source to use if you want to change the default output (default shown below)
+        }).display();
+      });
+    </script>
 	</head>
 
 	<body <?php body_class(); ?>>
