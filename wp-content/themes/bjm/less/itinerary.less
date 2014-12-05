@@ -1,6 +1,39 @@
 @import "variables.less";
 /* ...................................the schedule*/
 
+.itinerary-trip {
+	margin-top: 30px;
+	padding-bottom: 29px;
+	border-bottom: 1px solid @fontGray;
+
+	&:last-child {
+		border-bottom: 0;
+	}
+
+	div {
+		margin-bottom: 5px;
+	}
+	
+	.itinerary-title {
+		margin-bottom: 20px;
+	}
+
+}
+
+.itinerary-title {
+	font-family: 'Crimson Text',serif;
+	font-size: 36px;
+	font-weight: 300;
+}
+
+.itinerary-date {
+	font-style: italic;
+}
+
+.itinerary-organizer {
+	font-weight: bold;
+}
+
 
 .bethel-schedule {
 	margin-top: 0;
@@ -81,10 +114,6 @@ h4.bottom {
 
 		div:first-child {
 			font-weight: bold;
-
-			&:after {
-				content:(" //");
-			}
 		}
 
 		a {

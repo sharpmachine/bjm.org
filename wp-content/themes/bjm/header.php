@@ -43,6 +43,7 @@
 			
 	    <!-- Le styles -->
 	    <link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.css" rel="stylesheet">
+	    <link href="<?php bloginfo('template_directory'); ?>/css/itinerary.css" rel="stylesheet">
 	    <link href="<?php bloginfo('template_directory'); ?>/css/responsive.css" rel="stylesheet">
 	    <!--[if lte IE 8]><link href="<?php bloginfo('template_directory'); ?>/css/ie8.css" rel="stylesheet"><![endif]-->
 			
