@@ -34,7 +34,25 @@
 							<div class="small-text">
 								Thank you for your interest in supporting Bill Johnson Minstries.
 							</div>
-							<div class="amount-to-give">
+							<div class="paypal">
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="cmd" value="_s-xclick">
+									<input type="hidden" name="amount" value="<?php echo $_POST['amount']; ?>">
+									<?php if ($_GET['designation'] == 'houseofgenerals') { ?>
+									<input type="hidden" name="hosted_button_id" value="JUD5STEKAV8VW">
+									<?php } else { ?>
+									<input type="hidden" name="hosted_button_id" value="RQ6FZ8HTXF9PC">
+									<?php } ?>
+
+									<button class="btn paypal-btn">
+										<a href="#">
+											<img src="/bjm.org/wp-content/themes/bjm/img/paypal.png" alt="Paypal">
+											<p>Donate</p>
+										</a>
+									</button>
+								</form>
+							</div>
+							<!-- <div class="amount-to-give">
 								<form action="" id="donate-form" method=POST>
  
   									<div class="control-group">
@@ -47,7 +65,7 @@
 										Continue
 									</button>
 								</form>
-							</div>
+							</div> -->
 							
 							<div class="modal" id="donate-modal">
 								<div class="modal-header">
@@ -73,10 +91,10 @@
 					</div>
 					<div class="span2">
 						<ul class="footer-icons inline pull-right">
-		  				<li><a href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
-		  				<li><a href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
-		  				<li><a href="<?php bloginfo('rss_url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>
-		  			</ul>
+							<li><a href="https://www.facebook.com/BillJohnsonMinistries"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a></li>
+							<li><a href="https://twitter.com/billjohnsonBJM"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a></li>
+							<li><a href="<?php bloginfo('rss_url') ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -86,7 +104,7 @@
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/scrollTo.min.js"></script>
-  	<script src="<?php bloginfo ('template_directory'); ?>/js/nav.js"></script>
+	<script src="<?php bloginfo ('template_directory'); ?>/js/nav.js"></script>
 
 	<!-- scripts concatenated and minified via ant build script-->
 	<script src="<?php bloginfo ('template_directory'); ?>/js/plugins-min.js"></script>
@@ -95,5 +113,5 @@
 	<!-- Google Analytics: UA-2614909-11 -->
 	
 	<?php wp_footer(); ?>
-	</body>
+</body>
 </html>
